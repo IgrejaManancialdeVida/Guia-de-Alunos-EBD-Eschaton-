@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton · Lição 08 — A Segunda Vinda de Cristo</title>
+
+<meta content="#1a1428" name="theme-color"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icon-192.svg" rel="apple-touch-icon"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--cor:#9040a0;--grad1:#200828;--grad2:#2a0838;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(144,64,160,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 55%,rgba(144,64,160,0.45) 0%,transparent 55%),radial-gradient(ellipse at 78% 22%,rgba(201,168,76,0.18) 0%,transparent 45%),radial-gradient(ellipse at 55% 88%,rgba(60,0,80,0.4) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:18px 18px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#200828,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#100018,var(--cor) 55%,#e0a0ff);opacity:0.38;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,#200828,var(--cor),var(--ouro),transparent);opacity:0.7;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.1;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:20pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#200828,var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(144,64,160,0.35);background:rgba(144,64,160,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+ul li::before { 
+    content: '\2192' !important; 
+    position: absolute !important; 
+    left: 0 !important; 
+    color: var(--cor) !important; 
+    font-size: 9pt !important; 
+    display: inline-block !important;
+}
+.apl{background:linear-gradient(135deg,rgba(144,64,160,0.06),rgba(201,168,76,0.06));border:1px solid rgba(144,64,160,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'&#183;';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(144,64,160,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(144,64,160,0.08);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ── BLOCOS DO ALUNO ── */
+.baluno{border-radius:3px;padding:9px 12px;margin-top:12px;margin-bottom:2px;position:relative;}
+.baluno-ico{font-size:10pt;margin-right:6px;vertical-align:middle;}
+.baluno-tag{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.baluno-corpo{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.baluno-linha{border-bottom:1px solid rgba(0,0,0,0.12);height:22px;margin-top:6px;}
+
+/* Variantes de cor */
+.ba-refletir{background:rgba(144,64,160,0.06);border-left:3px solid var(--cor);}
+.ba-refletir .baluno-tag{color:var(--cor);}
+.ba-biblica{background:rgba(201,168,76,0.07);border-left:3px solid var(--ouro);}
+.ba-biblica .baluno-tag{color:#8a6a20;}
+.ba-sabia{background:rgba(60,120,180,0.06);border-left:3px solid #5080b0;}
+.ba-sabia .baluno-tag{color:#4060a0;}
+.ba-pense{background:rgba(144,64,160,0.04);border:1px dashed rgba(144,64,160,0.30);border-left:3px solid var(--cor);}
+.ba-pense .baluno-tag{color:var(--cor);}
+.ba-vida{background:linear-gradient(135deg,rgba(144,64,160,0.05),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.30);border-left:3px solid var(--ouro);}
+.ba-vida .baluno-tag{color:#8a6a20;}
+
+@media (max-width:768px){
+    .baluno{padding:8px 10px;}
+    .baluno-corpo,.baluno-linha{font-size:9.5pt;}
+}
+@media print{
+    .baluno{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON<span>Lição 08 · A Segunda Vinda de Cristo</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<div aria-label="Abrir lição 08" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<img alt="Capa da revista Eschaton" src="capa-revista.png"/>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">08</div><div class="cnd">08</div>
+<div class="ccon">
+<div class="cser">Série · Eschaton · Estudos Escatológicos</div>
+<div class="ctit">A Segunda Vinda de Cristo</div>
+<div class="cver">
+            "Este mesmo Jesus, que dentre vós foi recebido em cima no céu, assim virá, como o vistes ir para o céu."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Atos 1:11</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 08</span><span class="pht">A Segunda Vinda de Cristo</span></div>
+<h2>Introdução</h2>
+<p class="cap">A Segunda Vinda de Cristo é o evento central de toda a escatologia cristã, o horizonte em direção ao qual toda a história caminha e para o qual toda a esperança aponta. Enquanto debates sobre o milênio, o arrebatamento e o Anticristo dividem as tradições, o retorno pessoal, visível e glorioso de Jesus Cristo é confessado unanimemente por cristãos de todas as épocas e denominações como verdade fundamental e inegociável da fé.</p>
+<div class="bver">"Eis que vem com as nuvens, e todo olho o verá, até mesmo os que o traspassaram; e todas as tribos da terra se lamentarão sobre ele." <cite>Apocalipse 1:7</cite></div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Compreender o significado do termo grego "Parusia" e suas implicações teológicas</li>
+<li>Examinar as principais passagens bíblicas sobre a Segunda Vinda em seu contexto</li>
+<li>Identificar as características da vinda de Cristo segundo as Escrituras</li>
+<li>Avaliar as perspectivas pentecostal e reformada sobre a natureza e cronologia da Parusia</li>
+</ul>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>O Credo Apostólico confessa: "de onde há de vir a julgar os vivos e os mortos." O Credo Niceno acrescenta: "e virá outra vez em glória para julgar os vivos e os mortos, e o seu reino não terá fim." Essa esperança sustentou mártires, missionários e fiéis em cada geração e continua sendo o fundamento mais sólido da fé cristã diante da morte e do sofrimento.</p>
+<p>A doutrina da Segunda Vinda não ocupa lugar periférico na fé cristã. Ela preserva a Igreja tanto do desespero, porque a história não caminha para o caos sem sentido, quanto da presunção, porque a consumação do Reino pertence ao Senhor e não ao esforço humano. Esperar a vinda de Cristo é viver entre a confiança e a sobriedade.</p>
+<div class="baluno ba-refletir">
+<div class="baluno-tag"><span class="baluno-ico">◆</span> Para você refletir</div>
+<div class="baluno-corpo">A esperança do retorno de Cristo muda a forma como você enxerga o presente? De que maneira essa certeza afeta suas decisões, seus medos e sua motivação para servir hoje?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 DESENVOLVIMENTO I -->
+<div class="lbl">Página 3 · Desenvolvimento I</div>
+<div class="pag int">
+<div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 08</span><span class="pht">A Segunda Vinda de Cristo</span></div>
+<h2>I — A Parusia: o Conceito Bíblico</h2>
+<p>O termo grego <em>parousia</em>, traduzido como "vinda" ou "presença", era usado no mundo greco-romano para descrever a visita oficial de um rei ou imperador a uma cidade. A cidade se preparava, saía ao encontro do soberano e o conduzia triunfalmente para dentro de seus muros. Paulo usa exatamente essa imagem em 1 Tessalonicenses 4:17: os crentes "saem ao encontro" do Senhor. A Parusia não é um evento secreto, mas uma chegada real e pública.</p>
+<h3>Características da Segunda Vinda</h3>
+<p>As Escrituras descrevem a Segunda Vinda com quatro características irredutíveis. Será <strong>pessoal</strong>, "este mesmo Jesus" (At 1:11), e não um princípio ou ideia. Será <strong>corporal</strong>, "assim virá, como o vistes ir" (At 1:11), com o mesmo corpo ressurreto. Será <strong>visível</strong>, "todo olho o verá" (Ap 1:7), sem ambiguidade. E será <strong>gloriosa</strong>, com poder e grande glória (Mt 24:30), e não na humildade da encarnação.</p>
+<div class="bver">"Porque o próprio Senhor descerá do céu com alarido, e com voz de arcanjo, e com a trombeta de Deus." <cite>1 Tessalonicenses 4:16</cite></div>
+<h3>Uma Vinda ou Duas?</h3>
+<p>O dispensacionalismo distingue dois eventos separados: o arrebatamento secreto, a parousia para a Igreja, e a Segunda Vinda pública, a revelação para o mundo e Israel. A teologia da aliança e o premilenismo histórico entendem esses textos como referências a um único evento com desdobramentos: a vinda de Cristo é sempre a mesma, gloriosa e universal, sem divisão em duas fases separadas por anos.</p>
+<p>Mesmo quando há divergência sobre a cronologia, o texto bíblico insiste em um ponto central: o retorno de Cristo interromperá decisivamente a presente ordem do mundo. A Igreja não aguarda apenas um símbolo de renovação moral, mas a manifestação do Senhor ressurreto, que concluirá sua obra com autoridade visível e irreversível.</p>
+<div class="baluno ba-biblica">
+<div class="baluno-tag"><span class="baluno-ico">✎</span> Conexão Bíblica</div>
+<div class="baluno-corpo">Leia Atos 1:9-11 e Mateus 24:30. Quais palavras nesses versículos reforçam as quatro características da vinda de Cristo — pessoal, corporal, visível e gloriosa? Anote abaixo os termos que mais chamaram sua atenção.</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 DESENVOLVIMENTO II -->
+<div class="lbl">Página 4 · Desenvolvimento II</div>
+<div class="pag int">
+<div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 08</span><span class="pht">A Segunda Vinda de Cristo</span></div>
+<h2>II — Os Desdobramentos da Parusia</h2>
+<p>A Segunda Vinda de Cristo não é um evento isolado, mas o início de uma série de acontecimentos que consumam a história da salvação. Cada tradição ordena esses desdobramentos de forma distinta, mas todos os afirmam como reais e certos.</p>
+<h3>A Ressurreição dos Mortos</h3>
+<p>O retorno de Cristo desencadeia a ressurreição, tema que será aprofundado na próxima lição. Em 1 Coríntios 15:23, Paulo estabelece a ordem: "Cristo, as primícias; depois, os que são de Cristo, na sua vinda." A ressurreição corporal dos crentes é inseparável da Parusia; não há escatologia cristã sem corpo ressurreto.</p>
+<div class="bver">"Quando Cristo, que é a nossa vida, se manifestar, então também vós vos manifestareis com ele em glória." <cite>Colossenses 3:4</cite></div>
+<div class="sep"><span>✦</span></div>
+<h3>O Julgamento Final</h3>
+<p>A Segunda Vinda inaugura o julgamento: Cristo vem "para julgar os vivos e os mortos" (2 Tm 4:1). Esse julgamento não é arbitrário; é a revelação pública e definitiva da justiça de Deus diante de toda a criação. Cada ser humano comparecerá diante do tribunal de Cristo (2 Co 5:10). Para os crentes, é afirmação da graça; para os incrédulos, é condenação justa.</p>
+<h3>A Renovação de Todas as Coisas</h3>
+<p>A Parusia inaugura também a renovação cósmica, o que Pedro chama de "restauração de todas as coisas" (At 3:21) e Paulo de "libertação da escravidão da corrupção" (Rm 8:21). O cosmos criado por Deus não será destruído e substituído, mas transformado e glorificado. A nova criação é continuidade com transformação, não aniquilação e substituição total.</p>
+<p>Por isso, ressurreição, juízo e renovação da criação não devem ser pensados como temas isolados. Na visão bíblica, eles formam um único movimento da consumação: Cristo vem, vence publicamente todo mal, vindica o seu povo e estabelece a plenitude de seu Reino. A esperança cristã é integral, alcançando o corpo, a história e toda a criação.</p>
+<div class="baluno ba-sabia">
+<div class="baluno-tag"><span class="baluno-ico">▶</span> Sabia que?</div>
+<div class="baluno-corpo">A palavra grega <em>apokatastasis</em> ("restauração de todas as coisas", At 3:21) foi usada na antiguidade para descrever a renovação total de um organismo vivo — não sua destruição. Isso reforça que a nova criação é transformação, não aniquilamento. A esperança cristã é radicalmente material e histórica.</div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 VISOES EM DIALOGO -->
+<div class="lbl">Página 5 · Visões em Diálogo</div>
+<div class="pag int">
+<div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 08</span><span class="pht">A Segunda Vinda de Cristo</span></div>
+<h2>III — Visões em Diálogo</h2>
+<p>Sobre a realidade da Segunda Vinda, há consenso total. Sobre sua natureza, cronologia e desdobramentos, as tradições divergem em pontos importantes, sempre dentro do mesmo horizonte de esperança cristã.</p>
+<div class="bvp">
+<div class="vl">✦ Perspectiva Pentecostal</div>
+<div class="vt">Para o pentecostalismo dispensacionalista, a "Segunda Vinda" tecnicamente se divide em dois eventos: o arrebatamento, parousia para a Igreja, secreto e iminente, e a revelação gloriosa, apokalypsis, pública, após sete anos de Tribulação. No arrebatamento, Cristo vem "no ar" (1 Ts 4:17) e busca a Igreja sem tocar a terra; na Segunda Vinda propriamente dita, seus pés tocam o Monte das Oliveiras (Zc 14:4). Entre os dois eventos, transcorre a Tribulação. A iminência do arrebatamento é central na espiritualidade pentecostal: Cristo pode vir a qualquer momento.</div>
+</div>
+<div class="bvr">
+<div class="vl">✦ Perspectiva Reformada</div>
+<div class="vt">Para a teologia reformada e o amilenismo, há uma única e gloriosa vinda de Cristo ao fim da história, sem divisão em fases. A "saída ao encontro" de 1 Tessalonicenses 4:17 usa o vocabulário da parousia greco-romana: os crentes saem ao encontro do rei que vem, para conduzi-lo triunfalmente, e não para ser levados para longe. A Segunda Vinda é simultaneamente ressurreição dos mortos, julgamento universal e inauguração da nova criação. Hoekema, Ridderbos e Murray defendem essa leitura unitária da Parusia.</div>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>O núcleo confessional comum é inabalável: Jesus Cristo voltará pessoalmente, corporalmente e gloriosamente. Toda a Igreja de todos os séculos confessa essa esperança; ela é o fundamento da adoração, da missão e da perseverança cristã diante do sofrimento e da morte.</p>
+<p>Essa convergência deve produzir humildade teológica. O cristão pode sustentar convicções firmes sobre a ordem dos eventos escatológicos, mas não deve permitir que pontos secundários obscureçam a certeza principal: o Cristo que veio em humilhação virá novamente em glória. Essa verdade comum é maior do que as divergências entre os sistemas.</p>
+<div class="baluno ba-pense">
+<div class="baluno-tag"><span class="baluno-ico">⊙</span> Pense nisso</div>
+<div class="baluno-corpo">Pentecostais e reformados discordam sobre o arrebatamento, mas concordam que Cristo voltará pessoalmente. Essa convergência é suficiente para a unidade da Igreja? Onde você traçaria a linha entre divergência secundária e erro essencial na escatologia?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 APLICACAO -->
+<div class="lbl">Página 6 · Aplicação Prática</div>
+<div class="pag int">
+<div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 08</span><span class="pht">A Segunda Vinda de Cristo</span></div>
+<h2>Conclusão </h2>
+<p>A esperança da Segunda Vinda não foi dada para alimentar especulações cronológicas nem para justificar o escapismo espiritualista, mas para transformar o modo como vivemos agora. Três atitudes bíblicas decorrem dessa esperança: vigilância, santidade e missão. São inseparáveis e mutuamente dependentes.</p>
+<p>Conclusivamente, a doutrina da volta de Cristo chama a Igreja a uma vida equilibrada: pés firmes no presente e olhos voltados para a promessa. Quem espera o Senhor não abandona o mundo, mas serve nele com fidelidade, sabendo que nenhum trabalho feito em Cristo é vão e que a história terá um desfecho santo e justo.</p>
+<div class="apl">
+<div class="at">Aplicação</div>
+<p>Primeiro: leia Tito 2:11-14. Paulo conecta diretamente a "bendita esperança" da vinda de Cristo com a vida sóbria, justa e piedosa no presente. O que em sua vida precisa mudar à luz dessa conexão? Segundo: reflita sobre a afirmação dos dois anjos em Atos 1:11: "Por que estais olhando para o céu?" Você tende a ficar contemplando o futuro em vez de agir no presente com a força da esperança? Terceiro: compartilhe com alguém próximo a razão da sua esperança, a certeza de que a história tem um destino e de que Cristo é o Senhor desse destino.</p>
+</div>
+<div class="sep"><span>✦</span></div>
+<h3>Para Refletir</h3>
+<p>C.S. Lewis escreveu: "Se você ler a história, descobrirá que os cristãos que mais fizeram pelo mundo presente foram justamente aqueles que mais pensaram no mundo vindouro." Isso contradiz o chavão de que a esperança escatológica torna o cristão inútil no presente. Como a certeza do retorno de Cristo pode ser o maior motivador para o serviço, a criatividade e o amor ao próximo hoje?</p>
+<div class="bver">"Aguardando a bendita esperança e a manifestação da glória do grande Deus e Salvador nosso Jesus Cristo, o qual se entregou a si mesmo por nós." <cite>Tito 2:13-14</cite></div>
+<p>Na próxima lição estudaremos a doutrina fundamental que acompanha a Parusia: <strong>A Ressurreição dos Mortos</strong> — o que nos espera além da morte.</p>
+<div class="baluno ba-vida">
+<div class="baluno-tag"><span class="baluno-ico">✦</span> Leve para a vida</div>
+<div class="baluno-corpo">Esta semana, escolha uma atitude concreta motivada pela esperança da volta de Cristo: uma reconciliação adiada, um serviço esquecido, uma palavra de esperança a alguém que vive no medo. Anote aqui o que você vai fazer:</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 QUESTOES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 08</span><span class="pht">A Segunda Vinda de Cristo</span></div>
+<h2>Questões</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">O termo grego "parousia" descrevia a visita pública de um rei. Como esse contexto cultural enriquece a compreensão da Segunda Vinda em 1 Tessalonicenses 4:16-17? O que muda na sua leitura ao entender esse pano de fundo?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Quais são as quatro características irredutíveis da Segunda Vinda segundo as Escrituras (pessoal, corporal, visível, gloriosa)? Por que cada uma delas é teologicamente importante e não pode ser negligenciada?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">O dispensacionalismo divide a vinda de Cristo em duas fases separadas; a teologia reformada a entende como um único evento. Quais textos bíblicos cada posição usa como suporte? Qual argumento você considera mais sólido?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">C.S. Lewis disse que quem mais pensa no mundo vindouro é quem mais faz pelo presente. Você concorda? Como a esperança da Segunda Vinda tem, ou deveria ter, impacto concreto nas suas escolhas e prioridades desta semana?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="lit">
+<div class="lt">Leituras Complementares</div>
+<ul>
+<li>Anthony Hoekema — A Bíblia e o Futuro, cap. 10 (a Segunda Vinda na perspectiva reformada)</li>
+<li>N.T. Wright — Surpreendido pela Esperança (a ressurreição e a nova criação como horizonte da Parusia)</li>
+<li>Leitura devocional: Atos 1:9-11 + 1 Ts 4:13-18 + Ap 1:4-8 + Tito 2:11-14</li>
+</ul>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

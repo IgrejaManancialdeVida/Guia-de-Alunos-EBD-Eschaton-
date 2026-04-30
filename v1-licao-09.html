@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton · Lição 09 — A Ressurreição dos Mortos</title>
+
+<meta content="#1a1428" name="theme-color"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icon-192.svg" rel="apple-touch-icon"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--cor:#2090b0;--grad1:#0a2028;--grad2:#082030;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(32,144,176,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 22% 58%,rgba(32,144,176,0.45) 0%,transparent 55%),radial-gradient(ellipse at 80% 22%,rgba(201,168,76,0.18) 0%,transparent 45%),radial-gradient(ellipse at 52% 85%,rgba(0,50,80,0.4) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:18px 18px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#082030,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#030c10,var(--cor) 55%,#90e0ff);opacity:0.38;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,#082030,var(--cor),var(--ouro),transparent);opacity:0.7;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.1;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:20pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#082030,var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(32,144,176,0.35);background:rgba(32,144,176,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.obj ul li::before { content: '→'; position: absolute; left: 0; color: var(--cor); font-size: 9pt; }
+.apl{background:linear-gradient(135deg,rgba(32,144,176,0.06),rgba(201,168,76,0.06));border:1px solid rgba(32,144,176,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before {
+    content: '\2192'; /* Código Unicode para seta para a direita (→) */
+    position: absolute;
+    left: 2px;
+    color: var(--ouro);
+    font-family: Arial, sans-serif; /* Garante que o símbolo apareça em qualquer celular */
+}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(32,144,176,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(32,144,176,0.08);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ── BLOCOS DO ALUNO ── */
+.baluno{border-radius:3px;padding:9px 12px;margin-top:12px;margin-bottom:2px;position:relative;}
+.baluno-ico{font-size:10pt;margin-right:6px;vertical-align:middle;}
+.baluno-tag{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.baluno-corpo{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.baluno-linha{border-bottom:1px solid rgba(0,0,0,0.12);height:22px;margin-top:6px;}
+
+/* Variantes de cor */
+.ba-refletir{background:rgba(32,144,176,0.06);border-left:3px solid var(--cor);}
+.ba-refletir .baluno-tag{color:var(--cor);}
+.ba-biblica{background:rgba(201,168,76,0.07);border-left:3px solid var(--ouro);}
+.ba-biblica .baluno-tag{color:#8a6a20;}
+.ba-sabia{background:rgba(60,120,180,0.06);border-left:3px solid #5080b0;}
+.ba-sabia .baluno-tag{color:#4060a0;}
+.ba-pense{background:rgba(32,144,176,0.04);border:1px dashed rgba(32,144,176,0.30);border-left:3px solid var(--cor);}
+.ba-pense .baluno-tag{color:var(--cor);}
+.ba-vida{background:linear-gradient(135deg,rgba(32,144,176,0.05),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.30);border-left:3px solid var(--ouro);}
+.ba-vida .baluno-tag{color:#8a6a20;}
+
+@media (max-width:768px){
+    .baluno{padding:8px 10px;}
+    .baluno-corpo,.baluno-linha{font-size:9.5pt;}
+}
+@media print{
+    .baluno{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON<span>Lição 09 · A Ressurreição dos Mortos</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<div aria-label="Abrir lição 09" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<img alt="Capa da revista Eschaton" src="capa-revista.png"/>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">09</div><div class="cnd">09</div>
+<div class="ccon">
+<div class="cser">Série · Eschaton · Estudos Escatológicos</div>
+<div class="ctit">A Ressurreição dos Mortos</div>
+<div class="cver">
+            "Mas agora Cristo ressuscitou dentre os mortos e se tornou as primícias dos que dormem... Porque assim como todos morrem em Adão, assim também todos serão vivificados em Cristo."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">1 Coríntios 15:20,22</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 09</span><span class="pht">A Ressurreição dos Mortos</span></div>
+<h2>Introdução</h2>
+<p class="cap">Em uma cultura que oscila entre o medo da morte e a negação dela, a doutrina da ressurreição dos mortos é o testemunho mais radical e contracultural do cristianismo. Não é imortalidade da alma — ideia grega que desconfia do corpo. Não é reencarnação — ideia oriental que descarta o indivíduo. É ressurreição: o mesmo corpo, transformado e glorificado, reunido com o espírito para uma vida plena e eterna na nova criação de Deus.</p>
+<div class="bver">"Porque sei que o meu Redentor vive, e que por último se levantará sobre o pó; e depois de consumida a minha pele, ainda verei a Deus na minha carne." <cite>Jó 19:25-26</cite></div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Distinguir a ressurreição bíblica da imortalidade da alma grega e da reencarnação</li>
+<li>Compreender Cristo como "primícia" — garantia e modelo da ressurreição dos crentes</li>
+<li>Examinar 1 Coríntios 15 como o texto mais completo sobre a ressurreição no NT</li>
+<li>Avaliar as perspectivas pentecostal e reformada sobre a sequência das ressurreições</li>
+</ul>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>Jó 19:25-26 é um dos versículos mais antigos da Bíblia — e já confessa a ressurreição corporal com clareza surpreendente. Jó, em seu sofrimento extremo, afirma que verá Deus "na minha carne". O corpo não é obstáculo para a eternidade — é o palco dela.</p>
+<p>A ressurreição bíblica, portanto, não é fuga do mundo material, mas sua redenção final. Deus não abandona a obra de suas mãos; antes, leva à consumação aquilo que criou e declarou bom desde o princípio. Por isso, a esperança cristã não se limita ao consolo para a alma, mas alcança a pessoa inteira.</p>
+<p>Essa doutrina também corrige dois extremos frequentes: o materialismo, que reduz o homem ao corpo presente, e o espiritualismo, que trata o corpo como algo descartável. Nas Escrituras, o ser humano é uma unidade criada por Deus, e a salvação plena inclui a restauração dessa unidade na presença do Senhor.</p>
+<div class="baluno ba-refletir">
+<div class="baluno-tag"><span class="baluno-ico">◆</span> Para você refletir</div>
+<div class="baluno-corpo">A ressurreição corporal é a esperança mais radical do cristianismo. Como essa doutrina diferencia a fé cristã das demais visões sobre a morte — especialmente das ideias de imortalidade da alma e reencarnação? O que muda para você saber que Deus redimirá o seu próprio corpo?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 DESENVOLVIMENTO I -->
+<div class="lbl">Página 3 · Desenvolvimento I</div>
+<div class="pag int">
+<div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 09</span><span class="pht">A Ressurreição dos Mortos</span></div>
+<h2>I — O Fundamento: Cristo Ressuscitado</h2>
+<p>A doutrina da ressurreição dos mortos não é uma esperança autônoma — ela depende inteiramente da ressurreição de Cristo como seu fundamento e garantia. Paulo é categórico em 1 Coríntios 15:17-18: "se Cristo não ressuscitou, a vossa fé é vã... e também os que dormiram em Cristo estão perdidos." A ressurreição cristã não é um apêndice da fé — ela é a fé.</p>
+<h3>Cristo: As Primícias da Ressurreição</h3>
+<p>Paulo usa a imagem das "primícias" — a primeira porção da colheita oferecida a Deus como penhor e garantia do restante (1 Co 15:20,23). A ressurreição de Cristo não é um caso isolado, mas o início de uma colheita maior: todos os que são de Cristo ressuscitarão na sua vinda. Há uma solidariedade ontológica entre o Chefe e os membros do corpo — onde ele chegou, nós chegaremos.</p>
+<div class="bver">"Mas agora Cristo ressuscitou dentre os mortos e se tornou as primícias dos que dormem." <cite>1 Coríntios 15:20</cite></div>
+<h3>O Corpo Ressurreto: Continuidade e Transformação</h3>
+<p>A analogia do grão em 1 Coríntios 15:35-44 é fundamental: o corpo ressurreto é o mesmo corpo semeado, mas gloriosamente transformado — assim como o trigo que brota não é idêntico ao grão plantado, mas é sua continuação orgânica. Há identidade pessoal real: o mesmo "eu" que viveu, sofreu e amou. E há transformação radical: de corruptível para incorruptível, de desonra para glória, de fraqueza para poder, de natural para espiritual.</p>
+<p>A ressurreição de Cristo, portanto, não é apenas prova de seu poder, mas o padrão da esperança cristã. O túmulo vazio não anuncia apenas que Jesus venceu a morte; anuncia também que a morte perdeu seu domínio definitivo sobre todos os que lhe pertencem.</p>
+<p>Isso significa que a esperança do crente não repousa em uma sobrevivência vaga após a morte, mas em uma promessa histórica e concreta. Assim como Cristo ressuscitou de fato, em continuidade com o corpo que foi crucificado, também os redimidos ressuscitarão em continuidade real com a sua identidade pessoal, embora plenamente transformados pela glória de Deus.</p>
+<div class="baluno ba-biblica">
+<div class="baluno-tag"><span class="baluno-ico">✎</span> Conexão Bíblica</div>
+<div class="baluno-corpo">Leia 1 Coríntios 15:35-44. Paulo usa a imagem do grão para explicar continuidade e transformação. Quais pares de contraste ele apresenta (v. 42-44)? O que cada par revela sobre a diferença entre o corpo atual e o corpo ressurreto?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 DESENVOLVIMENTO II -->
+<div class="lbl">Página 4 · Desenvolvimento II</div>
+<div class="pag int">
+<div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 09</span><span class="pht">A Ressurreição dos Mortos</span></div>
+<h2>II — A Sequência das Ressurreições</h2>
+<p>A Bíblia indica que a ressurreição ocorre em sequência — não como um evento único e simultâneo para todos. A questão é: qual é essa sequência, quantas ressurreições há e quando cada uma ocorre? Esse é um dos pontos de maior debate entre as tradições escatológicas.</p>
+<h3>A Ordem Paulina: 1 Coríntios 15:23-24</h3>
+<p>Paulo estabelece: primeiro Cristo (as primícias), depois os que são de Cristo na sua vinda, depois o fim — quando Cristo entregar o reino ao Pai. O premilenismo vê aqui duas ressurreições separadas por mil anos: a dos justos na Segunda Vinda e a dos ímpios após o milênio (cf. Ap 20:4-6). O amilenismo vê uma única ressurreição geral de todos — justos e ímpios — na vinda de Cristo.</p>
+<div class="bver">"Porque assim como todos morrem em Adão, assim também todos serão vivificados em Cristo. Mas cada um na sua própria ordem." <cite>1 Coríntios 15:22-23</cite></div>
+<div class="sep"><span>✦</span></div>
+<h3>O Estado Intermediário</h3>
+<p>O que acontece entre a morte e a ressurreição? A Bíblia afirma que os crentes que morrem estão "com Cristo" (Fp 1:23) — em estado consciente de comunhão com o Senhor, aguardando a ressurreição corporal. Esse "estado intermediário" é bom e desejável (2 Co 5:8), mas incompleto — pois o destino final do crente é a ressurreição do corpo, não apenas a sobrevivência da alma. A alma sem corpo não é o ideal bíblico — é um estado temporário de espera.</p>
+<h3>A Ressurreição dos Ímpios</h3>
+<p>João 5:28-29 e Daniel 12:2 afirmam claramente a ressurreição de todos — justos e ímpios. Os ímpios ressuscitarão para o julgamento e a condenação eterna. A ressurreição não é privilégio dos salvos apenas — é o destino universal da humanidade, com destinos radicalmente distintos.</p>
+<p>Seja qual for a cronologia adotada, o ponto central permanece: a morte não terá a palavra final sobre nenhum ser humano. Todos comparecerão diante de Deus como pessoas integrais, e não como consciências desencarnadas. A ressurreição estabelece a seriedade moral da existência humana e a dignidade do corpo diante do Criador.</p>
+<p>O estado intermediário, por sua vez, embora seja de consolo para os que morrem no Senhor, não deve ser confundido com o destino final. A esperança cristã mira além do descanso da alma na presença de Cristo; ela aguarda o dia em que o corpo também será redimido, e a comunhão com Deus será experimentada em plenitude na nova criação.</p>
+<div class="baluno ba-sabia">
+<div class="baluno-tag"><span class="baluno-ico">▶</span> Sabia que?</div>
+<div class="baluno-corpo">A palavra grega <em>anastasis</em> ("ressurreição") significa literalmente "levantar-se" ou "ficar de pé novamente". No mundo antigo, quando Paulo pregou sobre a <em>anastasis</em> em Atenas (At 17:32), os filósofos gregos riram — pois a ressurreição do corpo era considerada indesejável. Para os gregos, o corpo era uma prisão da alma. O evangelho inverteu radicalmente essa visão.</div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 VISOES EM DIALOGO -->
+<div class="lbl">Página 5 · Visões em Diálogo</div>
+<div class="pag int">
+<div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 09</span><span class="pht">A Ressurreição dos Mortos</span></div>
+<h2>III — Visões em Diálogo</h2>
+<p>Sobre a realidade da ressurreição corporal, há consenso pleno entre pentecostais e reformados. A divergência se concentra na sequência, no número e no momento das ressurreições em relação ao milênio e ao julgamento.</p>
+<div class="bvp">
+<div class="vl">✦ Perspectiva Pentecostal</div>
+<div class="vt">Para o dispensacionalismo pentecostal, há múltiplas ressurreições em sequência: (1) a ressurreição de Cristo como primícias; (2) a ressurreição dos crentes no arrebatamento pré-tribulacional; (3) a ressurreição dos mártires da Tribulação ao início do milênio; (4) a ressurreição dos ímpios após o milênio para o Grande Trono Branco. A "primeira ressurreição" de Apocalipse 20:5-6 é literal e corporal — especificamente a dos mártires da Tribulação que reinarão com Cristo por mil anos. O corpo ressurreto é idêntico ao atual, mas glorificado como o de Cristo após a ressurreição.</div>
+</div>
+<p>A divergência entre essas leituras não elimina o núcleo comum da fé cristã. Ambas afirmam que a ressurreição será corporal, histórica, universal e inseparável do senhorio de Cristo. A diferença está na ordem dos acontecimentos, não na realidade gloriosa prometida por Deus ao seu povo.</p>
+<p>Por isso, o estudo desse tema deve produzir reverência e esperança, e não mera curiosidade cronológica. A finalidade pastoral da doutrina é fortalecer a perseverança dos santos, consolar os enlutados e orientar a Igreja a viver no presente à luz do futuro prometido.</p>
+    <div class="bvr">
+<div class="vl">✦ Perspectiva Reformada</div>
+<div class="vt">Para o amilenismo reformado, há uma única ressurreição geral de todos os mortos — justos e ímpios — na vinda de Cristo ao final da história. A "primeira ressurreição" de Apocalipse 20:5-6 é interpretada como regeneração espiritual ou como a entrada dos crentes na glória após a morte. João 5:28-29 — "todos os que estão nos sepulcros ouvirão a sua voz e sairão" — aponta para um único evento simultâneo. Hoekema, Berkhof e Murray defendem essa leitura unitária. O corpo ressurreto é o mesmo corpo de carne transformado, como o de Cristo que comeu peixe (Lc 24:42) e ainda tinha as marcas dos pregos (Jo 20:27).</div>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>Ambas as tradições afirmam com igual convicção: o corpo importa para Deus, a identidade pessoal é preservada na ressurreição, e a vida eterna não é uma existência etérea e desencarnada, mas uma vida plena, encarnada, na nova criação que Deus está preparando.</p>
+<div class="baluno ba-pense">
+<div class="baluno-tag"><span class="baluno-ico">⊙</span> Pense nisso</div>
+<div class="baluno-corpo">Pentecostais e reformados divergem sobre o número e a ordem das ressurreições — mas afirmam com igual convicção que a ressurreição será corporal e inseparável do senhorio de Cristo. Essa convergência é suficiente para a comunhão cristã? Onde está a linha entre debate teológico legítimo e divisão desnecessária?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 APLICACAO -->
+<div class="lbl">Página 6 · Conclusão e Aplicação</div>
+<div class="pag int">
+<div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 09</span><span class="pht">A Ressurreição dos Mortos</span></div>
+<h2>Conclusão </h2>
+<p>A doutrina da ressurreição não é conforto abstrato — ela transforma concretamente o modo como o cristão lida com o corpo, com o luto, com o trabalho e com o sofrimento. Se este corpo ressuscitará, ele importa agora. Se a história tem destino, o trabalho presente tem sentido eterno. Se veremos nossos amados em Cristo novamente, o luto tem horizonte.</p>
+<div class="apl">
+<div class="at">Aplicação </div>
+<p>Primeiro: reflita sobre como a cultura ao seu redor trata o corpo — como objeto de prazer descartável, como máquina de performance ou como templo do Espírito Santo que ressuscitará. Qual dessas visões molda sua relação com o próprio corpo? Segundo: visite ou escreva para alguém que está enlutado e compartilhe não apenas conforto emocional, mas também a esperança concreta da ressurreição — "voltareis a ver" (Jo 16:22). Terceiro: medite em 1 Coríntios 15:58 — "sede firmes e constantes, sempre abundando na obra do Senhor, sabendo que o vosso trabalho não é em vão no Senhor."</p>
+</div>
+<div class="sep"><span>✦</span></div>
+<h3>Para Refletir</h3>
+<p>N.T. Wright observa que a ressurreição de Cristo é a base para o engajamento com o mundo presente — não para o escapismo. Se o corpo ressurreto de Cristo ainda tinha as marcas dos pregos (Jo 20:27), isso sugere que a história não é descartada na eternidade, mas redimida e transformada. Como isso muda sua postura diante do sofrimento, da injustiça e do trabalho cotidiano?</p>
+<div class="bver">"Portanto, meus amados irmãos, sede firmes e constantes, sempre abundando na obra do Senhor, sabendo que o vosso trabalho não é em vão no Senhor." <cite>1 Coríntios 15:58</cite></div>
+<p>Na próxima lição enfrentaremos a realidade mais solene da escatologia bíblica: <strong>O Juízo Final</strong> — o Grande Trono Branco e a sentença eterna.</p>
+<p>Concluir essa doutrina corretamente é reconhecer que a ressurreição confere densidade eterna à vida presente. O que fazemos com o corpo, com o tempo, com o sofrimento e com o serviço cristão não é irrelevante. Tudo é vivido à sombra da promessa de que Deus redimirá plenamente aquilo que hoje ainda geme.</p>
+<p>Assim, a esperança da ressurreição não produz alienação, mas fidelidade. O cristão pode enfrentar perdas, limitações e a própria morte sem desespero, porque sabe que em Cristo sua história não termina no túmulo. O último capítulo da existência humana pertence ao Deus que ressuscita os mortos.</p>
+<div class="baluno ba-vida">
+<div class="baluno-tag"><span class="baluno-ico">✦</span> Leve para a vida</div>
+<div class="baluno-corpo">Esta semana, escolha uma atitude concreta motivada pela esperança da ressurreição: trate seu corpo com dignidade como templo que ressuscitará; consolide alguém enlutado com a esperança concreta da ressurreição; ou realize um serviço presente sabendo que ele não é vão no Senhor (1 Co 15:58). Anote aqui o que você vai fazer:</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 QUESTOES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 09</span><span class="pht">A Ressurreição dos Mortos</span></div>
+<h2>Questões para Reflexão</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">Qual é a diferença fundamental entre a ressurreição bíblica, a imortalidade da alma grega e a reencarnação oriental? Por que essas distinções importam para a fé cristã prática — especialmente diante do luto e da morte?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Paulo usa a imagem do grão em 1 Coríntios 15:35-44 para descrever o corpo ressurreto. O que essa analogia revela sobre a relação entre o corpo atual e o corpo glorificado — continuidade e transformação ao mesmo tempo?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">O dispensacionalismo vê múltiplas ressurreições sequenciais; o amilenismo vê uma ressurreição geral única. Quais textos bíblicos cada posição usa? Como João 5:28-29 e Apocalipse 20:4-6 se relacionam nesse debate?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">Se o trabalho presente "não é em vão no Senhor" (1 Co 15:58) por causa da ressurreição, o que isso diz sobre o valor eterno de suas ações cotidianas — seu trabalho, suas relações, sua criatividade e seu serviço?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="lit">
+<div class="lt">Leituras Complementares</div>
+<ul>
+<li>N.T. Wright — Surpreendido pela Esperança (a ressurreição como fundamento do engajamento cristão)</li>
+<li>Anthony Hoekema — A Bíblia e o Futuro, cap. 11-12 (ressurreição e estado intermediário)</li>
+<li>Leitura devocional: Jó 19:23-27 + 1 Co 15 completo + Jo 11:17-27 + Fp 3:20-21</li>
+</ul>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

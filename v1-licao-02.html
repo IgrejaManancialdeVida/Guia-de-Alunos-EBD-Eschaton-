@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton · Lição 02 — Os Sinais dos Tempos</title>
+
+<meta name="theme-color" content="#1a1428">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#7a5fa5;--grad1:#1a1428;--grad2:#2a1a40;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(122,95,165,0.4);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 60%,rgba(122,95,165,0.4) 0%,transparent 55%),radial-gradient(ellipse at 80% 25%,rgba(201,168,76,0.1) 0%,transparent 45%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:20px 20px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(160deg,var(--grad1),var(--cor) 50%,#b09de0);opacity:0.35;}
+.clh{position:absolute;top:52%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.6;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.15;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:22pt;font-weight:700;color:#fff;line-height:1.15;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--cor),var(--ouro) 60%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(122,95,165,0.35);background:rgba(122,95,165,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.obj ul li::before{content:'→';position:absolute;left:0;color:var(--cor);font-size:9pt;}
+.apl{background:linear-gradient(135deg,rgba(122,95,165,0.06),rgba(201,168,76,0.06));border:1px solid rgba(122,95,165,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'·';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(122,95,165,0.06);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(122,95,165,0.09);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ===== BLOCOS-ALUNO ===== */
+.bloco-aluno{
+    background:rgba(122,95,165,0.06);
+    border:1px solid rgba(122,95,165,0.25);
+    border-left:4px solid var(--cor);
+    border-radius:3px;
+    padding:10px 12px;
+    margin:12px 0 10px;
+}
+.bloco-aluno .ba-titulo{
+    font-family:'Oswald',sans-serif;
+    font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;
+    color:var(--cor);margin-bottom:6px;
+    display:flex;align-items:center;gap:6px;
+}
+.bloco-aluno .ba-titulo::before{content:'✦';font-size:7pt;color:var(--cor);}
+.bloco-aluno p{
+    font-family:'EB Garamond',serif;font-size:10pt;
+    line-height:1.6;color:var(--ct);margin-bottom:0;text-align:left;hyphens:none;
+}
+</style>
+</head>
+<body>
+<div class="painel">
+    <div class="marca">ESCHATON<span>Lição 02 · Os Sinais dos Tempos</span></div>
+    <button class="btn be" onclick="toggleEdit()">✏️ <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">🖨️ Imprimir</button>
+    <a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+
+<div class="area">
+
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 02">
+    <img src="capa-revista.png" alt="Capa da revista Eschaton">
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+
+<div id="conteudoLicao">
+
+<!-- PG 1 — CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">02</div><div class="cnd">02</div>
+    <div class="ccon">
+        <div class="cser">Série · Eschaton · Estudos Escatológicos</div>
+        <div class="ctit">Os Sinais dos Tempos</div>
+        <div class="cver">
+            "Quando, porém, começarem a acontecer essas coisas, olhai para cima e levantai a vossa cabeça, porque a vossa redenção está próxima."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Lucas 21:28</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 — INTRODUÇÃO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 02</span><span class="pht">Os Sinais dos Tempos</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Era terça-feira da Semana Santa quando, saindo do Templo de Jerusalém, Jesus fez uma afirmação desconcertante: não ficaria pedra sobre pedra naquele majestoso complexo. Os discípulos, atônitos, buscaram um momento a sós com ele no Monte das Oliveiras. Ali, fizeram a pergunta que ecoa por vinte séculos: "Qual o sinal da tua vinda e do fim do século?" (Mateus 24:3). Essa pergunta, ao mesmo tempo simples e profunda, inaugura o mais importante discurso escatológico de Jesus — e continua a desafiar intérpretes e crentes até hoje.</p>
+    <div class="bver">"E haverá sinais no sol, na lua e nas estrelas; e na terra angústia das nações... os homens desmaiando de terror." <cite>Lucas 21:25-26</cite></div>
+    <div class="obj">
+        <div class="ot">Objetivos desta lição</div>
+        <ul>
+            <li>Compreender o contexto histórico e literário do Discurso do Monte das Oliveiras</li>
+            <li>Identificar as três categorias de sinais descritos por Jesus em Mateus 24</li>
+            <li>Distinguir o cumprimento histórico em 70 d.C. do cumprimento escatológico futuro</li>
+            <li>Aplicar o princípio da vigilância sem ansiedade no cotidiano cristão contemporâneo</li>
+        </ul>
+    </div>
+    <div class="sep"><span>✦</span></div>
+    <p>Em um mundo onde algoritmos amplificam cada crise como "o sinal definitivo", onde pastores monetizam cronogramas proféticos e onde a ansiedade apocalíptica cresce nas redes sociais, o estudo rigoroso de Mateus 24 torna-se o antídoto necessário para uma geração que precisa de ancoragem bíblica sólida. Nas páginas seguintes, examinaremos o Discurso do Monte das Oliveiras em seu contexto histórico, classificaremos as categorias de sinais apresentados por Jesus e colocaremos as perspectivas pentecostal e reformada em diálogo honesto e construtivo.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Para Você Refletir — O que Jesus Quis Dizer?</div>
+<p>A pergunta dos discípulos em Mateus 24:3 — "Qual o sinal da tua vinda e do fim do século?" — é a mesma que muita gente ainda faz hoje. Jesus não respondeu com uma data, mas com um mapa espiritual: guerras, tribulações, o evangelho sendo pregado. Antes de tentar decifrar cada sinal, pergunte-se: Jesus me chamou a <em>calcular</em> ou a <em>vigiar</em>? A diferença muda completamente a postura do cristão diante das crises do mundo.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 — TÓPICO I -->
+<div class="lbl">Página 3 · Tópico I</div>
+<div class="pag int">
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 02</span><span class="pht">Os Sinais dos Tempos</span></div>
+    <h2> I — O Discurso do Monte das Oliveiras</h2>
+    <p>A pergunta dos discípulos em Mateus 24:3 é, na verdade, dupla: "Quando serão essas coisas?" (a destruição do Templo) e "Qual o sinal da tua vinda e do fim do século?". Essa ambiguidade é o coração de toda a dificuldade interpretativa do capítulo — os discípulos provavelmente entendiam os dois eventos como simultâneos, mas Jesus os trata com nuances distintas. Essa tensão entre o imediato e o definitivo é o fio condutor de todo o discurso.</p>
+    <p>Por isso, ao ler Mateus 24, é necessário observar com atenção quando Jesus fala de eventos próximos aos seus ouvintes e quando amplia a perspectiva para o desfecho da história. Essa distinção não elimina a unidade do discurso, mas ajuda o leitor a perceber a profundidade da resposta de Cristo.</p>
+    <h3>A Destruição de Jerusalém (70 d.C.)</h3>
+    <p>Em 70 d.C., as legiões romanas sob o comando de Tito sitiaram Jerusalém por cinco meses. O Templo foi incendiado e as pedras foram reviradas para recuperar o ouro derretido entre as juntas — cumprindo literalmente a profecia de Jesus. Mais de um milhão de judeus morreram; outros cem mil foram escravizados. Aqueles que se lembraram das palavras de Jesus e fugiram para Pela sobreviveram.</p>
+    <div class="bver">"Quando, pois, virdes o abominável da desolação... então, os que estiverem na Judeia, fujam para os montes." <cite>Mateus 24:15-16</cite></div>
+    <h3>O Princípio do Cumprimento Duplo</h3>
+    <p>Muitas profecias bíblicas possuem um cumprimento histórico próximo (tipo) e um cumprimento escatológico futuro (antítipo). A destruição de Jerusalém prefigura os eventos do fim dos tempos — assim como o Êxodo prefigurou a redenção em Cristo. Reconhecer esse princípio é chave para interpretar Mateus 24 com maturidade hermenêutica e sem cair em reducionismos de um único lado.</p>
+    <p>Esse princípio também nos ensina que a profecia bíblica pode ter camadas de sentido sem perder sua objetividade. O cumprimento histórico confirma a fidelidade da Palavra de Deus, enquanto o cumprimento futuro mantém viva a expectativa da consumação final.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Conexão Histórica — Quando a Profecia Virou Notícia</div>
+<p>Em 70 d.C., as palavras de Jesus em Mateus 24:2 se tornaram manchete de jornal: o Templo foi destruído pedra por pedra. Os cristãos que se lembraram da instrução de fugir para as montanhas (Mt 24:16) sobreviveram. Isso não é coincidência — é evidência de que a profecia bíblica é confiável. O Deus que cumpriu a promessa sobre Jerusalém é o mesmo que cumprirá tudo o que disse sobre o fim da história.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 — TÓPICO II -->
+<div class="lbl">Página 4 · Tópico II</div>
+<div class="pag int">
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 02</span><span class="pht">Os Sinais dos Tempos</span></div>
+    <h2> II — As Categorias dos Sinais</h2>
+    <p>Jesus organiza os sinais em progressão crescente, como contrações que antecedem um parto — expressão que ele mesmo usa em Mateus 24:8 (<em>odines</em>, dores de parto). A intensidade cresce até o clímax da vinda do Filho do Homem. Compreender essa estrutura progressiva é fundamental para não confundir o que é prenúncio com o que é consumação.</p>
+    <p>Assim, nem todo abalo histórico deve ser tratado como sinal final e absoluto. Antes, esses acontecimentos funcionam como alertas que recordam à Igreja que a história caminha para o cumprimento do plano de Deus.</p>
+    <h3>Sinais Gerais: Os Princípios das Dores</h3>
+    <p>Guerras, rumores de guerras, fomes, pestilências e terremotos (Mt 24:6-8) são descritos como "princípios das dores" — não o fim em si, mas o prelúdio. Esses eventos caracterizam toda a era entre as duas vindas de Cristo. O erro fatal é tratá-los como cronômetro preciso; a sabedoria é lê-los como lembrete constante de vigilância e preparo espiritual.</p>
+    <div class="sep"><span>✦</span></div>
+    <h3>Sinais Específicos: A Grande Tribulação</h3>
+    <p>A "abominação da desolação" (Mt 24:15, cf. Dn 9:27) e a Grande Tribulação sinalizam uma intensificação sem precedentes — um período descrito no Apocalipse como os julgamentos das sete taças e das sete trombetas. A sua natureza — histórica, futura ou ambas — é o ponto central de debate entre as tradições interpretativas.</p>
+    <p>Independentemente das diferenças de leitura, o ensino central permanece: haverá momentos de grande oposição à verdade e de profunda pressão sobre o povo de Deus. Por isso, a perseverança é uma marca indispensável da fé cristã.</p>
+    <div class="bver">"E este evangelho do reino será pregado em todo o mundo em testemunho a todas as nações. Então virá o fim." <cite>Mateus 24:14</cite></div>
+    <h3>O Sinal Climático: A Vinda do Filho do Homem</h3>
+    <p>A vinda de Cristo será como o relâmpago que ilumina do oriente ao ocidente (Mt 24:27) — visível, universal, inconfundível. Nenhuma especulação cronológica sobreviverá ao seu aparecimento. Todo olho o verá (Ap 1:7), e o propósito de toda vigília cristã encontrará o seu cumprimento glorioso.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Sabia Que? — Os Sinais Não São um Cronômetro</div>
+<p>Ao longo dos séculos, cristãos identificaram guerras, pestes e terremotos de sua época como "o sinal definitivo" do fim — e se enganaram. As Guerras Napoleônicas, a Primeira Guerra Mundial, a pandemia de 1918, a Segunda Guerra, a Guerra Fria: todas geraram previsões que não se cumpriram. Jesus antecipou exatamente isso (Mt 24:6: "não vos turbeis"). Os sinais gerais são lembrete de vigilância, não material para especulação cronólogica.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 — TÓPICO III -->
+<div class="lbl">Página 5 · Tópico III</div>
+<div class="pag int">
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 02</span><span class="pht">Os Sinais dos Tempos</span></div>
+    <h2> III — Visões em Diálogo</h2>
+    <p>A interpretação dos sinais em Mateus 24 é onde pentecostais e reformados mais divergem — tanto no método quanto nas conclusões. Conhecer as duas leituras é fundamental para avaliar com maturidade o que circula nas redes sociais e nos púlpitos, e para desenvolver uma fé que não seja abalada por cada manchete internacional.</p>
+    <div class="bvp">
+        <div class="vl">✦ Perspectiva Pentecostal</div>
+        <div class="vt">A leitura pentecostal é predominantemente futurista: a maioria dos sinais de Mateus 24 ainda está por cumprir-se. O Estado de Israel (1948) é sinal profético decisivo — a figueira que brota (Mt 24:32). Os dons do Espírito (cf. Joel 2:28-29) derramados na era moderna são sinais do fim. O pré-tribulacionismo posiciona o arrebatamento antes da Grande Tribulação, poupando a Igreja da ira de Deus (1 Ts 5:9). A urgência missionária é diretamente motivada pela iminência do retorno.</div>
+    </div>
+    <div class="bvr">
+        <div class="vl">✦ Perspectiva Reformada</div>
+        <div class="vt">A leitura reformada adota o preterismo parcial: Mateus 24:1-35 encontrou cumprimento principal em 70 d.C., enquanto 24:36-51 aponta para a vinda final. Israel não possui papel profético distinto da Igreja — ambos formam um único povo de Deus. O sinal principal do fim é a evangelização mundial (Mt 24:14), não eventos geopolíticos. Teólogos como R.C. Sproul (<em>The Last Days According to Jesus</em>) defendem essa posição com sólida base exegética.</div>
+    </div>
+    <div class="sep"><span>✦</span></div>
+    <p>O terreno comum é firme: Cristo voltará, o tempo é incerto (Mt 24:36), e a resposta correta do cristão é vigilância ativa — não paralisia ansiosa nem especulação cronológica irresponsável. Sobre essa rocha, pentecostais e reformados caminham juntos.</p>
+    <p>Conhecer essas leituras distintas não tem como objetivo alimentar divisões desnecessárias, mas amadurecer o discernimento do aluno. O estudo comparado ajuda a perceber onde estão as diferenças secundárias e onde permanece a convicção central da esperança cristã.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Pense Nisso — O Que Une Pentecostais e Reformados</div>
+<p>Pentecostais e reformados leem Mateus 24 de forma diferente — mas concordão nas convicções que importam: Cristo voltará de forma pessoal e visível, ninguém sabe o dia nem a hora, e a resposta correta é vigilância ativa e fidelidade ao evangelho. Antes de focar no que divide, pergunte: <em>as divergências me afastam dessa certeza central, ou me ajudam a entendê-la com mais profundidade?</em> A maturidade teológica começa quando distinguimos o inegociável do secundário.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 — CONCLUSÃO -->
+<div class="lbl">Página 6 · Conclusão</div>
+<div class="pag int">
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 02</span><span class="pht">Os Sinais dos Tempos</span></div>
+    <h2>Conclusão</h2>
+    <p>Depois de percorrer o Discurso do Monte das Oliveiras, classificar as categorias dos sinais e ouvir as tradições pentecostal e reformada, chegamos a uma certeza que transcende os debates: Jesus não nos chamou à especulação, mas à fidelidade. Os sinais dos tempos não são enigmas para decifrar, mas convites para vigiar, servir e anunciar o evangelho com urgência crescente. Vivemos na era do sensacionalismo profético: vídeos virais que decifram o "código secreto" do Apocalipse, ministérios que vendem livros com datas para o fim do mundo e uma ansiedade coletiva que confunde notícia com cumprimento profético. O jovem cristão do século XXI precisa de discernimento — e Mateus 24 é o roteiro.</p>
+    <p>Estudar os sinais, portanto, não deve produzir medo descontrolado, mas senso de responsabilidade espiritual. A esperança cristã não é fuga da realidade, e sim a certeza de que Deus conduz a história até o seu fim determinado.</p>
+    <div class="apl">
+        <div class="at">Para a sua semana</div>
+        <p>Primeiro: quando encontrar uma afirmação profética nas redes sociais, pergunte-se — ela distingue sinais gerais de específicos? Tem base exegética ou é apenas correlação entre manchetes e versículos isolados? Segundo: leia 1 Tessalonicenses 5:1-11 e identifique qual é a resposta que Paulo espera dos crentes diante da incerteza do dia do Senhor — sobriedade e edificação mútua, não especulação. Terceiro: use o sinal de Mateus 24:14 como bússola missionária — onde você ainda não chegou com o evangelho?</p>
+    </div>
+    <div class="sep"><span>✦</span></div>
+    <h3>Para Refletir</h3>
+    <p>Jesus disse explicitamente que ninguém sabe o dia nem a hora — "nem os anjos do céu, nem o Filho, senão só o Pai" (Mt 24:36). O que isso diz a respeito de ministérios e pessoas que anunciam datas para o fim do mundo? Que tipo de humildade teológica essa afirmação de Jesus exige de todos nós? A ignorância do momento não é uma deficiência — é um convite à confiança plena no Pai que tudo governa.</p>
+    <div class="bver">"Mas vós, irmãos, não estais em trevas... Portanto, não durmamos como os demais, mas vigiemos e sejamos sóbrios." <cite>1 Tessalonicenses 5:4-6</cite></div>
+    <p>Na próxima lição, enfrentaremos um dos debates mais acalorados da escatologia: <strong>O Arrebatamento</strong> — quando, como e para quem.</p>
+    <p>Até lá, permaneça com esta convicção: mais importante do que identificar cada sinal com precisão absoluta é viver em constante prontidão, com fé, sobriedade e fidelidade ao Senhor.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Leve Para a Vida — Vigilância Sem Ansiedade</div>
+<p>Jesus terminou seu discurso sobre os sinais não com um cronograma, mas com uma ordem: <em>"Vigiai, pois"</em> (Mt 24:42). Vigiar não é fícar paralisado de medo ou obcecado com manchetes — é viver com propósito, generosidade e urgência missionária porque sabe que o tempo é de Deus. Esta semana, toda vez que uma notícia te provocar ansiedade, substitua a especulação por uma ação concreta: ore, sirva, anuncie. Isso é vigilância bíblica.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 — QUESTÕES -->
+<div class="lbl">Página 7 · Questões & Anotações</div>
+<div class="pag int">
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 02</span><span class="pht">Os Sinais dos Tempos</span></div>
+    <h2>Questões para Reflexão</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">A pergunta dos discípulos em Mateus 24:3 é dupla. Como essa ambiguidade afeta toda a interpretação do capítulo? Qual pergunta você acha que Jesus responde prioritariamente?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">O que é o "princípio do cumprimento duplo" e como ele se aplica à relação entre a destruição de Jerusalém em 70 d.C. e os eventos escatológicos futuros?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">Compare as perspectivas pentecostal (futurista) e reformada (preterista parcial) sobre Mateus 24. Qual parece mais coerente com o contexto histórico original? Justifique.</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">Jesus disse que ninguém sabe o dia nem a hora (Mt 24:36). Como isso deveria moldar concretamente a postura de um jovem cristão diante das crises do mundo atual?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="lit">
+        <div class="lt">Leituras Complementares</div>
+        <ul>
+            <li>R.C. Sproul — <em>The Last Days According to Jesus</em> (perspectiva preterista/reformada)</li>
+            <li>D.A. Carson — <em>Matthew</em>, The Expositor's Bible Commentary (exegese de Mateus 24)</li>
+            <li>Leitura devocional: Mateus 24 completo + Lucas 21:25-36 + 1 Ts 5:1-11</li>
+        </ul>
+    </div>
+    <h3 style="margin-top:12px;">Anotações</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div>
+</div>
+<script>
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

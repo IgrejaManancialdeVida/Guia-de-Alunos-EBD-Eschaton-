@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton · Lição 04 — A Grande Tribulação</title>
+
+<meta content="#1a1428" name="theme-color"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icon-192.svg" rel="apple-touch-icon"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--cor:#c06020;--grad1:#281408;--grad2:#3a1a08;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(192,96,32,0.4);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 65%,rgba(192,96,32,0.45) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,0.15) 0%,transparent 45%),radial-gradient(ellipse at 50% 40%,rgba(139,26,26,0.3) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:20px 20px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--vermelho),var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.035);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#1a0800,var(--cor) 55%,#ffaa60);opacity:0.4;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--vermelho),var(--cor),var(--ouro),transparent);opacity:0.7;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.12;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:22pt;font-weight:700;color:#fff;line-height:1.15;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--vermelho),var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(192,96,32,0.35);background:rgba(192,96,32,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+ul li::before { 
+    content: '\2192' !important; 
+    position: absolute; 
+    left: 0; 
+    color: var(--cor); 
+    font-size: 9pt; 
+}
+.apl{background:linear-gradient(135deg,rgba(192,96,32,0.06),rgba(201,168,76,0.06));border:1px solid rgba(192,96,32,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'&#183;';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(192,96,32,0.06);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(192,96,32,0.09);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ===== BLOCOS-ALUNO ===== */
+.bloco-aluno{border-left:4px solid var(--cor);background:rgba(192,96,32,0.05);border-radius:0 3px 3px 0;padding:10px 12px;margin:12px 0;}
+.bloco-aluno .ba-titulo{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.bloco-aluno .ba-titulo::before{content:'✦';font-size:7pt;color:var(--cor);}
+.bloco-aluno .ba-txt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.6;color:var(--ct);margin-bottom:0;}
+.bloco-aluno .ba-nota{font-family:'Oswald',sans-serif;font-size:7pt;letter-spacing:1px;text-transform:uppercase;color:#888;margin-top:6px;padding-top:6px;border-top:1px solid rgba(192,96,32,0.2);}
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON<span>Lição 04 - A Grande Tribulação</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<div aria-label="Abrir lição 04" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<img alt="Capa da revista Eschaton" src="capa-revista.png"/>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<div class="lbl">Página 1 - Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">04</div><div class="cnd">04</div>
+<div class="ccon">
+<div class="cser">Série - Eschaton - Estudos Escatológicos</div>
+<div class="ctit">A Grande Tribulação</div>
+<div class="cver">
+            "Porque haverá então grande tribulação, como nunca houve desde o princípio do mundo até agora, nem tampouco haverá. E, se aqueles dias não fossem abreviados, nenhuma carne se salvaria; mas por causa dos escolhidos serão abreviados aqueles dias."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Mateus 24:21-22</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<div class="lbl">Página 2 - Introdução</div>
+<div class="pag int">
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 04</span><span class="pht">A Grande Tribulação</span></div>
+<h2>Introdução</h2>
+<p class="cap">Nenhum tema da escatologia bíblica evoca imagens mais perturbadoras do que a Grande Tribulação. Filmes, séries e literatura popular a retratam como um período de catástrofes globais, perseguição religiosa e julgamentos sobrenaturais. Mas o que exatamente a Bíblia descreve? Qual é a natureza, a duração e o propósito desse período singular na história da humanidade?</p>
+<div class="bver">"Ai! Porque aquele dia será grande, de sorte que nenhum outro será semelhante a ele; e é o tempo da angústia de Jacó, mas dele será salvo." <cite>Jeremias 30:7</cite></div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Compreender as origens bíblicas da doutrina da Grande Tribulação</li>
+<li>Examinar a estrutura profética de Daniel 9 e as "setenta semanas"</li>
+<li>Analisar a natureza e o propósito redentor do período tribulacional</li>
+<li>Avaliar as distintas leituras pentecostal e reformada sobre o tema</li>
+</ul>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>A Grande Tribulação não é apenas horror profético — é, antes de tudo, o palco do julgamento justo de Deus sobre uma humanidade que persistentemente rejeitou sua graça. Entendê-la exige tanto rigor exegético quanto sensibilidade teológica para não transformar o sofrimento alheio em espetáculo.</p>
+<p>
+Esse cenário, embora impactante, não deve ser interpretado apenas como juízo, mas também como revelação do caráter de Deus. A Tribulação expõe simultaneamente a justiça divina contra o pecado e a paciência de Deus, que ainda concede oportunidades de arrependimento mesmo em meio ao juízo.
+</p>
+<p>
+Além disso, a compreensão correta desse período evita extremos: tanto o medo irracional quanto a banalização do sofrimento humano. A escatologia bíblica chama o crente à sobriedade espiritual.
+</p>
+<div class="bloco-aluno">
+<div class="ba-titulo">Para Você Refletir — O que é a Grande Tribulação?</div>
+<div class="ba-txt">A Bíblia não apresenta a Grande Tribulação como um espetáculo profético para curiosos, mas como o palco do julgamento justo de Deus e da misericórdia que ainda convida ao arrependimento. Antes de perguntar <em>quando</em> ela ocorrerá, pergunte: <em>o que ela revela sobre Deus</em> — e sobre o coração humano?</div>
+<div class="ba-nota">✦ Bloco para o aluno · Pg. 2 — Introdução</div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<div class="lbl">Página 3 · Desenvolvimento I</div>
+<div class="pag int">
+<div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 04</span><span class="pht">A Grande Tribulação</span></div>
+<h2>I — A Base Profética da Grande Tribulação</h2>
+<p>A Grande Tribulação não nasce no Apocalipse — suas raízes estão fincadas no Antigo Testamento. O profeta Jeremias chamou de "angústia de Jacó" (Jr 30:7); Daniel a descreveu como um tempo de angústia sem precedentes (Dn 12:1); e Joel vislumbrou o "Dia do Senhor" como trevas e não luz (Jl 2:2). Jesus foi o primeiro a usar a expressão "grande tribulação" em Mateus 24:21.</p>
+<h3>As Setenta Semanas de Daniel</h3>
+<p>O texto-chave para compreender a estrutura temporal da Tribulação é Daniel 9:24-27 — a profecia das "setenta semanas". O anjo Gabriel revela a Daniel um cronograma de 490 anos dividido em três segmentos. Para o dispensacionalismo, a última "semana" de sete anos ainda está por cumprir-se, e corresponde ao período tribulacional. A Igreja foi "arrebatada" antes desse período, e Deus volta a tratar prioritariamente com Israel.</p>
+<div class="bver">"E confirmará o pacto com muitos por uma semana; e no meio da semana fará cessar o sacrifício e a oblação." <cite>Daniel 9:27</cite></div>
+<h3>A Abominação da Desolação</h3>
+<p>No meio da semana final, a "abominação da desolação" é estabelecida no Templo — evento referenciado por Jesus em Mateus 24:15. Historicamente associada à profanação do Templo por Antíoco IV Epifânio em 167 a.C., ela aponta para uma realidade escatológica futura ainda maior. Sua identificação exata permanece um dos debates mais vivos da teologia profética.</p>
+<p>
+A leitura dessas profecias exige cautela hermenêutica. Muitos dos elementos apresentados possuem cumprimento histórico parcial e, ao mesmo tempo, apontam para uma realidade futura mais ampla. Esse padrão já é observado em outras profecias bíblicas.
+</p>
+<p>
+Assim, a Tribulação deve ser entendida dentro de uma continuidade profética, evitando interpretações fragmentadas que desconsiderem o desenvolvimento progressivo da revelação.
+</p>
+<div class="bloco-aluno">
+<div class="ba-titulo">Conexão Bíblica — O Fio Profético do AT ao NT</div>
+<div class="ba-txt">Jeremias, Daniel, Joel, Jesus e João descrevem o mesmo horizonte com linguagens distintas. A "angústia de Jacó", as "setenta semanas", o "Dia do Senhor" e a "grande tribulação" não são profecias isoladas — são elos de uma corrente que revela a coerência do plano redentor de Deus ao longo de toda a Escritura.</div>
+<div class="ba-nota">✦ Bloco para o aluno · Pg. 3 — Base Profética</div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<div class="lbl">Página 4 · Desenvolvimento II</div>
+<div class="pag int">
+<div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 04</span><span class="pht">A Grande Tribulação</span></div>
+<h2>II — Propósitos e Duração da Tribulação</h2>
+<p>O Apocalipse descreve a Tribulação por meio de três séries de julgamentos: os sete selos (Ap 6-8), as sete trombetas (Ap 8-11) e as sete taças (Ap 15-16), cada série crescendo em intensidade. Esses julgamentos possuem propósito redentor e judicial preciso — não são catástrofes arbitrárias.</p>
+<h3>Julgamento Sobre a Humanidade Rebelde</h3>
+<p>O primeiro propósito da Tribulação é o julgamento divino sobre uma humanidade que, mesmo diante de sinais inequívocos, recusa o arrependimento. Apocalipse 9:20-21 descreve com assombro como, mesmo após os julgamentos das trombetas, os sobreviventes "não se arrependeram das obras de suas mãos". O endurecimento humano revela a profundidade da depravação e a justiça do julgamento de Deus.</p>
+<div class="bver">"E os outros homens que não foram mortos com estas pragas não se arrependeram das obras de suas mãos." <cite>Apocalipse 9:20</cite></div>
+<div class="sep"><span>✦</span></div>
+<h3>Purificação e Conversão de Israel</h3>
+<p>O segundo propósito, presente em Zacarias 13:8-9 e Romanos 11:25-27, é a purificação e conversão do remanescente de Israel. Dois terços serão cortados, mas um terço passará pelo fogo como prata refinada. Para Paulo, a plenitude dos gentios precede e precipita essa conversão nacional — o mistério da história da salvação se revela em seu clímax.</p>
+<h3>Duração: Sete Anos ou Período Simbólico?</h3>
+<p>O dispensacionalismo calcula sete anos literais baseado em Daniel 9:27 e Apocalipse 11:3 (1.260 dias / 42 meses). O amilenismo reformado entende os números como simbólicos, representando a plenitude do julgamento divino — não um calendário astronômico literal.</p>
+<p>
+Outro aspecto importante é que os juízos descritos não são meramente punitivos, mas também reveladores. Eles expõem a condição espiritual da humanidade e demonstram a rejeição persistente ao chamado ao arrependimento.
+</p>
+<p>
+Ao mesmo tempo, esses eventos evidenciam a soberania de Deus sobre a história, mostrando que mesmo em meio ao caos aparente, há um propósito sendo cumprido.
+</p>
+<div class="bloco-aluno">
+<div class="ba-titulo">Sabia Que? — A Tribulação Tem Propósito Redentor</div>
+<div class="ba-txt">Os julgamentos da Tribulação não são arbitrários: servem para julgar a rebeldia humana <em>e</em> para purificar e converter o remanescente de Israel (Zc 13:9). Deus não envia o juízo sem propósito — mesmo no período mais sombrio da história, há uma misericórdia que convida ao arrependimento (Ap 9:20-21).</div>
+<div class="ba-nota">✦ Bloco para o aluno · Pg. 4 — Propósitos e Duração</div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<div class="lbl">Página 5 · Desenvolvimento III</div>
+<div class="pag int">
+<div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 04</span><span class="pht">A Grande Tribulação</span></div>
+<h2>III — Visões em Diálogo</h2>
+<p>A compreensão da Grande Tribulação é profundamente moldada pelo sistema teológico adotado. Pentecostais e reformados chegam a leituras radicalmente distintas, especialmente quanto ao papel da Igreja nesse período.</p>
+<div class="bvp">
+<div class="vl">✦ Perspectiva Pentecostal</div>
+<div class="vt">Para o pentecostalismo dispensacionalista, a Grande Tribulação é um período literal de sete anos ainda futuro, iniciado com o arrebatamento pré-tribulacional da Igreja. Os 144.000 de Apocalipse 7 são judeus literais que evangelizarão o mundo nesse período. As pragas das taças e trombetas são julgamentos literais sobre a terra. O Anticristo governará um império global por 3,5 anos. A Igreja, já arrebatada, não passa pela ira divina (1 Ts 5:9) — esta é uma das razões centrais para o pré-tribulacionismo pentecostal.</div>
+</div>
+<div class="bvr">
+<div class="vl">✦ Perspectiva Reformada</div>
+<div class="vt">Para o amilenismo reformado, a "Grande Tribulação" de Mateus 24 encontrou seu principal cumprimento histórico na destruição de Jerusalém em 70 d.C. As imagens apocalípticas de Apocalipse são simbólicas — linguagem de crise intensa, não cronograma literal. A Igreja presente na história enfrenta tribulação contínua (Jo 16:33), mas não um período escatológico distinto de sete anos. Teólogos como G.K. Beale e Meredith Kline demonstraram a coerência literária e teológica da leitura simbólica do Apocalipse.</div>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>Ambas as tradições reconhecem a soberania de Deus sobre os eventos mais sombrios da história, a certeza do julgamento divino sobre a iniquidade humana e a preservação dos escolhidos até o fim — seja pelo arrebatamento, seja pela proteção divina na tribulação.</p>
+<p>As diferenças entre as leituras sobre a tribulação mostram como a escatologia toca diretamente a espiritualidade cristã. Alguns leem o período como uma etapa futura e concentrada; outros veem nele um padrão recorrente de aflição que culminará em um desfecho final. Em ambos os casos, a Igreja é chamada a permanecer fiel, discernindo que sofrimento e oposição jamais anulam a soberania de Deus.</p><p>Isso amplia a utilidade da aula para além da curiosidade profética. A doutrina da tribulação ensina a preparar o coração para resistir à pressão cultural, à perseguição e ao engano, lembrando que a perseverança dos santos não depende de força autônoma, mas da graça sustentadora do Senhor.</p>
+<p>
+Essa diferença de interpretações não deve ser vista como obstáculo, mas como oportunidade de aprofundamento teológico. O diálogo entre tradições contribui para uma compreensão mais cuidadosa do texto bíblico.
+</p>
+<p>
+Independentemente da posição adotada, permanece o chamado central da escatologia: viver com fidelidade, vigilância e esperança diante da consumação do plano de Deus.
+</p>
+<div class="bloco-aluno">
+<div class="ba-titulo">Pense Nisso — O Que Une e o Que Divide</div>
+<div class="ba-txt">Pentecostais e reformados divergem profundamente na <em>leitura</em> da Tribulação — literal ou simbólica, futura ou parcialmente cumprida. Mas ambos concordam no essencial: Deus é soberano sobre a história, a iniquidade será julgada, e os escolhidos serão preservados. Maturidade teológica é saber discernir onde está o fundamento e onde está a interpretação.</div>
+<div class="ba-nota">✦ Bloco para o aluno · Pg. 5 — Visões em Diálogo</div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<div class="lbl">Página 6 · Conclusão</div>
+<div class="pag int">
+<div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 04</span><span class="pht">A Grande Tribulação</span></div>
+<h2>Conclusão</h2>
+<p>Há um risco real na escatologia popular: transformar o sofrimento do mundo em espetáculo profético. Quando guerras, pandemias e catástrofes são recebidas com entusiasmo como "sinais do fim", perdemos a compaixão que o Evangelho exige. O estudo da Tribulação deve nos tornar mais compassivos, não mais calculistas.</p>
+<p>Concluir esta lição corretamente é mostrar que a tribulação não foi revelada para alimentar pânico, mas para fortalecer a fidelidade. O crente é chamado a vigiar, discernir e perseverar, certo de que Deus continua governando a história mesmo nos períodos mais escuros.</p>
+<p>
+A reflexão sobre a Tribulação deve conduzir o cristão a uma postura de responsabilidade espiritual. Conhecer o futuro revelado por Deus implica viver de maneira coerente no presente.
+</p>
+<p>
+Dessa forma, a escatologia deixa de ser apenas um campo de estudo e passa a ser um instrumento de transformação da vida cristã.
+</p>
+<div class="apl">
+<div class="at">Para a sua semana</div>
+<p>Primeiro: leia Apocalipse 6 — a abertura dos selos, e pergunte-se: qual é a resposta que essa passagem deveria provocar em você? Fascínio profético ou intercessão urgente? Segundo: reflita sobre como cristãos que vivem em zonas de guerra hoje experimentam algo próximo ao descrito na Tribulação, e o que isso exige de você em termos de solidariedade e oração. Terceiro: identifique em que áreas da sua vida você ainda resiste ao arrependimento, à semelhança dos habitantes da terra em Apocalipse 9:20.</p>
+</div>
+<div class="sep"><span>✦</span></div>
+<h3>Para Refletir</h3>
+<p>Se os julgamentos da Tribulação têm como propósito o arrependimento (Ap 9:20-21) e a purificação (Zc 13:9), o que isso revela sobre o caráter de Deus? Como a soberania de Deus sobre os eventos mais sombrios da história pode ser ao mesmo tempo aterrorizante e reconfortante para o cristão?</p>
+<div class="bver">"Estas são as que vieram da grande tribulação, e lavaram as suas vestes e as alvejaram no sangue do Cordeiro." <cite>Apocalipse 7:14</cite></div>
+<p>Na próxima lição, identificaremos o personagem central desse período: <strong>O Anticristo</strong> — sua identidade, ascensão e queda definitiva.</p>
+<div class="bloco-aluno">
+<div class="ba-titulo">Leve Para a Vida — Compaixão, não Especulação</div>
+<div class="ba-txt">O conhecimento da Tribulação não foi dado para nos tornar curiosos proféticos, mas para nos tornar mais compassivos e fiéis. Hoje mesmo existem cristãos que vivem o que esta doutrina descreve — perseguição, perda, pressão extrema. A resposta correta ao estudo da Tribulação é <em>intercessão</em> e <em>solidariedade</em>, não fascínio especulativo.</div>
+<div class="ba-nota">✦ Bloco para o aluno · Pg. 6 — Conclusão e Aplicação</div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<div class="lbl">Página 7 - Questões e Anotações</div>
+<div class="pag int">
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 04</span><span class="pht">A Grande Tribulação</span></div>
+<h2>Questões para Reflexão</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">A profecia das "setenta semanas" de Daniel 9:24-27 é central para a teologia dispensacionalista da Tribulação. Como o dispensacionalismo interpreta a "semana final"? Essa leitura é exegeticamente sólida?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Quais são os dois propósitos principais da Grande Tribulação segundo as Escrituras? Como esses propósitos revelam o caráter de Deus — ao mesmo tempo justo e misericordioso?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">Compare a leitura literal/dispensacionalista com a leitura simbólica/reformada do Apocalipse. Quais são os pontos fortes e as limitações de cada abordagem hermenêutica?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">Como o estudo da Grande Tribulação deveria moldar sua postura diante do sofrimento no mundo hoje — seja de cristãos perseguidos, seja de populações em zonas de conflito?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="lit">
+<div class="lt">Leituras Complementares</div>
+<ul>
+<li>John F. Walvoord — The Tribulation Period (perspectiva dispensacionalista)</li>
+<li>G.K. Beale — The Book of Revelation, NIGTC (exegese reformada do Apocalipse)</li>
+<li>Leitura devocional: Daniel 9:24-27 + Mateus 24:15-31 + Apocalipse 6-7</li>
+</ul>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton - EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

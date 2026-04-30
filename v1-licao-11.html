@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton · Lição 11 — O Inferno</title>
+
+<meta name="theme-color" content="#1a1428">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#40a040;--grad1:#082008;--grad2:#0a2808;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(64,160,64,0.4);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 22% 58%,rgba(64,160,64,0.38) 0%,transparent 55%),radial-gradient(ellipse at 78% 22%,rgba(201,168,76,0.15) 0%,transparent 45%),radial-gradient(ellipse at 52% 85%,rgba(0,40,0,0.4) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.013) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.013) 1px,transparent 1px);background-size:18px 18px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#082008,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#020d02,var(--cor) 55%,#a0ffa0);opacity:0.35;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,#082008,var(--cor),var(--ouro),transparent);opacity:0.7;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.1;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:26pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#082008,var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(64,160,64,0.35);background:rgba(64,160,64,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.bloco-ctx ul li::before, 
+.bloco-apl ul li::before, 
+ul li::before { 
+    content: '\2192' !important; 
+    position: absolute; 
+    left: 0; 
+    color: var(--cor) !important; 
+    font-size: 9pt; 
+}
+.apl{background:linear-gradient(135deg,rgba(64,160,64,0.05),rgba(201,168,76,0.06));border:1px solid rgba(64,160,64,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'&#183;';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(64,160,64,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(64,160,64,0.08);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ── BLOCOS DO ALUNO — Lição 11 ── */
+/* Paleta verde-escuro/ouro da lição 11 */
+.baluno{border-radius:3px;padding:9px 12px;margin-top:12px;margin-bottom:2px;position:relative;}
+.baluno-ico{font-size:10pt;margin-right:6px;vertical-align:middle;}
+.baluno-tag{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.baluno-corpo{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.baluno-linha{border-bottom:1px solid rgba(0,0,0,0.12);height:22px;margin-top:6px;}
+
+/* Para você refletir — verde escuro */
+.ba-refletir{background:rgba(64,160,64,0.06);border-left:3px solid var(--cor);}
+.ba-refletir .baluno-tag{color:var(--cor);}
+/* Conexão Bíblica — ouro */
+.ba-biblica{background:rgba(201,168,76,0.07);border-left:3px solid var(--ouro);}
+.ba-biblica .baluno-tag{color:#8a6a20;}
+/* Sabia que? — verde musgo escuro */
+.ba-sabia{background:rgba(30,60,30,0.06);border-left:3px solid #2e5e2e;}
+.ba-sabia .baluno-tag{color:#2e5e2e;}
+/* Pense nisso — verde com borda tracejada */
+.ba-pense{background:rgba(64,160,64,0.04);border:1px dashed rgba(64,160,64,0.32);border-left:3px solid var(--cor);}
+.ba-pense .baluno-tag{color:var(--cor);}
+/* Leve para a vida — gradiente verde/ouro */
+.ba-vida{background:linear-gradient(135deg,rgba(64,160,64,0.05),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.30);border-left:3px solid var(--ouro);}
+.ba-vida .baluno-tag{color:#8a6a20;}
+
+@media (max-width:768px){
+    .baluno{padding:8px 10px;}
+    .baluno-corpo{font-size:9.5pt;}
+}
+@media print{
+    .baluno{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<div class="painel">
+    <div class="marca">ESCHATON<span>Lição 11 &middot; O Inferno</span></div>
+    <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+    <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+<div class="area">
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 11">
+    <img src="capa-revista.png" alt="Capa da revista Eschaton">
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 &middot; Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">11</div><div class="cnd">11</div>
+    <div class="ccon">
+        <div class="cser">Série &middot; Eschaton &middot; Estudos Escatológicos</div>
+        <div class="ctit">O Inferno</div>
+        <div class="cver">
+            "E a morte e o inferno foram lançados no lago de fogo. Esta é a segunda morte. E aquele cujo nome não foi achado escrito no livro da vida foi lançado no lago de fogo."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 20:14-15</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 INTRODUÇÃO -->
+<div class="lbl">Página 2 &middot; Introdução</div>
+<div class="pag int">
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 11</span><span class="pht">O Inferno</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Nenhuma doutrina cristã é mais rejeitada pela cultura contemporânea — e ao mesmo tempo mais claramente ensinada por Jesus — do que o inferno. Enquanto teólogos liberais a suavizam em "aniquilacionismo" ou "universalismo", e a cultura popular a transforma em piada ou metáfora, Jesus falou sobre a condenação eterna com mais frequência e seriedade do que qualquer outro personagem do Novo Testamento. Estudar o inferno com honestidade bíblica é um ato de amor — pelo próximo e pela verdade.</p>
+    <div class="bver">"E não temais os que matam o corpo e não podem matar a alma; temei antes aquele que pode destruir tanto a alma como o corpo no inferno." <cite>Mateus 10:28</cite></div>
+    <div class="obj">
+        <div class="ot">Objetivos desta lição</div>
+        <ul>
+            <li>Examinar o vocabulário bíblico do inferno: Sheol, Hades, Geena e lago de fogo</li>
+            <li>Analisar a natureza do inferno segundo o ensino de Jesus e os apóstolos</li>
+            <li>Avaliar as posições do infernalismo eterno, aniquilacionismo e universalismo</li>
+            <li>Compreender como a doutrina do inferno intensifica o amor missionário e a gratidão pela graça</li>
+        </ul>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <p>O pastor e teólogo John Stott, ao fim de sua vida, admitiu hesitar entre o infernalismo eterno e o aniquilacionismo — não por rejeitar a Bíblia, mas por luta exegética genuína. Isso nos convida a estudar o tema com rigor e humildade, sem trivializar nem sensacionalizar.</p>
+    
+    <p>A seriedade dessa doutrina impede tanto o sentimentalismo quanto a crueldade. O cristão não estuda o inferno para sentir superioridade moral, mas para reconhecer o peso do pecado, a santidade de Deus e a urgência da redenção oferecida em Cristo. Onde o pecado é banalizado, a cruz perde sua profundidade; onde a condenação é negada, a graça também se torna irrelevante.</p>
+    <p>Por isso, a doutrina do inferno precisa ser tratada com lágrimas e com reverência. Ela não foi dada para produzir prazer na condenação alheia, mas para levar a Igreja ao arrependimento, à gratidão e à missão. A mesma Bíblia que fala do juízo eterno também proclama, com igual clareza, a amplitude da misericórdia divina oferecida no evangelho.</p>
+
+    <div class="baluno ba-refletir">
+        <div class="baluno-tag"><span class="baluno-ico">&#9670;</span> Para você refletir</div>
+        <div class="baluno-corpo">Jesus falou sobre o inferno com mais frequência do que qualquer outro personagem do Novo Testamento. Por que você acha que essa doutrina é tão rejeitada hoje — inclusive dentro da Igreja? Sua própria reação ao tema é mais de desconforto, indiferença ou gratidão pela graça que o livrou?</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 TÓPICO I -->
+<div class="lbl">Página 3 &middot; Desenvolvimento I</div>
+<div class="pag int">
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 11</span><span class="pht">O Inferno</span></div>
+    <h2>I-O Vocabulário Bíblico</h2>
+    <p>A Bíblia usa quatro termos distintos frequentemente traduzidos como "inferno" — e confundi-los gera grande parte dos debates desnecessários sobre o tema. Cada palavra tem significado e contexto próprios.</p>
+    <h3>Seol e Hades: O Reino dos Mortos</h3>
+    <p>No Antigo Testamento, <em>Sheol</em> (hebraico) designa o reino dos mortos em geral — o lugar para onde vão tanto os justos quanto os ímpios após a morte. Não é necessariamente um lugar de tormento, mas de sombra e silêncio. No Novo Testamento, <em>Hades</em> (grego) é seu equivalente — o estado intermediário antes da ressurreição e do julgamento. Em Lucas 16:23, o rico tormenta-se no Hades enquanto aguarda o julgamento final.</p>
+    <h3>Geena: O Inferno do Julgamento</h3>
+    <p><em>Geena</em> é o termo que Jesus usa com mais frequência para o inferno de condenação — aparece 11 das 12 vezes nos Evangelhos na boca de Jesus. Origina-se do Vale de Hinom (<em>Ge-Hinnom</em>), ao sul de Jerusalém, onde crianças foram sacrificadas a Moloque e que se tornou o lixão perene da cidade, com fogo que nunca se apagava. Jesus usa essa imagem para descrever o destino dos condenados: "onde o bicho deles não morre e o fogo não se apaga" (Mc 9:48, citando Is 66:24).</p>
+    <div class="bver">"E se o teu olho te escandalizar, arranca-o; melhor é para ti entrar no reino de Deus com um olho do que, tendo dois olhos, seres lançado no inferno [Geena]." <cite>Marcos 9:47</cite></div>
+    <h3>Lago de Fogo: O Destino Final</h3>
+    <p>O <em>lago de fogo</em> em Apocalipse 19–20 é o destino eterno dos condenados após o julgamento final — distinto do Hades, que é lançado nele (Ap 20:14). É chamado de "segunda morte" — separação eterna de Deus, que é a fonte de toda vida e bem.</p>
+    
+    <p>Essa distinção vocabular também protege a leitura bíblica contra simplificações apressadas. Nem todo texto sobre o estado dos mortos trata diretamente da condenação final, e nem toda referência ao juízo deve ser automaticamente lida como descrição detalhada do lago de fogo. A teologia cuidadosa respeita o desenvolvimento progressivo da revelação e evita confundir estado intermediário com destino eterno.</p>
+    <p>Além disso, o uso desses termos mostra que a Bíblia não fala do juízo apenas em categorias abstratas. Há imagens concretas, históricas e morais que comunicam a gravidade da separação de Deus. Jesus escolhe imagens fortes porque o assunto é grave demais para ser reduzido a metáforas inofensivas ou a construções puramente filosóficas.</p>
+
+    <div class="baluno ba-biblica">
+        <div class="baluno-tag"><span class="baluno-ico">&#9998;</span> Conexão Bíblica</div>
+        <div class="baluno-corpo">Leia Marcos 9:43-48 e Lucas 16:19-26. Qual dos quatro termos (<em>Sheol</em>, <em>Hades</em>, <em>Geena</em>, lago de fogo) cada passagem utiliza? Jesus está descrevendo o estado intermediário ou a condenação final? O que a especificidade do vocabulário revela sobre a intenção do texto?</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 TÓPICO II -->
+<div class="lbl">Página 4 &middot; Desenvolvimento II</div>
+<div class="pag int">
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 11</span><span class="pht">O Inferno</span></div>
+    <h2>II-As Três Posições Principais</h2>
+    <p>O debate contemporâneo sobre o inferno organiza-se em torno de três posições principais, todas presentes em círculos evangélicos — embora com pesos históricos muito distintos.</p>
+    <h3>Infernalismo Eterno</h3>
+    <p>É a posição histórica e majoritária do cristianismo — defendida por Agostinho, Tomás de Aquino, Lutero, Calvino, Jonathan Edwards e a grande maioria dos teólogos evangélicos. Os condenados existem eternamente em estado de separação consciente de Deus e sofrimento proporcional às suas obras. Base: Mateus 25:46 — "irão para o castigo eterno"; Apocalipse 20:10 — "atormentados de dia e de noite pelos séculos dos séculos"; Lucas 16:22-28 — o rico em tormento consciente no Hades.</p>
+    <div class="bver">"E irão estes para o castigo eterno, mas os justos para a vida eterna." <cite>Mateus 25:46</cite></div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>Aniquilacionismo (Mortalismo)</h3>
+    <p>Os condenados serão definitivamente destruídos — deixarão de existir — após o julgamento. Não há tormento eterno, mas aniquilação final. Defensores: John Stott, Clark Pinnock, Edward Fudge. Base: a linguagem de "destruição" e "morte" (Mt 10:28; 2 Ts 1:9); o fogo que consome, não que tortura eternamente. Minoria significativa no evangelicalismo contemporâneo.</p>
+    <h3>Universalismo</h3>
+    <p>Todos os seres humanos serão eventualmente salvos — seja pela graça irresistível de Deus, seja por um processo de purificação pós-morte. Defensores históricos: Orígenes, mais recentemente Robin Parry (<em>The Evangelical Universalist</em>). Posição minoritária e amplamente rejeitada pelo evangelicalismo conservador, por conflitar com passagens claras sobre a condenação eterna.</p>
+    
+    <p>Entre essas posições, o ponto decisivo não é apenas filosófico, mas exegético. A pergunta central é como harmonizar a linguagem de "morte", "destruição" e "fogo eterno" com textos que falam de castigo consciente e permanente. Por isso, qualquer conclusão responsável deve nascer da leitura conjunta de Jesus, Paulo, João e do pano de fundo veterotestamentário, e não de preferências emocionais sobre o que pareceria mais aceitável à sensibilidade moderna.</p>
+    <p>Também é importante notar que o debate não diminui a seriedade do juízo. Mesmo onde há divergência sobre a duração ou a forma da punição, permanece a convicção de que rejeitar a graça de Deus tem consequências irreversíveis. O inferno, em qualquer leitura ortodoxa do tema, não é um detalhe periférico, mas parte do testemunho bíblico sobre a santidade divina e a responsabilidade humana.</p>
+
+    <div class="baluno ba-sabia">
+        <div class="baluno-tag"><span class="baluno-ico">&#9654;</span> Sabia que?</div>
+        <div class="baluno-corpo">A palavra <em>Geena</em> vem de <em>Ge-Hinnom</em> — o Vale de Hinom, ao sul de Jerusalém. Ali, durante o período dos reis, crianças foram sacrificadas ao deus Moloque (2 Rs 23:10). Josias profanou o lugar para encerrar essa prática, e ele se tornou o lixão permanente da cidade, com fogo que nunca se apagava. Quando Jesus usava a palavra <em>Geena</em>, todo ouvinte judeu reconhecia imediatamente essa imagem de horror, rejeição e fogo incessante.</div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 TÓPICO III -->
+<div class="lbl">Página 5 &middot; Tópico III</div>
+<div class="pag int">
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 11</span><span class="pht">O Inferno</span></div>
+    <h2>III-Visões em Diálogo</h2>
+    <p>Tanto o pentecostalismo quanto a tradição reformada adotam predominantemente o infernalismo eterno como posição confessional. A divergência mais significativa está na ênfase e na abordagem pastoral do tema.</p>
+    <div class="bvp">
+        <div class="vl">&#10022; Perspectiva Pentecostal</div>
+        <div class="vt">O pentecostalismo brasileiro adota de forma quase unânime o infernalismo eterno literal: o inferno é um lugar real de tormento consciente e eterno — fogo, trevas, choro e ranger de dentes. A pregação sobre o inferno é frequente e central na evangelização pentecostal, usada como motivação para conversão imediata. A ameaça do inferno é vista como expressão legítima do amor de Deus que avisa o pecador de seu destino. Passagens como Lucas 16 e Mateus 25:46 são interpretadas em sentido estritamente literal e físico.</div>
+    </div>
+    <div class="bvr">
+        <div class="vl">&#10022; Perspectiva Reformada</div>
+        <div class="vt">A teologia reformada também afirma o infernalismo eterno confessionalmente (Confissão de Westminster 33.2), mas tende a enfatizar a natureza relacional da condenação — separação eterna de Deus — mais do que os aspectos físicos do tormento. A linguagem do fogo e das trevas pode ser simbólica de uma realidade ainda pior: a ausência total da presença benevolente de Deus. Alguns reformados conservadores (como John Stott) migraram para o aniquilacionismo. A pregação reformada sobre o inferno é geralmente mais teológica e menos apelativa ao medo imediato.</div>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <p>O núcleo confessional comum: a condenação eterna é real, justa e proporcional; nenhum ser humano vai ao inferno por acidente ou por falta de opção; é o amor de Deus que envia seu Filho para que nenhum pereça (Jo 3:16) — o inferno é a sombra que torna a graça incompreensivelmente gloriosa.</p>
+    
+    <p>Apesar das diferenças de ênfase, ambas as tradições reconhecem que a doutrina do inferno não pode ser isolada do caráter de Deus revelado em Cristo. O mesmo Senhor que advertiu sobre o fogo eterno foi aquele que chorou sobre Jerusalém, recebeu pecadores e entregou a própria vida pela salvação dos culpados. A severidade do juízo só é corretamente compreendida à luz da grandeza da misericórdia rejeitada.</p>
+    <p>Por isso, a abordagem pastoral mais fiel une firmeza doutrinária e compaixão. Falar do inferno sem dureza de coração, mas também sem omissão, é parte da responsabilidade da Igreja. A verdade sobre a condenação eterna não enfraquece o evangelho; ao contrário, torna ainda mais luminosa a glória da cruz e da salvação graciosa oferecida por Deus.</p>
+
+    <div class="baluno ba-pense">
+        <div class="baluno-tag"><span class="baluno-ico">&#8857;</span> Pense nisso</div>
+        <div class="baluno-corpo">Pentecostais e reformados convergem na realidade da condenação eterna, mas divergem na ênfase: medo imediato como motivação para conversão versus sobriedade teológica e compaixão pastoral. Qual dessas abordagens você encontra mais frequentemente? Qual você acha mais fiel ao modelo de Jesus, que chorou sobre Jerusalém antes de anunciar sua destruição (Lc 19:41-44)?</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 CONCLUSÃO E APLICAÇÃO -->
+<div class="lbl">Página 6 &middot; Conclusão e Aplicação</div>
+<div class="pag int">
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 11</span><span class="pht">O Inferno</span></div>
+    <h2>Conclusão </h2>
+    <p>A doutrina do inferno, quando assimilada com seriedade, produz dois efeitos poderosos no crente: gratidão avassaladora pela graça — pois o cristão sabe que merecia o que Cristo suportou em seu lugar — e amor urgente pelo próximo — pois quem acredita genuinamente no inferno não pode ser indiferente ao destino eterno das pessoas ao seu redor.</p>
+    <div class="apl">
+        <div class="at">Aplicação</div>
+        <p>Primeiro: leia Lucas 16:19-31 com atenção especial ao pedido do rico — "envia Lázaro à casa de meu pai, para que testifique a eles." A resposta de Abraão é decisiva: "Têm Moisés e os profetas." O evangelho disponível agora é a única esperança — não há segunda chance. Segundo: reflita sobre quantas pessoas em sua vida cotidiana ainda não ouviram o evangelho claramente. A crença no inferno deveria intensificar sua missão. Terceiro: medite em Judas 23 — "a outros salvai, arrebatando-os do fogo" — como descrição da urgência evangelística que a doutrina do inferno deve gerar.</p>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>Para Refletir</h3>
+    <p>C. S. Lewis escreveu em <em>O Grande Abismo</em> que as portas do inferno são trancadas por dentro — os condenados escolheram a si mesmos em vez de Deus, e Deus os leva a sério o suficiente para honrar essa escolha eternamente. Isso muda sua compreensão da natureza do inferno — de pena arbitrária para consequência da recusa livre e persistente da graça. Como isso afeta sua forma de apresentar o evangelho?</p>
+    <div class="bver">"O Senhor não retarda a sua promessa... mas é longânimo para convosco, não querendo que alguns se percam, senão que todos venham a arrepender-se." <cite>2 Pedro 3:9</cite></div>
+    <p>Na última lição doutrinária desta série, contemplaremos o destino glorioso dos redimidos: <strong>O Céu e a Nova Jerusalém</strong> — a vida eterna na nova criação de Deus.</p>
+    
+    <p>Em termos pastorais, essa doutrina também chama o cristão à sobriedade espiritual. Não há espaço para presunção, frieza ou indiferença. Quem compreende o peso do juízo eterno aprende a valorizar mais profundamente a obra de Cristo, a tratar o pecado com seriedade e a olhar o próximo não como adversário ideológico, mas como alguém que precisa da reconciliação com Deus.</p>
+    <p>Essa certeza também desemboca em esperança moral: Deus não abandonará sua criação ao caos, nem permitirá que a injustiça permaneça para sempre sem resposta. A existência do juízo final e da condenação eterna afirma que o mal terá fim, que a verdade prevalecerá e que a graça de Cristo é, hoje, a única porta aberta para a vida eterna.</p>
+
+    <div class="baluno ba-vida">
+        <div class="baluno-tag"><span class="baluno-ico">&#10022;</span> Leve para a vida</div>
+        <div class="baluno-corpo">Esta semana, deixe a doutrina do inferno gerar um fruto prático: escolha uma pessoa próxima que ainda não conhece o evangelho e ore por ela todos os dias. Se possível, crie uma oportunidade real de conversa. Anote aqui o nome dessa pessoa e um passo concreto que você vai dar:</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 QUESTÕES -->
+<div class="lbl">Página 7 &middot; Questões e Anotações</div>
+<div class="pag int">
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 11</span><span class="pht">O Inferno</span></div>
+    <h2>Questões</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">Quais são as diferenças entre Sheol/Hades, Geena e o lago de fogo? Por que confundir esses termos gera distorções teológicas sobre a natureza e o momento do estado dos mortos?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">O aniquilacionismo afirma que os condenados deixarão de existir; o infernalismo eterno afirma existência consciente eterna em condenação. Quais argumentos bíblicos cada posição apresenta? Com qual você se identifica e por quê?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">C. S. Lewis disse que as portas do inferno são trancadas por dentro. Como essa perspectiva — de que a condenação é resultado da escolha humana persistente — afeta a compreensão da justiça e do amor de Deus simultaneamente?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">Se você genuinamente acredita na realidade do inferno, isso deveria intensificar sua urgência missionária. Existe alguém em sua vida — familiar, amigo, colega — por quem você precisa orar e testemunhar com mais determinação?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="lit">
+        <div class="lt">Leituras Complementares</div>
+        <ul>
+            <li>Edward Fudge — The Fire That Consumes (defesa exegética do aniquilacionismo)</li>
+            <li>Robert Peterson — Hell on Trial (defesa do infernalismo eterno contra o aniquilacionismo)</li>
+            <li>Leitura devocional: Lucas 16:19-31 + Mateus 25:31-46 + Ap 20:11-15 + 2 Pe 3:9</li>
+        </ul>
+    </div>
+    <h3 style="margin-top:12px;">Anotações</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton · Lição 10 — O Juízo Final</title>
+
+<meta content="#1a1428" name="theme-color"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icon-192.svg" rel="apple-touch-icon"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--cor:#803020;--grad1:#200808;--grad2:#280808;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(128,48,32,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(128,48,32,0.5) 0%,transparent 55%),radial-gradient(ellipse at 78% 22%,rgba(201,168,76,0.15) 0%,transparent 45%),radial-gradient(ellipse at 55% 85%,rgba(60,10,0,0.45) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:18px 18px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#1a0000,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:60%;background:linear-gradient(160deg,#0d0000,var(--cor) 50%,#ff8040);opacity:0.38;}
+.clh{position:absolute;top:57%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,#1a0000,var(--cor),var(--ouro),transparent);opacity:0.75;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.1;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:26pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0000,var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(128,48,32,0.35);background:rgba(128,48,32,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.bloco-ctx ul li::before, 
+.bloco-apl ul li::before, 
+ul li::before { 
+    content: '\2192' !important; 
+    position: absolute; 
+    left: 0; 
+    color: var(--cor) !important; 
+    font-size: 9pt; 
+}
+.apl{background:linear-gradient(135deg,rgba(128,48,32,0.06),rgba(201,168,76,0.06));border:1px solid rgba(128,48,32,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'&#183;';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(128,48,32,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(128,48,32,0.08);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ── BLOCOS DO ALUNO ── */
+.baluno{border-radius:3px;padding:9px 12px;margin-top:12px;margin-bottom:2px;position:relative;}
+.baluno-ico{font-size:10pt;margin-right:6px;vertical-align:middle;}
+.baluno-tag{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.baluno-corpo{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.baluno-linha{border-bottom:1px solid rgba(0,0,0,0.12);height:22px;margin-top:6px;}
+
+/* Variantes de cor — paleta da lição 10 (terracota/juízo) */
+.ba-refletir{background:rgba(128,48,32,0.06);border-left:3px solid var(--cor);}
+.ba-refletir .baluno-tag{color:var(--cor);}
+.ba-biblica{background:rgba(201,168,76,0.07);border-left:3px solid var(--ouro);}
+.ba-biblica .baluno-tag{color:#8a6a20;}
+.ba-sabia{background:rgba(80,50,30,0.06);border-left:3px solid #7a5030;}
+.ba-sabia .baluno-tag{color:#6a4020;}
+.ba-pense{background:rgba(128,48,32,0.04);border:1px dashed rgba(128,48,32,0.30);border-left:3px solid var(--cor);}
+.ba-pense .baluno-tag{color:var(--cor);}
+.ba-vida{background:linear-gradient(135deg,rgba(128,48,32,0.05),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.30);border-left:3px solid var(--ouro);}
+.ba-vida .baluno-tag{color:#8a6a20;}
+
+@media (max-width:768px){
+    .baluno{padding:8px 10px;}
+    .baluno-corpo,.baluno-linha{font-size:9.5pt;}
+}
+@media print{
+    .baluno{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON<span>Lição 10 · O Juízo Final</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<div aria-label="Abrir lição 10" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<img alt="Capa da revista Eschaton" src="capa-revista.png"/>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">10</div><div class="cnd">10</div>
+<div class="ccon">
+<div class="cser">Série · Eschaton · Estudos Escatológicos</div>
+<div class="ctit">O Juízo Final</div>
+<div class="cver">
+            "E vi um grande trono branco e o que estava assentado sobre ele, de cuja face fugiu a terra e o céu; e não se achou lugar para eles. E vi os mortos, os grandes e os pequenos, em pé diante do trono."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 20:11-12</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 10</span><span class="pht">O Juízo Final</span></div>
+<h2>Introdução</h2>
+<p class="cap">Em uma era que celebra a tolerância e desconfia de qualquer julgamento absoluto, a doutrina do Juízo Final é profundamente contracultural. Mas é precisamente por isso que ela é necessária. Se não há julgamento final, a história termina sem justiça — os assassinos triunfam sobre suas vítimas, os opressores nunca respondem por seus crimes, e o mal fica impune para sempre. O Juízo Final é a garantia de que a história tem um juiz e que a justiça divina é a última palavra.</p>
+<div class="bver">"Porque todos nos compareceremos ante o tribunal de Cristo, para que cada um receba segundo o que tiver feito por meio do corpo, seja bem ou seja mal." <cite>2 Coríntios 5:10</cite></div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Compreender o Juízo Final como ato de justiça divina universal e definitivo</li>
+<li>Examinar o Grande Trono Branco de Apocalipse 20:11-15 em seu contexto literário</li>
+<li>Distinguir o julgamento dos crentes do julgamento dos incrédulos nas Escrituras</li>
+<li>Avaliar as perspectivas pentecostal e reformada sobre a natureza e os efeitos do julgamento</li>
+</ul>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>O julgamento não é vingança divina — é a afirmação pública e definitiva da justiça de Deus diante de toda a criação. Para os crentes, é a revelação da graça; para os incrédulos, é a condenação que eles próprios escolheram ao rejeitar o Salvador. Nenhum ser humano comparecerá ao tribunal de Cristo por acidente.</p>
+<p>Por isso, falar do Juízo Final não é abandonar a linguagem do amor, mas afirmar que o amor de Deus jamais é indiferente ao mal. Um Deus que não julga a perversidade não consola verdadeiramente as vítimas nem vindica sua própria santidade. O juízo é a face pública da justiça divina.</p>
+<p>Ao mesmo tempo, essa verdade impede tanto o desespero quanto a presunção. Desespero, porque nenhum mal ficará sem resposta; presunção, porque ninguém escapará do exame perfeito de Deus. Diante do trono, toda máscara cai e toda vida é trazida à luz.</p>
+<div class="baluno ba-refletir">
+<div class="baluno-tag"><span class="baluno-ico">◆</span> Para você refletir</div>
+<div class="baluno-corpo">Em uma cultura que relativiza o julgamento moral, como a certeza do Juízo Final muda o modo como você entende a justiça — tanto a injustiça que você sofre quanto a que você prática? O que você sente ao saber que nenhuma ação humana ficará definitivamente sem resposta?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 DESENVOLVIMENTO I -->
+<div class="lbl">Página 3 · Desenvolvimento I</div>
+<div class="pag int">
+<div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 10</span><span class="pht">O Juízo Final</span></div>
+<h2>I —O Grande Trono Branco</h2>
+<p>Apocalipse 20:11-15 apresenta a cena mais solene de toda a Bíblia: um Grande Trono Branco, diante do qual "a terra e o céu fugiram" — toda a ordem presente se dissolve perante a santidade absoluta do Juiz. Os mortos, "grandes e pequenos", comparecem sem exceção. Os livros são abertos. O Livro da Vida e aberto. A sentença e proferida.</p>
+<h3>O Juiz: Cristo</h3>
+<p>O Novo Testamento é unânime: o Pai confiou todo o julgamento ao Filho (Jo 5:22,27). Cristo, que foi julgado injustamente pelos homens, será o Juiz justo de todos os homens. Isso não é ironia — é teologia profunda: o único ser humano que viveu perfeitamente e o único qualificado para julgar com justiça perfeita. "E nos ordenou que pregassemos ao povo e testificassemos que ele e o que Deus constituiu Juiz dos vivos e dos mortos" (At 10:42).</p>
+<div class="bver">"Porque o Pai a ninguém julga, mas todo o julgamento deu ao Filho... e lhe deu autoridade para exercer o juízo, porque é o Filho do homem." <cite>João 5:22,27</cite></div>
+<h3>Os Livros e o Livro da Vida</h3>
+<p>Dois tipos de registros são abertos em Apocalipse 20:12: "os livros" — o registro das obras de cada ser humano — e "o Livro da Vida" — o registro dos redimidos. As obras não salvam, mas testemunham. A sentença final depende do Livro da Vida: quem não está nele é lançado no lago de fogo (Ap 20:15). Gratidao e tremor são as respostas adequadas a essa realidade.</p>
+<p>A cena do Grande Trono Branco revela que o juízo final não será caótico nem arbitrário. Nada ficará oculto, nada será esquecido e nada será relativizado. O que os tribunais humanos não alcançaram, o Juiz perfeito trará à plena luz.</p>
+<p>Há profundo consolo nisso para o povo de Deus. A fé cristã não ensina que os sofrimentos da história são irrelevantes, mas que todos serão finalmente avaliados diante daquele que conhece perfeitamente intenções, contextos e consequências. O juízo final é a resposta divina à impunidade aparente do mundo presente.</p>
+<div class="baluno ba-biblica">
+<div class="baluno-tag"><span class="baluno-ico">✎</span> Conexão Bíblica</div>
+<div class="baluno-corpo">Leia Apocalipse 20:11-15 e João 5:22-29. Quais palavras descrevem a <em>universalidade</em> do julgamento — quem comparece, sem exceção? O que a presença do "Livro da Vida" ao lado dos "livros de obras" revela sobre a base final da sentença?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 DESENVOLVIMENTO II -->
+<div class="lbl">Página 4 · Desenvolvimento II</div>
+<div class="pag int">
+<div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 10</span><span class="pht">O Juízo Final</span></div>
+<h2>II —O Julgamento dos Crentes e dos Incrédulos</h2>
+<p>As Escrituras distinguem com clareza dois aspectos do julgamento final: o julgamento dos crentes, que não determina condenação, mas revelação e recompensa; e o julgamento dos incrédulos, que resulta em condenação eterna proporcional às suas obras.</p>
+<h3>O Tribunal de Cristo para os Crentes</h3>
+<p>Em 2 Coríntios 5:10, Paulo afirma que "todos nos compareceremos ante o tribunal de Cristo" — incluindo os crentes. Esse julgamento não é para condenação (Rm 8:1 — "nenhuma condenação há para os que estão em Cristo Jesus"), mas para avaliação das obras realizadas na vida cristã. Paulo usa a imagem do fogo que prova cada obra em 1 Coríntios 3:12-15: o crente será salvo, "mas como pelo fogo." Obras de qualidade perdurarão; obras superficiais seráo consumidas. Ha recompensas distintas no reino eterno.</p>
+<div class="bver">"Se a obra de alguém se queimar, sofrerá perda; mas ele será salvo, todavia, como pelo fogo." <cite>1 Coríntios 3:15</cite></div>
+<div class="sep"><span>✦</span></div>
+<h3>O Julgamento dos Incredulos</h3>
+<p>Para os que rejeitaram o evangelho, o julgamento é condenação — proporcional ao conhecimento que tiveram e as obras que práticaram (Lc 12:47-48; Rm 2:6-11). Há graus de condenação assim como há graus de recompensa. Deus não é arbitrário: "cada um será remunerado segundo às suas obras" (Rm 2:6). A condenação e justa precisamente porque cada ser humano teve oportunidade de responder ao testemunho geral de Deus na criação (Rm 1:19-20) e ao testemunho especial do evangelho onde este chegou.</p>
+<p>Essa distinção ajuda a preservar duas verdades bíblicas ao mesmo tempo: a salvação é inteiramente pela graça, e a vida do crente possui responsabilidade real diante de Deus. As obras não compram a redenção, mas evidenciam a realidade da fé e serão trazidas à memória para louvor da justiça e da misericórdia divinas.</p>
+<p>Do lado dos incrédulos, o juízo final demonstra que a condenação não será genérica nem impessoal. Cada caso será perfeitamente julgado, e a sentença corresponderá à verdade integral da vida de cada um. Isso exclui qualquer ideia de injustiça em Deus e reforça a urgência do arrependimento enquanto dura o tempo da graça.</p>
+<div class="baluno ba-sabia">
+<div class="baluno-tag"><span class="baluno-ico">▶</span> Sabia que?</div>
+<div class="baluno-corpo">A palavra grega <em>bema</em> ("tribunal", usada em 2 Co 5:10) designava a plataforma elevada onde um magistrado romano proferia julgamentos ou onde um árbitro olímpico anunciava resultados e distribuía prêmios. Paulo usa esse termo para o julgamento dos crentes — não o banco dos réus, mas o estrado de premiação onde obras são avaliadas por Cristo.</div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 VISOES EM DIALOGO -->
+<div class="lbl">Página 5 · Visões em Diálogo</div>
+<div class="pag int">
+<div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 10</span><span class="pht">O Juízo Final</span></div>
+<h2>III —Visões em Diálogo</h2>
+<p>Sobre a realidade do Juízo Final, há consenso entre todas as tradições cristãs ortodoxas. As diferenças se concentram na cronologia do julgamento e em sua relação com o milênio e as ressurreições sequênciais.</p>
+<div class="bvp">
+<div class="vl">✦ Perspectiva Pentecostal</div>
+<div class="vt">Para o dispensacionalismo pentecostal, há múltiplos julgamentos em sequência: (1) o Tribunal de Cristo (Bema) para os crentes arrebatados, nos céus durante a Tribulação — avalia obras, não salvação; (2) o julgamento das nações em Mateus 25:31-46, na vinda de Cristo, baseado no tratamento dado aos "irmãos" de Cristo (judeus da Tribulação); (3) o Grande Trono Branco de Apocalipse 20:11-15 apos o milênio, exclusivamente para os incrédulos de todas as eras. Cada julgamento tem base, momento e consequências distintas dentro do esquema dispensacionalista.</div>
+</div>Mesmo onde há diferença de cronologia, permanece o mesmo testemunho: ninguém escapará da justiça de Deus e ninguém que esteja em Cristo será lançado fora. O juízo final não ameaça a segurança do salvo; antes, manifesta publicamente a eficácia da obra redentora de Jesus em favor do seu povo.
+<p>Essa convergência é importante para a vida da igreja. Ela impede tanto a indiferença moral quanto o sensacionalismo escatológico. O foco das Escrituras não é alimentar especulação, mas chamar todos os homens ao arrependimento, à fé e à sobriedade diante daquele que julgará o mundo com justiça.</p>
+    &gt;
+    <div class="bvr">
+<div class="vl">✦ Perspectiva Reformada</div>
+<div class="vt">Para o amilenismo reformado, há um único julgamento universal — o Grande Julgamento — ao fim da história, quando Cristo voltar. Todos os seres humanos de todas as eras comparecem simultaneamente: crentes e incrédulos, vivos e ressuscitados. O "tribunal de Cristo" de 2 Coríntios 5:10 e o "Grande Trono Branco" de Apocalipse 20 descrevem o mesmo evento sob ângulos distintos. As obras dos crentes seráo reveladas publicamente para glória de Deus, confirmando a graça; as obras dos incrédulos fundamentarao a justa condenação. Louis Berkhof e Herman Bavinck defendem essa leitura unitaria.</div>
+</div>
+<div class="sep"><span>✦</span></div>
+<p>O fundamento comum é inabalável: Deus e justo, Cristo é o Juiz, nenhuma injustica ficara sem resposta, nenhuma bondade ficara sem reconhecimento. O Juízo Final é a garantia de que a história tem sentido moral e que o mal não tera a ultima palavra.</p>
+<div class="baluno ba-pense">
+<div class="baluno-tag"><span class="baluno-ico">⊙</span> Pense nisso</div>
+<div class="baluno-corpo">Pentecostais e reformados divergem sobre a cronologia dos julgamentos, mas convergem no essencial: Cristo é o Juiz, as obras serão avaliadas, nenhuma injustiça ficará sem resposta. Essa convergência é suficiente para a unidade cristã? O debate sobre sequência muda algo na forma como você vive agora?</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 APLICACAO -->
+<div class="lbl">Página 6 · Conclusão e Aplicação</div>
+<div class="pag int">
+<div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 10</span><span class="pht">O Juízo Final</span></div>
+<h2>Conclusão </h2>
+<p>A doutrina do Juízo Final produz dois efeitos simultaneos no crente maduro: temor reverente e liberdade profunda. Temor, porque cada ação presente tem péso eterno e será examinada pelo olhar onisciente de Cristo. Liberdade, porque o crente não precisa mais julgar e se vingar — Deus e o Juiz, e sua justiça e perfeita. Essas duas atitudes, longe de se contradizer, se alimentam mutuamente.</p>
+<div class="apl">
+<div class="at">Aplicação </div>
+<p>Primeiro: leia Romanos 12:19 — "a mim pertence a vingança; eu recompensarei, diz o Senhor." Ha alguém em sua vida que te fez mal e que você ainda quer ver "receber o que merece"? O Juízo Final libera você do fardo da vingança — entregue ao Juiz justo. Segundo: avalie suas obras à luz de 1 Coríntios 3:12-15 — o que você tem construido que sobreviveria ao fogo do julgamento? Terceiro: o conhecimento do julgamento deveria intensificar sua urgencia missionaria — compartilhar o evangelho e dar a cada pessoa a oportunidade de ter seu nome no Livro da Vida.</p>
+</div>
+<div class="sep"><span>✦</span></div>
+<h3>Para Refletir</h3>
+<p>Dostoievski escreveu: "Se Deus não existe, tudo e permitido." O Juízo Final e a resposta cristã a esse dilema: Deus existe, a história tem um juiz, e nenhuma ação humana e moralmente neutra ou definitivamente impune. Como essa convicção deveria moldar suas escolhas eticas cotidianas — nos relacionamentos, no trabalho, no uso do dinheiro e do tempo?</p>
+<div class="bver">"Nao vos vingueis a vos mesmos, amados, mas dai lugar a ira de Deus; porque está escrito: A mim pertence a vingança; eu recompensarei, diz o Senhor." <cite>Romanos 12:19</cite></div>
+<p>Nas próximas duas licoes contemplaremos os dois destinos finais da humanidade: <strong>O Inferno</strong> e <strong>O Ceu e a Nova Jerusalem</strong> — as duas realidades eternas que o Juízo Final determina.</p>
+<p>Em conclusão, o Juízo Final deve conduzir o crente a uma vida de sobriedade, reconciliação e perseverança. Quem sabe que Deus julgará o mundo não precisa viver dominado pela ansiedade de resolver tudo com as próprias mãos, mas também não pode tratar o pecado como algo leve ou indiferente.</p>
+<p>A doutrina do juízo final, portanto, não foi dada para alimentar pavor estéril, e sim para ordenar a vida diante de Deus. Ela chama a igreja a andar em santidade, a anunciar o evangelho com urgência e a descansar na certeza de que a justiça perfeita do Senhor prevalecerá no fim.</p>
+<div class="baluno ba-vida">
+<div class="baluno-tag"><span class="baluno-ico">✦</span> Leve para a vida</div>
+<div class="baluno-corpo">Esta semana, escolha uma atitude concreta motivada pela certeza do Juízo Final: libere alguém que te fez mal entregando ao Juiz justo (Rm 12:19); examine uma área da sua vida à luz de 1 Co 3:12-15; ou compartilhe o evangelho com alguém, sabendo que o tempo da graça é limitado. Anote aqui o que você vai fazer:</div>
+<div class="baluno-linha"></div>
+<div class="baluno-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 QUESTOES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 10</span><span class="pht">O Juízo Final</span></div>
+<h2>Questões para Reflexão</h2>
+<div class="q">
+<div class="qn">Questao 01</div>
+<div class="qt">Por que a doutrina do Juízo Final é profundamente necessária para que a história tenhá sentido moral? Como a negacao do julgamento final afeta a etica e a justiça na vida prática de uma sociedade?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questao 02</div>
+<div class="qt">O julgamento dos crentes no "Tribunal de Cristo" (2 Co 5:10) não e para condenação, mas para avaliação de obras. O que isso revela sobre a relação entre graça e responsabilidade na vida cristã? Isso muda sua motivacao para servir?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questao 03</div>
+<div class="qt">O dispensacionalismo ve múltiplos julgamentos sequênciais; o amilenismo ve um julgamento universal único. Quais textos biblicos cada posicao usa como suporte? Como você avalia os argumentos de cada lado?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questao 04</div>
+<div class="qt">Romanos 12:19 libera o crente da vingança pessoal porque Deus e o Juiz. Ha situações em sua vida onde essa verdade está sendo dificil de aplicar? Como a certeza do Juízo Final pode trazer liberdade ao inves de ressentimento?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="lit">
+<div class="lt">Leituras Complementares</div>
+<ul>
+<li>Herman Bavinck — Reformed Dogmatics, vol. 4 (o julgamento final na perspectiva reformada classica)</li>
+<li>D.A. Carson — The Gagging of God, cap. 12 (julgamento, pluralismo e exclusividade cristã)</li>
+<li>Leitura devocional: Ap 20:11-15 + Jo 5:19-30 + 2 Co 5:6-10 + Rm 2:1-16</li>
+</ul>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

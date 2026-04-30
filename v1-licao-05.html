@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton · Lição 05 — O Anticristo</title>
+
+<meta name="theme-color" content="#1a1428">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#a03030;--grad1:#280a0a;--grad2:#3a0808;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(160,48,48,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+/* CAPA */
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(160,48,48,0.5) 0%,transparent 55%),radial-gradient(ellipse at 75% 25%,rgba(201,168,76,0.1) 0%,transparent 45%),radial-gradient(ellipse at 60% 80%,rgba(80,10,10,0.4) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:18px 18px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#3a0808,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:60%;background:linear-gradient(160deg,#0d0000,var(--cor) 50%,#ff6060);opacity:0.35;}
+.clh{position:absolute;top:57%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,#3a0808,var(--cor),var(--ouro),transparent);opacity:0.7;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.1;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:26pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+/* INTERNAS */
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#3a0808,var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(160,48,48,0.35);background:rgba(160,48,48,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+ul li::before { 
+    content: '\2192' !important; 
+    position: absolute; 
+    left: 0; 
+    color: var(--cor); 
+    font-size: 9pt; 
+}
+.apl{background:linear-gradient(135deg,rgba(160,48,48,0.06),rgba(201,168,76,0.06));border:1px solid rgba(160,48,48,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'&#183;';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(160,48,48,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(160,48,48,0.08);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ===== BLOCOS-ALUNO ===== */
+.bloco-aluno{border-left:4px solid var(--cor);background:rgba(160,48,48,0.05);border-radius:0 3px 3px 0;padding:10px 12px;margin:12px 0;}
+.bloco-aluno .ba-titulo{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.bloco-aluno .ba-titulo::before{content:'✦';font-size:7pt;color:var(--cor);}
+.bloco-aluno .ba-txt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.6;color:var(--ct);margin-bottom:0;}
+.bloco-aluno .ba-nota{font-family:'Oswald',sans-serif;font-size:7pt;letter-spacing:1px;text-transform:uppercase;color:#888;margin-top:6px;padding-top:6px;border-top:1px solid rgba(160,48,48,0.2);}
+</style>
+</head>
+<body>
+
+<div class="painel">
+    <div class="marca">ESCHATON<span>Lição 05 · O Anticristo</span></div>
+    <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+    <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+<div class="area">
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 05">
+    <img src="capa-revista.png" alt="Capa da revista Eschaton">
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">05</div><div class="cnd">05</div>
+    <div class="ccon">
+        <div class="cser">Série · Eschaton · Estudos Escatológicos</div>
+        <div class="ctit">O Anticristo</div>
+        <div class="cver">
+            "Filhinhos, é o último tempo; e, como ouvistes que o anticristo vem, também agora muitos anticristos se levantaram, pelo que conhecemos que é o último tempo."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">1 João 2:18</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 05</span><span class="pht">O Anticristo</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Poucos personagens da história e da profecia bíblica fascinaram tanto o imaginário humano quanto o Anticristo. De Nero a Hitler, de Mussolini a líderes contemporâneos — cada geração identificou em algum tirano a encarnação dessa figura sinistra. Mas o que a Bíblia de fato ensina sobre o Anticristo? Quem é ele, de onde vem e qual será seu fim?</p>
+    <div class="bver">"Não vos enganeis de maneira alguma; porque isso não acontecerá sem que antes venha a apostasia, e se manifeste o homem do pecado, o filho da perdição." <cite>2 Tessalonicenses 2:3</cite></div>
+    <div class="obj">
+        <div class="ot">Objetivos desta lição</div>
+        <ul>
+            <li>Mapear as principais referências bíblicas ao Anticristo no AT e NT</li>
+            <li>Distinguir o "espírito do anticristo" do personagem escatológico final</li>
+            <li>Analisar as características, ascensão e queda do "homem do pecado"</li>
+            <li>Avaliar as leituras pentecostal e reformada sobre essa figura profética</li>
+        </ul>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <p>O termo "anticristo" aparece apenas nas cartas de João (1 Jo 2:18,22; 4:3; 2 Jo 7) — mas a figura que ele representa percorre toda a Bíblia sob diferentes nomes: o "homem do pecado" em Paulo, a "besta" em João, o "pequeno chifre" em Daniel. Compreender cada um desses títulos é essencial para uma teologia profética madura.</p>
+    <p>Ao estudar esse tema, o aluno da Escola Bíblica Dominical deve evitar dois extremos igualmente perigosos: a curiosidade sensacionalista e a negligência doutrinária. A Escritura não nos foi dada para alimentar especulações vazias, mas para formar discernimento espiritual, perseverança e sobriedade diante do engano que antecede a consumação de todas as coisas.</p>
+    <p>Por isso, esta lição não procura satisfazer a curiosidade humana em torno de nomes, datas ou conjecturas políticas. Seu propósito é mostrar que a revelação bíblica apresenta o Anticristo como expressão máxima da rebelião contra Deus, ao mesmo tempo em que chama a Igreja a permanecer firme em Cristo, que reina soberanamente sobre a história e já decretou o fim de toda oposição ao seu senhorio.</p>
+
+    <div class="bloco-aluno">
+        <div class="ba-titulo">Para Você Refletir — Quem Você Acha que É o Anticristo?</div>
+        <div class="ba-txt">Cada geração identificou algum tirano como o Anticristo — e errou. Antes de apontar nomes, esta lição convida a uma pergunta mais urgente: você conhece o critério bíblico para reconhecê-lo? João diz que o primeiro teste é doutrinário — o que esse personagem confessa sobre Jesus (1 Jo 2:22). Discernimento começa pela Palavra, não pela manchete.</div>
+        <div class="ba-nota">✦ Bloco para o aluno · Pg. 2 — Introdução</div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 TÓPICO I -->
+<div class="lbl">Página 3 · Tópico I</div>
+<div class="pag int">
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 05</span><span class="pht">O Anticristo</span></div>
+    <h2>I — O Anticristo nas Escrituras</h2>
+    <p>A figura do Anticristo emerge progressivamente ao longo do cânon bíblico, com cada autor revelando novos aspectos de sua identidade e missão. Não é uma invenção apocalíptica tardia — suas raízes chegam aos profetas do Antigo Testamento.</p>
+    <h3>No Antigo Testamento: O Pequeno Chifre</h3>
+    <p>Daniel 7:8,24-26 descreve um "pequeno chifre" que surge entre os dez chifres da quarta besta — falando "grandes cousas", fazendo guerra contra os santos e tentando mudar os tempos e a lei. Daniel 11:36-37 aprofunda o retrato: um rei que "se exaltará e se engrandecerá acima de todo deus, e falará cousas espantosas contra o Deus dos deuses". Antíoco IV Epifânio cumpriu isso parcialmente em 167 a.C., mas a profecia aponta além dele.</p>
+    <div class="bver">"E o rei fará conforme a sua vontade, e se exaltará, e se engrandecerá acima de todo deus, e falará cousas espantosas contra o Deus dos deuses." <cite>Daniel 11:36</cite></div>
+    <h3>Em Paulo: O Homem do Pecado</h3>
+    <p>Em 2 Tessalonicenses 2:3-10, Paulo descreve o "homem do pecado" — também chamado de "filho da perdição" — que se assentará no templo de Deus proclamando ser Deus. Sua manifestação é retida por um "obstaculizador" (katechon) ainda presente. Paulo claramente aponta para um personagem futuro e individual, não apenas um princípio impessoal de maldade.</p>
+    <p>Essas descrições mostram uma progressão importante na revelação: o Antigo Testamento fornece os contornos do poder blasfemo e perseguidor, enquanto o Novo Testamento explicita seu caráter satanicamente inspirado e sua oposição direta a Cristo. Não se trata apenas de crueldade política, mas de usurpação religiosa, pois o objetivo final dessa figura é ocupar o lugar que pertence somente ao Senhor.</p>
+    <p>Também é relevante notar que a Bíblia apresenta essa manifestação final como parte de um processo de mistério da iniquidade já em operação. Isso significa que o aparecimento do Anticristo não será um evento desconectado da história humana, mas o auge de uma longa dinâmica de rebeldia, engano e autoexaltação. Onde a verdade de Deus é trocada pela pretensão humana de autonomia absoluta, ali já se percebe a atmosfera espiritual que prepara o caminho para sua revelação.</p>
+
+    <div class="bloco-aluno">
+        <div class="ba-titulo">Conexão Bíblica — De Daniel a Paulo, um Único Retrato</div>
+        <div class="ba-txt">O "pequeno chifre" de Daniel 7, o "rei que se exalta" de Daniel 11 e o "homem do pecado" de Paulo descrevem o mesmo perfil: uma figura que usurpa o lugar de Deus, persegue os santos e age com poder satânico. A Bíblia não inventa um vilão novo a cada século — ela revela, progressivamente, um único adversário final de Cristo que já lança sua sombra ao longo de toda a história.</div>
+        <div class="ba-nota">✦ Bloco para o aluno · Pg. 3 — O Anticristo nas Escrituras</div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 TÓPICO II -->
+<div class="lbl">Página 4 · Tópico II</div>
+<div class="pag int">
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 05</span><span class="pht">O Anticristo</span></div>
+    <h2>II — A Besta do Apocalipse</h2>
+    <p>Apocalipse 13 apresenta a figura mais detalhada do Anticristo — "a besta que sobe do mar", com dez chifres e sete cabeças, recebendo seu poder do dragão (Satanás). Sua ascensão e marcada por uma imitação diabólica da ressurreição: uma das cabeças parece morta mas é curada, provocando adoração universal.</p>
+    <h3>As Caracteristicas da Besta</h3>
+    <p>Apocalipse 13 revela um programa sistemático de controle global: autoridade política sobre nações, poder econômico (a marca sem a qual ninguém compra ou vende) e exigência de adoração religiosa. A besta não é apenas um tirano político — é uma contrafação do próprio Cristo, uma trindade invertida: o dragão (falso pai), a besta (falso filho) e o falso profeta (falso espírito santo).</p>
+    <div class="bver">"E foi-lhe dado poder sobre toda tribo, e povo, e língua, e nação. E adoraram-na todos os que habitam sobre a terra." <cite>Apocalipse 13:7-8</cite></div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>O Espírito do Anticristo: Já Presente</h3>
+    <p>João equilibra a expectativa futurista com uma advertência imediata: "já agora está no mundo" o espírito do anticristo (1 Jo 4:3). Todo sistema ideológico, líder religioso ou movimento cultural que nega a encarnação de Cristo e rejeita seu senhorio manifesta o espírito do anticristo — independentemente de qualquer personagem escatológico futuro. Essa dimensão "já presente" é frequentemente negligenciada pela escatologia popular.</p>
+    <h3>O Fim: Destruição pelo Sopro</h3>
+    <p>Paulo e João convergem: o Senhor Jesus destruirá o Anticristo "pelo sopro de sua boca" (2 Ts 2:8) e será lançado vivo no lago de fogo (Ap 19:20). Seu fim é tão certo quanto seu surgimento.</p>
+    <p>A ênfase de Apocalipse 13 não está apenas no terror que a besta produz, mas na facilidade com que o mundo seduzido se rende a ela. O texto combina coerção e fascinação: há poder militar, propaganda religiosa, controle econômico e assombro coletivo. Isso revela que o mal escatológico não age somente pela violência aberta, mas também pela capacidade de oferecer uma falsa segurança e uma falsa unidade apartadas da verdade divina.</p>
+    <p>Nesse ponto, a Igreja precisa aprender a discernir entre autoridade legítima e idolatria política, entre progresso técnico e dominação espiritual, entre religiosidade aparente e verdadeira adoração. A besta sempre exige mais do que obediência civil; ela deseja lealdade última. E exatamente nesse aspecto que o testemunho cristão se torna indispensável, pois confessar que Jesus é Senhor impede que qualquer poder terreno receba a devoção que pertence unicamente ao Cordeiro.</p>
+
+    <div class="bloco-aluno">
+        <div class="ba-titulo">Sabia Que? — O Espírito do Anticristo Já Está no Mundo</div>
+        <div class="ba-txt">João não espera um personagem futuro para soar o alarme: <em>"já agora está no mundo"</em> o espírito do anticristo (1 Jo 4:3). Todo sistema que nega a encarnação de Cristo, exige lealdade absoluta ou substitui o senhorio de Jesus já manifesta esse espírito. O Anticristo final será o clímax de algo que já opera — e o cristão é chamado a discerni-lo agora, não apenas no futuro.</div>
+        <div class="ba-nota">✦ Bloco para o aluno · Pg. 4 — A Besta do Apocalipse</div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 TÓPICO III -->
+<div class="lbl">Página 5 · Tópico III</div>
+<div class="pag int">
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 05</span><span class="pht">O Anticristo</span></div>
+    <h2>III — Visões em Diálogo</h2>
+    <p>A figura do Anticristo é interpretada de maneiras radicalmente distintas pelas tradições pentecostal e reformada — desde sua identidade até a cronologia de sua manifestação.</p>
+    <div class="bvp">
+        <div class="vl">&#10022; Perspectiva Pentecostal</div>
+        <div class="vt">Para o pentecostalismo dispensacionalista, o Anticristo é um indivíduo futuro e literal que surgirá após o arrebatamento da Igreja. Ele firmará um pacto de sete anos com Israel (Dn 9:27), governará um império político global, reconstruirá o Templo de Jerusalém, se assentará nele como deus na metade da Tribulação (2 Ts 2:4) e perseguirá ferozmente os que se converterem durante esse período. O número 666 identifica seu nome em algum sistema numerológico. Muitas especulações conectam figuras contemporâneas a esse perfil.</div>
+    </div>
+    <div class="bvr">
+        <div class="vl">&#10022; Perspectiva Reformada</div>
+        <div class="vt">A tradição reformada historicamente identificou o "homem do pecado" com o sistema papal romano — posição presente nas Confissões de Westminster (1646) e de outros documentos confessionais. Na exegese reformada contemporânea, o Anticristo é compreendido tanto como uma realidade histórica já manifesta quanto como uma intensificação futura do princípio de oposição a Cristo. O amilenismo vê na "besta" do Apocalipse uma referência ao Império Romano do século I, com aplicação tipológica a toda oposição sistemática ao evangelho ao longo da história.</div>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <p>Ambas as tradições concordam: existe uma força ativa de oposição a Cristo no mundo — pessoal ou sistêmica — que será definitivamente destruída pela vinda gloriosa do Senhor Jesus. A certeza da derrota do mal é o fundamento comum da esperança cristã.</p>
+    <p>O diálogo entre essas leituras exige maturidade teológica. Nem toda diferença interpretativa implica negação da autoridade das Escrituras; muitas vezes, ela decorre de pressupostos hermenêuticos distintos sobre línguagem apocalíptica, relação entre Israel e Igreja e cumprimento progressivo da profecia. Por isso, o estudante sério deve ouvir os argumentos com reverência bíblica, evitando tanto o dogmatismo precipitado quanto o relativismo doutrinário.</p>
+    <p>Ao mesmo tempo, a diversidade de leituras não anula as certezas centrais do texto sagrado: Cristo permanece no controle da história, o mal não triunfará, a Igreja é chamada a perseverar em santidade e o juízo final de Deus porá fim a toda impostura anticrista. Quando essas convicções permanecem firmes, o estudo das diferenças deixa de produzir confusão estéril e passa a fortalecer a vigilância espiritual e a esperança escatológica.</p>
+
+    <div class="bloco-aluno">
+        <div class="ba-titulo">Pense Nisso — Indivíduo Futuro ou Princípio Histórico?</div>
+        <div class="ba-txt">Pentecostais veem um indivíduo futuro e literal; reformados veem também realidades históricas já cumpridas e um princípio presente. As duas tradições, porém, concordam no essencial: existe uma força ativa de oposição a Cristo no mundo que será destruída pela sua vinda gloriosa. Onde está o fundamento da sua esperança — no calendário do Anticristo ou na certeza da vitória de Cristo?</div>
+        <div class="ba-nota">✦ Bloco para o aluno · Pg. 5 — Visões em Diálogo</div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 CONCLUSÃO -->
+<div class="lbl">Página 6 · Conclusão</div>
+<div class="pag int">
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 05</span><span class="pht">O Anticristo</span></div>
+    <h2>Conclusão</h2>
+    <p>Ao percorrer as Escrituras — do "pequeno chifre" de Daniel ao "homem do pecado" de Paulo e à "Besta" do Apocalipse —, descobrimos que o tema do Anticristo não foi entregue à Igreja para alimentar medo ou curiosidade, mas para formar discernimento, perseverança e esperança. A revelação do inimigo máximo de Cristo serve, paradoxalmente, para exaltar a soberania absoluta do próprio Cristo: o mal terá fim, a impostura será desmascarada e o Cordeiro reinará sem oposição.</p>
+    <p>A fascinação com o Anticristo pode se tornar uma armadilha espiritual. Quando o cristão investe mais energia identificando o Anticristo em líderes políticos do que examinando o "espírito do anticristo" em sua própria cultura e coração, ele perde o foco que João pretendia: discernimento e fidelidade no presente, não especulação sobre o futuro.</p>
+    <div class="apl">
+        <div class="at">Para a sua semana</div>
+        <p>Primeiro: leia 1 João 4:1-6 e identifique os critérios que João dá para testar os "espíritos" — o que eles confessam sobre Jesus Cristo? Isso é mais útil do que qualquer gráfico profético. Segundo: reflita sobre quais sistemas de pensamento, plataformas ou ideologias em sua vida cotidiana negam o senhorio de Cristo de forma velada — esse é o "espírito do anticristo" presente e real. Terceiro: estude 2 Tessalonicenses 2:1-12 com atenção ao papel do "obstaculizador" — o que ou quem Paulo tinha em mente?</p>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>Para Refletir</h3>
+    <p>João escreve que "já agora está no mundo" o espírito do anticristo (1 Jo 4:3). Se isso é verdade, o que muda na sua postura diante de sistemas políticos, culturais e religiosos que exaltam o homem e marginalizam Cristo? A resposta cristã é fuga do mundo ou testemunho profético dentro dele?</p>
+    <div class="bver">"Filhinhos, vós sois de Deus, e já os tendes vencido; porque maior é o que está em vós do que o que esta no mundo." <cite>1 João 4:4</cite></div>
+    <p>Antes de encerrar, é necessário lembrar que a melhor preparação contra o engano final não é o medo, mas a fidelidade cotidiana. Crentes firmados na Palavra, sensíveis ao Espírito Santo e comprometidos com a centralidade de Cristo não serão preservados por astúcia humana, e sim pela verdade divina recebida, obedecida e amada. A vigilância bíblica sempre anda ao lado da vida devocional, da comunhão da Igreja e do discernimento doutrinário.</p>
+    <p>Assim, estudar o Anticristo não deve produzir paranoia, mas sobriedade; não deve alimentar curiosidade mórbida, mas fortalecer a convicção de que o Reino de Deus prevalecerá. A Igreja não precisa temer o desfecho da história, porque o Cordeiro que foi morto é o mesmo que reina, julga e consumará todas as coisas. Toda aula sobre esse tema deve terminar menos fascinada pelo mal e mais rendida à majestade de Cristo.</p>
+    <p>Na próxima lição examinaremos o papel singular de <strong>Israel na profecia</strong> — um dos temas mais debatidos entre dispensacionalistas e teólogos da aliança.</p>
+
+    <div class="bloco-aluno">
+        <div class="ba-titulo">Leve Para a Vida — Sobriedade, não Paranoia</div>
+        <div class="ba-txt">A revelação bíblica sobre o Anticristo não foi dada para produzir medo ou paranoia, mas discernimento e perseverança. A melhor defesa contra o engano final é a fidelidade cotidiana: uma vida enraizada na Palavra, sensível ao Espírito e centrada em Cristo. <em>"Maior é o que está em vós do que o que está no mundo"</em> (1 Jo 4:4) — essa é a convicção que sustenta o cristão, hoje e no fim dos tempos.</div>
+        <div class="ba-nota">✦ Bloco para o aluno · Pg. 6 — Conclusão e Aplicação</div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 QUESTÕES -->
+<div class="lbl">Página 7 · Questões &amp; Anotações</div>
+<div class="pag int">
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 05</span><span class="pht">O Anticristo</span></div>
+    <h2>Questões para Reflexão</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">O termo "anticristo" aparece apenas nas cartas de João, mas a figura perpassa toda a Bíblia com nomes diferentes. Quais são esses nomes e o que cada um revela sobre o caráter dessa figura profética?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">Paulo descreve o "homem do pecado" que se assentará no templo de Deus (2 Ts 2:4). Como as perspectivas dispensacionalista e reformada interpretam esse "templo"? Qual leitura você considera mais sólida?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">João afirma que o "espírito do anticristo" já estava presente no século I (1 Jo 4:3). Como isso equilibra a expectativa futurista do Anticristo com uma aplicação prática e imediata para o cristão de hoje?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">A trindade invertida — dragão, besta e falso profeta — imita a Trindade divina. O que essa imitação diabólica revela sobre a estratégia de Satanás e como o cristão pode discerni-la em seu contexto cultural?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="lit">
+        <div class="lt">Leituras Complementares</div>
+        <ul>
+            <li>Kim Riddlebarger — A Case for Amillennialism (cap. sobre o Anticristo, perspectiva reformada)</li>
+            <li>John MacArthur — Because the Time is Near (perspectiva dispensacionalista do Apocalipse 13)</li>
+            <li>Leitura devocional: Daniel 7:19-27 + 2 Ts 2:1-12 + 1 Jo 2:18-23 + Ap 13:1-18</li>
+        </ul>
+    </div>
+    <h3 style="margin-top:12px;">Anotações</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton · Lição 13 — Vivendo à Luz da Eternidade</title>
+
+<meta name="theme-color" content="#1a1428">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#c09030;--grad1:#201808;--grad2:#281a08;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(192,144,48,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.área{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+/* CAPA ESPECIAL — ENCERRAMENTO DA SERIE */
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 55%,rgba(192,144,48,0.45) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,0.25) 0%,transparent 45%),radial-gradient(ellipse at 50% 88%,rgba(100,60,0,0.35) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:18px 18px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#201808,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#100a00,var(--cor) 50%,#ffe090);opacity:0.42;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,#201808,var(--cor),var(--ouro),transparent);opacity:0.8;}
+/* Faixa de encerramento no topo da capa */
+.capa-fim{position:absolute;top:0;left:0;right:0;padding:8mm 14mm 6mm 18mm;z-index:4;}
+.capa-fim-txt{font-family:'Oswald',sans-serif;font-size:7pt;letter-spacing:3px;color:rgba(201,168,76,0.7);text-transform:uppercase;}
+.capa-fim-linha{width:100%;height:1px;background:linear-gradient(90deg,rgba(201,168,76,0.5),transparent);margin-top:4px;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.12;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:17pt;font-weight:700;color:#fff;line-height:1.26;text-transform:uppercase;margin-bottom:12px;letter-spacing:0.5px;word-spacing:normal;max-width:100%;overflow-wrap:normal;word-break:normal;hyphens:none;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+/* PAGINAS INTERNAS */
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#201808,var(--cor),var(--ouro) 70%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(192,144,48,0.35);background:rgba(192,144,48,0.05);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+/* Correção definitiva para Lição 13 */
+
+/* 1. Seta dos Objetivos e Itens de Síntese */
+.obj ul li::before, 
+.sintese-item::before {
+    content: '\2192' !important; 
+    position: absolute !important;
+    left: 0 !important;
+    color: var(--cor) !important;
+    font-size: 11pt !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+/* 2. Pontos das Leituras Finais */
+.lit ul li::before {
+    content: '\2022' !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: var(--ouro) !important;
+    visibility: visible !important;
+}
+.apl{background:linear-gradient(135deg,rgba(192,144,48,0.07),rgba(201,168,76,0.07));border:1px solid rgba(192,144,48,0.25);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+/* BLOCO DE SINTESE — exclusivo desta lição */
+.sintese{background:linear-gradient(135deg,#fdfbf0,#f5f0e0);border:1px solid rgba(192,144,48,0.3);border-radius:3px;padding:12px 14px;margin:12px 0;}
+.sintese-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;}
+.sintese-item{font-family:'EB Garamond',serif;font-size:9.5pt;color:var(--ct);padding:3px 0 3px 14px;position:relative;line-height:1.4;border-bottom:1px solid rgba(192,144,48,0.15);}
+.sintese-item:last-child{border-bottom:none;}
+.sintese-item::before{content:'&#10022;';position:absolute;left:0;color:var(--ouro);font-size:8pt;top:4px;}
+/* ENCERRAMENTO FINAL */
+.encerramento{background:linear-gradient(135deg,#201808,#281a08);border-radius:3px;padding:14px;margin:12px 0;text-align:center;}
+.enc-titulo{font-family:'Cinzel',serif;font-size:11pt;color:var(--ouro);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.enc-texto{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'&#183;';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(192,144,48,0.06);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(192,144,48,0.09);border-radius:2px;}
+
+/* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.lição-iniciada #conteudoLicao{display:contents;}
+body.lição-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(16pt,7vw,20pt);line-height:1.24;letter-spacing:0.4px;}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .área{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ── BLOCOS DO ALUNO — Lição 13 ── */
+/* Paleta âmbar/ouro da lição 13 */
+.baluno{border-radius:3px;padding:9px 12px;margin-top:12px;margin-bottom:2px;position:relative;}
+.baluno-ico{font-size:10pt;margin-right:6px;vertical-align:middle;}
+.baluno-tag{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.baluno-corpo{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.baluno-linha{border-bottom:1px solid rgba(0,0,0,0.12);height:22px;margin-top:6px;}
+
+/* Para você refletir — âmbar */
+.ba-refletir{background:rgba(192,144,48,0.07);border-left:3px solid var(--cor);}
+.ba-refletir .baluno-tag{color:var(--cor);}
+/* Conexão Bíblica — ouro */
+.ba-biblica{background:rgba(201,168,76,0.08);border-left:3px solid var(--ouro);}
+.ba-biblica .baluno-tag{color:#8a6a20;}
+/* Sabia que? — âmbar escuro */
+.ba-sabia{background:rgba(80,50,10,0.06);border-left:3px solid #7a5a10;}
+.ba-sabia .baluno-tag{color:#7a5a10;}
+/* Pense nisso — âmbar com borda tracejada */
+.ba-pense{background:rgba(192,144,48,0.04);border:1px dashed rgba(192,144,48,0.38);border-left:3px solid var(--cor);}
+.ba-pense .baluno-tag{color:var(--cor);}
+/* Leve para a vida — gradiente âmbar/ouro */
+.ba-vida{background:linear-gradient(135deg,rgba(192,144,48,0.06),rgba(201,168,76,0.07));border:1px solid rgba(201,168,76,0.32);border-left:3px solid var(--ouro);}
+.ba-vida .baluno-tag{color:#8a6a20;}
+
+@media (max-width:768px){
+    .baluno{padding:8px 10px;}
+    .baluno-corpo{font-size:9.5pt;}
+}
+@media print{
+    .baluno{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<div class="painel">
+    <div class="marca">ESCHATON<span>Lição 13 &middot; Vivendo à Luz da Eternidade</span></div>
+    <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+    <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+<div class="área">
+
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 13">
+    <img src="capa-revista.png" alt="Capa da revista Eschaton">
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+
+    
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 &middot; Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">13</div><div class="cnd">13</div>
+    <div class="capa-fim">
+        <div class="capa-fim-txt">Lição Final &middot; Encerramento da Série</div>
+        <div class="capa-fim-linha"></div>
+    </div>
+    <div class="ccon">
+        <div class="cser">Série &middot; Eschaton &middot; Estudos Escatológicos</div>
+        <div class="ctit">Vivendo à Luz da Eternidade</div>
+        <div class="cver">
+            "Visto que todas essas coisas hão de se dissolver, que pessoas deveis ser vós em santo procedimento e piedade? Esperando e apressando a vinda do dia de Deus."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">2 Pedro 3:11-12</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 INTRODUCAO / SINTESE -->
+<div class="lbl">Página 2 &middot; Introdução e Síntese</div>
+<div class="pag int">
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 13 &middot; Final</span><span class="pht">Vivendo à Luz da Eternidade</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Chegamos ao fim de uma jornada de treze lições pelos grandes temas da escatologia bíblica. Estudamos sinais dos tempos, arrebatamento, tribulação, anticristo, milênio, ressurreição, juízo, inferno e nova criação. Mas toda essa teologia tem um único destino prático: transformar o modo como vivemos hoje. A escatologia que não muda a vida não entrou no coração — ficou apenas no intelecto.</p>
+    <div class="sintese">
+        <div class="sintese-titulo">O que aprendemos nas 13 lições</div>
+        <div class="sintese-item">A escatologia é o horizonte de toda a teologia — não um apêndice (L1)</div>
+        <div class="sintese-item">Os sinais dos tempos exigem vigilância, não ansiedade (L2)</div>
+        <div class="sintese-item">O arrebatamento foi dado para consolar, não para especular (L3)</div>
+        <div class="sintese-item">A Tribulação revela a justiça e a misericórdia simultâneas de Deus (L4)</div>
+        <div class="sintese-item">O Anticristo já opera como espírito — discernimento é urgente (L5)</div>
+        <div class="sintese-item">Israel e a Igreja: um único mistério da graça soberana de Deus (L6)</div>
+        <div class="sintese-item">O milênio: Cristo reina — agora e para sempre (L7)</div>
+        <div class="sintese-item">A Segunda Vinda é certa, visível e gloriosa — nenhum olho escapará (L8)</div>
+        <div class="sintese-item">A ressurreição do corpo é o fundamento de todo engajamento presente (L9)</div>
+        <div class="sintese-item">O Juízo Final libera da vingança e intensifica a missão (L10)</div>
+        <div class="sintese-item">O inferno torna a graça incompreensivelmente gloriosa (L11)</div>
+        <div class="sintese-item">O céu é renovação — não fuga — da criação que Deus ama (L12)</div>
+    </div>
+    
+    <p>A síntese desta série mostra que a escatologia não é um tema periférico, mas a moldura que dá unidade à esperança cristã. Cada lição estudada convergiu para a mesma verdade: Deus conduz a história a um fim santo, justo e glorioso.</p>
+    <p>Por isso, conhecer o fim não é satisfazer curiosidade, mas aprender a viver com propósito. A doutrina escatológica amadurece a fé quando leva o crente a abandonar tanto a ansiedade quanto a superficialidade espiritual.</p>
+
+    <div class="baluno ba-refletir">
+        <div class="baluno-tag"><span class="baluno-ico">&#9670;</span> Para você refletir</div>
+        <div class="baluno-corpo">Ao olhar a síntese das 13 lições, qual tema te impactou mais profundamente — e qual ficou apenas no intelecto sem descer ao coração? A escatologia que não transforma a vida ficou no caminho. O que ainda precisa mudar em você a partir de tudo que foi estudado?</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 DESENVOLVIMENTO I -->
+<div class="lbl">Página 3 &middot; Desenvolvimento I</div>
+<div class="pag int">
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 13</span><span class="pht">Vivendo à Luz da Eternidade</span></div>
+    <h2>I-A Ética Escatológica</h2>
+    <p>Pedro faz a conexão mais direta da Bíblia entre escatologia e ética: "visto que todas essas coisas hão de se dissolver, que pessoas deveis ser vós em santo procedimento e piedade?" (2 Pe 3:11). O conhecimento do fim não é informação neutra — é imperativo moral. Quem sabe como a história termina deve viver de forma diferente de quem não sabe.</p>
+    <h3>Três Atitudes Bíblicas Diante do Fim</h3>
+    <p>O Novo Testamento descreve três atitudes que a esperança escatológica deve produzir no cristão. A primeira é <strong>vigilância</strong> — "vigiai e orai" (Mt 26:41), "sede sóbrios e vigilantes" (1 Pe 5:8). Não a vigilância paranoica de quem espia o noticioso em busca de sinais, mas a vigilância espiritual de quem cuida do próprio coração e das próprias relações. A segunda é <strong>santidade</strong> — "todo aquele que tem esta esperança nele a si mesmo se purifica, assim como ele é puro" (1 Jo 3:3). A esperança da vinda de Cristo não é conforto para a mediocridade — é convocação para a semelhança com ele. A terceira é <strong>missão</strong> — "e será pregado este evangelho do reino em todo o mundo... e então virá o fim" (Mt 24:14). A escatologia é o maior motivador missionário da história da Igreja.</p>
+    <div class="bver">"Todo aquele que tem esta esperança nele a si mesmo se purifica, assim como ele é puro." <cite>1 João 3:3</cite></div>
+    
+    <p>A ética escatológica não se apoia em medo estéril, mas em responsabilidade diante de Deus. Quem sabe que Cristo voltará aprende a avaliar o presente à luz da eternidade e a ordenar a vida segundo o Reino que vem.</p>
+    <p>Essa perspectiva toca escolhas concretas: o modo de falar, de perdoar, de servir e de perseverar. A vigilância, a santidade e a missão deixam de ser conceitos abstratos e se tornam práticas diárias de fidelidade.</p>
+
+    <div class="baluno ba-biblica">
+        <div class="baluno-tag"><span class="baluno-ico">&#9998;</span> Conexão Bíblica</div>
+        <div class="baluno-corpo">Leia 2 Pedro 3:10-14 e 1 João 3:2-3 lado a lado. Como Pedro e João conectam a esperança do retorno de Cristo com a ética cotidiana? Quais verbos de ação cada autor usa — e o que eles revelam sobre a postura concreta que o cristão deve ter enquanto aguarda?</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 DESENVOLVIMENTO II -->
+<div class="lbl">Página 4 &middot; Desenvolvimento II</div>
+<div class="pag int">
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 13</span><span class="pht">Vivendo à Luz da Eternidade</span></div>
+    <h2>II-Esperança que Transforma</h2>
+    <p>A palavra grega <em>elpis</em> — esperança — no Novo Testamento não significa um desejo incerto, como no português coloquial ("espero que chova"). Significa certeza antecipada de uma realidade futura garantida por Deus. E essa certeza que transforma o presente.</p>
+    <h3>Diante do Sofrimento</h3>
+    <p>Paulo afirma que "os sofrimentos do tempo presente não podem ser comparados com a glória que em nós há de ser revelada" (Rm 8:18). O crente que conhece seu destino eterno pode suportar o sofrimento presente sem ser destruído por ele. Os mártires de todas as eras morreram com esperança no rosto — não porque negavam a dor, mas porque tinham uma perspectiva que a transcendia.</p>
+    <div class="bver">"Porque para mim o viver é Cristo, e o morrer é lucro." <cite>Filipenses 1:21</cite></div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>Diante da Morte</h3>
+    <p>A ressurreição de Cristo transforma radicalmente a relação do crente com a própria morte. Paulo zomba dela: "Onde está, ó morte, o teu aguilhão?" (1 Co 15:55). Essa não é arrogância — é a confiança de quem sabe que a morte foi vencida de dentro, por alguém que morreu e ressuscitou. O cristão não finge que a morte não existe; ele a olha nos olhos e diz: "Cristo já passou por você antes de mim."</p>
+    <h3>Diante do Trabalho</h3>
+    <p>A certeza da ressurreição e da nova criação confere significado eterno ao trabalho presente. "O vosso trabalho não é em vão no Senhor" (1 Co 15:58). Cada ato de amor, cada obra de arte, cada ato de justiça praticado em Cristo tem ressonância eterna — porque o Deus que faz novas todas as coisas não desperdiçará nada do que foi feito em seu nome e pelo seu poder.</p>
+    
+    <p>A esperança cristã redefine o sofrimento, a morte e o trabalho porque nenhum deles possui a palavra final. A promessa de Deus impede o desespero e sustenta a fidelidade mesmo quando o presente parece marcado por perdas e limitações.</p>
+    <p>Além disso, ela protege o cristão do cinismo. O que é feito no Senhor não desaparece no vazio, mas participa, por graça, da realidade futura que Deus prometeu consumar.</p>
+
+    <div class="baluno ba-sabia">
+        <div class="baluno-tag"><span class="baluno-ico">&#9654;</span> Sabia que?</div>
+        <div class="baluno-corpo">A palavra grega <em>elpis</em> (esperança) aparece 53 vezes no Novo Testamento e nunca designa um desejo incerto — sempre uma certeza antecipada. Os primeiros cristãos viviam sob perseguição romana, mas os registros históricos mostram que enfrentavam a morte com serenidade desconcertante para os contemporâneos. O filósofo Epicteto, pagão, admirava-se: "É possível, por hábito e disciplina, desprezar a morte assim." Para Paulo, não era hábito — era ressurreição.</div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 VISOES EM DIALOGO -->
+<div class="lbl">Página 5 &middot; Visões em Diálogo</div>
+<div class="pag int">
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 13</span><span class="pht">Vivendo à Luz da Eternidade</span></div>
+    <h2>III-Visões em Diálogo</h2>
+    <p>Na lição final, as perspectivas pentecostal e reformada convergem mais do que divergem — ambas chamam o cristão a uma vida transformada pela esperança do retorno de Cristo.</p>
+    <div class="bvp">
+        <div class="vl">&#10022; Perspectiva Pentecostal</div>
+        <div class="vt">Para o pentecostalismo, a iminência do retorno de Cristo — que pode acontecer a qualquer momento — é o maior motivador para a conversão imediata, o evangelismo urgente e a vida santa. A experiência do Espírito Santo no presente é penhor e antegosto da glória vinda. A adoração exuberante e a oração intensa são respostas naturais de quem vive com o olhar fixo na volta de Cristo. A escatologia pentecostal é visceral, emocional e missionária — ela move o crente a agir com urgência porque o tempo é curto.</div>
+    </div>
+    <div class="bvr">
+        <div class="vl">&#10022; Perspectiva Reformada</div>
+        <div class="vt">Para a teologia reformada, a esperança escatológica molda uma ética de longo prazo: construir instituições justas, cuidar da criação, investir na educação e na cultura, porque o reino de Deus avança progressivamente pela pregação do evangelho e pela transformação das estruturas sociais. A escatologia reformada gera estabilidade, profundidade e engajamento — o cristão não foge do mundo esperando o arrebatamento; ele o habita com esperança, laboriosidade e responsabilidade, sabendo que seu trabalho não é em vão.</div>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <p>O cristão completo precisa das duas ênfases: a urgência missionária pentecostal e a profundidade cultural reformada. A esperança do retorno de Cristo não é apenas motivo para evangelizar — é motivo para construir, criar, cuidar e amar com tudo o que temos, enquanto temos tempo.</p>
+    
+    <p>As diferentes tradições cristãs oferecem ênfases que podem se corrigir e se enriquecer mutuamente. A urgência missionária e o compromisso cultural não precisam ser rivais, mas expressões complementares de uma mesma esperança escatológica.</p>
+    <p>Uma escatologia equilibrada evita extremos e forma crentes capazes de anunciar o evangelho com fervor e, ao mesmo tempo, habitar o mundo com responsabilidade, profundidade e amor ao próximo.</p>
+
+    <div class="baluno ba-pense">
+        <div class="baluno-tag"><span class="baluno-ico">&#8857;</span> Pense nisso</div>
+        <div class="baluno-corpo">A perspectiva pentecostal enfatiza urgência — Cristo pode voltar a qualquer momento; a reformada enfatiza profundidade — o reino avança e exige construção de longo prazo. Essas ênfases parecem opostas, mas precisam coexistir. Qual delas você tende naturalmente? Que fruto concreto a ênfase oposta poderia produzir na sua vida se você a levasse a sério?</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 APLICACAO FINAL -->
+<div class="lbl">Página 6 &middot; Conclusão e Aplicação</div>
+<div class="pag int">
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 13 &middot; Final</span><span class="pht">Vivendo à Luz da Eternidade</span></div>
+    <h2>Conclusão</h2>
+    <p>Ao final desta série, a pergunta não é "qual posição milenista você adota?" ou "você é pré ou pós-tribulacional?". A pergunta é: o que mudou em você? A escatologia que entra pela cabeça e não desce ao coração é apenas erudição — pode até inflar o orgulho intelectual. A que chega ao coração muda a direção da vida.</p>
+    <div class="apl">
+        <div class="at">Desafio Final — Três Compromissos</div>
+        <p><strong>1. Vigilância:</strong> Estabeleça uma prática diária de exame de consciência e oração que reflita sua expectativa pelo retorno de Cristo — não como ritual, mas como postura de quem vive diante do Eterno. <strong>2. Santidade:</strong> Identifique uma área específica da sua vida que precisa ser alinhada com a esperança da vinda de Cristo — um relacionamento, um hábito, uma atitude. Decida hoje o que vai mudar. <strong>3. Missão:</strong> Escreva o nome de três pessoas ao seu redor que ainda não conhecem o evangelho. Ore por elas diariamente. A escatologia bíblica é o maior argumento contra a indiferença missionária.</p>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <div class="encerramento">
+        <div class="enc-titulo">Eschaton &middot; Encerramento</div>
+        <div class="enc-texto">"Aquele que testifica estas coisas diz: Certamente venho sem demora. Amém! Vem, Senhor Jesus."<br><br>Apocalipse 22:20</div>
+    </div>
+    
+    <p>Concluir esta série exige mais do que recordar conteúdos; exige resposta prática. O conhecimento adquirido precisa se converter em transformação real, afetando prioridades, hábitos e a direção da vida diante de Deus.</p>
+    <p>A escatologia bíblica chama o cristão a viver de modo intencional, com os olhos erguidos para a promessa divina e os pés firmes na obediência cotidiana. O futuro prometido por Deus é a força que sustenta a fidelidade no presente.</p>
+
+    <div class="baluno ba-vida">
+        <div class="baluno-tag"><span class="baluno-ico">&#10022;</span> Leve para a vida</div>
+        <div class="baluno-corpo">Esta é a última lição — mas não o fim da jornada. Escolha agora um dos três compromissos do desafio final (vigilância, santidade ou missão) e escreva aqui uma ação concreta e datada que você vai realizar esta semana. A escatologia que não gera compromisso ficou pelo caminho:</div>
+        <div class="baluno-linha"></div>
+        <div class="baluno-linha"></div>
+    </div>
+
+    <div class="rod"><span class="rt">Eschaton &middot; EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 QUESTOES FINAIS -->
+<div class="lbl">Página 7 &middot; Questões Finais e Anotações</div>
+<div class="pag int">
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 13 &middot; Final</span><span class="pht">Vivendo à Luz da Eternidade</span></div>
+    <h2>Questões Finais da Série</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">Pedro pergunta: "que pessoas deveis ser vós em santo procedimento e piedade?" (2 Pe 3:11). Depois de treze lições de escatologia, como você responderia a essa pergunta com suas próprias palavras? O que mudou na sua perspectiva?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">Das três atitudes escatológicas — vigilância, santidade e missão — qual é a mais fácil para você viver? Qual é a mais difícil? O que impede que a mais difícil se torne real na sua vida?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">A perspectiva pentecostal enfatiza urgência e missão; a reformada enfatiza profundidade e engajamento cultural. Como você pode integrar essas duas ênfases em sua vida cristã de forma equilibrada e frutífera?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">Se Cristo voltasse amanhã, o que você lamentaria não ter feito — ou ter feito? Essa resposta é o mapa da transformação que a escatologia quer operar em você.</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="lit">
+        <div class="lt">Leituras para Continuar a Jornada</div>
+        <ul>
+            <li>N.T. Wright — Surpreendido pela Esperança (a escatologia como fundamento da vida cristã)</li>
+            <li>Anthony Hoekema — A Bíblia e o Futuro (panorama reformado completo da escatologia)</li>
+            <li>Leitura devocional final: 2 Pe 3:10-18 + 1 Jo 3:1-3 + Ap 22:12-21</li>
+        </ul>
+    </div>
+    <h3 style="margin-top:10px;">Anotações Finais</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton &middot; Fim da Série &middot; 13 Lições</span><span class="rn">7</span></div>
+</div>
+
+</div>
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('lição-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

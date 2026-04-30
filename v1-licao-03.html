@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton · Lição 03 — O Arrebatamento</title>
+
+<meta name="theme-color" content="#1a1428">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#3a9a6a;--grad1:#0a2018;--grad2:#0d3020;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--creme:#f5f0e8;--cc:#e0ddd8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#111;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0a0a0a,#1a1a1a);border-bottom:1px solid rgba(58,154,106,0.4);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:12pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:8pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#666;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--branco);box-shadow:0 6px 30px rgba(0,0,0,0.5);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 65%,rgba(58,154,106,0.4) 0%,transparent 55%),radial-gradient(ellipse at 75% 20%,rgba(201,168,76,0.12) 0%,transparent 45%);}
+.cgrd{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:20px 20px;}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(160deg,var(--grad1),var(--cor) 50%,#80e0b0);opacity:0.35;}
+.clh{position:absolute;top:52%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.6;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.cnd{font-family:'Cinzel',serif;font-size:36pt;font-weight:900;color:#fff;opacity:0.15;position:absolute;top:20mm;right:12mm;line-height:1;}
+.ctit{font-family:'Cinzel',serif;font-size:22pt;font-weight:700;color:#fff;line-height:1.15;text-transform:uppercase;margin-bottom:12px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--branco);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--cor),var(--ouro) 60%,transparent);}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.035);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:12pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);border-left:4px solid var(--cor);padding-left:10px;margin-bottom:12px;margin-top:4px;line-height:1.2;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1px;color:var(--ct);text-transform:uppercase;margin-bottom:6px;margin-top:12px;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.bver{background:var(--creme);border-left:3px solid var(--ouro);padding:10px 12px;margin:12px 0;font-style:italic;font-size:10pt;color:#555;line-height:1.55;font-family:'EB Garamond',serif;}
+.bver cite{display:block;font-size:8.5pt;font-style:normal;color:var(--ouro);margin-top:4px;font-family:'Oswald',sans-serif;letter-spacing:1px;}
+.bvp{border:1px solid rgba(58,154,106,0.35);background:rgba(58,154,106,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.bvr{border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.04);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.vl{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;font-weight:600;}
+.bvp .vl{color:var(--cor);}.bvr .vl{color:#8a6a20;}
+.vt{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.55;color:var(--ct);}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.35;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cc);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.obj{background:var(--creme);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.obj ul li::before{content:'→';position:absolute;left:0;color:var(--cor);font-size:9pt;}
+.apl{background:linear-gradient(135deg,rgba(58,154,106,0.06),rgba(201,168,76,0.06));border:1px solid rgba(58,154,106,0.2);border-radius:3px;padding:10px 12px;margin:10px 0;}
+.apl .at{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.q{margin-bottom:14px;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid #ddd;height:20px;margin-top:3px;}
+.lit{margin-top:10px;padding-top:10px;border-top:1px solid var(--cc);}
+.lit .lt{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:var(--ouro);text-transform:uppercase;margin-bottom:6px;}
+.lit ul{list-style:none;padding:0;}
+.lit ul li{font-family:'EB Garamond',serif;font-size:9.5pt;color:#666;padding:1px 0 1px 12px;position:relative;}
+.lit ul li::before{content:'·';position:absolute;left:2px;color:var(--ouro);}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#bbb;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.lin{border-bottom:1px solid #ddd;height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(58,154,106,0.06);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(58,154,106,0.09);border-radius:2px;}
+
+ /* ENTRADA DA REVISTA */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+.capa-entrada img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.entrada-cta{position:absolute;left:50%;bottom:16mm;transform:translateX(-50%);z-index:2;background:rgba(5,5,5,0.72);color:var(--ouro-claro);border:1px solid rgba(201,168,76,0.35);padding:9px 16px;border-radius:2px;font-family:'Oswald',sans-serif;font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(2px);}
+#conteudoLicao{display:none;}
+body.licao-iniciada #conteudoLicao{display:contents;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+
+@media (max-width: 768px){
+    .painel{padding:8px 10px;gap:8px;}
+    .marca{font-size:10pt;letter-spacing:2px;}
+    .marca span{font-size:7pt;}
+    .btn{font-size:8pt;padding:7px 10px;letter-spacing:1px;}
+    .area{margin-top:74px;padding:12px 10px 40px;gap:12px;}
+    .pag{width:100%;min-height:auto;}
+    .lbl{margin-left:0;align-self:stretch;}
+    .capa-entrada{min-height:calc(100dvh - 98px);max-height:calc(100dvh - 98px);}
+    .capa-entrada img{object-fit:contain;background:#050505;}
+    .entrada-cta{bottom:14px;font-size:8pt;letter-spacing:1.5px;padding:8px 12px;width:calc(100% - 24px);text-align:center;}
+    .capa,.int{min-height:auto;}
+    .ccon{padding:0 8vw 10vw 10vw;}
+    .cnd{top:12vw;right:7vw;font-size:22vw;}
+    .cnbg{font-size:38vw;right:-2vw;bottom:-5vw;}
+    .ctit{font-size:clamp(18pt,8vw,22pt);}
+    .cver{font-size:9.5pt;}
+    .ph{gap:8px;align-items:flex-start;}
+    .phl,.pht{font-size:7.5pt;}
+    h2{font-size:11pt;letter-spacing:1.5px;}
+    h3{font-size:9pt;}
+    p,.vt,.obj ul li,.qt{font-size:10pt;line-height:1.55;}
+    .bver,.bvp,.bvr,.obj,.apl{padding:10px;}
+    .rod{position:relative;padding:14px 8vw 8vw 10vw;margin-top:18px;}
+    .wm{display:none;}
+}
+   
+@media print{
+    body{background:none;}
+    .painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm{display:none;}
+}
+
+/* ===== BLOCOS-ALUNO ===== */
+.bloco-aluno{
+    background:rgba(58,154,106,0.06);
+    border:1px solid rgba(58,154,106,0.25);
+    border-left:4px solid var(--cor);
+    border-radius:3px;
+    padding:10px 12px;
+    margin:12px 0 10px;
+}
+.bloco-aluno .ba-titulo{
+    font-family:'Oswald',sans-serif;
+    font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;
+    color:var(--cor);margin-bottom:6px;
+    display:flex;align-items:center;gap:6px;
+}
+.bloco-aluno .ba-titulo::before{content:'✦';font-size:7pt;color:var(--cor);}
+.bloco-aluno p{
+    font-family:'EB Garamond',serif;font-size:10pt;
+    line-height:1.6;color:var(--ct);margin-bottom:0;text-align:left;hyphens:none;
+}
+</style>
+</head>
+<body>
+<div class="painel">
+    <div class="marca">ESCHATON<span>Lição 03 · O Arrebatamento</span></div>
+    <button class="btn be" onclick="toggleEdit()">✏️ <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">🖨️ Imprimir</button>
+    <a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+
+<div class="area">
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 03">
+    <img src="capa-revista.png" alt="Capa da revista Eschaton">
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+   
+<!-- PG 1 — CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">03</div><div class="cnd">03</div>
+    <div class="ccon">
+        <div class="cser">Série · Eschaton · Estudos Escatológicos</div>
+        <div class="ctit">O Arrebatamento</div>
+        <div class="cver">
+            "Porque o mesmo Senhor descerá do céu com alarido, e com voz do arcanjo, e com a trombeta de Deus; e os mortos em Cristo ressuscitarão primeiro. Depois nós, os que ficarmos vivos, seremos arrebatados juntamente com eles nas nuvens."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">1 Tessalonicenses 4:16-17</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 — INTRODUÇÃO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 03</span><span class="pht">O Arrebatamento</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Poucos temas escatológicos mobilizaram tanto a imaginação cristã quanto o arrebatamento. A palavra vem do latim <em>rapturo</em>, tradução da Vulgata para o grego <em>harpazo</em> — "arrebatar, tomar com força" — em 1 Tessalonicenses 4:17. Séries de livros, filmes como <em>Left Behind</em> e incontáveis pregações moldaram a percepção popular sobre o tema. Mas o que a Bíblia de fato ensina?</p>
+    <div class="bver">"Eis que vos digo um mistério: nem todos dormiremos, mas todos seremos transformados, num momento, num abrir e fechar de olhos, ao som da última trombeta." <cite>1 Coríntios 15:51-52</cite></div>
+    <div class="obj">
+        <div class="ot">Objetivos desta lição</div>
+        <ul>
+            <li>Compreender a base bíblica do arrebatamento em 1 Ts 4, Jo 14 e 1 Co 15</li>
+            <li>Conhecer a origem histórica da doutrina e o papel de John Nelson Darby</li>
+            <li>Analisar as três posições cronológicas: pré, mid e pós-tribulacionismo</li>
+            <li>Avaliar cada posição à luz das Escrituras com maturidade e equilíbrio</li>
+        </ul>
+    </div>
+    <div class="sep"><span>✦</span></div>
+    <p>Filmes e séries populares consolidaram no imaginário evangélico a ideia de um arrebatamento secreto, repentino e pré-tribulacional. Mas essa imagem tem apenas dois séculos de história teológica — o que torna o estudo de suas bases bíblicas ainda mais urgente e necessário.</p>
+    <p>Isso exige que o estudante da Bíblia diferencie tradição popular, linguagem devocional e fundamento exegético. Nem toda imagem amplamente repetida nasce diretamente do texto bíblico, e por isso a Igreja precisa retornar às Escrituras com reverência e discernimento.</p>
+    <p>Ao mesmo tempo, o tema não deve ser tratado apenas como assunto de controvérsia. A esperança da vinda de Cristo pertence ao centro da fé cristã e precisa ser estudada de modo que produza confiança, vigilância e consolo.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Para Você Refletir — Cultura ou Escritura?</div>
+<p>Filmes, séries e livros populares criaram uma imagem muito vívida do arrebatamento — aviões caindo, carros sem motoristas, pessoas desaparecendo. Mas essa imagem tem apenas dois séculos de história teológica, popularizada por Darby no século XIX. Isso não significa que está errada, mas significa que precisa ser avaliada pelo texto bíblico, não pelo filme. O que você crê sobre o arrebatamento vem da Escritura ou da cultura evangélica?</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 — DESENVOLVIMENTO I -->
+<div class="lbl">Página 3 · Desenvolvimento I</div>
+<div class="pag int">
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 03</span><span class="pht">O Arrebatamento</span></div>
+    <h2>I-A Base Bíblica</h2>
+    <p>As três passagens centrais sobre o arrebatamento são: <strong>1 Tessalonicenses 4:13-18</strong> — a mais explícita, escrita para consolar cristãos que temiam que os mortos perdessem a ressurreição; <strong>João 14:1-3</strong> — Jesus prometendo ir preparar lugar e voltar para buscar os seus; e <strong>1 Coríntios 15:51-52</strong> — Paulo descrevendo a transformação instantânea dos crentes vivos.</p>
+    <div class="bver">"Na casa de meu Pai há muitas moradas... Vou preparar-vos lugar. E quando eu for e vos preparar lugar, voltarei e vos tomarei para mim mesmo." <cite>João 14:2-3</cite></div>
+    <h3>A Origem Histórica da Doutrina</h3>
+    <p>A sistematização do arrebatamento <em>pré-tribulacional</em> como evento distinto da Segunda Vinda foi obra de John Nelson Darby (1800–1882), teólogo irlandês fundador dos Irmãos de Plymouth. Darby desenvolveu o dispensacionalismo — um sistema que divide a história em eras distintas e separa Israel da Igreja como entidades proféticas diferentes. O <em>Scofield Reference Bible</em> (1909) popularizou essas ideias nos EUA e, depois, no Brasil.</p>
+    <div class="sep"><span>✦</span></div>
+    <p>Antes de Darby, a tradição cristã histórica — dos pais da Igreja aos reformadores — não distinguia o arrebatamento da Segunda Vinda como dois eventos separados. Esse dado histórico não invalida o pré-tribulacionismo, mas exige que ele seja avaliado com o mesmo rigor exegético que qualquer posição.</p>
+    <p>Por isso, a base bíblica do arrebatamento precisa ser analisada com atenção ao contexto de cada passagem. Em 1 Tessalonicenses 4, por exemplo, Paulo fala a uma comunidade entristecida; em João 14, Cristo consola seus discípulos diante da sua partida; em 1 Coríntios 15, o enfoque recai sobre a transformação gloriosa dos santos. Essas passagens se complementam e ajudam a formar um quadro mais completo.</p>
+    <p>Também é importante notar que a doutrina do arrebatamento está ligada à esperança da ressurreição. O encontro com Cristo não é um escape isolado da história, mas parte da consumação da redenção e da vitória final do Senhor sobre a morte.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Conexão Bíblica — O Consolo que Originou a Doutrina</div>
+<p>Paulo escreveu 1 Tessalonicenses 4:13-18 para cristãos que choravam a morte de irmãos na fé e temiam que eles perdessem a ressurreição. A resposta de Paulo não foi um cronograma — foi consolo: "os mortos em Cristo ressuscitarão primeiro." A doutrina do arrebatamento nasceu para curar o luto, não para alimentar debates cronológicos. Toda vez que você a usa para dividir ou especular, ela perdeu sua função original. Toda vez que ela te ajuda a enfrentar a morte com esperança, está cumprindo o propósito que Paulo tinha em mente.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 — DESENVOLVIMENTO II -->
+<div class="lbl">Página 4 · Desenvolvimento II</div>
+<div class="pag int">
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 03</span><span class="pht">O Arrebatamento</span></div>
+    <h2>II-As Três Posições Cronológicas</h2>
+    <p>A controvérsia central não é <em>se</em> o arrebatamento ocorrerá, mas <em>quando</em> — em relação à Grande Tribulação de sete anos descrita no Apocalipse. Três posições principais organizam o debate:</p>
+    <h3>Pré-Tribulacionismo</h3>
+    <p>O arrebatamento ocorre <em>antes</em> dos sete anos de tribulação. A Igreja é poupada da ira divina (1 Ts 5:9) e retorna com Cristo ao fim do período. É a posição dominante no pentecostalismo e no dispensacionalismo clássico. Defensores: Darby, Scofield, Charles Ryrie, John Walvoord.</p>
+    <h3>Mid-Tribulacionismo</h3>
+    <p>O arrebatamento ocorre na metade da tribulação — após 3,5 anos — quando a "abominação da desolação" é estabelecida. A Igreja atravessa a primeira metade, mas é poupada da "Grande Tribulação" propriamente dita. Alguns associam o arrebatamento à sétima trombeta de Apocalipse 11:15.</p>
+    <div class="sep"><span>✦</span></div>
+    <h3>Pós-Tribulacionismo</h3>
+    <p>O arrebatamento coincide com a Segunda Vinda, ao final da tribulação. A Igreja atravessa o período inteiro sob proteção divina — assim como Israel foi preservado no Egito durante as pragas. Mateus 24:29-31 descreve a colheita dos eleitos após a tribulação. Defensores: George Ladd (<em>The Blessed Hope</em>), Douglas Moo, N.T. Wright.</p>
+    <p>Ao comparar essas posições, o estudante cristão precisa agir com sobriedade. Cada linha de interpretação busca harmonizar textos difíceis e responder a perguntas legítimas sobre a relação entre Igreja, tribulação e vinda de Cristo. Por isso, a divergência cronológica não deve apagar a unidade da esperança cristã.</p>
+    <p>Em todas as posições, permanece a certeza de que Cristo voltará, os mortos em Cristo ressuscitarão e o povo de Deus será reunido ao Senhor. Essa convergência é decisiva, porque preserva o núcleo da fé mesmo quando há diferenças na ordem dos acontecimentos.</p>
+    <div class="bver">"Logo após a tribulação daqueles dias... ele enviará os seus anjos com grande clamor de trombeta, e eles ajuntarão os seus escolhidos." <cite>Mateus 24:29-31</cite></div>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Sabia Que? — Três Posições, Uma Esperança</div>
+<p>Pré, mid e pós-tribulacionistas discordam sobre o <em>quando</em> — mas todos confessam o <em>quê</em>: Cristo voltará, os mortos em Cristo ressuscitarão, e o povo de Deus será reunido ao Senhor. George Ladd (pós-trib.), John Walvoord (pré-trib.) e outros líderes estudaram as mesmas Escrituras com igual devoção e chegaram a conclusões diferentes. Isso não é falha da Bíblia — é evidência de que textos ricos admitem interpretações honestas distintas. O debate é sobre o mapa; a certeza da chegada ao destino é compartilhada por todos.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 — VISÕES EM DIÁLOGO -->
+<div class="lbl">Página 5 · Visões em Diálogo</div>
+<div class="pag int">
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 03</span><span class="pht">O Arrebatamento</span></div>
+    <h2>III-Visões em Diálogo</h2>
+    <p>O tema do arrebatamento talvez seja o ponto de maior divergência entre pentecostais e reformados — não apenas na cronologia, mas nos pressupostos hermenêuticos que moldam toda a leitura profética.</p>
+    <div class="bvp">
+        <div class="vl">✦ Perspectiva Pentecostal</div>
+        <div class="vt">A esmagadora maioria das igrejas pentecostais e carismáticas adota o pré-tribulacionismo dispensacionalista. Israel e Igreja são entidades proféticas distintas — Deus tem um plano separado para cada uma. O arrebatamento retira a Igreja antes da tribulação, poupando-a da ira divina (1 Ts 5:9). Cristo volta primeiro secretamente para buscar a Igreja; depois, visivelmente, para reinar por mil anos. A série <em>Left Behind</em>, de Tim LaHaye e Jerry Jenkins, popularizou esse esquema para milhões de leitores.</div>
+    </div>
+    <div class="bvr">
+        <div class="vl">✦ Perspectiva Reformada</div>
+        <div class="vt">A tradição reformada rejeita o dispensacionalismo e a separação Israel/Igreja como entidades proféticas distintas. A Igreja é o Israel de Deus (Gl 6:16), herdeira das promessas pactais. O "arrebatamento" de 1 Ts 4 é entendido como o encontro da Igreja com Cristo na sua vinda única e final — não um evento prévio e secreto. George Ladd, teólogo batista conservador, demonstrou que o pós-tribulacionismo tem raízes mais antigas e exegéticas mais sólidas do que o pré-tribulacionismo darbista.</div>
+    </div>
+    <div class="sep"><span>✦</span></div>
+    <p>O terreno comum e inegociável: Cristo voltará para buscar os seus, os mortos em Cristo ressuscitarão, e haverá uma reunião gloriosa entre o Senhor e sua Igreja. Esta esperança consola a todos — independente da posição cronológica.</p>
+    <p>Essa constatação é importante porque evita que o debate escatológico se transforme em motivo de soberba espiritual. Quando irmãos fiéis defendem posições diferentes, a postura correta não é ridicularizar, mas examinar as Escrituras com humildade e manter a comunhão no que é essencial.</p>
+    <p>Assim, o estudo do arrebatamento deve ampliar tanto o entendimento quanto o caráter cristão. Não basta defender uma posição com firmeza; é necessário fazê-lo com espírito ensinável, amor à verdade e respeito pelos que também aguardam a bendita esperança.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Pense Nisso — O Que Toda Posição Confessa</div>
+<p>Pentecostais e reformados divergem sobre dispensacionalismo, sobre Israel e Igreja, sobre pré ou pós-tribulação. Mas ambos confessam: Cristo voltará pessoalmente, os mortos em Cristo ressuscitarão, e haverá uma reunião gloriosa do Senhor com o seu povo. A divisão está na cronologia — o consenso está na certeza e na esperança. Antes de defender sua posição com passagem e argumento, pergunte: <em>estou usando esta doutrina para consolar, como Paulo fez — ou para dividir?</em></p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 — Aplicação -->
+<div class="lbl">Página 6 · Aplicação Prática </div>
+<div class="pag int">
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 03</span><span class="pht">O Arrebatamento</span></div>
+    <h2>Conclusão </h2>
+    <p>É significativo que Paulo introduza o ensino sobre o arrebatamento em 1 Tessalonicenses 4 não como um cronograma profético, mas como consolo pastoral para cristãos enlutados. A doutrina nasceu para curar o luto, não para alimentar debates. Isso deveria orientar como a usamos.</p>
+    <div class="apl">
+        <div class="at">Para a sua semana</div>
+        <p>Primeiro: releia 1 Tessalonicenses 4:13-18 com o foco na função consolatória — Paulo a escreve para pessoas que choravam a morte de irmãos na fé. Como essa esperança pode ajudá-lo a consolar alguém enlutado hoje? Segundo: avalie honestamente se seu interesse no arrebatamento é motivado pela esperança de ver Cristo ou pelo desejo de escapar do sofrimento — são motivações muito diferentes. Terceiro: discuta com alguém de visão diferente da sua sobre o arrebatamento, praticando ouvir antes de responder.</p>
+    </div>
+    <div class="sep"><span>✦</span></div>
+    <h3>Para Refletir</h3>
+    <p>Se a doutrina do arrebatamento foi dada para consolar (1 Ts 4:18), o que isso diz sobre como ela tem sido usada para gerar medo, divisão e especulação cronológica? Que tipo de transformação pastoral seria necessária para devolver a essa doutrina sua função original?</p>
+    <div class="bver">"Aguardando a bendita esperança e a manifestação da glória do grande Deus e Salvador nosso Jesus Cristo." <cite>Tito 2:13</cite></div>
+    <p>Na próxima lição, examinaremos o período mais sombrio da profecia bíblica: <strong>A Grande Tribulação</strong> — sua natureza, duração e propósito redentor.</p>
+    <p>Enquanto isso, a aplicação mais imediata desta doutrina é simples e profunda: viver preparados para encontrar o Senhor. A expectativa da sua vinda deve fortalecer a santidade, renovar a esperança e consolar o coração diante da morte e do sofrimento.</p>
+    <p>O arrebatamento, portanto, não é apenas um tópico de debate cronológico. É uma lembrança constante de que a história caminha para a presença definitiva de Cristo com o seu povo.</p>
+    <div class="bloco-aluno">
+<div class="ba-titulo">Leve Para a Vida — Doutrina que Cura</div>
+<p>Paulo encerrou o ensino sobre o arrebatamento com uma instrução prática: <em>"Consolai-vos, pois, uns aos outros com estas palavras"</em> (1 Ts 4:18). A melhor aplicação desta doutrina não é vencer um debate — é olhar para alguém enlutado, ansioso ou desesperançado e dizer com convicção: os mortos em Cristo ressuscitarão, e nós seremos reunidos ao Senhor para sempre. Esta semana, encontre alguém que precisa ouvir isso. Leve a esperança, não o cronograma.</p>
+</div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 — QUESTÕES -->
+<div class="lbl">Página 7 · Questões & Anotações</div>
+<div class="pag int">
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 03</span><span class="pht">O Arrebatamento</span></div>
+    <h2>Questões para Reflexão</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">A sistematização do pré-tribulacionismo é atribuída a John Nelson Darby no século XIX. Isso enfraquece ou simplesmente contextualiza historicamente a posição? Como você avalia esse dado?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">Compare as três posições cronológicas (pré, mid, pós-tribulacionismo). Qual base bíblica você considera mais sólida? Cite ao menos um texto que sustente sua resposta.</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">A visão reformada rejeita a separação entre Israel e Igreja como entidades proféticas distintas. Como essa posição muda fundamentalmente a leitura das profecias escatológicas?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">Paulo diz "consolai-vos uns aos outros" com a doutrina do arrebatamento (1 Ts 4:18). Você usa essa esperança para consolar ou para debater posições? O que precisa mudar?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="lit">
+        <div class="lt">Leituras Complementares</div>
+        <ul>
+            <li>George E. Ladd — <em>The Blessed Hope</em> (argumento pós-tribulacionista clássico)</li>
+            <li>John F. Walvoord — <em>The Rapture Question</em> (defesa pré-tribulacionista)</li>
+            <li>Leitura devocional: 1 Ts 4:13-18 + Jo 14:1-6 + 1 Co 15:50-58</li>
+        </ul>
+    </div>
+    <h3 style="margin-top:12px;">Anotações</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div>
+<script>
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>
