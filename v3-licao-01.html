@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton Vol. III · Lição 01 — A Majestosa Apresentação do Noivo da Igreja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #b03a14;
+  --grad1:      #1a1008;
+  --grad2:      #281408;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f8f0e0;
+  --creme:      #f0e4cc;
+  --cc:         #ddd0c0;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #120806; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL FIXO ─────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #080402, #120806);
+  border-bottom: 1px solid rgba(176,58,20,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  color: var(--ouro); letter-spacing: 3px; margin-right: auto;
+}
+.marca span {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.68rem);
+  color: #666; letter-spacing: 1px; display: block; font-weight: 300;
+}
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: none; cursor: pointer;
+  padding: 0.44rem 1rem; border-radius: 2px;
+  transition: all .2s; white-space: nowrap;
+}
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA PRINCIPAL ──────────────────────────────────── */
+.area {
+  margin-top: 60px;
+  padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag {
+  width: min(148mm, 100%);
+  min-height: 210mm;
+  background: var(--perg);
+  box-shadow: 0 6px 30px rgba(0,0,0,.6);
+  position: relative; overflow: hidden;
+  page-break-after: always; flex-shrink: 0; margin: 0 auto;
+}
+.lbl {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: #555; letter-spacing: 2px; text-transform: uppercase;
+  width: min(148mm, 100%);
+  align-self: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -8px;
+}
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa {
+  background: linear-gradient(160deg, var(--grad1), var(--grad2));
+  display: flex; flex-direction: column;
+  justify-content: flex-end; min-height: 210mm; padding: 0;
+}
+.catm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 22% 60%, rgba(176,58,20,.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.2) 0%, transparent 45%);
+}
+.cgrd {
+  position: absolute; inset: 0; opacity: .025;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cfx  { position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+        background: linear-gradient(180deg, #281408, var(--cor), var(--ouro)); }
+.cnbg { position: absolute; bottom: -20px; right: -10px;
+        font-family: 'Cinzel', serif; font-size: clamp(5rem,18vw,8.125rem);
+        font-weight: 900; color: rgba(255,255,255,.03);
+        line-height: 1; user-select: none; }
+.cimg { position: absolute; top: 0; left: 0; right: 0; height: 58%;
+        background: linear-gradient(160deg, #0d0802, var(--cor) 50%, #ffa060);
+        opacity: .38; }
+.clh  { position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px;
+        background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+        opacity: .75; }
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num   { font-family: 'Cinzel', serif; font-size: clamp(0.55rem,1.5vw,0.625rem);
+              color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  font-weight: 700; color: #fff;
+  line-height: 1.15; text-transform: uppercase; margin-bottom: 10px;
+}
+.cref {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; color: rgba(201,168,76,.6);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cver {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(0.8rem, 2.2vw, 0.875rem);
+  color: var(--ouro-claro); line-height: 1.6;
+  border-left: 2px solid var(--ouro); padding-left: 10px; opacity: .9;
+}
+
+/* ── PÁGINAS INTERNAS ────────────────────────────────── */
+.int {
+  padding: clamp(8mm,4vw,14mm) clamp(6mm,3vw,12mm) 18mm clamp(8mm,4vw,14mm);
+  min-height: 210mm; position: relative; background: var(--perg);
+}
+.int::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent);
+}
+.int::after {
+  content: ''; position: absolute; top: 6px; left: 14mm; right: 12mm; height: 1px;
+  background: rgba(176,58,20,.15);
+}
+.int-linhas {
+  position: absolute; inset: 0; top: 20mm; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    transparent, transparent 23px,
+    rgba(176,58,20,.045) 23px, rgba(176,58,20,.045) 24px);
+  z-index: 0;
+}
+.wm {
+  position: absolute; bottom: 14mm; right: 10mm;
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem);
+  font-weight: 900; color: rgba(0,0,0,.03);
+  line-height: 1; user-select: none; pointer-events: none;
+}
+
+/* ── CABEÇALHO DE PÁGINA ─────────────────────────────── */
+.ph {
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--cc);
+  display: flex; justify-content: space-between; align-items: baseline;
+  position: relative; z-index: 1;
+}
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem);
+       color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic;
+       font-size: clamp(0.6rem,1.8vw,0.75rem); color: #aaa; }
+
+/* ── TÍTULOS ─────────────────────────────────────────── */
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(0.75rem, 2.5vw, 0.9375rem);
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--cor); border-bottom: 2px solid var(--cor);
+  padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px;
+  line-height: 1.2; position: relative; z-index: 1;
+}
+h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 400;
+  font-size: clamp(0.65rem, 2vw, 0.8125rem);
+  letter-spacing: 1.5px; color: #5a1a0a;
+  text-transform: uppercase; margin-bottom: 6px; margin-top: 12px;
+  position: relative; z-index: 1;
+}
+
+/* ── PARÁGRAFOS ──────────────────────────────────────── */
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: var(--fonte-base);
+  line-height: 1.65; color: var(--ct);
+  text-align: justify; margin-bottom: 9px;
+  hyphens: auto; position: relative; z-index: 1;
+}
+.cap::first-letter {
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,2.875rem);
+  font-weight: 900; float: left; margin-right: 5px;
+  color: var(--cor); line-height: .82; padding-top: 2px;
+}
+
+/* ── BLOCO DE VERSÍCULO ──────────────────────────────── */
+.bver {
+  background: #fff;
+  border: 1px solid rgba(176,58,20,.2);
+  border-left: 4px solid var(--cor);
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bver-ref {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bver p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: var(--fonte-base); color: #2a1004; line-height: 1.7; margin: 0;
+}
+.bver .ref-f {
+  font-size: clamp(0.6rem,1.8vw,0.75rem); font-style: normal;
+  color: var(--ouro); font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px; display: block; text-align: right; margin-top: 4px;
+}
+
+/* ── BLOCOS TEMÁTICOS ────────────────────────────────── */
+.bloco {
+  background: rgba(176,58,20,.05); border-radius: 2px;
+  padding: 0.625rem 0.75rem; margin: 0.625rem 0;
+  position: relative; z-index: 1;
+}
+.bloco-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.blteo {
+  background: rgba(201,168,76,.08);
+  border-left: 3px solid var(--ouro);
+  padding: 0.625rem 0.75rem; margin: 0.625rem 0;
+  position: relative; z-index: 1;
+}
+.blteo-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #8a6a20; margin-bottom: 6px;
+}
+.blapl {
+  background: linear-gradient(135deg, rgba(176,58,20,.06), rgba(201,168,76,.07));
+  border: 1px solid rgba(176,58,20,.2);
+  border-radius: 2px; padding: 0.625rem 0.75rem;
+  margin: 0.625rem 0; position: relative; z-index: 1;
+}
+.blapl-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── VERSÍCULO PARA MEMORIZAR ────────────────────────── */
+.mem {
+  background: var(--creme);
+  border: 1px solid rgba(201,168,76,.3);
+  border-radius: 2px; padding: 0.625rem 0.75rem;
+  margin: 0.625rem 0; text-align: center;
+  position: relative; z-index: 1;
+}
+.mem-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ouro); margin-bottom: 6px;
+}
+.mem p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(0.8rem,2.2vw,0.9rem);
+  color: #2a1004; text-align: center; line-height: 1.6;
+}
+
+/* ── OBJETIVOS ───────────────────────────────────────── */
+.obj { background: var(--creme); border-radius: 2px; padding: 0.625rem 0.75rem;
+       margin: 0.625rem 0; position: relative; z-index: 1; }
+.obj .ot {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.obj ul { list-style: none; padding: 0; }
+.obj ul li {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.8rem,2.2vw,0.9rem);
+  color: var(--ct); padding: 2px 0 2px 1rem;
+  position: relative; line-height: 1.4;
+}
+.obj ul li::before {
+  content: '◆'; position: absolute; left: 0;
+  color: var(--cor); font-size: 0.5rem; top: 4px;
+}
+
+/* ── SEPARADOR ───────────────────────────────────────── */
+.sep {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0.75rem 0; opacity: .3; position: relative; z-index: 1;
+}
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: 0.5rem; color: var(--ouro); }
+
+/* ── QUESTÕES ────────────────────────────────────────── */
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  color: var(--cor); letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 3px;
+}
+.qt {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.8rem,2.2vw,0.9rem);
+  color: var(--ct); line-height: 1.45; margin-bottom: 5px;
+}
+.lr { border-bottom: 1px solid rgba(176,58,20,.2); height: 20px; margin-top: 3px; }
+
+/* ── RODAPÉ DE PÁGINA ────────────────────────────────── */
+.rod {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 6px 12mm 6mm 14mm;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 2;
+}
+.rod::before {
+  content: ''; position: absolute; top: 0; left: 12mm; right: 12mm; height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .3;
+}
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(0.45rem,1.3vw,0.56rem);
+      color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(0.6rem,1.8vw,0.75rem); color: var(--ouro); }
+
+/* ── LINHAS DE ANOTAÇÃO ──────────────────────────────── */
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px;
+        position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(176,58,20,.2); height: 22px; }
+
+/* ── BLOCOS ESPECIAIS ────────────────────────────────── */
+.brefletir {
+  background: rgba(139,26,26,.06);
+  border: 1px solid rgba(139,26,26,.2);
+  border-top: 3px solid var(--vermelho);
+  border-radius: 0 0 2px 2px;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.brefletir-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--vermelho); margin-bottom: 6px;
+}
+.bconexao {
+  background: rgba(201,168,76,.1);
+  border: 1px solid rgba(201,168,76,.35);
+  border-left: 4px solid var(--ouro);
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bconexao-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #7a5c10; margin-bottom: 6px;
+}
+.bsabia {
+  background: rgba(176,58,20,.07);
+  border: 1px dashed rgba(176,58,20,.3);
+  border-radius: 2px;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bsabia-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bpense {
+  background: var(--creme);
+  border-left: 4px solid var(--cor);
+  border-radius: 0 2px 2px 0;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bpense-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bleve {
+  background: linear-gradient(135deg, rgba(176,58,20,.08), rgba(201,168,76,.1));
+  border: 1px solid rgba(176,58,20,.25);
+  border-bottom: 3px solid var(--ouro);
+  border-radius: 2px 2px 0 0;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bleve-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(160deg, #0d0804 0%, #1a1008 40%, #281408 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; transition: opacity .6s ease;
+  padding: 2rem;
+}
+#capaEntradaRevista.saindo {
+  opacity: 0; pointer-events: none;
+}
+body.licao-iniciada #capaEntradaRevista {
+  display: none;
+}
+.cv-atm {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(176,58,20,.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cv-grd {
+  position: absolute; inset: 0; pointer-events: none; opacity: .02;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cv-fx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none;
+  background: linear-gradient(180deg, #281408, var(--cor), var(--ouro));
+}
+.cv-corpo {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 480px; gap: 1.5rem;
+}
+.cv-serie {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; opacity: .7;
+  display: flex; align-items: center; gap: 10px;
+}
+.cv-serie::before, .cv-serie::after {
+  content: ''; display: block; width: 24px; height: 1px; background: var(--ouro); opacity: .5;
+}
+.cv-num {
+  font-family: 'Cinzel', serif; font-weight: 900;
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
+  color: rgba(201,168,76,.4); letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.cv-tema {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
+  color: #fff; line-height: 1.2; text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cv-tema-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  color: rgba(201,168,76,.6); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.cv-divisor {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+  opacity: .5;
+}
+.cv-frase {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  color: var(--ouro-claro); line-height: 1.7; opacity: .85;
+  border-left: 2px solid rgba(201,168,76,.4);
+  padding-left: 1rem; text-align: left; max-width: 400px;
+}
+.cv-ref {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(0.55rem, 1.5vw, 0.65rem);
+  color: rgba(201,168,76,.5); letter-spacing: 2px;
+  text-transform: uppercase; text-align: right; width: 100%; max-width: 400px;
+}
+.cv-cta {
+  margin-top: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #fff; background: var(--cor);
+  border: none; padding: 0.6rem 1.8rem; cursor: pointer;
+  border-radius: 2px; transition: all .2s;
+}
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape {
+  position: absolute; bottom: 1.5rem; left: 0; right: 0;
+  text-align: center; pointer-events: none;
+}
+.cv-rodape-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(0.5rem, 1.3vw, 0.6rem);
+  color: rgba(255,255,255,.2); letter-spacing: 3px; text-transform: uppercase;
+}
+
+/* ── EDIÇÃO INLINE ───────────────────────────────────── */
+[contenteditable="true"]       { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(176,58,20,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(176,58,20,.08); border-radius: 2px; }
+
+/* ── IMPRESSÃO ───────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+
+/* ── RESPONSIVIDADE ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .painel { padding: 0.5rem 0.75rem; gap: 0.5rem; }
+  .btn    { padding: 0.375rem 0.625rem; }
+  .area   { margin-top: 56px; }
+  .ccon   { padding: 0 6mm 10mm 10mm; }
+  .rod    { padding: 6px 6mm 4mm 8mm; }
+  .rod::before { left: 6mm; right: 6mm; }
+}
+@media (max-width: 768px) {
+  .area { margin-top: 60px; }
+  .lbl  { margin-left: 0.5rem; }
+}
+@media (min-width: 1024px) {
+  .area { padding: 1.5rem 2rem 4rem; }
+}
+
+
+/* ── COMPATIBILIDADE COM CLASSES DAS LIÇÕES 01–03 ───── */
+.texto-biblico {
+  background: #fff; border: 1px solid rgba(176,58,20,.2);
+  border-left: 4px solid var(--cor); padding: 0.625rem 0.75rem;
+  margin: 0.75rem 0; position: relative; z-index: 1;
+}
+.texto-biblico-ref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase; color: var(--cor);
+  margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+}
+.texto-biblico-ref::after { content: ''; flex: 1; height: 1px; background: rgba(176,58,20,.2); }
+.texto-biblico p { font-family: 'EB Garamond', serif; font-style: italic; font-size: var(--fonte-base); color: #2a0a04; line-height: 1.7; margin-bottom: 4px; text-align: left; }
+.texto-biblico .ref-final { font-size: clamp(0.6rem,1.8vw,0.75rem); font-style: normal; color: var(--ouro); font-family: 'Oswald', sans-serif; letter-spacing: 1px; display: block; text-align: right; margin-top: 4px; }
+.bloco-ctx, .bloco { background: rgba(176,58,20,.05); border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.625rem 0; position: relative; z-index: 1; }
+.bloco-ctx-titulo, .bloco-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bloco-teo, .blteo { background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro); padding: 0.625rem 0.75rem; margin: 0.625rem 0; position: relative; z-index: 1; }
+.bloco-teo-titulo, .blteo-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: #8a6a20; margin-bottom: 6px; }
+.bloco-apl, .blapl { background: linear-gradient(135deg, rgba(176,58,20,.06), rgba(201,168,76,.07)); border: 1px solid rgba(176,58,20,.2); border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.625rem 0; position: relative; z-index: 1; }
+.bloco-apl-titulo, .blapl-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.memorizar, .mem { background: var(--creme); border: 1px solid rgba(201,168,76,.3); border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.625rem 0; text-align: center; position: relative; z-index: 1; }
+.memorizar-titulo, .mem-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: var(--ouro); margin-bottom: 6px; }
+.memorizar p, .mem p { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.8rem,2.2vw,0.9rem); color: #2a0a04; text-align: center; line-height: 1.6; }
+.baluno { border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.75rem 0 0.125rem; position: relative; z-index: 1; }
+.baluno-ico { font-size: clamp(0.75rem,2vw,0.875rem); margin-right: 6px; vertical-align: middle; filter: var(--ouro-brilho); }
+.baluno-tag { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
+.baluno-corpo { font-family: 'EB Garamond', serif; font-size: var(--fonte-base); line-height: 1.55; color: var(--ct); }
+.baluno-linha { border-bottom: 1px solid rgba(176,58,20,.18); height: 22px; margin-top: 6px; }
+.ba-refletir { background: rgba(176,58,20,.05); border-left: 3px solid var(--cor); }
+.ba-refletir .baluno-tag { color: var(--cor); }
+.ba-biblica { background: rgba(201,168,76,.07); border-left: 3px solid var(--ouro); }
+.ba-biblica .baluno-tag { color: #8a6a20; }
+.ba-sabia { background: rgba(90,58,18,.06); border-left: 3px solid #7a5a10; }
+.ba-sabia .baluno-tag { color: #7a5a10; }
+.ba-pense { background: rgba(176,58,20,.04); border: 1px dashed rgba(176,58,20,.32); border-left: 3px solid var(--cor); }
+.ba-pense .baluno-tag { color: var(--cor); }
+.ba-vida { background: linear-gradient(135deg, rgba(176,58,20,.05), rgba(201,168,76,.06)); border: 1px solid rgba(201,168,76,.28); border-left: 3px solid var(--ouro); }
+.ba-vida .baluno-tag { color: #8a6a20; }
+
+</style>
+</head>
+<body>
+
+<div class="painel">
+  <div class="marca">ESCHATON VOL. III<span>Lição 01 · A Majestosa Apresentação do Noivo da Igreja</span></div>
+  <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+  <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+  <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+
+
+<!-- CAPA DE ENTRADA CLICÁVEL -->
+<div id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 01" role="button" tabindex="0">
+  <div class="cv-atm"></div>
+  <div class="cv-grd"></div>
+  <div class="cv-fx"></div>
+  <div class="cv-corpo">
+    <div class="cv-serie">Eschaton · O Futuro Chegou</div>
+    <div class="cv-num">Vol. III · Lição 01</div>
+    <div class="cv-tema">A Majestosa Apresentação do Noivo da Igreja</div>
+    <div class="cv-tema-sub">Apocalipse 1:1–20 · O Noivo da Igreja</div>
+    <div class="cv-divisor"></div>
+    <div class="cv-frase">"Na sua primeira vinda a glória de Cristo estava encoberta. Mas na sua segunda vinda, sua glória será autoevidente."</div>
+    <div class="cv-ref">Hernandes Dias Lopes</div>
+    <button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+  </div>
+  <div class="cv-rodape">
+    <div class="cv-rodape-sub">Jovens Adultos · Lição 01</div>
+  </div>
+</div>
+
+<div class="area">
+
+
+<div id="conteudoLicao">
+
+<!-- CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+  <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+  <div class="cimg"></div><div class="clh"></div>
+  <div class="cnbg">01</div>
+  <div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+  <div class="ccon">
+    <div class="cser">Eschaton · O Futuro Chegou</div>
+    <div class="cref">Apocalipse 1:1-20</div>
+    <div class="ctit">A Majestosa Apresentação do Noivo da Igreja</div>
+    <div class="cver">
+      "Na sua primeira vinda a glória de Cristo estava encoberta. Ele viveu se esvaziando da sua glória. Mas na sua segunda vinda, sua glória será autoevidente."
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:0.625rem;letter-spacing:1px;color:var(--ouro);">Hernandes Dias Lopes — Apocalipse: O Futuro Chegou</span>
+    </div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- TEXTO BÍBLICO -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">2</div>
+  <div class="ph"><span class="phl">Lição 01 · Vol. III</span><span class="pht">O Noivo da Igreja</span></div>
+  <h2>O Texto</h2>
+  <div class="texto-biblico">
+    <div class="texto-biblico-ref">Apocalipse 1:5,7,13-16</div>
+    <p>"E da parte de Jesus Cristo, a fiel testemunha, o primogênito dos mortos e o soberano dos reis da terra... Eis que vem com as nuvens, e todo olho o verá."</p>
+    <p>"E no meio dos castiçais, um semelhante ao Filho do homem, vestido com uma roupa que chegava até os pés, e cingido pelo peito com um cinto de ouro. A sua cabeça e cabelos eram brancos como lã branca, como neve; e seus olhos como chama de fogo; e os seus pés semelhantes ao bronze polido... e a sua face como o sol quando em todo o seu fulgor."</p>
+    <span class="ref-final">Apocalipse 1:5,7,13-16</span>
+  </div>
+  <div class="obj">
+    <div class="ot">Objetivos desta lição</div>
+    <ul>
+      <li>Ver o contraste entre o Cristo sofredor da cruz e o Cristo glorificado do Apocalipse</li>
+      <li>Examinar os três títulos de Jesus em Apocalipse 1:5 e seu significado pastoral</li>
+      <li>Compreender o que significa que Cristo "anda no meio dos castiçais"</li>
+      <li>Aplicar a visão do Cristo glorioso à coragem e à adoração da Igreja de hoje</li>
+    </ul>
+  </div>
+  <div class="bloco-ctx">
+    <div class="bloco-ctx-titulo">A Situação da Igreja em Patmos</div>
+    <p>João recebe essa revelação como prisioneiro político na Ilha de Patmos — banido pelo imperador Domiciano, obrigado a trabalhar nas minas com trapos. A Igreja estava sendo massacrada. É nesse contexto de absoluto desamparo que Deus abre o céu e revela o Cristo glorioso.</p>
+  </div>
+  <div class="baluno ba-refletir">
+    <div class="baluno-tag"><span class="baluno-ico">&#9670;</span> Para você refletir</div>
+    <div class="baluno-corpo">João estava preso, sofrendo, longe de tudo — e foi exatamente ali que Deus abriu o céu. Em que momento de dificuldade ou isolamento Deus já se revelou de forma especial para você? O que esse padrão diz sobre como Ele age?</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- DOIS RETRATOS DE CRISTO -->
+<div class="lbl">Página 3 · Dois Retratos de Cristo</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">3</div>
+  <div class="ph"><span class="phl">Lição 01 · Vol. III</span><span class="pht">O Noivo da Igreja</span></div>
+  <h2>Dois Retratos de Cristo</h2>
+  <p class="cap">Hernandes Dias Lopes faz uma das observações mais poderosas do livro: como o Pai revela o Filho no Apocalipse? Como o servo lavando os pés dos discípulos? Como a ovelha muda que vai para o matadouro? Como aquele que tem as mãos pregadas na cruz? Absolutamente não.</p>
+  <div class="bloco-ctx">
+    <div class="bloco-ctx-titulo">Na Cruz — Cristo Esvaziado</div>
+    <p>Cabelos cheios de sangue. Olhos inchados. Pés pregados. Voz rouca. Mãos com pregos. Rosto desfigurado. Esse é o Cristo da Sexta-Feira Santa — o Cristo que "se esvaziou da sua glória" por nós.</p>
+  </div>
+  <div class="bloco-ctx">
+    <div class="bloco-ctx-titulo">No Apocalipse — Cristo Glorificado</div>
+    <p>Cabelos alvos como neve. Olhos como chama de fogo. Pés de bronze polido. Voz de muitas águas. Mãos que seguram a Igreja e a história. Rosto brilhando como o sol. Esse é o Cristo da ressurreição — o Cristo que o Pai revela a João e que voltará em glória autoevidente.</p>
+  </div>
+  <h3>Os Três Títulos de Cristo — Ap 1:5</h3>
+  <p>João apresenta Cristo com três títulos que definem sua identidade para uma Igreja sob perseguição. Primeiro: <strong>Fiel Testemunha</strong> — ele nunca deixou de testemunhar sobre o Pai, mesmo na hora do sofrimento e da morte. Segundo: <strong>Primogênito dos Mortos</strong> — ele foi o primeiro a ressuscitar em glória; é o primeiro da fila, e nós vamos logo atrás. Ele matou a morte. Terceiro: <strong>Soberano dos Reis da Terra</strong> — Jesus está acima de Roma, acima dos imperadores, acima de todos os poderes que perseguem a Igreja. Ele é o Presidente dos presidentes, o Rei dos reis.</p>
+  <div class="baluno ba-biblica">
+    <div class="baluno-tag"><span class="baluno-ico">&#9998;</span> Conexão Bíblica</div>
+    <div class="baluno-corpo">A descrição do Cristo glorificado em Apocalipse 1:13-16 ecoa a visão de Daniel 7:9-14 e Daniel 10:5-6. Leia Daniel 7:13-14 e compare com Apocalipse 1:7. O que essas passagens juntas revelam sobre a identidade de Jesus e o cumprimento da profecia?</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- CRISTO ANDA NO MEIO DOS CASTIÇAIS -->
+<div class="lbl">Página 4 · Cristo no Meio da Igreja</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">4</div>
+  <div class="ph"><span class="phl">Lição 01 · Vol. III</span><span class="pht">O Noivo da Igreja</span></div>
+  <h2>Cristo Anda no Meio dos Castiçais</h2>
+  <p>A visão de Cristo em Apocalipse 1:13 o coloca "no meio dos castiçais" — que representam as sete igrejas (1:20). Cristo não olha a Igreja de longe. Ele anda no meio dela. Ele conhece suas obras, suas lutas, seus pecados, suas fidelidades. Ele segura as sete estrelas — os anjos/pastores das igrejas — em suas mãos.</p>
+  <div class="texto-biblico">
+    <div class="texto-biblico-ref">Apocalipse 1:17-18</div>
+    <p>"Quando o vi, caí a seus pés como morto; e ele pôs sobre mim a sua mão direita, dizendo: Não temas; eu sou o primeiro e o último e o que vivo; e estive morto, mas eis que estou vivo pelos séculos dos séculos. Amém! E tenho as chaves da morte e do inferno."</p>
+    <span class="ref-final">Apocalipse 1:17-18</span>
+  </div>
+  <h3>A Reação de João e a Nossa</h3>
+  <p>Quando João vê o Cristo glorioso, ele cai como morto. Essa é a resposta adequada diante da santidade de Deus — prostrar-se em adoração e terror reverente. Mas Cristo imediatamente estende a mão e diz "Não temas." Essa combinação é o coração do Apocalipse: o terror que a glória produz é suavizado pela graça que se aproximou.</p>
+  <div class="bloco-teo">
+    <div class="bloco-teo-titulo">O que isso revela sobre Cristo</div>
+    <p>Cristo tem "as chaves da morte e do inferno" (1:18) — nenhuma morte acontece sem a sua autorização. Para uma Igreja sob martírio, essa afirmação é de coragem absoluta: a morte dos santos não é um acidente nem uma derrota do plano de Deus. É a chave girada por mãos que foram perfuradas por amor.</p>
+  </div>
+  <div class="baluno ba-sabia">
+    <div class="baluno-tag"><span class="baluno-ico">&#9654;</span> Sabia que?</div>
+    <div class="baluno-corpo">O imperador Domiciano (81–96 d.C.) exigia ser chamado de <em>Dominus et Deus</em> — "Senhor e Deus". Quando João escreve que Cristo é o "Soberano dos Reis da Terra" e usa o título <em>Kyrios</em> (Senhor), estava fazendo uma afirmação diretamente subversiva ao poder imperial — motivo suficiente para prisão e morte.</div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- A MENSAGEM PARA HOJE -->
+<div class="lbl">Página 5 · Mensagem para Hoje</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">5</div>
+  <div class="ph"><span class="phl">Lição 01 · Vol. III</span><span class="pht">O Noivo da Igreja</span></div>
+  <h2>A Mensagem para Hoje</h2>
+  <div class="bloco-teo">
+    <div class="bloco-teo-titulo">A Pergunta de Hernandes Dias Lopes</div>
+    <p>"Temos hoje uma visão da glória do Noivo da Igreja? Temos honrado o nosso Noivo? Estamos nos preparando para nos encontrar com Ele, como as virgens prudentes? Nossas lâmpadas estão cheias de azeite?"</p>
+  </div>
+  <h3>A Igreja que Perdeu a Visão do Cristo Glorioso</h3>
+  <p>Quando a Igreja perde a visão do Cristo glorioso do Apocalipse, ela se torna vulnerável a dois pecados opostos. De um lado, a acomodação — se Cristo não é o Soberano dos reis da terra, a Igreja se curva ao poder cultural, político ou religioso do momento. De outro lado, o desânimo — se Cristo não tem "as chaves da morte e do inferno", o martírio e o sofrimento parecem derrotas, não vitórias.</p>
+  <h3>Com os Pés no Vale, mas a Cabeça no Céu</h3>
+  <p>João estava fisicamente em Patmos — preso, isolado, sofrendo. Mas espiritualmente estava "no dia do Senhor" (1:10), e Deus abriu-lhe o céu. Essa é a postura da Igreja fiel em todos os séculos: com os pés no vale das dificuldades e da perseguição, mas com a cabeça no céu, fixada no Cristo glorioso que anda no meio dos castiçais e nunca abandona a sua Igreja.</p>
+  <p>R. A. Torrey diz que a verdade do retorno do Senhor é a verdade mais preciosa que contém a Bíblia. Ela enche o coração do crente de gozo e o cinge com força para a batalha. Ela o eleva por cima das lutas, temores e provas deste mundo.</p>
+  <div class="baluno ba-pense">
+    <div class="baluno-tag"><span class="baluno-ico">&#8857;</span> Pense nisso</div>
+    <div class="baluno-corpo">A Igreja que perde a visão do Cristo glorioso tende a se acomodar ao mundo ou a cair no desânimo. Qual desses dois perigos você enxerga mais na sua própria vida? E qual seria o antídoto, à luz do que esta lição ensina?</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- APLICAÇÃO -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">6</div>
+  <div class="ph"><span class="phl">Lição 01 · Vol. III</span><span class="pht">O Noivo da Igreja</span></div>
+  <h2>Aplicação Direta</h2>
+  <p class="cap">João recebe a saudação do Cristo glorioso: "Graça e Paz" (1:4). Não é uma saudação de terror, mas de doçura e encorajamento a uma Igreja que passa pelo vale do martírio. O mesmo Cristo glorioso que João vê nos envia sua graça e paz. A questão é se temos olhos para vê-lo.</p>
+  <div class="bloco-apl">
+    <div class="bloco-apl-titulo">Para esta semana</div>
+    <p>Primeiro: Leia Apocalipse 1:12-20 devagar, como se você fosse João. Deixe a descrição de Cristo aterrissar — os olhos como chama de fogo, o rosto como o sol, a voz de muitas águas. O que você sente diante desse Cristo? Segundo: Cristo tem "as chaves da morte e do inferno." Há alguma situação na sua vida que parece estar fora do controle de Deus — uma doença, uma crise, uma perseguição? Como a afirmação de Cristo muda sua perspectiva? Terceiro: "Não temas; eu sou o primeiro e o último e o que vivo" — Cristo diz isso a João prostrado. Para qual situação da sua vida você mais precisa ouvir "Não temas" do Cristo glorioso?</p>
+  </div>
+  <div class="sep"><span>&#10022;</span></div>
+  <p>A glória do Cristo do Apocalipse é o mesmo Cristo que você recebeu na salvação — mas agora você o vê sem o véu da humilhação. A cruz foi o caminho; a glória é o destino. É o Cristo glorioso que voltará para buscar sua noiva.</p>
+  <div class="memorizar">
+    <div class="memorizar-titulo">&#10022; Versículo para Memorizar</div>
+    <p>"Não temas; eu sou o primeiro e o último e o que vivo; e estive morto, mas eis que estou vivo pelos séculos dos séculos. Amém! E tenho as chaves da morte e do inferno."</p>
+    <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:0.625rem;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 1:17-18</p>
+  </div>
+  <div class="baluno ba-vida">
+    <div class="baluno-tag"><span class="baluno-ico">&#10022;</span> Leve para a sua vida</div>
+    <div class="baluno-corpo">Esta semana, escolha uma situação concreta em que você precisa ouvir "Não temas" do Cristo glorioso — uma decisão, um medo, uma relação. Escreva essa situação aqui e ore usando as palavras de Apocalipse 1:17-18 como base. Deixe o Cristo que tem "as chaves da morte e do inferno" falar sobre essa área da sua vida.</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- QUESTÕES E ANOTAÇÕES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">7</div>
+  <div class="ph"><span class="phl">Lição 01 · Vol. III</span><span class="pht">O Noivo da Igreja</span></div>
+  <h2>Questões para Reflexão</h2>
+  <div class="q">
+    <div class="qn">Questão 01</div>
+    <div class="qt">Hernandes Dias Lopes contrasta o Cristo humilhado da cruz com o Cristo glorificado do Apocalipse. Qual desses dois retratos de Cristo é mais presente na sua devoção e na sua adoração cotidiana? O que seria diferente se o Cristo glorioso do Apocalipse fosse mais real para você?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 02</div>
+    <div class="qt">Cristo é apresentado como "Soberano dos Reis da Terra" (1:5). Que poderes humanos — políticos, culturais, ideológicos — a Igreja brasileira atual tende a temer ou a se curvar, em vez de confiar na soberania de Cristo sobre eles?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 03</div>
+    <div class="qt">Cristo anda no meio dos castiçais — ele conhece cada Igreja por dentro. Se Cristo escrevesse uma carta para a sua Igreja ou para o seu grupo de jovens hoje, qual seria o maior elogio e qual seria a maior advertência?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 04</div>
+    <div class="qt">Cristo diz "Não temas" a João prostrado. Qual é o maior medo que paralisa você espiritualmente hoje? Como a afirmação "estive morto, mas estou vivo pelos séculos dos séculos" fala diretamente a esse medo?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <h3 style="margin-top:12px;">Anotações</h3>
+  <div class="lins">
+    <div class="lin"></div><div class="lin"></div>
+    <div class="lin"></div><div class="lin"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div><!-- /conteudoLicao -->
+
+<script>
+function entrarLicao() {
+  const capa = document.getElementById('capaEntradaRevista');
+  if (!capa) return;
+  capa.classList.add('saindo');
+  setTimeout(() => {
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+  }, 600);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    const capa = document.getElementById('capaEntradaRevista');
+    if (capa && !document.body.classList.contains('licao-iniciada')) entrarLicao();
+  }
+});
+let edit = false;
+const TAGS = ['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit() {
+  edit = !edit;
+  document.querySelectorAll('.pag *').forEach(el => {
+    if (TAGS.includes(el.tagName) && !el.querySelector('div,p,h2,h3,ul'))
+      el.contentEditable = edit ? 'true' : 'false';
+  });
+  document.getElementById('etxt').textContent = edit ? 'Concluir' : 'Editar';
+}
+</script>
+</body>
+</html>

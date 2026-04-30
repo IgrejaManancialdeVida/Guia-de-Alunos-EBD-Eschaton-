@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton Vol. III · Lição 06 — Os Selos, os Cavaleiros e os Selados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #305080;
+  --grad1:      #0a1018;
+  --grad2:      #101828;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f8f0e0;
+  --creme:      #f0e4cc;
+  --cc:         #ddd0c0;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #060c10; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL ──────────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #030608, #060c10);
+  border-bottom: 1px solid rgba(48,80,128,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  color: var(--ouro); letter-spacing: 3px; margin-right: auto;
+}
+.marca span {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.68rem);
+  color: #666; letter-spacing: 1px; display: block; font-weight: 300;
+}
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: none; cursor: pointer;
+  padding: 0.44rem 1rem; border-radius: 2px;
+  transition: all .2s; white-space: nowrap;
+}
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA ────────────────────────────────────────────── */
+.area {
+  margin-top: 64px;
+  padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag {
+  width: min(148mm, 100%);
+  min-height: 210mm;
+  background: var(--perg);
+  box-shadow: 0 6px 30px rgba(0,0,0,.6);
+  position: relative; overflow: hidden;
+  page-break-after: always; flex-shrink: 0;
+  margin: 0 auto;
+}
+.lbl {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: #555; letter-spacing: 2px; text-transform: uppercase;
+  width: min(148mm, 100%);
+  align-self: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -0.5rem;
+}
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa {
+  background: linear-gradient(160deg, var(--grad1), var(--grad2));
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 210mm; padding: 0;
+}
+.catm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 22% 60%, rgba(48,80,128,.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cgrd {
+  position: absolute; inset: 0; opacity: .025;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px
+  );
+}
+.cfx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+  background: linear-gradient(180deg, #101828, var(--cor), var(--ouro));
+}
+.cnbg {
+  position: absolute; bottom: -20px; right: -10px;
+  font-family: 'Cinzel', serif; font-size: clamp(80pt, 22vw, 130pt);
+  font-weight: 900; color: rgba(255,255,255,.03); line-height: 1;
+  user-select: none;
+}
+.cimg {
+  position: absolute; top: 0; left: 0; right: 0; height: 58%;
+  background: linear-gradient(160deg, #040810, var(--cor) 50%, #90c0ff);
+  opacity: .38;
+}
+.clh {
+  position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .75;
+}
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num { font-family: 'Cinzel', serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 4px; color: var(--ouro); text-transform: uppercase;
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit {
+  font-family: 'Cinzel', serif; font-size: clamp(12pt, 3.5vw, 17pt);
+  font-weight: 700; color: #fff; line-height: 1.1;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; color: rgba(201,168,76,.6);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cver {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ouro-claro);
+  line-height: 1.6; border-left: 2px solid var(--ouro);
+  padding-left: 10px; opacity: .9;
+}
+
+/* ── INTERIOR ────────────────────────────────────────── */
+.int {
+  padding: clamp(8mm, 5vw, 14mm) clamp(6mm, 4vw, 12mm) 18mm clamp(8mm, 4vw, 14mm);
+  min-height: 210mm; position: relative; background: var(--perg);
+}
+.int::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent);
+}
+.int::after {
+  content: ''; position: absolute; top: 6px;
+  left: clamp(8mm, 4vw, 14mm); right: clamp(6mm, 4vw, 12mm);
+  height: 1px; background: rgba(48,80,128,.15);
+}
+.int-linhas {
+  position: absolute; inset: 0; top: 20mm; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    transparent, transparent 23px,
+    rgba(48,80,128,.045) 23px, rgba(48,80,128,.045) 24px
+  );
+  z-index: 0;
+}
+.wm {
+  position: absolute; bottom: 14mm; right: 10mm;
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem);
+  font-weight: 900; color: rgba(0,0,0,.03); line-height: 1;
+  user-select: none; pointer-events: none;
+}
+
+/* ── CABEÇALHO DA PÁGINA ─────────────────────────────── */
+.ph {
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--cc);
+  display: flex; justify-content: space-between; align-items: baseline;
+  position: relative; z-index: 1;
+}
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.55rem, 1.5vw, 0.7rem); color: #aaa; }
+
+/* ── TIPOGRAFIA ──────────────────────────────────────── */
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(10pt, 3vw, 13pt); letter-spacing: 1px;
+  text-transform: uppercase; color: var(--cor);
+  border-bottom: 2px solid var(--cor);
+  padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px;
+  line-height: 1.2; position: relative; z-index: 1;
+}
+h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 400;
+  font-size: clamp(8pt, 2.5vw, 10pt); letter-spacing: 1.5px;
+  color: #182840; text-transform: uppercase;
+  margin-bottom: 6px; margin-top: 12px;
+  position: relative; z-index: 1;
+}
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(9.5pt, 2.5vw, 10.5pt);
+  line-height: 1.65; color: var(--ct);
+  text-align: justify; margin-bottom: 9px;
+  hyphens: auto; position: relative; z-index: 1;
+}
+.cap::first-letter {
+  font-family: 'Cinzel', serif; font-size: clamp(28pt, 8vw, 38pt);
+  font-weight: 900; float: left; margin-right: 5px;
+  color: var(--cor); line-height: .82; padding-top: 2px;
+}
+
+/* ── BLOCOS DE CONTEÚDO ──────────────────────────────── */
+.bver {
+  background: #fff; border: 1px solid rgba(48,80,128,.2);
+  border-left: 4px solid var(--cor);
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bver-ref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bver p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9.5pt, 2.5vw, 10.5pt); color: #101828;
+  line-height: 1.7; margin: 0;
+}
+.bver .ref-f {
+  font-size: clamp(8pt, 2vw, 9pt); font-style: normal;
+  color: var(--ouro); font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px; display: block; text-align: right; margin-top: 4px;
+}
+
+.bloco {
+  background: rgba(48,80,128,.05); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.bloco-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+.blteo {
+  background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro);
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.blteo-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #8a6a20; margin-bottom: 6px;
+}
+
+.blapl {
+  background: linear-gradient(135deg, rgba(48,80,128,.05), rgba(201,168,76,.07));
+  border: 1px solid rgba(48,80,128,.2); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.blapl-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+.mem {
+  background: var(--creme); border: 1px solid rgba(201,168,76,.3);
+  border-radius: 2px; padding: 10px 12px; margin: 10px 0;
+  text-align: center; position: relative; z-index: 1;
+}
+.mem-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ouro); margin-bottom: 6px;
+}
+.mem p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9pt, 2.5vw, 10pt); color: #101828;
+  text-align: center; line-height: 1.6;
+}
+
+.obj {
+  background: var(--creme); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.obj .ot {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.obj ul { list-style: none; padding: 0; }
+.obj ul li {
+  font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt);
+  color: var(--ct); padding: 2px 0 2px 14px;
+  position: relative; line-height: 1.4;
+}
+.obj ul li::before {
+  content: '◆';
+  position: absolute; left: 0; color: var(--cor);
+  font-size: clamp(6pt, 1.5vw, 8pt); top: 4px;
+}
+
+/* ── TABELA ──────────────────────────────────────────── */
+.tabela-wrap { overflow-x: auto; margin: 10px 0; position: relative; z-index: 1; }
+.tabela { width: 100%; border-collapse: collapse; font-size: clamp(8pt, 2.2vw, 9pt); }
+.tabela th {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--cor); background: rgba(48,80,128,.07);
+  padding: 5px 7px; border-bottom: 2px solid var(--cor); text-align: left;
+}
+.tabela td {
+  font-family: 'EB Garamond', serif; font-size: clamp(8.5pt, 2.2vw, 9.5pt);
+  color: var(--ct); padding: 4px 7px;
+  border-bottom: 1px solid rgba(48,80,128,.1);
+  vertical-align: top; line-height: 1.4;
+}
+.tabela tr:last-child td { border-bottom: none; }
+.tabela td:first-child {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  color: var(--cor); white-space: nowrap;
+}
+
+/* ── BLOCOS ESPECIAIS ────────────────────────────────── */
+.brefletir {
+  background: rgba(48,80,128,.06);
+  border: 1px solid rgba(48,80,128,.2);
+  border-top: 3px solid var(--cor);
+  border-radius: 0 0 2px 2px;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.brefletir-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bconexao {
+  background: rgba(201,168,76,.1);
+  border: 1px solid rgba(201,168,76,.35);
+  border-left: 4px solid var(--ouro);
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bconexao-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #7a5c10; margin-bottom: 6px;
+}
+.bsabia {
+  background: rgba(48,80,128,.07);
+  border: 1px dashed rgba(48,80,128,.3);
+  border-radius: 2px;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bsabia-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bpense {
+  background: var(--creme);
+  border-left: 4px solid var(--cor);
+  border-radius: 0 2px 2px 0;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bpense-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bleve {
+  background: linear-gradient(135deg, rgba(48,80,128,.08), rgba(201,168,76,.1));
+  border: 1px solid rgba(48,80,128,.25);
+  border-bottom: 3px solid var(--ouro);
+  border-radius: 2px 2px 0 0;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bleve-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── SEPARADOR ───────────────────────────────────────── */
+.sep {
+  display: flex; align-items: center; gap: 10px;
+  margin: 12px 0; opacity: .3; position: relative; z-index: 1;
+}
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: clamp(6pt, 1.5vw, 8pt); color: var(--ouro); }
+
+/* ── QUESTÕES ────────────────────────────────────────── */
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: var(--cor); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px;
+}
+.qt {
+  font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt);
+  color: var(--ct); line-height: 1.45; margin-bottom: 5px;
+}
+.lr { border-bottom: 1px solid rgba(48,80,128,.2); height: 20px; margin-top: 3px; }
+
+/* ── LINHAS DE ANOTAÇÃO ──────────────────────────────── */
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px; position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(48,80,128,.2); height: 22px; }
+
+/* ── RODAPÉ ──────────────────────────────────────────── */
+.rod {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 6px clamp(6mm, 4vw, 12mm) 6mm clamp(8mm, 4vw, 14mm);
+  display: flex; justify-content: space-between; align-items: center; z-index: 2;
+}
+.rod::before {
+  content: ''; position: absolute; top: 0;
+  left: clamp(6mm, 4vw, 12mm); right: clamp(6mm, 4vw, 12mm);
+  height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .3;
+}
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(6pt, 1.5vw, 7pt); color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(8pt, 2vw, 9pt); color: var(--ouro); }
+
+/* ── EDIÇÃO ──────────────────────────────────────────── */
+[contenteditable="true"] { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(48,80,128,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(48,80,128,.08); border-radius: 2px; }
+
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(160deg, #040810 0%, #0a1018 40%, #101828 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; transition: opacity .6s ease;
+  padding: 2rem;
+}
+#capaEntradaRevista.saindo { opacity: 0; pointer-events: none; }
+body.licao-iniciada #capaEntradaRevista { display: none; }
+.cv-atm {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(48,80,128,.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cv-grd {
+  position: absolute; inset: 0; pointer-events: none; opacity: .02;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cv-fx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none;
+  background: linear-gradient(180deg, #101828, var(--cor), var(--ouro));
+}
+.cv-corpo {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 480px; gap: 1.2rem;
+}
+.cv-serie {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(.55rem,1.5vw,.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; opacity: .75;
+}
+.cv-num {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(.6rem,2vw,.75rem);
+  color: rgba(201,168,76,.45); letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.cv-tema {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(1.1rem,4vw,1.6rem);
+  color: #fff; line-height: 1.2;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.cv-tema-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.6rem,1.8vw,.75rem);
+  color: rgba(201,168,76,.6); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.cv-divisor {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+  opacity: .5;
+}
+.cv-frase {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(.85rem,2.2vw,1rem);
+  color: var(--ouro-claro); line-height: 1.7; opacity: .9;
+  border-left: 2px solid rgba(201,168,76,.4);
+  padding-left: 1rem; text-align: left; max-width: 400px;
+}
+.cv-ref {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.55rem,1.5vw,.65rem);
+  color: rgba(201,168,76,.55); letter-spacing: 2px;
+  text-transform: uppercase; text-align: right;
+  width: 100%; max-width: 400px;
+}
+.cv-cta {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(.6rem,1.8vw,.75rem);
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #fff; background: var(--cor);
+  border: none; padding: .6rem 1.8rem; cursor: pointer;
+  border-radius: 2px; transition: all .2s;
+}
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape {
+  position: absolute; bottom: 1.5rem; left: 0; right: 0;
+  text-align: center; pointer-events: none;
+}
+.cv-rodape-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.5rem,1.3vw,.6rem);
+  color: rgba(255,255,255,.2); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── IMPRESSÃO ───────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+
+/* ── RESPONSIVIDADE ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .tabela td:first-child { white-space: normal; }
+  .cver { font-size: 9pt; }
+}
+@media (max-width: 600px) {
+  .tabela-wrap { -webkit-overflow-scrolling: touch; }
+}
+</style>
+</head>
+<body>
+
+<div class="painel">
+  <div class="marca">ESCHATON VOL. III<span>Lição 06 · Os Selos, os Cavaleiros e os Selados</span></div>
+  <button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+  <button class="btn bi" onclick="window.print()">🖨 Imprimir</button>
+  <a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+
+
+<!-- CAPA DE ENTRADA -->
+<div id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 06" role="button" tabindex="0">
+  <div class="cv-atm"></div>
+  <div class="cv-grd"></div>
+  <div class="cv-fx"></div>
+  <div class="cv-corpo">
+    <div class="cv-serie">Eschaton · O Futuro Chegou</div>
+    <div class="cv-num">Vol. III · Lição 06</div>
+    <div class="cv-tema">Os Selos, os Cavaleiros e os Selados</div>
+    <div class="cv-tema-sub">Apocalipse 6:1-17 · 7:1-17</div>
+    <div class="cv-divisor"></div>
+    <div class="cv-frase">"A história não está à deriva como um barco sem leme. O Cordeiro governa! Todos os eventos acontecem porque Ele conhece, determina, permite e controla."</div>
+    <div class="cv-ref">Hernandes Dias Lopes</div>
+    <button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+  </div>
+  <div class="cv-rodape">
+    <div class="cv-rodape-sub">Jovens Adultos · Lição 06</div>
+  </div>
+</div>
+
+<div class="area">
+
+<!-- CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+  <div class="catm"></div>
+  <div class="cgrd"></div>
+  <div class="cfx"></div>
+  <div class="cimg"></div>
+  <div class="clh"></div>
+  <div class="cnbg">06</div>
+  <div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+  <div class="ccon">
+    <div class="cser">Eschaton · O Futuro Chegou</div>
+    <div class="cref">Apocalipse 6:1-17 · 7:1-17</div>
+    <div class="ctit">Os Selos, os Cavaleiros e os Selados</div>
+    <div class="cver">
+      "A história não está à deriva como um barco sem leme. O Cordeiro governa! Todos os eventos acontecem porque Ele conhece, determina, permite e controla. Até os inimigos estão debaixo da autoridade do Cordeiro."
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:clamp(0.5rem,1.5vw,0.625rem);letter-spacing:1px;color:var(--ouro);">Hernandes Dias Lopes</span>
+    </div>
+  </div>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">1</span>
+  </div>
+</div>
+
+<!-- TEXTO BÍBLICO -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+  <div class="int-linhas"></div>
+  <div class="wm">2</div>
+  <div class="ph">
+    <span class="phl">Lição 06 · Vol. III</span>
+    <span class="pht">Os Selos e os Selados</span>
+  </div>
+  <h2>O Texto</h2>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 6:9-10</div>
+    <p>"E quando abriu o quinto selo, vi debaixo do altar as almas dos que tinham sido mortos por causa da palavra de Deus e por causa do testemunho que sustentavam. E clamavam em grande voz, dizendo: Até quando, Senhor, santo e verdadeiro, não julgas e vingas o nosso sangue nos que habitam na terra?"</p>
+    <span class="ref-f">Apocalipse 6:9-10</span>
+  </div>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 7:9,14</div>
+    <p>"Depois destas coisas, vi uma grande multidão que ninguém podia numerar, de todas as nações, tribos, povos e línguas… vestidos de vestiduras brancas e com palmas nas suas mãos… Estes são os que vêm da grande tribulação, e lavaram as suas vestiduras e as branquearam no sangue do Cordeiro."</p>
+    <span class="ref-f">Apocalipse 7:9,14</span>
+  </div>
+  <div class="obj">
+    <div class="ot">Objetivos desta lição</div>
+    <ul>
+      <li>Compreender os quatro cavaleiros como descrição da era presente da Igreja</li>
+      <li>Examinar o quinto selo — os mártires que clamam por justiça debaixo do altar</li>
+      <li>Identificar os selados de Deus como a Igreja protegida na tribulação</li>
+      <li>Contemplar a visão da multidão incontável como destino eterno do povo de Deus</li>
+    </ul>
+  </div>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">2</span>
+  </div>
+</div>
+
+<!-- OS QUATRO CAVALEIROS -->
+<div class="lbl">Página 3 · Os Quatro Cavaleiros</div>
+<div class="pag int">
+  <div class="int-linhas"></div>
+  <div class="wm">3</div>
+  <div class="ph">
+    <span class="phl">Lição 06 · Vol. III</span>
+    <span class="pht">Os Quatro Cavaleiros</span>
+  </div>
+  <h2>Os Quatro Cavaleiros do Apocalipse</h2>
+  <p class="cap">Os sete selos descrevem movimentos que caracterizarão a era inteira da Igreja — desde a ascensão até o regresso glorioso de Cristo. O Cordeiro abre os selos. Ele está encarregado de todo o programa. A história está em Suas mãos. É do trono que sai a ordem para os cavaleiros.</p>
+  <div class="tabela-wrap">
+    <table class="tabela">
+      <tr>
+        <th>Cavaleiro</th>
+        <th>Significado segundo H. D. Lopes</th>
+      </tr>
+      <tr>
+        <td>Branco</td>
+        <td>Cristo vencedor — o evangelho avançando vitoriosamente pelo mundo. O branco está sempre ligado a Cristo (1:14; 19:11); a coroa é <em>stephanos</em>, usada para Cristo e os santos, nunca para o anticristo.</td>
+      </tr>
+      <tr>
+        <td>Vermelho</td>
+        <td>Perseguição religiosa — a guerra do mundo contra a Igreja ao longo dos séculos. Entre 100.000 e 200.000 cristãos morreram nos 249 anos de perseguição romana. O maior número de mártires da história foi morto no século XX.</td>
+      </tr>
+      <tr>
+        <td>Preto</td>
+        <td>Pobreza e fome — subproduto da concentração da riqueza e da injustiça. Um homem trabalharia o dia inteiro para comprar um litro de trigo. Os fiéis preferem a morte a aceitar a marca da besta e não poder comprar nem vender.</td>
+      </tr>
+      <tr>
+        <td>Amarelo</td>
+        <td>Morte — espada, fome, pestilência e feras da terra. Um quarto da humanidade atingido. Não é apenas um evento futuro; é a realidade de toda a história humana sob o juízo de Deus.</td>
+      </tr>
+    </table>
+  </div>
+  <p>Hernandes Dias Lopes: "O Cordeiro governa! Todos os eventos acontecem porque Ele conhece, determina, permite e controla. Até os inimigos estão debaixo da autoridade do Cordeiro."</p>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">3</span>
+  </div>
+</div>
+
+<!-- O QUINTO SELO — OS MÁRTIRES -->
+<div class="lbl">Página 4 · O Quinto Selo — Os Mártires sob o Altar</div>
+<div class="pag int">
+  <div class="int-linhas"></div>
+  <div class="wm">4</div>
+  <div class="ph">
+    <span class="phl">Lição 06 · Vol. III</span>
+    <span class="pht">Os Mártires e o 6.º Selo</span>
+  </div>
+  <h2>Os Mártires sob o Altar</h2>
+  <h3>O Quinto Selo — Ap 6:9-11</h3>
+  <p>Quando o quinto selo é aberto, João vê almas debaixo do altar — os mártires mortos pela Palavra de Deus. Eles clamam: "Até quando, Senhor?" Não é um grito de desespero — é uma oração de justiça. Eles confiam na santidade e na veracidade de Deus. A resposta de Deus não é uma data — é uma veste branca e o pedido para "repousar ainda um pouco". O juízo virá no tempo certo; a espera tem um propósito soberano.</p>
+  <div class="blteo">
+    <div class="blteo-t">A Pergunta que a Igreja Perseguida Faz</div>
+    <p>Hernandes Dias Lopes conecta o clamor dos mártires ao presente: "O maior número de mártires da história foi morto no século XX." Hoje, em dezenas de países, cristãos são mortos pela fé. O clamor "até quando?" não é apenas a voz dos mártires do século I — é a voz da Igreja em perseguição em todas as épocas. É a oração mais honesta que um crente sofredor pode orar.</p>
+  </div>
+  <h3>O Sexto Selo — O Mundo em Pânico — Ap 6:12-17</h3>
+  <p>Com o sexto selo, os ímpios enfrentam o terror do Deus irado — reis, ricos, poderosos e escravos buscam esconder-se entre as rochas e os montes. É o primeiro instinto do pecador desde o Éden: esconder-se de Deus. Warren Wiersbe: "A ira de Deus é a evidência do Seu santo amor por tudo o que é certo e o Seu santo repúdio por tudo que é mau." William Barclay: "o maior temor do pecador não é a morte, mas a manifestação plena da presença de Deus."</p>
+  <div class="brefletir">
+    <div class="brefletir-t">✦ Para Você Refletir</div>
+    <p>A pergunta "Até quando, Senhor?" é a mais honesta da Bíblia. Os Salmos estão cheios dela (Sl 6; 13; 22; 79; 94). Não é falta de fé — é fé que exige da santidade de Deus. Como você tem orado em momentos de injustiça prolongada? A veste branca (consolação presente) e o "repousar ainda um pouco" (espera soberana) descrevem como Deus sustenta sem explicar tudo.</p>
+  </div>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">4</span>
+  </div>
+</div>
+
+<!-- OS SELADOS E A MULTIDÃO -->
+<div class="lbl">Página 5 · Os Selados e a Multidão Incontável</div>
+<div class="pag int">
+  <div class="int-linhas"></div>
+  <div class="wm">5</div>
+  <div class="ph">
+    <span class="phl">Lição 06 · Vol. III</span>
+    <span class="pht">Apocalipse 7</span>
+  </div>
+  <h2>Os Selados e a Multidão da Glória</h2>
+  <p class="cap">Apocalipse 7 responde à pergunta do capítulo 6: "Quem poderá suster-se diante do Deus irado?" A resposta bíblica é clara: aqueles que foram selados como propriedade de Deus. O capítulo 7 funciona como um interlúdio de esperança entre o sexto e o sétimo selos.</p>
+  <div class="bloco">
+    <div class="bloco-t">O Selo de Deus — Três Significados</div>
+    <p>William Hendriksen identifica três dimensões do selo: <strong>Proteção</strong> — o que está selado não pode ser violado. <strong>Propriedade</strong> — somos propriedade exclusiva de Deus, marcados como Seus. Quem toca o selado toca o Seu Dono. <strong>Genuinidade</strong> — o que está selado não pode ser adulterado. O Espírito Santo é o selo e o penhor da nossa redenção (Ef 1:13-14).</p>
+  </div>
+  <h3>A Multidão Incontável — Ap 7:9-17</h3>
+  <p>Depois dos 144.000 selados (Israel espiritual contado do ponto de vista de Deus), João vê uma multidão que ninguém pode numerar — de todas as nações, tribos, povos e línguas, vestidos de branco com palmas nas mãos. É a mesma Igreja vista de ângulo diferente: do ponto de vista da terra é incontável. Do ponto de vista do céu é 144.000 — completa, sem nenhum faltando.</p>
+  <p>Hernandes Dias Lopes descreve as seis glórias dessa Igreja na glória: <strong>inumerável</strong> — cumprimento da promessa a Abraão; <strong>universal</strong> — de todas as culturas e línguas; <strong>honrada</strong> — em pé diante do trono do Cordeiro; <strong>pura</strong> — lavada no sangue do Cordeiro; <strong>vencedora</strong> — com palmas de vitória; <strong>grata</strong> — "a salvação é de Deus e do Cordeiro" (7:10).</p>
+  <div class="bconexao">
+    <div class="bconexao-t">✦ Conexão Bíblica</div>
+    <p>O padrão dos 144.000 / multidão incontável ecoa a estrutura de Gênesis 15:5 (promessa a Abraão: "Conta as estrelas, se puderes"). Hendriksen e Lopes enxergam os 144.000 como número simbólico de perfeição e completude (12 × 12 × 1.000 = totalidade das doze tribos × totalidade dos apóstolos × plenitude). A multidão incontável é a mesma realidade vista do plano terreno: a Igreja é maior do que qualquer censo humano pode capturar.</p>
+  </div>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">5</span>
+  </div>
+</div>
+
+<!-- APLICAÇÃO -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+  <div class="int-linhas"></div>
+  <div class="wm">6</div>
+  <div class="ph">
+    <span class="phl">Lição 06 · Vol. III</span>
+    <span class="pht">Os Selos e os Selados</span>
+  </div>
+  <h2>Aplicação Direta</h2>
+  <p class="cap">Os quatro cavaleiros não são apenas profecia do futuro — são a descrição da história humana em curso. O evangelismo que avança (branco), a perseguição que acompanha (vermelho), a pobreza que oprime (preto) e a morte que ameaça (amarelo) — são realidades do presente para a Igreja global. Mas a Igreja selada por Deus atravessa tudo isso protegida.</p>
+  <div class="blapl">
+    <div class="blapl-t">Para esta semana</div>
+    <p>Primeiro: Os mártires sob o altar clamam "até quando?" — e recebem uma veste branca e um chamado a esperar. Há uma situação de injustiça ou sofrimento em sua vida onde você está clamando "até quando?" Como a resposta de Deus aos mártires — não uma data, mas uma veste e uma promessa — fala à sua própria situação? Segundo: O Espírito Santo é o selo de Deus em você (Ef 1:13-14). Isso significa que você é propriedade exclusiva de Deus — o diabo não pode tocar o que está selado. Como essa certeza muda sua coragem diante das pressões espirituais que você enfrenta? Terceiro: A multidão incontável de "toda nação, tribo, povo e língua" é a Igreja que você vai encontrar na eternidade. Isso muda como você vê os cristãos de outras denominações, culturas e contextos ao seu redor?</p>
+  </div>
+  <div class="mem">
+    <div class="mem-t">◆ Versículo para Memorizar</div>
+    <p>"Estes são os que vêm da grande tribulação, e lavaram as suas vestiduras e as branquearam no sangue do Cordeiro."</p>
+    <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:clamp(0.5rem,1.5vw,0.625rem);letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 7:14</p>
+  </div>
+  <div class="bpense">
+    <div class="bpense-t">✦ Pense Nisso</div>
+    <p>A distinção entre ser livrado <em>do</em> sofrimento e ser sustentado <em>dentro</em> do sofrimento é uma das mais importantes da teologia prática. A fé que espera ser poupada do fogo é destruída quando o fogo chega. A fé que espera ser sustentada <em>dentro</em> do fogo — como Sadraque, Mesaque e Abednego (Dn 3:25) — encontra o "quarto homem" no meio das chamas. Esta lição é o treinamento espiritual para essa segunda postura.</p>
+  </div>
+  <div class="bleve">
+    <div class="bleve-t">✦ Leve para a Vida...</div>
+    <p>Escreva em algum lugar visível (celular, espelho, caderno) a frase: <em>"Eu sou selado — o que está em Deus não pode ser tomado."</em> Identifique, nos próximos sete dias, um momento onde sentiu pressão espiritual e aplique conscientemente a certeza do selo.</p>
+  </div>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">6</span>
+  </div>
+</div>
+
+<!-- QUESTÕES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+  <div class="int-linhas"></div>
+  <div class="wm">7</div>
+  <div class="ph">
+    <span class="phl">Lição 06 · Vol. III</span>
+    <span class="pht">Selos e Selados</span>
+  </div>
+  <h2>Questões para Reflexão</h2>
+  <div class="q">
+    <div class="qn">Questão 01</div>
+    <div class="qt">Hernandes Dias Lopes interpreta o cavaleiro do cavalo branco como o Cristo vencedor — o evangelho avançando. Isso significa que guerras, fome e morte (os outros três cavaleiros) são parte da era da Igreja, não apenas de um período futuro. Como essa interpretação muda sua compreensão do sofrimento presente da Igreja no mundo?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 02</div>
+    <div class="qt">Os mártires debaixo do altar clamam "até quando?" — e recebem uma veste branca e a instrução de esperar. Por que Deus não responde com uma data? O que a veste branca e o chamado a esperar revelam sobre a forma como Deus consola e sustenta os que sofrem injustamente?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 03</div>
+    <div class="qt">Hernandes Dias Lopes diz que a Igreja será preservada <em>na</em> tribulação, não <em>da</em> tribulação. Como essa distinção é importante para a fé prática? Qual é a diferença entre uma fé que espera ser livrada do sofrimento e uma fé que confia em ser sustentada dentro dele?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 04</div>
+    <div class="qt">A multidão incontável de Apocalipse 7 vem "da grande tribulação" — são pessoas que sofreram, mas chegaram lavadas no sangue do Cordeiro. Como essa visão do destino final dos redimidos — que vêm do sofrimento para a glória — sustenta a perseverança da Igreja hoje?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <h3 style="margin-top:12px;">Anotações</h3>
+  <div class="lins">
+    <div class="lin"></div><div class="lin"></div>
+    <div class="lin"></div><div class="lin"></div>
+  </div>
+  <div class="rod">
+    <span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span>
+    <span class="rn">7</span>
+  </div>
+</div>
+
+</div><!-- /area -->
+
+<script>
+function entrarLicao(){
+  const capa = document.getElementById('capaEntradaRevista');
+  if (capa) capa.classList.add('saindo');
+  setTimeout(() => document.body.classList.add('licao-iniciada'), 550);
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+let edit = false;
+const TAGS = ['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM','TD','TH'];
+function toggleEdit() {
+  edit = !edit;
+  document.querySelectorAll('.pag *').forEach(el => {
+    if (TAGS.includes(el.tagName) && !el.querySelector('div,p,h2,h3,ul,table'))
+      el.contentEditable = edit ? 'true' : 'false';
+  });
+  document.getElementById('etxt').textContent = edit ? 'Concluir' : 'Editar';
+}
+</script>
+</body>
+</html>

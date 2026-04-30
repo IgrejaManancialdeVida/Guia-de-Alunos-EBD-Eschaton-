@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton Vol. III · Lição 03 — Mistura, Tolerância e Morte Espiritual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #a03218;
+  --grad1:      #180a08;
+  --grad2:      #280a08;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f8f0e0;
+  --creme:      #f0e4cc;
+  --cc:         #ddd0c0;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #120504; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL FIXO ─────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #080202, #120504);
+  border-bottom: 1px solid rgba(160,50,24,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  color: var(--ouro); letter-spacing: 3px; margin-right: auto;
+}
+.marca span {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.68rem);
+  color: #666; letter-spacing: 1px; display: block; font-weight: 300;
+}
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: none; cursor: pointer;
+  padding: 0.44rem 1rem; border-radius: 2px;
+  transition: all .2s; white-space: nowrap;
+}
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA PRINCIPAL ──────────────────────────────────── */
+.area {
+  margin-top: 60px;
+  padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag {
+  width: min(148mm, 100%);
+  min-height: 210mm;
+  background: var(--perg);
+  box-shadow: 0 6px 30px rgba(0,0,0,.6);
+  position: relative; overflow: hidden;
+  page-break-after: always; flex-shrink: 0; margin: 0 auto;
+}
+.lbl {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: #555; letter-spacing: 2px; text-transform: uppercase;
+  width: min(148mm, 100%);
+  align-self: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -8px;
+}
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa {
+  background: linear-gradient(160deg, var(--grad1), var(--grad2));
+  display: flex; flex-direction: column;
+  justify-content: flex-end; min-height: 210mm; padding: 0;
+}
+.catm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 22% 60%, rgba(176,58,20,.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.2) 0%, transparent 45%);
+}
+.cgrd {
+  position: absolute; inset: 0; opacity: .025;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cfx  { position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+        background: linear-gradient(180deg, #281408, var(--cor), var(--ouro)); }
+.cnbg { position: absolute; bottom: -20px; right: -10px;
+        font-family: 'Cinzel', serif; font-size: clamp(5rem,18vw,8.125rem);
+        font-weight: 900; color: rgba(255,255,255,.03);
+        line-height: 1; user-select: none; }
+.cimg { position: absolute; top: 0; left: 0; right: 0; height: 58%;
+        background: linear-gradient(160deg, #0d0802, var(--cor) 50%, #ffa060);
+        opacity: .38; }
+.clh  { position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px;
+        background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+        opacity: .75; }
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num   { font-family: 'Cinzel', serif; font-size: clamp(0.55rem,1.5vw,0.625rem);
+              color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  font-weight: 700; color: #fff;
+  line-height: 1.15; text-transform: uppercase; margin-bottom: 10px;
+}
+.cref {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; color: rgba(201,168,76,.6);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cver {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(0.8rem, 2.2vw, 0.875rem);
+  color: var(--ouro-claro); line-height: 1.6;
+  border-left: 2px solid var(--ouro); padding-left: 10px; opacity: .9;
+}
+
+/* ── PÁGINAS INTERNAS ────────────────────────────────── */
+.int {
+  padding: clamp(8mm,4vw,14mm) clamp(6mm,3vw,12mm) 18mm clamp(8mm,4vw,14mm);
+  min-height: 210mm; position: relative; background: var(--perg);
+}
+.int::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent);
+}
+.int::after {
+  content: ''; position: absolute; top: 6px; left: 14mm; right: 12mm; height: 1px;
+  background: rgba(176,58,20,.15);
+}
+.int-linhas {
+  position: absolute; inset: 0; top: 20mm; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    transparent, transparent 23px,
+    rgba(176,58,20,.045) 23px, rgba(176,58,20,.045) 24px);
+  z-index: 0;
+}
+.wm {
+  position: absolute; bottom: 14mm; right: 10mm;
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem);
+  font-weight: 900; color: rgba(0,0,0,.03);
+  line-height: 1; user-select: none; pointer-events: none;
+}
+
+/* ── CABEÇALHO DE PÁGINA ─────────────────────────────── */
+.ph {
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--cc);
+  display: flex; justify-content: space-between; align-items: baseline;
+  position: relative; z-index: 1;
+}
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem);
+       color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic;
+       font-size: clamp(0.6rem,1.8vw,0.75rem); color: #aaa; }
+
+/* ── TÍTULOS ─────────────────────────────────────────── */
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(0.75rem, 2.5vw, 0.9375rem);
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--cor); border-bottom: 2px solid var(--cor);
+  padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px;
+  line-height: 1.2; position: relative; z-index: 1;
+}
+h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 400;
+  font-size: clamp(0.65rem, 2vw, 0.8125rem);
+  letter-spacing: 1.5px; color: #5a1a0a;
+  text-transform: uppercase; margin-bottom: 6px; margin-top: 12px;
+  position: relative; z-index: 1;
+}
+
+/* ── PARÁGRAFOS ──────────────────────────────────────── */
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: var(--fonte-base);
+  line-height: 1.65; color: var(--ct);
+  text-align: justify; margin-bottom: 9px;
+  hyphens: auto; position: relative; z-index: 1;
+}
+.cap::first-letter {
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,2.875rem);
+  font-weight: 900; float: left; margin-right: 5px;
+  color: var(--cor); line-height: .82; padding-top: 2px;
+}
+
+/* ── BLOCO DE VERSÍCULO ──────────────────────────────── */
+.bver {
+  background: #fff;
+  border: 1px solid rgba(176,58,20,.2);
+  border-left: 4px solid var(--cor);
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bver-ref {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bver p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: var(--fonte-base); color: #2a1004; line-height: 1.7; margin: 0;
+}
+.bver .ref-f {
+  font-size: clamp(0.6rem,1.8vw,0.75rem); font-style: normal;
+  color: var(--ouro); font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px; display: block; text-align: right; margin-top: 4px;
+}
+
+/* ── BLOCOS TEMÁTICOS ────────────────────────────────── */
+.bloco {
+  background: rgba(176,58,20,.05); border-radius: 2px;
+  padding: 0.625rem 0.75rem; margin: 0.625rem 0;
+  position: relative; z-index: 1;
+}
+.bloco-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.blteo {
+  background: rgba(201,168,76,.08);
+  border-left: 3px solid var(--ouro);
+  padding: 0.625rem 0.75rem; margin: 0.625rem 0;
+  position: relative; z-index: 1;
+}
+.blteo-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #8a6a20; margin-bottom: 6px;
+}
+.blapl {
+  background: linear-gradient(135deg, rgba(176,58,20,.06), rgba(201,168,76,.07));
+  border: 1px solid rgba(176,58,20,.2);
+  border-radius: 2px; padding: 0.625rem 0.75rem;
+  margin: 0.625rem 0; position: relative; z-index: 1;
+}
+.blapl-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── VERSÍCULO PARA MEMORIZAR ────────────────────────── */
+.mem {
+  background: var(--creme);
+  border: 1px solid rgba(201,168,76,.3);
+  border-radius: 2px; padding: 0.625rem 0.75rem;
+  margin: 0.625rem 0; text-align: center;
+  position: relative; z-index: 1;
+}
+.mem-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ouro); margin-bottom: 6px;
+}
+.mem p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(0.8rem,2.2vw,0.9rem);
+  color: #2a1004; text-align: center; line-height: 1.6;
+}
+
+/* ── OBJETIVOS ───────────────────────────────────────── */
+.obj { background: var(--creme); border-radius: 2px; padding: 0.625rem 0.75rem;
+       margin: 0.625rem 0; position: relative; z-index: 1; }
+.obj .ot {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.obj ul { list-style: none; padding: 0; }
+.obj ul li {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.8rem,2.2vw,0.9rem);
+  color: var(--ct); padding: 2px 0 2px 1rem;
+  position: relative; line-height: 1.4;
+}
+.obj ul li::before {
+  content: '◆'; position: absolute; left: 0;
+  color: var(--cor); font-size: 0.5rem; top: 4px;
+}
+
+/* ── SEPARADOR ───────────────────────────────────────── */
+.sep {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0.75rem 0; opacity: .3; position: relative; z-index: 1;
+}
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: 0.5rem; color: var(--ouro); }
+
+/* ── QUESTÕES ────────────────────────────────────────── */
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  color: var(--cor); letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 3px;
+}
+.qt {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.8rem,2.2vw,0.9rem);
+  color: var(--ct); line-height: 1.45; margin-bottom: 5px;
+}
+.lr { border-bottom: 1px solid rgba(176,58,20,.2); height: 20px; margin-top: 3px; }
+
+/* ── RODAPÉ DE PÁGINA ────────────────────────────────── */
+.rod {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 6px 12mm 6mm 14mm;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 2;
+}
+.rod::before {
+  content: ''; position: absolute; top: 0; left: 12mm; right: 12mm; height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .3;
+}
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(0.45rem,1.3vw,0.56rem);
+      color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(0.6rem,1.8vw,0.75rem); color: var(--ouro); }
+
+/* ── LINHAS DE ANOTAÇÃO ──────────────────────────────── */
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px;
+        position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(176,58,20,.2); height: 22px; }
+
+/* ── BLOCOS ESPECIAIS ────────────────────────────────── */
+.brefletir {
+  background: rgba(139,26,26,.06);
+  border: 1px solid rgba(139,26,26,.2);
+  border-top: 3px solid var(--vermelho);
+  border-radius: 0 0 2px 2px;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.brefletir-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--vermelho); margin-bottom: 6px;
+}
+.bconexao {
+  background: rgba(201,168,76,.1);
+  border: 1px solid rgba(201,168,76,.35);
+  border-left: 4px solid var(--ouro);
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bconexao-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #7a5c10; margin-bottom: 6px;
+}
+.bsabia {
+  background: rgba(176,58,20,.07);
+  border: 1px dashed rgba(176,58,20,.3);
+  border-radius: 2px;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bsabia-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bpense {
+  background: var(--creme);
+  border-left: 4px solid var(--cor);
+  border-radius: 0 2px 2px 0;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bpense-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bleve {
+  background: linear-gradient(135deg, rgba(176,58,20,.08), rgba(201,168,76,.1));
+  border: 1px solid rgba(176,58,20,.25);
+  border-bottom: 3px solid var(--ouro);
+  border-radius: 2px 2px 0 0;
+  padding: 0.625rem 0.75rem; margin: 0.75rem 0;
+  position: relative; z-index: 1;
+}
+.bleve-t {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(160deg, #0d0804 0%, #1a1008 40%, #281408 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; transition: opacity .6s ease;
+  padding: 2rem;
+}
+#capaEntradaRevista.saindo {
+  opacity: 0; pointer-events: none;
+}
+body.licao-iniciada #capaEntradaRevista {
+  display: none;
+}
+.cv-atm {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(176,58,20,.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cv-grd {
+  position: absolute; inset: 0; pointer-events: none; opacity: .02;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cv-fx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none;
+  background: linear-gradient(180deg, #281408, var(--cor), var(--ouro));
+}
+.cv-corpo {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 480px; gap: 1.5rem;
+}
+.cv-serie {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; opacity: .7;
+  display: flex; align-items: center; gap: 10px;
+}
+.cv-serie::before, .cv-serie::after {
+  content: ''; display: block; width: 24px; height: 1px; background: var(--ouro); opacity: .5;
+}
+.cv-num {
+  font-family: 'Cinzel', serif; font-weight: 900;
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
+  color: rgba(201,168,76,.4); letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.cv-tema {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
+  color: #fff; line-height: 1.2; text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cv-tema-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  color: rgba(201,168,76,.6); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.cv-divisor {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+  opacity: .5;
+}
+.cv-frase {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  color: var(--ouro-claro); line-height: 1.7; opacity: .85;
+  border-left: 2px solid rgba(201,168,76,.4);
+  padding-left: 1rem; text-align: left; max-width: 400px;
+}
+.cv-ref {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(0.55rem, 1.5vw, 0.65rem);
+  color: rgba(201,168,76,.5); letter-spacing: 2px;
+  text-transform: uppercase; text-align: right; width: 100%; max-width: 400px;
+}
+.cv-cta {
+  margin-top: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #fff; background: var(--cor);
+  border: none; padding: 0.6rem 1.8rem; cursor: pointer;
+  border-radius: 2px; transition: all .2s;
+}
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape {
+  position: absolute; bottom: 1.5rem; left: 0; right: 0;
+  text-align: center; pointer-events: none;
+}
+.cv-rodape-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(0.5rem, 1.3vw, 0.6rem);
+  color: rgba(255,255,255,.2); letter-spacing: 3px; text-transform: uppercase;
+}
+
+/* ── EDIÇÃO INLINE ───────────────────────────────────── */
+[contenteditable="true"]       { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(176,58,20,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(176,58,20,.08); border-radius: 2px; }
+
+/* ── IMPRESSÃO ───────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+
+/* ── RESPONSIVIDADE ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .painel { padding: 0.5rem 0.75rem; gap: 0.5rem; }
+  .btn    { padding: 0.375rem 0.625rem; }
+  .area   { margin-top: 56px; }
+  .ccon   { padding: 0 6mm 10mm 10mm; }
+  .rod    { padding: 6px 6mm 4mm 8mm; }
+  .rod::before { left: 6mm; right: 6mm; }
+}
+@media (max-width: 768px) {
+  .area { margin-top: 60px; }
+  .lbl  { margin-left: 0.5rem; }
+}
+@media (min-width: 1024px) {
+  .area { padding: 1.5rem 2rem 4rem; }
+}
+
+
+/* ── COMPATIBILIDADE COM CLASSES DAS LIÇÕES 01–03 ───── */
+.texto-biblico {
+  background: #fff; border: 1px solid rgba(176,58,20,.2);
+  border-left: 4px solid var(--cor); padding: 0.625rem 0.75rem;
+  margin: 0.75rem 0; position: relative; z-index: 1;
+}
+.texto-biblico-ref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem);
+  letter-spacing: 2px; text-transform: uppercase; color: var(--cor);
+  margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+}
+.texto-biblico-ref::after { content: ''; flex: 1; height: 1px; background: rgba(176,58,20,.2); }
+.texto-biblico p { font-family: 'EB Garamond', serif; font-style: italic; font-size: var(--fonte-base); color: #2a0a04; line-height: 1.7; margin-bottom: 4px; text-align: left; }
+.texto-biblico .ref-final { font-size: clamp(0.6rem,1.8vw,0.75rem); font-style: normal; color: var(--ouro); font-family: 'Oswald', sans-serif; letter-spacing: 1px; display: block; text-align: right; margin-top: 4px; }
+.bloco-ctx, .bloco { background: rgba(176,58,20,.05); border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.625rem 0; position: relative; z-index: 1; }
+.bloco-ctx-titulo, .bloco-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bloco-teo, .blteo { background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro); padding: 0.625rem 0.75rem; margin: 0.625rem 0; position: relative; z-index: 1; }
+.bloco-teo-titulo, .blteo-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: #8a6a20; margin-bottom: 6px; }
+.bloco-apl, .blapl { background: linear-gradient(135deg, rgba(176,58,20,.06), rgba(201,168,76,.07)); border: 1px solid rgba(176,58,20,.2); border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.625rem 0; position: relative; z-index: 1; }
+.bloco-apl-titulo, .blapl-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.memorizar, .mem { background: var(--creme); border: 1px solid rgba(201,168,76,.3); border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.625rem 0; text-align: center; position: relative; z-index: 1; }
+.memorizar-titulo, .mem-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; color: var(--ouro); margin-bottom: 6px; }
+.memorizar p, .mem p { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.8rem,2.2vw,0.9rem); color: #2a0a04; text-align: center; line-height: 1.6; }
+.baluno { border-radius: 2px; padding: 0.625rem 0.75rem; margin: 0.75rem 0 0.125rem; position: relative; z-index: 1; }
+.baluno-ico { font-size: clamp(0.75rem,2vw,0.875rem); margin-right: 6px; vertical-align: middle; filter: var(--ouro-brilho); }
+.baluno-tag { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem,1.5vw,0.6875rem); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
+.baluno-corpo { font-family: 'EB Garamond', serif; font-size: var(--fonte-base); line-height: 1.55; color: var(--ct); }
+.baluno-linha { border-bottom: 1px solid rgba(176,58,20,.18); height: 22px; margin-top: 6px; }
+.ba-refletir { background: rgba(176,58,20,.05); border-left: 3px solid var(--cor); }
+.ba-refletir .baluno-tag { color: var(--cor); }
+.ba-biblica { background: rgba(201,168,76,.07); border-left: 3px solid var(--ouro); }
+.ba-biblica .baluno-tag { color: #8a6a20; }
+.ba-sabia { background: rgba(90,58,18,.06); border-left: 3px solid #7a5a10; }
+.ba-sabia .baluno-tag { color: #7a5a10; }
+.ba-pense { background: rgba(176,58,20,.04); border: 1px dashed rgba(176,58,20,.32); border-left: 3px solid var(--cor); }
+.ba-pense .baluno-tag { color: var(--cor); }
+.ba-vida { background: linear-gradient(135deg, rgba(176,58,20,.05), rgba(201,168,76,.06)); border: 1px solid rgba(201,168,76,.28); border-left: 3px solid var(--ouro); }
+.ba-vida .baluno-tag { color: #8a6a20; }
+
+</style>
+</head>
+<body>
+
+<div class="painel">
+  <div class="marca">ESCHATON VOL. III<span>Lição 03 · Mistura, Tolerância e Morte Espiritual</span></div>
+  <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+  <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+  <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+<!-- CAPA DE ENTRADA -->
+<div id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 03">
+  <div class="cv-atm"></div><div class="cv-grd"></div><div class="cv-fx"></div>
+  <div class="cv-corpo">
+    <div class="cv-serie">Eschaton · O Futuro Chegou</div>
+    <div class="cv-num">Vol. III · Lição 03</div>
+    <div class="cv-tema">Mistura, Tolerância e Morte Espiritual</div>
+    <div class="cv-tema-sub">Apocalipse 2:12–3:6 · Pérgamo, Tiatira e Sardes</div>
+    <div class="cv-divisor"></div>
+    <div class="cv-frase">"O pecado não é apenas o de quem se desviou, mas também o de quem ficou calado. O silêncio cúmplice é tão culpável quanto o desvio ativo."</div>
+    <div class="cv-ref">Hernandes Dias Lopes</div>
+    <button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+  </div>
+  <div class="cv-rodape"><div class="cv-rodape-sub">Jovens Adultos · Lição 03</div></div>
+</div>
+
+<div class="area">
+
+<div id="conteudoLicao">
+
+<!-- CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+  <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+  <div class="cimg"></div><div class="clh"></div>
+  <div class="cnbg">03</div>
+  <div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+  <div class="ccon">
+    <div class="cser">Eschaton · O Futuro Chegou</div>
+    <div class="cref">Ap 2:12–29 · Ap 3:1–6 · Pérgamo, Tiatira, Sardes</div>
+    <div class="ctit">Mistura, Tolerância e Morte Espiritual</div>
+    <div class="cver">
+      "O pecado da Igreja de Pérgamo era a tolerância ao erro e ao pecado. O pecado não é apenas o de quem se desviou, mas também o de quem ficou calado. O silêncio cúmplice é tão culpável quanto o desvio ativo."
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Hernandes Dias Lopes</span>
+    </div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- TEXTO BÍBLICO -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">2</div>
+  <div class="ph"><span class="phl">Lição 03 · Vol. III</span><span class="pht">Pérgamo, Tiatira e Sardes</span></div>
+  <h2>O Texto</h2>
+  <div class="texto-biblico">
+    <div class="texto-biblico-ref">Apocalipse 2:13–14, 16 — Pérgamo</div>
+    <p>"Sei onde moras, onde está o trono de Satanás… Tenho, porém, algumas coisas contra ti: tens aí os que sustentam a doutrina de Balaão… Arrepende-te, pois; caso contrário, virei a ti em breve e guerrearerei contra eles com a espada da minha boca."</p>
+    <span class="ref-final">Apocalipse 2:13–14, 16</span>
+  </div>
+  <div class="texto-biblico">
+    <div class="texto-biblico-ref">Apocalipse 3:1–3 — Sardes</div>
+    <p>"Conheço as tuas obras; tens o nome de que vives, e estás morto. Sê vigilante, e confirma o restante que estava para morrer… Lembra-te, pois, do que tens recebido e ouvido; guarda-o e arrepende-te. Se, pois, não vigiares, virei como ladrão, e não saberás a hora em que virei contra ti."</p>
+    <span class="ref-final">Apocalipse 3:1–3</span>
+  </div>
+  <div class="obj">
+    <div class="ot">Objetivos desta lição</div>
+    <ul>
+      <li>Compreender o perigo da mistura da Igreja com o mundo — lição de Pérgamo</li>
+      <li>Examinar como Satanás muda de tática: da perseguição para a sedução</li>
+      <li>Identificar o pecado de Tiatira — tolerar a profetisa Jezabel e seu ensinamento</li>
+      <li>Confrontar a Igreja de Sardes — que tem nome de viva, mas está morta</li>
+    </ul>
+  </div>
+  <div class="baluno ba-refletir">
+    <div class="baluno-tag"><span class="baluno-ico">&#9670;</span> Para você refletir</div>
+    <div class="baluno-corpo">Cristo conhece não apenas as obras visíveis de cada igreja, mas também os compromissos silenciosos que ela faz com o mundo ao redor. O que na sua vida ou comunidade pode estar sendo tolerado sem que você perceba?</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PÉRGAMO — O PERIGO DA MISTURA -->
+<div class="lbl">Página 3 · Pérgamo — O Perigo da Mistura</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">3</div>
+  <div class="ph"><span class="phl">Lição 03 · Vol. III</span><span class="pht">A Igreja de Pérgamo</span></div>
+  <h2>Pérgamo — Casada com o Mundo</h2>
+  <p class="cap">Pérgamo era a cidade mais importante da Ásia por quase quatrocentos anos. Centro cultural com uma biblioteca de duzentos mil pergaminhos, centro do culto ao imperador, lar do templo de Zeus — uma das sete maravilhas do mundo — e do culto a Esculápio, o "deus serpente das curas." No topo da Acrópole de Pérgamo estava, literalmente, o trono de Satanás.</p>
+  <h3>A Tática de Satanás Muda</h3>
+  <p>Satanás não logrou vencer a Igreja de Pérgamo com a perseguição — ela resistiu ao martírio de Antipas, seu fiel pastor, queimado vivo dentro de um touro de bronze. Então ele mudou a tática: da perseguição para a sedução. Da substituição para a mistura. Não "abandonem Cristo", mas "misturem Cristo com o mundo."</p>
+  <div class="bloco-ctx">
+    <div class="bloco-ctx-titulo">Os Dois Grupos Dentro de Pérgamo</div>
+    <p>Dentro da mesma congregação havia crentes firmes — que enfrentaram o martírio com coragem — e crentes que estavam cedendo à doutrina de Balaão e aos nicolaítas. A heresia não estava do lado de fora; estava assentada nos bancos da Igreja. Enquanto alguns sustentavam o erro, os demais ficavam em silêncio. Hernandes Dias Lopes é severo: "A infidelidade aninhou-se dentro da igreja com a adesão de uns e o conformismo dos outros."</p>
+  </div>
+  <h3>O Pecado de Balaão — A Infiltração</h3>
+  <p>Balaão não conseguiu amaldiçoar Israel diretamente — então aconselhou que mulheres sedutoras infiltrassem o acampamento para provocar a imoralidade e afastar Israel de Deus. A heresia de Pérgamo funcionava da mesma forma: não era apostasia aberta, mas ecumenismo — a proposta de mistura da fé cristã com a idolatria e a imoralidade do mundo.</p>
+  <div class="baluno ba-biblica">
+    <div class="baluno-tag"><span class="baluno-ico">&#9998;</span> Conexão Bíblica</div>
+    <div class="baluno-corpo">Em Números 25:1–3, vemos os resultados do conselho de Balaão em ação: Israel se prostituiu com as filhas de Moabe e se inclinou aos seus deuses. Compare com a situação de Pérgamo. Como o padrão de Balaão — sedução por dentro — é mais perigoso do que a perseguição por fora?</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- TIATIRA E SARDES -->
+<div class="lbl">Página 4 · Tiatira e Sardes</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">4</div>
+  <div class="ph"><span class="phl">Lição 03 · Vol. III</span><span class="pht">Tiatira e Sardes</span></div>
+  <h2>Tiatira e Sardes — Tolerância e Aparência</h2>
+  <h3>Tiatira — Tolerar Jezabel</h3>
+  <p>A Igreja de Tiatira era elogiada por Cristo por suas obras, amor, fé e perseverança — e por progredir em suas obras ao longo do tempo. Mas havia um problema grave: tolerava "a mulher Jezabel, que se diz profetisa" e ensinava os servos de Deus a praticarem imoralidade. O pecado de Tiatira não era apenas o de Jezabel — era o de <em>tolerar</em> Jezabel. A Igreja sabia do problema e não fez nada. O silêncio cúmplice é tão culpável quanto o desvio ativo.</p>
+  <div class="bloco-ctx">
+    <div class="bloco-ctx-titulo">A Tática de Satanás em Tiatira</div>
+    <p>Se em Pérgamo Satanás usou a mistura doutrinária, em Tiatira ele usou a sedução moral — com pretensões espirituais. A "profetisa" prometia revelar as "coisas profundas" — supostamente de Deus, mas que Cristo chama de "coisas profundas de Satanás." Uma espiritualidade que libera a imoralidade é doutrina de demônio, não revelação divina.</p>
+  </div>
+  <h3>Sardes — A Igreja Morta que Tem Nome de Viva</h3>
+  <p>A mensagem a Sardes é uma das mais perturbadoras de todas as sete cartas. Cristo não aponta falsa doutrina nem imoralidade — aponta algo pior: a Igreja tem um nome glorioso e uma grande reputação, mas está morta. William Barclay observa que "quando uma Igreja perde sua vitalidade espiritual, já não vale a pena atacá-la." O diabo não precisou perseguir Sardes por fora — ela já estava sendo derrotada pelos próprios pecados internos.</p>
+  <div class="texto-biblico">
+    <div class="texto-biblico-ref">Apocalipse 3:1</div>
+    <p>"Conheço as tuas obras; tens o nome de que vives, e estás morto."</p>
+    <span class="ref-final">Apocalipse 3:1</span>
+  </div>
+  <p>Hernandes Dias Lopes conta a história do pastor que colocou um caixão na frente do púlpito e convidou a congregação a ver o defunto. No fundo do caixão havia um espelho. Cada membro via o próprio rosto. Todos entenderam: eles eram o defunto.</p>
+  <div class="baluno ba-sabia">
+    <div class="baluno-tag"><span class="baluno-ico">&#9654;</span> Sabia que?</div>
+    <div class="baluno-corpo">Sardes havia sido duas vezes conquistada por inimigos que escalaram sua famosa cidadela inexpugnável — não por assalto frontal, mas por surpresa, enquanto os guardas dormiam. Cristo usa essa memória histórica dolorosa ao dizer: "Se não vigiares, virei como ladrão." A cidade que foi tomada por não vigiar estava recebendo o mesmo aviso na sua Igreja.</div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- DIAGNÓSTICO PARA HOJE -->
+<div class="lbl">Página 5 · Diagnóstico para a Igreja Hoje</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">5</div>
+  <div class="ph"><span class="phl">Lição 03 · Vol. III</span><span class="pht">Mensagem para Hoje</span></div>
+  <h2>Três Perigos Vivos na Igreja Hoje</h2>
+  <div class="bloco-teo">
+    <div class="bloco-teo-titulo">A Voz de Hernandes Dias Lopes</div>
+    <p>"O pecado da Igreja de Pérgamo era a tolerância ao erro. Enquanto os crentes de Éfeso odiavam as obras dos nicolaítas, os de Pérgamo toleravam a doutrina e a obra deles. O problema não é apenas o de quem se desviou, mas o de quem ficou calado diante do desvio. Numa mesma congregação há os que permanecem firmes e os que caem — e os que ficam calados enquanto isso acontece."</p>
+  </div>
+  <h3>1. A Mistura de Pérgamo Hoje</h3>
+  <p>A Igreja brasileira enfrenta a tentação de Pérgamo quando adota a estética, os valores e a linguagem do entretenimento secular para crescer numericamente. Quando o critério para o ministério é o que "dá ibope" e não o que é verdadeiro. Quando a graça se torna licença para a imoralidade. A proposta é sempre a mesma: "mistura, não substituição."</p>
+  <h3>2. A Tolerância de Tiatira Hoje</h3>
+  <p>A Igreja peca como Tiatira quando cala diante de erros doutrinários ou comportamentais graves dentro da congregação — por medo do conflito, por amor à unidade superficial, por não querer perder membros. O amor que não corrige não é amor cristão; é cumplicidade.</p>
+  <h3>3. A Morte de Sardes Hoje</h3>
+  <p>Adolf Pohl diz: "Onde reina a morte pelo pecado, não há morte pelo martírio." A Igreja de Sardes não era perseguida porque não incomodava ninguém. Uma Igreja que não é nem perigosa nem indesejável para o mundo ao redor — essa é a marca de Sardes. Há uma diferença devastadora entre uma Igreja que <em>tem</em> programas, música e estrutura, e uma Igreja que <em>é</em> a Igreja viva de Cristo no mundo.</p>
+  <div class="baluno ba-pense">
+    <div class="baluno-tag"><span class="baluno-ico">&#8857;</span> Pense nisso</div>
+    <div class="baluno-corpo">Cristo promete ao vencedor de Sardes que andará com Ele "de vestes brancas" e que seu nome não será riscado do livro da vida. Essa promessa foi dada a uma Igreja quase morta. O que isso revela sobre a paciência de Cristo com Sua Igreja — e com você?</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- APLICAÇÃO -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">6</div>
+  <div class="ph"><span class="phl">Lição 03 · Vol. III</span><span class="pht">Pérgamo, Tiatira e Sardes</span></div>
+  <h2>Aplicação Direta</h2>
+  <p class="cap">Três igrejas, três formas distintas de sucumbir — e três chamados distintos de Cristo. A Pérgamo: "Arrepende-te" da mistura com o erro. A Tiatira: não tolere mais o que deveria ter sido corrigido. A Sardes: "Sê vigilante e confirma o restante que estava para morrer" — o reavivamento ainda é possível.</p>
+  <div class="bloco-apl">
+    <div class="bloco-apl-titulo">Para esta semana</div>
+    <p><strong>Pérgamo:</strong> Há alguma área da sua vida onde você tem misturado valores cristãos com valores do mundo — no trabalho, nos relacionamentos, nas redes sociais, no uso do dinheiro — sem perceber que o resultado é uma fé diluída?</p>
+    <p><strong>Tiatira:</strong> Há algum erro doutrinário ou moral que você tem tolerado na sua Igreja ou comunidade por comodidade ou medo do conflito? O que Cristo esperaria que você fizesse?</p>
+    <p><strong>Sardes:</strong> Sua vida cristã tem incomodado alguém ao redor? Uma fé que não gera nenhuma tensão com o mundo ao redor pode ser a fé de Sardes — presente nos registros, ausente na vida. O que precisa ser reavivado?</p>
+  </div>
+  <div class="sep"><span>&#9670;</span></div>
+  <p>Cristo diz a Sardes: "Lembra-te do que tens recebido e ouvido, guarda-o e arrepende-te." O reavivamento começa pela memória — lembrar o que Deus já fez. Depois vem o <em>guarda-o</em> — tomar posse do que já foi dado. Depois o <em>arrepende-te</em> — a decisão de mudar. Esse é o caminho de Sardes de volta à vida.</p>
+  <div class="memorizar">
+    <div class="memorizar-titulo">&#10022; Versículo para Memorizar</div>
+    <p>"Conheço as tuas obras; tens o nome de que vives, e estás morto. Sê vigilante, e confirma o restante que estava para morrer."</p>
+    <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 3:1–2</p>
+  </div>
+  <div class="baluno ba-vida">
+    <div class="baluno-tag"><span class="baluno-ico">&#10022;</span> Leve para a sua vida</div>
+    <div class="baluno-corpo">Esta semana, faça uma avaliação honesta: em qual das três igrejas desta lição você mais se reconhece? Pérgamo (mistura), Tiatira (tolerância) ou Sardes (aparência sem vida)? Use Apocalipse 3:2–3 como oração pessoal e peça a Cristo que revele o que precisa ser reavivado, corrigido ou abandonado na sua vida.</div>
+    <div class="baluno-linha"></div>
+    <div class="baluno-linha"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- QUESTÕES E ANOTAÇÕES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">7</div>
+  <div class="ph"><span class="phl">Lição 03 · Vol. III</span><span class="pht">Pérgamo, Tiatira e Sardes</span></div>
+  <h2>Questões para Reflexão</h2>
+  <div class="q">
+    <div class="qn">Questão 01</div>
+    <div class="qt">Hernandes Dias Lopes diz que Satanás muda de tática quando não consegue vencer a Igreja pela perseguição: passa da oposição para a sedução, da substituição para a mistura. Como você identifica essa tática operando na Igreja evangélica brasileira contemporânea? Cite exemplos concretos.</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 02</div>
+    <div class="qt">O pecado de Tiatira era tolerar Jezabel — não apenas segui-la, mas ficar em silêncio. Como a Igreja (e o crente individualmente) pode exercer discernimento e correção sem cair no extremo do legalismo ou da inquisição? Qual é a diferença entre correção fraterna e julgamento condenatório?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 03</div>
+    <div class="qt">A Igreja de Sardes tinha nome, fama e reputação — mas estava morta. Adolf Pohl diz que "onde reina a morte pelo pecado, não há morte pelo martírio." Uma Igreja que não incomoda o mundo ao redor pode ser sinal de morte espiritual. Como você avalia sua própria vida cristã com esse critério?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 04</div>
+    <div class="qt">Cristo promete ao vencedor de Sardes que "andará comigo de vestes brancas" e que "não riscarei o seu nome do livro da vida." Como essa promessa — dada a uma Igreja que estava quase morta — revela a paciência e a misericórdia de Cristo para com Sua Igreja, mesmo quando ela está em estado crítico?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <h3 style="margin-top:12px;">Anotações</h3>
+  <div class="lins">
+    <div class="lin"></div><div class="lin"></div>
+    <div class="lin"></div><div class="lin"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div><!-- /conteudoLicao -->
+
+<script>
+function entrarLicao(){
+  const capa=document.getElementById('capaEntradaRevista');
+  if(capa){capa.classList.add('saindo');}
+  setTimeout(()=>document.body.classList.add('licao-iniciada'),550);
+  window.scrollTo({top:0,behavior:'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+  edit=!edit;
+  document.querySelectorAll('.pag *').forEach(el=>{
+    if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+      el.contentEditable=edit?'true':'false';
+  });
+  document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

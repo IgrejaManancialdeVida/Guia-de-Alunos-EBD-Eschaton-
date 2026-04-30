@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton Vol. III · Lição 10 — As Bodas do Cordeiro e a Vitória do Rei dos Reis</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #1a5c8a;
+  --grad1:      #040d14;
+  --grad2:      #081422;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f0f6fb;
+  --creme:      #dceef8;
+  --cc:         #b8d4e8;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #020a12; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL ──────────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #020608, #040d14);
+  border-bottom: 1px solid rgba(26,92,138,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  color: var(--ouro); letter-spacing: 3px; margin-right: auto;
+}
+.marca span {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.68rem);
+  color: #666; letter-spacing: 1px; display: block; font-weight: 300;
+}
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: none; cursor: pointer;
+  padding: 0.44rem 1rem; border-radius: 2px;
+  transition: all .2s; white-space: nowrap;
+}
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA ────────────────────────────────────────────── */
+.area {
+  margin-top: 64px;
+  padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag {
+  width: min(148mm, 100%);
+  min-height: 210mm;
+  background: var(--perg);
+  box-shadow: 0 6px 30px rgba(0,0,0,.6);
+  position: relative; overflow: hidden;
+  page-break-after: always; flex-shrink: 0;
+  margin: 0 auto;
+}
+.lbl {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: #555; letter-spacing: 2px; text-transform: uppercase;
+  width: min(148mm, 100%);
+  align-self: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -0.5rem;
+}
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa {
+  background: linear-gradient(160deg, var(--grad1), var(--grad2));
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 210mm; padding: 0;
+}
+.catm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 22% 60%, rgba(26,92,138,.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cgrd {
+  position: absolute; inset: 0; opacity: .025;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px
+  );
+}
+.cfx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+  background: linear-gradient(180deg, #081422, var(--cor), var(--ouro));
+}
+.cnbg {
+  position: absolute; bottom: -20px; right: -10px;
+  font-family: 'Cinzel', serif; font-size: clamp(80pt, 22vw, 130pt);
+  font-weight: 900; color: rgba(255,255,255,.03); line-height: 1;
+  user-select: none;
+}
+.cimg {
+  position: absolute; top: 0; left: 0; right: 0; height: 58%;
+  background: linear-gradient(160deg, #020a14, var(--cor) 50%, #80c0ff);
+  opacity: .38;
+}
+.clh {
+  position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .75;
+}
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num { font-family: 'Cinzel', serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 4px; color: var(--ouro); text-transform: uppercase;
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit {
+  font-family: 'Cinzel', serif; font-size: clamp(12pt, 3.5vw, 17pt);
+  font-weight: 700; color: #fff; line-height: 1.1;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; color: rgba(201,168,76,.6);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cver {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ouro-claro);
+  line-height: 1.6; border-left: 2px solid var(--ouro);
+  padding-left: 10px; opacity: .9;
+}
+
+/* ── INTERIOR ────────────────────────────────────────── */
+.int {
+  padding: clamp(8mm, 5vw, 14mm) clamp(6mm, 4vw, 12mm) 18mm clamp(8mm, 4vw, 14mm);
+  min-height: 210mm; position: relative; background: var(--perg);
+}
+.int::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent);
+}
+.int::after {
+  content: ''; position: absolute; top: 6px;
+  left: clamp(8mm, 4vw, 14mm); right: clamp(6mm, 4vw, 12mm);
+  height: 1px; background: rgba(26,92,138,.15);
+}
+.int-linhas {
+  position: absolute; inset: 0; top: 20mm; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    transparent, transparent 23px,
+    rgba(26,92,138,.045) 23px, rgba(26,92,138,.045) 24px
+  );
+  z-index: 0;
+}
+.wm {
+  position: absolute; bottom: 14mm; right: 10mm;
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem);
+  font-weight: 900; color: rgba(0,0,0,.03); line-height: 1;
+  user-select: none; pointer-events: none;
+}
+
+/* ── CABEÇALHO DA PÁGINA ─────────────────────────────── */
+.ph {
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--cc);
+  display: flex; justify-content: space-between; align-items: baseline;
+  position: relative; z-index: 1;
+}
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.55rem, 1.5vw, 0.7rem); color: #aaa; }
+
+/* ── TIPOGRAFIA ──────────────────────────────────────── */
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(10pt, 3vw, 13pt); letter-spacing: 1px;
+  text-transform: uppercase; color: var(--cor);
+  border-bottom: 2px solid var(--cor);
+  padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px;
+  line-height: 1.2; position: relative; z-index: 1;
+}
+h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 400;
+  font-size: clamp(8pt, 2.5vw, 10pt); letter-spacing: 1.5px;
+  color: #103050; text-transform: uppercase;
+  margin-bottom: 6px; margin-top: 12px;
+  position: relative; z-index: 1;
+}
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(9.5pt, 2.5vw, 10.5pt);
+  line-height: 1.65; color: var(--ct);
+  text-align: justify; margin-bottom: 9px;
+  hyphens: auto; position: relative; z-index: 1;
+}
+.cap::first-letter {
+  font-family: 'Cinzel', serif; font-size: clamp(28pt, 8vw, 38pt);
+  font-weight: 900; float: left; margin-right: 5px;
+  color: var(--cor); line-height: .82; padding-top: 2px;
+}
+
+/* ── BLOCOS DE CONTEÚDO ──────────────────────────────── */
+.bver {
+  background: #fff; border: 1px solid rgba(26,92,138,.2);
+  border-left: 4px solid var(--cor);
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bver-ref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bver p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9.5pt, 2.5vw, 10.5pt); color: #081422;
+  line-height: 1.7; margin: 0;
+}
+.bver .ref-f {
+  font-size: clamp(8pt, 2vw, 9pt); font-style: normal;
+  color: var(--ouro); font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px; display: block; text-align: right; margin-top: 4px;
+}
+
+.bloco {
+  background: rgba(26,92,138,.05); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.bloco-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+.blteo {
+  background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro);
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.blteo-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #8a6a20; margin-bottom: 6px;
+}
+
+.blapl {
+  background: linear-gradient(135deg, rgba(26,92,138,.05), rgba(201,168,76,.07));
+  border: 1px solid rgba(26,92,138,.2); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.blapl-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+.mem {
+  background: var(--creme); border: 1px solid rgba(201,168,76,.3);
+  border-radius: 2px; padding: 10px 12px; margin: 10px 0;
+  text-align: center; position: relative; z-index: 1;
+}
+.mem-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ouro); margin-bottom: 6px;
+}
+.mem p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9pt, 2.5vw, 10pt); color: #081422;
+  text-align: center; line-height: 1.6;
+}
+
+.obj {
+  background: var(--creme); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.obj .ot {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.obj ul { list-style: none; padding: 0; }
+.obj ul li {
+  font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt);
+  color: var(--ct); padding: 2px 0 2px 14px;
+  position: relative; line-height: 1.4;
+}
+.obj ul li::before {
+  content: '◆';
+  position: absolute; left: 0; color: var(--cor);
+  font-size: clamp(6pt, 1.5vw, 8pt); top: 4px;
+}
+
+/* ── TABELA ──────────────────────────────────────────── */
+.tabela-wrap { overflow-x: auto; margin: 10px 0; position: relative; z-index: 1; }
+.tabela { width: 100%; border-collapse: collapse; font-size: clamp(8pt, 2.2vw, 9pt); }
+.tabela th {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--cor); background: rgba(26,92,138,.07);
+  padding: 5px 7px; border-bottom: 2px solid var(--cor); text-align: left;
+}
+.tabela td {
+  font-family: 'EB Garamond', serif; font-size: clamp(8.5pt, 2.2vw, 9.5pt);
+  color: var(--ct); padding: 4px 7px;
+  border-bottom: 1px solid rgba(26,92,138,.1);
+  vertical-align: top; line-height: 1.4;
+}
+.tabela tr:last-child td { border-bottom: none; }
+.tabela td:first-child {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  color: var(--cor); white-space: nowrap;
+}
+
+/* ── BLOCOS ESPECIAIS ────────────────────────────────── */
+.brefletir {
+  background: rgba(26,92,138,.06);
+  border: 1px solid rgba(26,92,138,.2);
+  border-top: 3px solid var(--cor);
+  border-radius: 0 0 2px 2px;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.brefletir-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bconexao {
+  background: rgba(201,168,76,.1);
+  border: 1px solid rgba(201,168,76,.35);
+  border-left: 4px solid var(--ouro);
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bconexao-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #7a5c10; margin-bottom: 6px;
+}
+.bsabia {
+  background: rgba(26,92,138,.07);
+  border: 1px dashed rgba(26,92,138,.3);
+  border-radius: 2px;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bsabia-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bpense {
+  background: var(--creme);
+  border-left: 4px solid var(--cor);
+  border-radius: 0 2px 2px 0;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bpense-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bleve {
+  background: linear-gradient(135deg, rgba(26,92,138,.08), rgba(201,168,76,.1));
+  border: 1px solid rgba(26,92,138,.25);
+  border-bottom: 3px solid var(--ouro);
+  border-radius: 2px 2px 0 0;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bleve-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── SEPARADOR ───────────────────────────────────────── */
+.sep {
+  display: flex; align-items: center; gap: 10px;
+  margin: 12px 0; opacity: .3; position: relative; z-index: 1;
+}
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: clamp(6pt, 1.5vw, 8pt); color: var(--ouro); }
+
+/* ── QUESTÕES ────────────────────────────────────────── */
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: var(--cor); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px;
+}
+.qt {
+  font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt);
+  color: var(--ct); line-height: 1.45; margin-bottom: 5px;
+}
+.lr { border-bottom: 1px solid rgba(26,92,138,.2); height: 20px; margin-top: 3px; }
+
+/* ── LINHAS DE ANOTAÇÃO ──────────────────────────────── */
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px; position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(26,92,138,.2); height: 22px; }
+
+/* ── RODAPÉ ──────────────────────────────────────────── */
+.rod {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 6px clamp(6mm, 4vw, 12mm) 6mm clamp(8mm, 4vw, 14mm);
+  display: flex; justify-content: space-between; align-items: center; z-index: 2;
+}
+.rod::before {
+  content: ''; position: absolute; top: 0;
+  left: clamp(6mm, 4vw, 12mm); right: clamp(6mm, 4vw, 12mm);
+  height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .3;
+}
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(6pt, 1.5vw, 7pt); color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(8pt, 2vw, 9pt); color: var(--ouro); }
+
+/* ── EDIÇÃO ──────────────────────────────────────────── */
+[contenteditable="true"] { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(26,92,138,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(26,92,138,.08); border-radius: 2px; }
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(160deg, #020a12 0%, #040d1a 40%, #081422 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; transition: opacity .6s ease;
+  padding: 2rem;
+}
+#capaEntradaRevista.saindo { opacity: 0; pointer-events: none; }
+body.licao-iniciada #capaEntradaRevista { display: none; }
+.cv-atm {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(26,92,138,.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cv-grd {
+  position: absolute; inset: 0; pointer-events: none; opacity: .02;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cv-fx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none;
+  background: linear-gradient(180deg, #081422, var(--cor), var(--ouro));
+}
+.cv-corpo {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 480px; gap: 1.2rem;
+}
+.cv-serie {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(.55rem,1.5vw,.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; opacity: .75;
+}
+.cv-num {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(.6rem,2vw,.75rem);
+  color: rgba(201,168,76,.45); letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.cv-tema {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(1.1rem,4vw,1.6rem);
+  color: #fff; line-height: 1.2;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.cv-tema-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.6rem,1.8vw,.75rem);
+  color: rgba(201,168,76,.6); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.cv-divisor {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+  opacity: .5;
+}
+.cv-frase {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(.85rem,2.2vw,1rem);
+  color: var(--ouro-claro); line-height: 1.7; opacity: .9;
+  border-left: 2px solid rgba(201,168,76,.4);
+  padding-left: 1rem; text-align: left; max-width: 400px;
+}
+.cv-ref {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.55rem,1.5vw,.65rem);
+  color: rgba(201,168,76,.55); letter-spacing: 2px;
+  text-transform: uppercase; text-align: right;
+  width: 100%; max-width: 400px;
+}
+.cv-cta {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(.6rem,1.8vw,.75rem);
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #fff; background: var(--cor);
+  border: none; padding: .6rem 1.8rem; cursor: pointer;
+  border-radius: 2px; transition: all .2s;
+}
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape {
+  position: absolute; bottom: 1.5rem; left: 0; right: 0;
+  text-align: center; pointer-events: none;
+}
+.cv-rodape-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.5rem,1.3vw,.6rem);
+  color: rgba(255,255,255,.2); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── IMPRESSÃO ───────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+
+/* ── RESPONSIVIDADE ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .tabela td:first-child { white-space: normal; }
+  .cver { font-size: 9pt; }
+}
+@media (max-width: 600px) {
+  .tabela-wrap { -webkit-overflow-scrolling: touch; }
+}
+
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON VOL. III<span>Lição 10 · As Bodas do Cordeiro e a Vitória do Rei dos Reis</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<!-- CAPA DE ENTRADA -->
+<div aria-label="Abrir lição 10" id="capaEntradaRevista" onclick="entrarLicao()" role="button" tabindex="0">
+<div class="cv-atm"></div>
+<div class="cv-grd"></div>
+<div class="cv-fx"></div>
+<div class="cv-corpo">
+<div class="cv-serie">Eschaton · O Futuro Chegou</div>
+<div class="cv-num">Vol. III · Lição 10</div>
+<div class="cv-tema">As Bodas do Cordeiro e a Vitória do Rei dos Reis</div>
+<div class="cv-tema-sub">Apocalipse 19:1-21</div>
+<div class="cv-divisor"></div>
+<div class="cv-frase">«Alegremo-nos e exultemos e demos-lhe glória, porque são chegadas as bodas do Cordeiro, cuja esposa a si mesma já se ataviou.»</div>
+<div class="cv-ref">Apocalipse 19:7</div>
+<button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+</div>
+<div class="cv-rodape">
+<div class="cv-rodape-sub">Jovens Adultos · Lição 10</div>
+</div>
+</div>
+<div class="area">
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">10</div>
+<div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+<div class="ccon">
+<div class="cser">Eschaton · O Futuro Chegou</div>
+<div class="cref">Apocalipse 19:1-21</div>
+<div class="ctit">As Bodas do Cordeiro e a Vitória do Rei dos Reis</div>
+<div class="cver">
+          «Alegremo-nos e exultemos e demos-lhe glória, porque são chegadas as bodas do Cordeiro, cuja esposa a si mesma já se ataviou. E foi-lhe dado que se vestisse de linho fino, puro e resplandecente; porque o linho fino são as obras justas dos santos.»
+          <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 19:7-8</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 TEXTO BÍBLICO -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 10 · Vol. III</span><span class="pht">Ap 19</span></div>
+<h2>O Texto</h2>
+<div class="bver">
+<div class="bver-ref">Apocalipse 19:6-8</div>
+<p>«E ouvi como que uma voz de uma grande multidão, e como que uma voz de muitas águas, e como que uma voz de grandes trovões, dizendo: Aleluia! Pois reina o Senhor nosso Deus, o Todo-Poderoso. Alegremo-nos e exultemos e demos-lhe glória, porque são chegadas as bodas do Cordeiro, cuja esposa a si mesma já se ataviou.»</p>
+<span class="ref-f">Apocalipse 19:6-7</span>
+</div>
+<div class="bver">
+<div class="bver-ref">Apocalipse 19:11-12, 16</div>
+<p>«E vi o céu aberto; e eis um cavalo branco, e o que estava assentado sobre ele se chamava Fiel e Verdadeiro; e julga e peleja com justiça. E os seus olhos eram como chama de fogo, e na sua cabeça havia muitos diademas... e tem no seu manto e na sua coxa este nome escrito: Rei dos reis e Senhor dos senhores.»</p>
+<span class="ref-f">Apocalipse 19:11-12, 16</span>
+</div>
+<div class="obj">
+<div class="ot">Objetivos desta Lição</div>
+<ul>
+<li>Compreender os três momentos de Apocalipse 19: o aleluia celestial, as bodas do Cordeiro e a vinda triunfal do Rei dos reis</li>
+<li>Examinar o significado das bodas do Cordeiro — a consumação do relacionamento de Cristo com sua Igreja</li>
+<li>Entender quem é o Noivo que vem a cavalo: Fiel, Verdadeiro, Palavra de Deus, Rei dos reis</li>
+<li>Aplicar à vida presente o chamado a ser uma noiva que se atavia em santidade e fidelidade</li>
+</ul>
+</div>
+<div class="brefletir">
+<div class="brefletir-t">✦ Para Você Refletir</div>
+<p>O céu inteiro irrompe em aleluias quando as bodas do Cordeiro se aproximam. A questão para a Igreja hoje não é apenas «quando Cristo virá?», mas «estou me preparando como noiva?» Em que áreas da sua vida você percebe que ainda não está ataviado(a) para esse encontro?</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 O ALELUIA DO CÉU E AS BODAS -->
+<div class="lbl">Página 3 · O Aleluia do Céu e as Bodas do Cordeiro</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 10 · Vol. III</span><span class="pht">Ap 19:1-10</span></div>
+<h2>O Aleluia do Céu e as Bodas do Cordeiro</h2>
+<p class="cap">Após a queda da Babilônia, descrita nos capítulos 17 e 18, o céu irrompe em adoração. Hernandes Dias Lopes: «Estamos chegando ao momento culminante da história da humanidade.» O capítulo 19 de Apocalipse apresenta três cenas gloriosas: o júbilo do céu pelo julgamento da meretriz, as bodas do Cordeiro com sua Igreja e a vinda triunfal do Rei dos reis.</p>
+<div class="bloco">
+<div class="bloco-t">O Júbilo Celestial pela Queda da Meretriz — Ap 19:1-6</div>
+<p>O coro celestial canta «Aleluia!» quatro vezes — única ocorrência desta palavra no Novo Testamento. Enquanto a meretriz dizia «Ai, ai!» (18:10), a Igreja diz «Aleluia!». Deus julga a falsa religião e ao mesmo tempo casa-se com a Igreja verdadeira. Dois eventos simultâneos: o julgamento do mal e a glorificação dos remidos. «Aleluia! Pois reina o Senhor, nosso Deus, o Todo-Poderoso» (19:6).</p>
+</div>
+<h3>As Bodas do Cordeiro — Ap 19:7-10</h3>
+<p><strong>1. Enquanto a meretriz é julgada, a noiva é honrada</strong> — A meretriz tinha vestes manchadas de prostituição; as vestes da noiva são «o mais limpo, o mais puro e o mais fino dos linhos». <strong>2. A noiva se atavia, mas as vestes lhe são dadas</strong> — A santificação é responsabilidade da Igreja, mas sua fonte é o Senhor. «A Igreja desenvolve a sua salvação, mas é Deus quem opera em nós tanto o querer como o realizar» (Lopes). <strong>3. A noiva e os convidados são as mesmas pessoas</strong> — «A Igreja é o povo mais feliz do universo. A eternidade será uma festa que nunca acaba.» <strong>4. O noivo é chamado de Cordeiro</strong> — Ele quer ser lembrado pelo sacrifício. Como noivo, quer ser amado como aquele que deu sua vida pela amada. <strong>5. As bodas são eternas</strong> — Não duram sete dias como no costume hebraico, mas por toda a eternidade.</p>
+<div class="bconexao">
+<div class="bconexao-t">✦ Conexão Bíblica</div>
+<p>Compare Apocalipse 19:7-8 com Efésios 5:25-27. Paulo descreve Cristo como o noivo que amou a Igreja e a entregou por ela «para a santificar». Como essa visão do casamento cristão ilumina o propósito da santificação: não como obrigação, mas como preparação da noiva para o seu Noivo?</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 A VINDA DO REI DOS REIS -->
+<div class="lbl">Página 4 · A Vinda Triunfal do Rei dos Reis</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 10 · Vol. III</span><span class="pht">Ap 19:11-21</span></div>
+<h2>A Vinda Triunfal do Noivo — O Rei dos Reis</h2>
+<p>O céu se abre. Desta vez não é para João entrar (como em Ap 4:1), mas para Jesus e seus exércitos saírem. A última cena da história está prestes a acontecer.</p>
+<div class="bloco">
+<div class="bloco-t">Quem É o Noivo que Vem a Cavalo? — Ap 19:11-16</div>
+<p><strong>Fiel e Verdadeiro</strong> — em contraste com o anticristo, que é falso e enganador. <strong>Olhos como chama de fogo</strong> — nada ficará oculto de seu profundo julgamento. <strong>Muitos diademas</strong> — coroa do vencedor supremo. Antes entrou em Jerusalém num jumentinho como servo; agora cavalga um cavalo branco como conquistador. <strong>A Palavra de Deus</strong> — Deus criou o universo pela Palavra; agora julgará o mundo pela mesma Palavra. <strong>Rei dos reis e Senhor dos senhores</strong> — Todo joelho se dobrará: o diabo, o anticristo, o falso profeta, os reis da terra.</p>
+</div>
+<div class="bloco">
+<div class="bloco-t">Os Dois Banquetes — Ap 19:7-9 e 19:17-18</div>
+<p>Há um contraste dramático entre dois banquetes. O <strong>banquete das bodas do Cordeiro</strong>: ao qual todos os santos são convidados — «Bem-aventurados os que são chamados para a ceia das bodas do Cordeiro» (19:9). O <strong>banquete dos vencidos</strong>: ao qual as aves de rapina são convocadas para se saciar das carnes dos inimigos de Deus. A vitória do Rei dos reis é completa. Todo o poder terreno, na figura dos reis, dos poderosos e dos comandantes, chega ao fim.</p>
+</div>
+<div class="bloco">
+<div class="bloco-t">A Batalha Final — Ap 19:19-21</div>
+<p>Os exércitos que acompanham Cristo não precisam lutar. Jesus destrói o anticristo «com o sopro da sua boca» (2 Ts 2:8) — não com armas convencionais, mas com sua Palavra, «a espada afiada que sai da sua boca» (19:15). O anticristo e o falso profeta são lançados no lago de fogo. A vitória do Cordeiro é total e definitiva.</p>
+</div>
+<div class="bsabia">
+<div class="bsabia-t">✦ Sabia Que?</div>
+<p>O costume matrimonial hebraico tinha quatro etapas: o noivado (compromisso legal), o intervalo (período de preparação, quando o noivo paga o dote), a procissão (o noivo vai buscar a noiva) e as bodas (festa de sete a quatorze dias). Cristo já pagou o dote com seu sangue. O intervalo é o tempo presente — o período em que a noiva se prepara. A procissão é a segunda vinda. As bodas começam e nunca mais terminam.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 MENSAGEM PARA HOJE -->
+<div class="lbl">Página 5 · Mensagem para Hoje</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 10 · Vol. III</span><span class="pht">A Noiva Hoje</span></div>
+<h2>A Noiva Ainda Está se Preparando</h2>
+<p class="cap">Hernandes Dias Lopes descreve a Igreja como a noiva que vive o intervalo — o período entre o noivado e a procissão do noivo. Cristo pagou o dote. Agora a noiva deve se preparar. «A noiva se atavia, mas as vestes lhe são dadas» — a santidade não é autogerada, mas recebida. E ainda assim exige decisão, vigilância e fidelidade.</p>
+<div class="blteo">
+<div class="blteo-t">O Grande Contraste de Apocalipse 19</div>
+<p>Lopes sublinha o contraste central do capítulo: ao mesmo tempo em que Jesus julga a meretriz, Ele se casa com a noiva — a Igreja fiel. «Ao mesmo tempo em que a religião prostituída diz: Ai, ai! — a noiva do Cordeiro, a Igreja, diz: Aleluia!» Esses dois destinos são absolutamente paralelos: a meretriz que se aliou ao mundo vai ser destruída pelo mesmo poder que a usou; a noiva que permaneceu fiel será honrada pelo Noivo que sempre a amou.</p>
+</div>
+<h3>O Noivo É Fiel e Verdadeiro</h3>
+<p>Jesus vem descrito como «Fiel e Verdadeiro» (19:11) em contraste direto com a falsidade do anticristo e a instabilidade do mundo. Hernandes Dias Lopes: «Quando ele entrou em Jerusalém, cavalgou um jumentinho. Encontrou como servo. Mas agora cavalga um cavalo branco.» A humilhação foi o caminho até a gloria. O servo crucificado é o Rei coroado. A Igreja que segue esse Noivo não segue uma causa perdida — segue o Rei dos reis.</p>
+<div class="bver">
+<div class="bver-ref">Apocalipse 19:9</div>
+<p>«E disse-me: Escreve: Bem-aventurados os que são chamados para a ceia das bodas do Cordeiro. E disse-me mais: Estas são as verdadeiras palavras de Deus.»</p>
+<span class="ref-f">Apocalipse 19:9</span>
+</div>
+<div class="bpense">
+<div class="bpense-t">✦ Pense Nisso</div>
+<p>A noiva do Cordeiro não anseia apenas pelo paraíso — ela anseia pelo Amado. Hernandes Dias Lopes: «O grande anseio de uma noiva não é ter uma casa, mas um esposo. Seu coração não está em coisas, mas no seu Amado.» Você anseia por Cristo, ou apenas pelas bênçãos que Ele oferece? Há diferença entre querer o céu e querer o Noivo.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 APLICAÇÃO -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 10 · Vol. III</span><span class="pht">Ataviai-vos!</span></div>
+<h2>Aplicação Direta</h2>
+<p class="cap">O linho fino e brilhante da noiva «são as obras justas dos santos» (19:8). A santidade não é opcional para quem espera o Noivo — é o próprio vestido das bodas. Lopes adverte: «A Igreja se santifica, mas essa santificação vem do Senhor.» A aplicação é dupla: dependência total de Cristo e resposta ativa de fidelidade.</p>
+<div class="blapl">
+<div class="blapl-t">Para esta semana</div>
+<p><strong>Primeiro:</strong> Lopes descreve o período atual como o «intervalo» — o tempo entre o noivado e a procissão do Noivo. Como você está usando esse intervalo? Em crescimento espiritual, comunhão com o Noivo e testemunho ao mundo, ou em distração e apego às promessas do mundo? <strong>Segundo:</strong> A noiva que se prepara clama: «Vem!» — essa é a última palavra da Igreja nas Escrituras (Ap 22:20). Quando foi a última vez que você orou genuinamente pela volta de Cristo? O anseio pela segunda vinda revela o estado do coração em relação ao Noivo. <strong>Terceiro:</strong> A Igreja que anseia pela volta de Cristo é também uma Igreja comprometida com o evangelismo. Lopes: «Uma Igreja que anseia pela volta de Jesus é uma Igreja comprometida com evangelismo.» Que ação concreta de testemunho você pode tomar esta semana, em resposta ao chamado do Espírito e da Noiva: «Vem!»?</p>
+</div>
+<div class="mem">
+<div class="mem-t">◆ Versículo para Memorizar</div>
+<p>«Alegremo-nos e exultemos e demos-lhe glória, porque são chegadas as bodas do Cordeiro, cuja esposa a si mesma já se ataviou.»</p>
+<p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 19:7</p>
+</div>
+<div class="bleve">
+<div class="bleve-t">✦ Leve para a Vida</div>
+<p>Durante esta semana, escolha uma prática concreta de «ataviar-se» como noiva do Cordeiro: uma área de santidade que precisa de atenção, um hábito de oração pela volta de Cristo, ou um ato de testemunho. Escreva sua decisão abaixo.</p>
+<div class="lr" style="margin-top:8px;"></div>
+<div class="lr"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 QUESTÕES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 10 · Vol. III</span><span class="pht">As Bodas do Cordeiro</span></div>
+<h2>Questões para Reflexão</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">Apocalipse 19 descreve dois banquetes simultâneos: o banquete das bodas do Cordeiro e o banquete dos vencidos. Esses dois destinos são paralelos e definitivos. Como a existência desses dois banquetes interpela a indiferença espiritual? O que significa, na prática, «ser chamado para as bodas do Cordeiro» hoje, enquanto o mundo ainda vive sob a influência da meretriz?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Lopes diz que «a noiva se atavia, mas as vestes lhe são dadas». Isso aponta para uma tensão bíblica central: a santidade é simultaneamente dom e responsabilidade. Como você equilibra, em sua vida prática, a dependência da graça de Deus e o esforço pessoal na santificação? Qual dos dois lados você tende a negligenciar?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">Jesus é descrito em Apocalipse 19:11 como «Fiel e Verdadeiro». Em contraste com o anticristo, que seduz, e com o mundo, que decepciona, esse é o caráter do Noivo. Como a certeza da fidelidade de Cristo sustenta a perseverança cristã em tempos de sofrimento, desencanto e tentação? Como essa visão do Noivo muda a forma de encarar as dificuldades presentes?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">A última oração registrada nas Escrituras é «Vem, Senhor Jesus!» (Ap 22:20). Lopes afirma que «a Igreja que anseia pela volta de Jesus é uma Igreja comprometida com evangelismo». Como o anseio genuíno pela segunda vinda transforma a missão da Igreja? Por que uma Igreja sem esse anseio tende à acomodação e à mundanidade?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+</div>
+<script>
+function entrarLicao(){
+  const capa = document.getElementById('capaEntradaRevista');
+  if (capa) capa.classList.add('saindo');
+  setTimeout(() => document.body.classList.add('licao-iniciada'), 550);
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM','TD','TH'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul,table'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

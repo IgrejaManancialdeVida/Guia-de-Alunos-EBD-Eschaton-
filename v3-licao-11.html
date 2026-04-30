@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton Vol. III · Lição 11 — O Milênio e o Juízo Final</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #5a2d82;
+  --grad1:      #0d0814;
+  --grad2:      #180f22;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f5f0fb;
+  --creme:      #e8daf5;
+  --cc:         #cbb8e0;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #080410; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL ──────────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #050208, #0d0814);
+  border-bottom: 1px solid rgba(90,45,130,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca { font-family: 'Cinzel', serif; font-size: clamp(0.7rem, 2vw, 0.875rem); color: var(--ouro); letter-spacing: 3px; margin-right: auto; }
+.marca span { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem, 1.5vw, 0.68rem); color: #666; letter-spacing: 1px; display: block; font-weight: 300; }
+.btn { font-family: 'Oswald', sans-serif; font-size: clamp(0.6rem, 1.8vw, 0.75rem); letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; padding: 0.44rem 1rem; border-radius: 2px; transition: all .2s; white-space: nowrap; }
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA ────────────────────────────────────────────── */
+.area { margin-top: 64px; padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem; display: flex; flex-direction: column; align-items: center; gap: clamp(0.75rem, 2vw, 1rem); }
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag { width: min(148mm, 100%); min-height: 210mm; background: var(--perg); box-shadow: 0 6px 30px rgba(0,0,0,.6); position: relative; overflow: hidden; page-break-after: always; flex-shrink: 0; margin: 0 auto; }
+.lbl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: #555; letter-spacing: 2px; text-transform: uppercase; width: min(148mm, 100%); align-self: center; margin-left: 0; margin-right: 0; margin-bottom: -0.5rem; }
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa { background: linear-gradient(160deg, var(--grad1), var(--grad2)); display: flex; flex-direction: column; justify-content: flex-end; min-height: 210mm; padding: 0; }
+.catm { position: absolute; inset: 0; background: radial-gradient(ellipse at 22% 60%, rgba(90,45,130,.5) 0%, transparent 55%), radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.18) 0%, transparent 45%); }
+.cgrd { position: absolute; inset: 0; opacity: .025; background-image: repeating-linear-gradient(45deg, rgba(201,168,76,.8) 0px, transparent 1px, transparent 28px, rgba(201,168,76,.8) 29px); }
+.cfx { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: linear-gradient(180deg, #180f22, var(--cor), var(--ouro)); }
+.cnbg { position: absolute; bottom: -20px; right: -10px; font-family: 'Cinzel', serif; font-size: clamp(80pt, 22vw, 130pt); font-weight: 900; color: rgba(255,255,255,.03); line-height: 1; user-select: none; }
+.cimg { position: absolute; top: 0; left: 0; right: 0; height: 58%; background: linear-gradient(160deg, #080410, var(--cor) 50%, #b080ff); opacity: .38; }
+.clh { position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px; background: linear-gradient(90deg, var(--cor), var(--ouro), transparent); opacity: .75; }
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num { font-family: 'Cinzel', serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 4px; color: var(--ouro); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit { font-family: 'Cinzel', serif; font-size: clamp(12pt, 3.5vw, 17pt); font-weight: 700; color: #fff; line-height: 1.1; text-transform: uppercase; margin-bottom: 10px; }
+.cref { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; color: rgba(201,168,76,.6); text-transform: uppercase; margin-bottom: 10px; }
+.cver { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ouro-claro); line-height: 1.6; border-left: 2px solid var(--ouro); padding-left: 10px; opacity: .9; }
+
+/* ── INTERIOR ────────────────────────────────────────── */
+.int { padding: clamp(8mm, 5vw, 14mm) clamp(6mm, 4vw, 12mm) 18mm clamp(8mm, 4vw, 14mm); min-height: 210mm; position: relative; background: var(--perg); }
+.int::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent); }
+.int::after { content: ''; position: absolute; top: 6px; left: clamp(8mm, 4vw, 14mm); right: clamp(6mm, 4vw, 12mm); height: 1px; background: rgba(90,45,130,.15); }
+.int-linhas { position: absolute; inset: 0; top: 20mm; pointer-events: none; background-image: repeating-linear-gradient(transparent, transparent 23px, rgba(90,45,130,.045) 23px, rgba(90,45,130,.045) 24px); z-index: 0; }
+.wm { position: absolute; bottom: 14mm; right: 10mm; font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem); font-weight: 900; color: rgba(0,0,0,.03); line-height: 1; user-select: none; pointer-events: none; }
+
+/* ── CABEÇALHO DA PÁGINA ─────────────────────────────── */
+.ph { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--cc); display: flex; justify-content: space-between; align-items: baseline; position: relative; z-index: 1; }
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.55rem, 1.5vw, 0.7rem); color: #aaa; }
+
+/* ── TIPOGRAFIA ──────────────────────────────────────── */
+h2 { font-family: 'Cinzel', serif; font-weight: 700; font-size: clamp(10pt, 3vw, 13pt); letter-spacing: 1px; text-transform: uppercase; color: var(--cor); border-bottom: 2px solid var(--cor); padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px; line-height: 1.2; position: relative; z-index: 1; }
+h3 { font-family: 'Oswald', sans-serif; font-weight: 400; font-size: clamp(8pt, 2.5vw, 10pt); letter-spacing: 1.5px; color: #2d1040; text-transform: uppercase; margin-bottom: 6px; margin-top: 12px; position: relative; z-index: 1; }
+p { font-family: 'EB Garamond', serif; font-size: clamp(9.5pt, 2.5vw, 10.5pt); line-height: 1.65; color: var(--ct); text-align: justify; margin-bottom: 9px; hyphens: auto; position: relative; z-index: 1; }
+.cap::first-letter { font-family: 'Cinzel', serif; font-size: clamp(28pt, 8vw, 38pt); font-weight: 900; float: left; margin-right: 5px; color: var(--cor); line-height: .82; padding-top: 2px; }
+
+/* ── BLOCOS ──────────────────────────────────────────── */
+.bver { background: #fff; border: 1px solid rgba(90,45,130,.2); border-left: 4px solid var(--cor); padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bver-ref { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bver p { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(9.5pt, 2.5vw, 10.5pt); color: #180f22; line-height: 1.7; margin: 0; }
+.bver .ref-f { font-size: clamp(8pt, 2vw, 9pt); font-style: normal; color: var(--ouro); font-family: 'Oswald', sans-serif; letter-spacing: 1px; display: block; text-align: right; margin-top: 4px; }
+
+.bloco { background: rgba(90,45,130,.05); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.bloco-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+.blteo { background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro); padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.blteo-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: #8a6a20; margin-bottom: 6px; }
+
+.blapl { background: linear-gradient(135deg, rgba(90,45,130,.05), rgba(201,168,76,.07)); border: 1px solid rgba(90,45,130,.2); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.blapl-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+.mem { background: var(--creme); border: 1px solid rgba(201,168,76,.3); border-radius: 2px; padding: 10px 12px; margin: 10px 0; text-align: center; position: relative; z-index: 1; }
+.mem-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--ouro); margin-bottom: 6px; }
+.mem p { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(9pt, 2.5vw, 10pt); color: #180f22; text-align: center; line-height: 1.6; }
+
+.obj { background: var(--creme); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.obj .ot { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.obj ul { list-style: none; padding: 0; }
+.obj ul li { font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ct); padding: 2px 0 2px 14px; position: relative; line-height: 1.4; }
+.obj ul li::before { content: '◆'; position: absolute; left: 0; color: var(--cor); font-size: clamp(6pt, 1.5vw, 8pt); top: 4px; }
+
+/* ── BLOCOS ESPECIAIS ────────────────────────────────── */
+.brefletir { background: rgba(90,45,130,.06); border: 1px solid rgba(90,45,130,.2); border-top: 3px solid var(--cor); border-radius: 0 0 2px 2px; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.brefletir-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+.bconexao { background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.35); border-left: 4px solid var(--ouro); padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bconexao-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: #7a5c10; margin-bottom: 6px; }
+
+.bsabia { background: rgba(90,45,130,.07); border: 1px dashed rgba(90,45,130,.3); border-radius: 2px; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bsabia-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+.bpense { background: var(--creme); border-left: 4px solid var(--cor); border-radius: 0 2px 2px 0; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bpense-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+.bleve { background: linear-gradient(135deg, rgba(90,45,130,.08), rgba(201,168,76,.1)); border: 1px solid rgba(90,45,130,.25); border-bottom: 3px solid var(--ouro); border-radius: 2px 2px 0 0; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bleve-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+/* ── SEPARADOR / QUESTÕES / LINHAS / RODAPÉ ─────────── */
+.sep { display: flex; align-items: center; gap: 10px; margin: 12px 0; opacity: .3; position: relative; z-index: 1; }
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: clamp(6pt, 1.5vw, 8pt); color: var(--ouro); }
+
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px; }
+.qt { font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ct); line-height: 1.45; margin-bottom: 5px; }
+.lr { border-bottom: 1px solid rgba(90,45,130,.2); height: 20px; margin-top: 3px; }
+
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px; position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(90,45,130,.2); height: 22px; }
+
+.rod { position: absolute; bottom: 0; left: 0; right: 0; padding: 6px clamp(6mm, 4vw, 12mm) 6mm clamp(8mm, 4vw, 14mm); display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+.rod::before { content: ''; position: absolute; top: 0; left: clamp(6mm, 4vw, 12mm); right: clamp(6mm, 4vw, 12mm); height: 1px; background: linear-gradient(90deg, var(--cor), var(--ouro), transparent); opacity: .3; }
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(6pt, 1.5vw, 7pt); color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(8pt, 2vw, 9pt); color: var(--ouro); }
+
+/* ── EDIÇÃO ──────────────────────────────────────────── */
+[contenteditable="true"] { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(90,45,130,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(90,45,130,.08); border-radius: 2px; }
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista { position: fixed; inset: 0; z-index: 10000; background: linear-gradient(160deg, #06030e 0%, #0d0820 40%, #180f2a 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: opacity .6s ease; padding: 2rem; }
+#capaEntradaRevista.saindo { opacity: 0; pointer-events: none; }
+body.licao-iniciada #capaEntradaRevista { display: none; }
+.cv-atm { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 30% 70%, rgba(90,45,130,.45) 0%, transparent 50%), radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%); }
+.cv-grd { position: absolute; inset: 0; pointer-events: none; opacity: .02; background-image: repeating-linear-gradient(45deg, rgba(201,168,76,.8) 0px, transparent 1px, transparent 28px, rgba(201,168,76,.8) 29px); }
+.cv-fx { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none; background: linear-gradient(180deg, #180f22, var(--cor), var(--ouro)); }
+.cv-corpo { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 480px; gap: 1.2rem; }
+.cv-serie { font-family: 'Oswald', sans-serif; font-size: clamp(.55rem,1.5vw,.6875rem); letter-spacing: 4px; color: var(--ouro); text-transform: uppercase; opacity: .75; }
+.cv-num { font-family: 'Cinzel', serif; font-size: clamp(.6rem,2vw,.75rem); color: rgba(201,168,76,.45); letter-spacing: 4px; text-transform: uppercase; }
+.cv-tema { font-family: 'Cinzel', serif; font-weight: 700; font-size: clamp(1.1rem,4vw,1.6rem); color: #fff; line-height: 1.2; text-transform: uppercase; letter-spacing: 1px; }
+.cv-tema-sub { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: clamp(.6rem,1.8vw,.75rem); color: rgba(201,168,76,.6); letter-spacing: 3px; text-transform: uppercase; }
+.cv-divisor { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--ouro), transparent); opacity: .5; }
+.cv-frase { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(.85rem,2.2vw,1rem); color: var(--ouro-claro); line-height: 1.7; opacity: .9; border-left: 2px solid rgba(201,168,76,.4); padding-left: 1rem; text-align: left; max-width: 400px; }
+.cv-ref { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: clamp(.55rem,1.5vw,.65rem); color: rgba(201,168,76,.55); letter-spacing: 2px; text-transform: uppercase; text-align: right; width: 100%; max-width: 400px; }
+.cv-cta { font-family: 'Oswald', sans-serif; font-size: clamp(.6rem,1.8vw,.75rem); letter-spacing: 3px; text-transform: uppercase; color: #fff; background: var(--cor); border: none; padding: .6rem 1.8rem; cursor: pointer; border-radius: 2px; transition: all .2s; }
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape { position: absolute; bottom: 1.5rem; left: 0; right: 0; text-align: center; pointer-events: none; }
+.cv-rodape-sub { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: clamp(.5rem,1.3vw,.6rem); color: rgba(255,255,255,.2); letter-spacing: 3px; text-transform: uppercase; }
+
+/* ── IMPRESSÃO / RESPONSIVIDADE ─────────────────────── */
+@media print {
+  body { background: none; }
+  #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+@media (max-width: 480px) { .cver { font-size: 9pt; } }
+@media (max-width: 600px) { }
+
+</style>
+</head>
+<body>
+<div class="painel">
+  <div class="marca">ESCHATON VOL. III<span>Lição 11 · O Milênio e o Juízo Final</span></div>
+  <button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+  <button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+  <a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+
+<!-- CAPA DE ENTRADA -->
+<div aria-label="Abrir lição 11" id="capaEntradaRevista" onclick="entrarLicao()" role="button" tabindex="0">
+  <div class="cv-atm"></div><div class="cv-grd"></div><div class="cv-fx"></div>
+  <div class="cv-corpo">
+    <div class="cv-serie">Eschaton · O Futuro Chegou</div>
+    <div class="cv-num">Vol. III · Lição 11</div>
+    <div class="cv-tema">O Milênio e o Juízo Final</div>
+    <div class="cv-tema-sub">O Reinado de Mil Anos e o Grande Trono Branco · Ap 20</div>
+    <div class="cv-divisor"></div>
+    <div class="cv-frase">«Vi um grande trono branco e aquele que estava assentado nele, de cuja presença fugiram a terra e o céu, e não se achou lugar para eles.»</div>
+    <div class="cv-ref">Apocalipse 20:11</div>
+    <button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+  </div>
+  <div class="cv-rodape"><div class="cv-rodape-sub">Jovens Adultos · Lição 11</div></div>
+</div>
+
+<div class="area">
+
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+  <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+  <div class="cimg"></div><div class="clh"></div>
+  <div class="cnbg">11</div>
+  <div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+  <div class="ccon">
+    <div class="cser">Eschaton · O Futuro Chegou</div>
+    <div class="cref">Apocalipse 20:1-15</div>
+    <div class="ctit">O Milênio e o Juízo Final</div>
+    <div class="cver">
+      «Vi um grande trono branco e aquele que estava assentado nele, de cuja presença fugiram a terra e o céu, e não se achou lugar para eles. Vi também os mortos, os grandes e os pequenos, em pé diante do trono, e abriram-se os livros; e abriu-se outro livro, que é o da vida.»
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 20:11-12</span>
+    </div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 TEXTO BÍBLICO -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">2</div>
+  <div class="ph"><span class="phl">Lição 11 · Vol. III</span><span class="pht">Ap 20</span></div>
+  <h2>O Texto</h2>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 20:1-3</div>
+    <p>«Vi descer do céu um anjo que tinha a chave do abismo e uma grande corrente na mão. E ele prendeu o dragão, a antiga serpente, que é o diabo e Satanás, e o amarrou por mil anos; e lançou-o no abismo, e o fechou e o selou por cima dele, para que não mais enganasse as nações, até que os mil anos se cumprissem.»</p>
+    <span class="ref-f">Apocalipse 20:1-3</span>
+  </div>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 20:11-12, 15</div>
+    <p>«Vi um grande trono branco e aquele que estava assentado nele, de cuja presença fugiram a terra e o céu... Vi também os mortos, os grandes e os pequenos, em pé diante do trono, e abriram-se os livros; e abriu-se outro livro, que é o da vida... E qualquer que não foi achado escrito no livro da vida foi lançado no lago do fogo.»</p>
+    <span class="ref-f">Apocalipse 20:11-12, 15</span>
+  </div>
+  <div class="obj">
+    <div class="ot">Objetivos desta Lição</div>
+    <ul>
+      <li>Compreender o que significa a prisão de Satanás e o reinado de mil anos na perspectiva amilenista de Hernandes Dias Lopes</li>
+      <li>Entender quem são as almas que reinam com Cristo no céu durante o milênio</li>
+      <li>Examinar o juízo do Grande Trono Branco: seu alcance, seus critérios e seu veredito</li>
+      <li>Aplicar a solenidade do juízo final à urgência da fé, da santidade e do evangelismo hoje</li>
+    </ul>
+  </div>
+  <div class="brefletir">
+    <div class="brefletir-t">✦ Para Você Refletir</div>
+    <p>Diante do Grande Trono Branco, «todos» ressuscitam — grandes e pequenos. Nenhuma posição social, inteligência, religiosidade ou influência altera o veredito. O único critério que muda o destino é o nome escrito no Livro da Vida. Seu nome está nele? Como essa certeza — ou essa dúvida — muda a forma de você viver hoje?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 A PRISÃO DE SATANÁS E O MILÊNIO -->
+<div class="lbl">Página 3 · A Prisão de Satanás e o Reinado de Mil Anos</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">3</div>
+  <div class="ph"><span class="phl">Lição 11 · Vol. III</span><span class="pht">Ap 20:1-6</span></div>
+  <h2>A Prisão de Satanás e o Milênio</h2>
+  <p class="cap">Apocalipse 20 é o capítulo mais polêmico do livro. Hernandes Dias Lopes adota a perspectiva amilenista: o milênio não é um reino terrestre de mil anos literais após a segunda vinda de Cristo, mas o período completo entre a primeira e a segunda vinda — o tempo em que Cristo reina e Satanás está restrito em seu poder.</p>
+  <div class="bloco">
+    <div class="bloco-t">O Que Significa a Prisão de Satanás? — Ap 20:1-3</div>
+    <p>A corrente, o abismo e o selo são linguagem simbólica — um espírito não pode ser amarrado com corrente literal. O que foi restringido é o <em>poder</em> de Satanás. Lopes: «Prendeu, fechou e selou são termos que denotam a limitação do seu poder.» Isso significa que Satanás não pode mais <em>enganar as nações</em> impedindo a evangelização. A missão universal da Igreja é possível porque o inimigo está no cabresto de Deus. Essa restrição começou com a primeira vinda de Cristo: «Vi Satanás caindo do céu como um relâmpago» (Lc 10:18); «o príncipe deste mundo será expulso» (Jo 12:31); «para destruir as obras do diabo» (1 Jo 3:8).</p>
+  </div>
+  <div class="bloco">
+    <div class="bloco-t">O Que São os Mil Anos? — Ap 20:3-4</div>
+    <p>O número mil é simbólico: dez ao cubo, símbolo de plenitude e completude. Representa o período inteiro entre a primeira e a segunda vinda de Cristo — o tempo em que Ele reina até colocar «todos os seus inimigos debaixo dos seus pés» (1 Co 15:23-25). O «pouco tempo» em que Satanás será solto (20:3) corresponde ao período final de grande tribulação imediatamente antes da segunda vinda.</p>
+  </div>
+  <h3>O Reinado das Almas com Cristo — Ap 20:4-6</h3>
+  <p>João vê <em>almas</em> — não corpos — reinando com Cristo. Isso indica que o cenário é celestial, não terrestre. São as almas dos mártires e de todos os que morreram na fé, reinando com Cristo no estado intermediário — entre a morte e a ressurreição corporal. A <strong>primeira ressurreição</strong> é espiritual: é a regeneração, o novo nascimento. Quem passa pela primeira ressurreição (espiritual) não sofrerá a segunda morte (eterna). Quem não passa pela regeneração, morre duas vezes: física e eternamente.</p>
+  <div class="bconexao">
+    <div class="bconexao-t">✦ Conexão Bíblica</div>
+    <p>Compare Apocalipse 20:4 com Filipenses 1:21-23 e 2 Coríntios 5:8. Paulo confirma que «partir e estar com Cristo é muito melhor» e que «estar fora do corpo é estar em casa com o Senhor». Como esses textos sustentam a visão de que o reinado do milênio ocorre no céu, e não na terra, durante o período entre a morte e a ressurreição?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 A DERROTA FINAL E O JUÍZO -->
+<div class="lbl">Página 4 · A Derrota Final de Satanás e o Grande Trono Branco</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">4</div>
+  <div class="ph"><span class="phl">Lição 11 · Vol. III</span><span class="pht">Ap 20:7-15</span></div>
+  <h2>A Derrota Final e o Grande Trono Branco</h2>
+  <p>Ao final do milênio, Satanás é solto por um «pouco tempo» — o período da grande tribulação — e lidera o último ataque contra o povo de Deus. Mas sua derrota é repentina, completa e eterna.</p>
+  <div class="bloco">
+    <div class="bloco-t">A Derrota Final de Satanás — Ap 20:7-10</div>
+    <p>Gogue e Magogue, neste contexto, não são nações geográficas: representam o conjunto das forças anticristãs na batalha final — o mesmo Armagedom descrito em Apocalipse 16 e 19. Lopes: «O Armagedom, a batalha final aqui descrita é a mesma descrita noutros textos.» A derrota é direta, pela ação de Deus — «desceu fogo do céu e os devorou». Satanás, o anticristo e o falso profeta são lançados juntos no lago de fogo. «Serão atormentados dia e noite pelos séculos dos séculos» (20:10). Satanás não é rei nem no lago do fogo — ele é prisioneiro eterno.</p>
+  </div>
+  <div class="bloco">
+    <div class="bloco-t">O Grande Trono Branco — Ap 20:11-15</div>
+    <p>O <strong>trono branco</strong> fala da santidade e da justiça do Juiz. Cristo Se assenta como Juiz de todos. Diante d'Ele «a terra e o céu fugiram». <strong>Todos os mortos</strong> ressuscitam — grandes e pequenos — numa única ressurreição geral (não duas separadas por mil anos). <strong>Os livros são abertos</strong>: registro de palavras, obras, omissões e pensamentos. <strong>O Livro da Vida é aberto</strong>: o critério final de salvação não são as obras, mas a graça — quem tem o nome nele não é condenado. O julgamento é universal e individual. A <strong>segunda morte</strong> — o lago de fogo — é o destino eterno dos que não têm o nome no Livro da Vida. A própria morte e o hades são lançados ali: a última autoridade inimiga é abolida.</p>
+  </div>
+  <div class="bsabia">
+    <div class="bsabia-t">✦ Sabia Que?</div>
+    <p>A Bíblia ensina uma única ressurreição geral de todos os mortos ao mesmo tempo (Dn 12:2; Jo 5:28-29; Jo 11:24; At 24:15). A ideia de duas ressurreições físicas separadas por mil anos literais não encontra apoio no restante do Novo Testamento. O «milênio» de Apocalipse 20 é o único texto bíblico que menciona esse período — e Lopes o interpreta como símbolo do tempo completo da era da Igreja.</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 MENSAGEM PARA HOJE -->
+<div class="lbl">Página 5 · Mensagem para Hoje</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">5</div>
+  <div class="ph"><span class="phl">Lição 11 · Vol. III</span><span class="pht">O Juízo e a Igreja Hoje</span></div>
+  <h2>O Juízo que Muda o Presente</h2>
+  <p class="cap">Hernandes Dias Lopes encerra o capítulo 20 com três perguntas ao leitor: «Você estará preparado para o dia do juízo? De que lado você estará naquele tremendo dia? Você está seguro, debaixo do sangue do Cordeiro?» O juízo final não é apenas doutrina a ser conhecida — é realidade que deve reorientar a vida presente.</p>
+  <div class="blteo">
+    <div class="blteo-t">O Juízo Será Diferente de Todo Tribunal Terreno</div>
+    <p>Lopes descreve o contraste: no tribunal terreno há juiz, jurados, defesa, apelação e recurso. No tribunal do Grande Trono Branco haverá juiz — mas não jurados; acusação — mas não defesa; sentença — mas não apelação. «A única maneira de escapar desse julgamento é confiar agora no Senhor Jesus Cristo (Jo 5:24).» O presente é o tempo da graça. O juízo é o fim da graça e o início da justiça permanente.</p>
+  </div>
+  <h3>Satanás: Inimigo Restrito, Não Inativo</h3>
+  <p>A prisão de Satanás não significa ausência de atividade. Lopes: «A prisão de Satanás não significa que ele está inativo, fora de cena. Ele está na corrente de Deus. Essa corrente é grande. Mas ele é um inimigo limitado.» O crente não ignora o adversário — mas também não o superestima. Satanás não pode destruir a Igreja (Mt 16:18), nem impedir que os eleitos de todas as nações creiam (Rm 8:30). A missão avança porque o Rei é soberano.</p>
+  <div class="bver">
+    <div class="bver-ref">João 5:24</div>
+    <p>«Em verdade, em verdade vos digo que quem ouve a minha palavra e crê naquele que me enviou tem a vida eterna e não entrará em condenação, mas passou da morte para a vida.»</p>
+    <span class="ref-f">João 5:24</span>
+  </div>
+  <div class="bpense">
+    <div class="bpense-t">✦ Pense Nisso</div>
+    <p>«Ninguém pode ser salvo pelas obras — por isso o Livro da Vida é aberto» (Lopes). As obras revelam o coração e tornam todos indesculpáveis. Mas o que salva é o nome inscrito pela graça. Você vive com a confiança de quem sabe que seu nome está no Livro da Vida, ou com a angústia de quem tenta ganhar esse lugar pelos próprios méritos?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 APLICAÇÃO -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">6</div>
+  <div class="ph"><span class="phl">Lição 11 · Vol. III</span><span class="pht">O Trono Branco e Minha Vida</span></div>
+  <h2>Aplicação Direta</h2>
+  <p class="cap">O juízo final não paralisa — liberta. Quem sabe que seu nome está no Livro da Vida vive sem o medo de um veredito desconhecido. Quem compreende a seriedade do tribunal do Trono Branco sente urgência por aqueles que ainda não têm esse nome escrito. A escatologia gera santidade e missão.</p>
+  <div class="blapl">
+    <div class="blapl-t">Para esta semana</div>
+    <p><strong>Primeiro:</strong> Lopes diz que «a única maneira de escapar do julgamento é confiar agora no Senhor Jesus Cristo». Essa confiança é segura, consciente e ativa na sua vida, ou ainda se mistura com medo, dúvida ou tentativa de mérito próprio? O que precisaria mudar para que você vivesse com a paz de Jo 5:24? <strong>Segundo:</strong> A visão do Trono Branco confronta a indiferença espiritual. Como a seriedade do julgamento final — o veredito eterno de cada pessoa — deveria mudar sua relação com pessoas próximas que ainda não creram? Quem é a pessoa por quem você precisa orar e testemunhar com urgência renovada? <strong>Terceiro:</strong> A Igreja está em missão porque Satanás foi restrito e não pode impedir a chegada do evangelho aos eleitos. Em que área da vida você tem subestimado o poder da missão — pensando que é inútil testemunhar a certas pessoas, ambientes ou culturas?</p>
+  </div>
+  <div class="mem">
+    <div class="mem-t">◆ Versículo para Memorizar</div>
+    <p>«Quem ouve a minha palavra e crê naquele que me enviou tem a vida eterna e não entrará em condenação, mas passou da morte para a vida.»</p>
+    <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">João 5:24</p>
+  </div>
+  <div class="bleve">
+    <div class="bleve-t">✦ Leve para a Vida</div>
+    <p>Esta semana, escreva o nome de uma pessoa que você conhece e que, até onde sabe, não tem o nome no Livro da Vida. Comprometa-se a orar por ela diariamente e a buscar uma oportunidade de testemunho. A seriedade do juízo é a maior motivação para o amor evangelístico.</p>
+    <div class="lr" style="margin-top:8px;"></div>
+    <div class="lr"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 QUESTÕES -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">7</div>
+  <div class="ph"><span class="phl">Lição 11 · Vol. III</span><span class="pht">O Milênio e o Trono Branco</span></div>
+  <h2>Questões para Reflexão</h2>
+  <div class="q">
+    <div class="qn">Questão 01</div>
+    <div class="qt">Lopes afirma que a prisão de Satanás significa restrição do seu poder — especificamente, que ele não pode mais impedir a evangelização das nações. Como essa compreensão muda a forma como a Igreja deve encarar sua missão? Por que uma Igreja que crê em um Satanás «preso» deveria ser mais, e não menos, comprometida com o evangelismo global?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 02</div>
+    <div class="qt">A «primeira ressurreição» de Apocalipse 20 é interpretada por Lopes como a regeneração espiritual — o novo nascimento. Quem passa pela primeira ressurreição (espiritual) não sofre a segunda morte (eterna). Como essa distinção — morrer uma vez e ressuscitar duas vezes vs. morrer duas vezes e ressuscitar uma só vez para o juízo — clarifica a gravidade da regeneração e o que está em jogo na decisão de fé?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 03</div>
+    <div class="qt">O juízo do Trono Branco não tem defesa, jurados nem apelação. O único critério de salvação é o nome no Livro da Vida — que é obra da graça, não das obras. Mas as obras serão abertas e reveladas. Como essas duas realidades — graça soberana e responsabilidade humana — coexistem no julgamento final? O que significa viver agora à luz de ambas?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 04</div>
+    <div class="qt">Lopes descreve a derrota de Satanás como repentina e completa, e afirma que «Satanás não é rei nem no lago do fogo». Como essa verdade confronta tanto o medo excessivo do diabo quanto a subestimação ingênua do seu poder atual? Que postura equilibrada o crente deve ter em relação ao adversário durante o «intervalo» em que vivemos?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <h3 style="margin-top:12px;">Anotações</h3>
+  <div class="lins">
+    <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div><!-- /area -->
+
+<script>
+function entrarLicao(){
+  const capa = document.getElementById('capaEntradaRevista');
+  if (capa) capa.classList.add('saindo');
+  setTimeout(() => document.body.classList.add('licao-iniciada'), 550);
+  window.scrollTo({top:0, behavior:'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM','TD','TH'];
+function toggleEdit(){
+  edit=!edit;
+  document.querySelectorAll('.pag *').forEach(el=>{
+    if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul,table'))
+      el.contentEditable=edit?'true':'false';
+  });
+  document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Escháton Vol. III · Lição 08 — Os Salvos, os Julgados é as Taças da Ira</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #a02828;
+  --grad1:      #180808;
+  --grad2:      #280a08;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f8f0e0;
+  --creme:      #f0e4cc;
+  --cc:         #ddd0c0;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #110404; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL ──────────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #080202, #110404);
+  border-bottom: 1px solid rgba(160,40,40,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  color: var(--ouro); letter-spacing: 3px; margin-right: auto;
+}
+.marca span {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.68rem);
+  color: #666; letter-spacing: 1px; display: block; font-weight: 300;
+}
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: none; cursor: pointer;
+  padding: 0.44rem 1rem; border-radius: 2px;
+  transition: all .2s; white-space: nowrap;
+}
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA ────────────────────────────────────────────── */
+.area {
+  margin-top: 64px;
+  padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag {
+  width: min(148mm, 100%);
+  min-height: 210mm;
+  background: var(--perg);
+  box-shadow: 0 6px 30px rgba(0,0,0,.6);
+  position: relative; overflow: hidden;
+  page-break-after: always; flex-shrink: 0;
+  margin: 0 auto;
+}
+.lbl {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: #555; letter-spacing: 2px; text-transform: uppercase;
+  width: min(148mm, 100%);
+  align-self: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -0.5rem;
+}
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa {
+  background: linear-gradient(160deg, var(--grad1), var(--grad2));
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 210mm; padding: 0;
+}
+.catm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 22% 60%, rgba(160,40,40,.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cgrd {
+  position: absolute; inset: 0; opacity: .025;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px
+  );
+}
+.cfx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+  background: linear-gradient(180deg, #280a08, var(--cor), var(--ouro));
+}
+.cnbg {
+  position: absolute; bottom: -20px; right: -10px;
+  font-family: 'Cinzel', serif; font-size: clamp(80pt, 22vw, 130pt);
+  font-weight: 900; color: rgba(255,255,255,.03); line-height: 1;
+  user-select: none;
+}
+.cimg {
+  position: absolute; top: 0; left: 0; right: 0; height: 58%;
+  background: linear-gradient(160deg, #0d0404, var(--cor) 50%, #ff8080);
+  opacity: .38;
+}
+.clh {
+  position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .75;
+}
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num { font-family: 'Cinzel', serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 4px; color: var(--ouro); text-transform: uppercase;
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit {
+  font-family: 'Cinzel', serif; font-size: clamp(12pt, 3.5vw, 17pt);
+  font-weight: 700; color: #fff; line-height: 1.1;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; color: rgba(201,168,76,.6);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cver {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ouro-claro);
+  line-height: 1.6; border-left: 2px solid var(--ouro);
+  padding-left: 10px; opacity: .9;
+}
+
+/* ── INTERIOR ────────────────────────────────────────── */
+.int {
+  padding: clamp(8mm, 5vw, 14mm) clamp(6mm, 4vw, 12mm) 18mm clamp(8mm, 4vw, 14mm);
+  min-height: 210mm; position: relative; background: var(--perg);
+}
+.int::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent);
+}
+.int::after {
+  content: ''; position: absolute; top: 6px;
+  left: clamp(8mm, 4vw, 14mm); right: clamp(6mm, 4vw, 12mm);
+  height: 1px; background: rgba(160,40,40,.15);
+}
+.int-linhas {
+  position: absolute; inset: 0; top: 20mm; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    transparent, transparent 23px,
+    rgba(160,40,40,.045) 23px, rgba(160,40,40,.045) 24px
+  );
+  z-index: 0;
+}
+.wm {
+  position: absolute; bottom: 14mm; right: 10mm;
+  font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem);
+  font-weight: 900; color: rgba(0,0,0,.03); line-height: 1;
+  user-select: none; pointer-events: none;
+}
+
+/* ── CABEÇALHO DA PÁGINA ─────────────────────────────── */
+.ph {
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--cc);
+  display: flex; justify-content: space-between; align-items: baseline;
+  position: relative; z-index: 1;
+}
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.55rem, 1.5vw, 0.7rem); color: #aaa; }
+
+/* ── TIPOGRAFIA ──────────────────────────────────────── */
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(10pt, 3vw, 13pt); letter-spacing: 1px;
+  text-transform: uppercase; color: var(--cor);
+  border-bottom: 2px solid var(--cor);
+  padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px;
+  line-height: 1.2; position: relative; z-index: 1;
+}
+h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 400;
+  font-size: clamp(8pt, 2.5vw, 10pt); letter-spacing: 1.5px;
+  color: #5a1010; text-transform: uppercase;
+  margin-bottom: 6px; margin-top: 12px;
+  position: relative; z-index: 1;
+}
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(9.5pt, 2.5vw, 10.5pt);
+  line-height: 1.65; color: var(--ct);
+  text-align: justify; margin-bottom: 9px;
+  hyphens: auto; position: relative; z-index: 1;
+}
+.cap::first-letter {
+  font-family: 'Cinzel', serif; font-size: clamp(28pt, 8vw, 38pt);
+  font-weight: 900; float: left; margin-right: 5px;
+  color: var(--cor); line-height: .82; padding-top: 2px;
+}
+
+/* ── BLOCOS DE CONTEÚDO ──────────────────────────────── */
+.bver {
+  background: #fff; border: 1px solid rgba(160,40,40,.2);
+  border-left: 4px solid var(--cor);
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bver-ref {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bver p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9.5pt, 2.5vw, 10.5pt); color: #280a08;
+  line-height: 1.7; margin: 0;
+}
+.bver .ref-f {
+  font-size: clamp(8pt, 2vw, 9pt); font-style: normal;
+  color: var(--ouro); font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px; display: block; text-align: right; margin-top: 4px;
+}
+
+.bloco {
+  background: rgba(160,40,40,.05); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.bloco-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+.blteo {
+  background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro);
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.blteo-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #8a6a20; margin-bottom: 6px;
+}
+
+.blapl {
+  background: linear-gradient(135deg, rgba(160,40,40,.05), rgba(201,168,76,.07));
+  border: 1px solid rgba(160,40,40,.2); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.blapl-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+.mem {
+  background: var(--creme); border: 1px solid rgba(201,168,76,.3);
+  border-radius: 2px; padding: 10px 12px; margin: 10px 0;
+  text-align: center; position: relative; z-index: 1;
+}
+.mem-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ouro); margin-bottom: 6px;
+}
+.mem p {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(9pt, 2.5vw, 10pt); color: #280a08;
+  text-align: center; line-height: 1.6;
+}
+
+.obj {
+  background: var(--creme); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0;
+  position: relative; z-index: 1;
+}
+.obj .ot {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.obj ul { list-style: none; padding: 0; }
+.obj ul li {
+  font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt);
+  color: var(--ct); padding: 2px 0 2px 14px;
+  position: relative; line-height: 1.4;
+}
+.obj ul li::before {
+  content: '◆';
+  position: absolute; left: 0; color: var(--cor);
+  font-size: clamp(6pt, 1.5vw, 8pt); top: 4px;
+}
+
+/* ── TABELA ──────────────────────────────────────────── */
+.tabela-wrap { overflow-x: auto; margin: 10px 0; position: relative; z-index: 1; }
+.tabela { width: 100%; border-collapse: collapse; font-size: clamp(8pt, 2.2vw, 9pt); }
+.tabela th {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--cor); background: rgba(160,40,40,.07);
+  padding: 5px 7px; border-bottom: 2px solid var(--cor); text-align: left;
+}
+.tabela td {
+  font-family: 'EB Garamond', serif; font-size: clamp(8.5pt, 2.2vw, 9.5pt);
+  color: var(--ct); padding: 4px 7px;
+  border-bottom: 1px solid rgba(160,40,40,.1);
+  vertical-align: top; line-height: 1.4;
+}
+.tabela tr:last-child td { border-bottom: none; }
+.tabela td:first-child {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  color: var(--cor); white-space: nowrap;
+}
+
+/* ── BLOCOS ESPECIAIS ────────────────────────────────── */
+.brefletir {
+  background: rgba(160,40,40,.06);
+  border: 1px solid rgba(160,40,40,.2);
+  border-top: 3px solid var(--cor);
+  border-radius: 0 0 2px 2px;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.brefletir-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bconexao {
+  background: rgba(201,168,76,.1);
+  border: 1px solid rgba(201,168,76,.35);
+  border-left: 4px solid var(--ouro);
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bconexao-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #7a5c10; margin-bottom: 6px;
+}
+.bsabia {
+  background: rgba(160,40,40,.07);
+  border: 1px dashed rgba(160,40,40,.3);
+  border-radius: 2px;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bsabia-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bpense {
+  background: var(--creme);
+  border-left: 4px solid var(--cor);
+  border-radius: 0 2px 2px 0;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bpense-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+.bleve {
+  background: linear-gradient(135deg, rgba(160,40,40,.08), rgba(201,168,76,.1));
+  border: 1px solid rgba(160,40,40,.25);
+  border-bottom: 3px solid var(--ouro);
+  border-radius: 2px 2px 0 0;
+  padding: 10px 12px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.bleve-t {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cor); margin-bottom: 6px;
+}
+
+/* ── SEPARADOR ───────────────────────────────────────── */
+.sep {
+  display: flex; align-items: center; gap: 10px;
+  margin: 12px 0; opacity: .3; position: relative; z-index: 1;
+}
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: clamp(6pt, 1.5vw, 8pt); color: var(--ouro); }
+
+/* ── QUESTÕES ────────────────────────────────────────── */
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn {
+  font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem);
+  color: var(--cor); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px;
+}
+.qt {
+  font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt);
+  color: var(--ct); line-height: 1.45; margin-bottom: 5px;
+}
+.lr { border-bottom: 1px solid rgba(160,40,40,.2); height: 20px; margin-top: 3px; }
+
+/* ── LINHAS DE ANOTAÇÃO ──────────────────────────────── */
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px; position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(160,40,40,.2); height: 22px; }
+
+/* ── RODAPÉ ──────────────────────────────────────────── */
+.rod {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 6px clamp(6mm, 4vw, 12mm) 6mm clamp(8mm, 4vw, 14mm);
+  display: flex; justify-content: space-between; align-items: center; z-index: 2;
+}
+.rod::before {
+  content: ''; position: absolute; top: 0;
+  left: clamp(6mm, 4vw, 12mm); right: clamp(6mm, 4vw, 12mm);
+  height: 1px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro), transparent);
+  opacity: .3;
+}
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(6pt, 1.5vw, 7pt); color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(8pt, 2vw, 9pt); color: var(--ouro); }
+
+/* ── EDIÇÃO ──────────────────────────────────────────── */
+[contenteditable="true"] { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(160,40,40,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(160,40,40,.08); border-radius: 2px; }
+
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(160deg, #0d0404 0%, #180808 40%, #280a08 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; transition: opacity .6s ease;
+  padding: 2rem;
+}
+#capaEntradaRevista.saindo { opacity: 0; pointer-events: none; }
+body.licao-iniciada #capaEntradaRevista { display: none; }
+.cv-atm {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(160,40,40,.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%);
+}
+.cv-grd {
+  position: absolute; inset: 0; pointer-events: none; opacity: .02;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(201,168,76,.8) 0px, transparent 1px,
+    transparent 28px, rgba(201,168,76,.8) 29px);
+}
+.cv-fx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none;
+  background: linear-gradient(180deg, #280a08, var(--cor), var(--ouro));
+}
+.cv-corpo {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 480px; gap: 1.2rem;
+}
+.cv-serie {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(.55rem,1.5vw,.6875rem);
+  letter-spacing: 4px; color: var(--ouro);
+  text-transform: uppercase; opacity: .75;
+}
+.cv-num {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(.6rem,2vw,.75rem);
+  color: rgba(201,168,76,.45); letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.cv-tema {
+  font-family: 'Cinzel', serif; font-weight: 700;
+  font-size: clamp(1.1rem,4vw,1.6rem);
+  color: #fff; line-height: 1.2;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.cv-tema-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.6rem,1.8vw,.75rem);
+  color: rgba(201,168,76,.6); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.cv-divisor {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+  opacity: .5;
+}
+.cv-frase {
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: clamp(.85rem,2.2vw,1rem);
+  color: var(--ouro-claro); line-height: 1.7; opacity: .9;
+  border-left: 2px solid rgba(201,168,76,.4);
+  padding-left: 1rem; text-align: left; max-width: 400px;
+}
+.cv-ref {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.55rem,1.5vw,.65rem);
+  color: rgba(201,168,76,.55); letter-spacing: 2px;
+  text-transform: uppercase; text-align: right;
+  width: 100%; max-width: 400px;
+}
+.cv-cta {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(.6rem,1.8vw,.75rem);
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #fff; background: var(--cor);
+  border: none; padding: .6rem 1.8rem; cursor: pointer;
+  border-radius: 2px; transition: all .2s;
+}
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape {
+  position: absolute; bottom: 1.5rem; left: 0; right: 0;
+  text-align: center; pointer-events: none;
+}
+.cv-rodape-sub {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: clamp(.5rem,1.3vw,.6rem);
+  color: rgba(255,255,255,.2); letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── IMPRESSÃO ───────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  #capaEntradaRevista, #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+
+/* ── RESPONSIVIDADE ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .tabela td:first-child { white-space: normal; }
+  .cver { font-size: 9pt; }
+}
+@media (max-width: 600px) {
+  .tabela-wrap { -webkit-overflow-scrolling: touch; }
+}
+
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON VOL. III<span>Lição 08 · Os Salvos, os Julgados é as Taças da Ira</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<!-- CAPA DE ENTRADA -->
+<div aria-label="Abrir lição 08" id="capaEntradaRevista" onclick="entrarLicao()" role="button" tabindex="0">
+<div class="cv-atm"></div>
+<div class="cv-grd"></div>
+<div class="cv-fx"></div>
+<div class="cv-corpo">
+<div class="cv-serie">Escháton · O Futuro Chegou</div>
+<div class="cv-num">Vol. III · Lição 08</div>
+<div class="cv-tema">Os Salvos, os Julgados é as Taças da Ira</div>
+<div class="cv-tema-sub">Apocalipse 14:1-20 · 15:1-8 · 16:1-21</div>
+<div class="cv-divisor"></div>
+<div class="cv-frase">"Qualquer interpretação da mensagem do Novo Testamento que não inclua a ira de Deus está aténuada e mutilada."</div>
+<div class="cv-ref">George Ladd — citado por H. D. Lopes</div>
+<button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+</div>
+<div class="cv-rodape">
+<div class="cv-rodape-sub">Jovens Adultos · Lição 08</div>
+</div>
+</div>
+<div class="area">
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">08</div>
+<div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+<div class="ccon">
+<div class="cser">Escháton · O Futuro Chegou</div>
+<div class="cref">Apocalipse 14:1-20 · 15:1-8 · 16:1-21</div>
+<div class="ctit">Os Salvos, os Julgados é as Taças da Ira</div>
+<div class="cver">
+            "Qualquer interpretação da mensagem do Novo Testamento que não inclua a ira de Deus está aténuada e mutilada. A ira de Deus não é uma emoção humana; é a reação preestabelecida de Sua santidadé à pecaminosidade e à rebelião humanas."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">George Ladd — citado por H. D. Lopes</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 TEXTO BIBLICO -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. III</span><span class="pht">Ap 14-16</span></div>
+<h2>O Texto</h2>
+<div class="bver">
+<div class="bver-ref">Apocalipse 14:6-7, 13</div>
+<p>"E vi outro anjo voar pelo meio do céu, tendo o evangelho eterno para o proclamar aos que hábitam sobré a terra... dizendo em grande voz: Temei a Deus, e dai-lhe glória, porque chegou a hora do seu juízo... E ouvi uma voz do céu, dizendo: Escreve: Bem-aventurados os mortos que desdé agora morrem no Senhor."</p>
+<span class="ref-f">Apocalipse 14:6-7, 13</span>
+</div>
+<div class="bver">
+<div class="bver-ref">Apocalipse 15:3-4</div>
+<p>"E cantavam o cântico de Moisés, servo de Deus, é o cântico do Cordeiro, dizendo: Grandes e maravilhosas são as tuas obras, Senhor Deus Todo-Poderoso; justos e verdadeiros são os teus caminhos, o Rei dos santos. Quem não te temerá, o Senhor, e não glorificará o teu nome?"</p>
+<span class="ref-f">Apocalipse 15:3-4</span>
+</div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Contemplar a Igreja vitoriosa no Monte Sião contrastando com os adoradores da besta</li>
+<li>Examinar o "evangelho eterno" proclamado antes do juízo — a última misericórdia de Deus</li>
+<li>Compreender a diferença entre trombetas (aviso) e taças (consumação da ira)</li>
+<li>Aplicar a bem-aventurança dos que morrem no Senhor a coragem diante da morte</li>
+</ul>
+</div>
+<div class="brefletir">
+<div class="brefletir-t">✦ Para Você Refletir</div>
+<p>Apocalipse 14 coloca lado a lado os salvos no Monte Sião é os adoradores da besta. A divisão não é apenas futura; ela revela lealdades presentes. Que sinais concretos mostram hojé a quem uma pessoa pertence: ao Cordeiro ou ao sistema que sé opõé a Ele?</p>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 A IGREJA NO MONTE SIÃO -->
+<div class="lbl">Página 3 · A Igreja no Monte Sião — Ap 14</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. III</span><span class="pht">Os Salvos</span></div>
+<h2>A Igreja Vitoriosa no Monte Sião</h2>
+<p class="cap">Apocalipse 14 encerra a quarta seção paralela do livro. Cada seção cobré o período completo da primeira a segunda vinda de Cristo, e termina com a cena do juízo final. Mas antes do juízo, Apocalipse 14 oferece um panorama glorioso da Igreja com o Cordeiro — em contraste nítido com os adoradores da besta.</p>
+<div class="bloco">
+<div class="bloco-t">Os Dois Grupos em Contraste</div>
+<p>A humanidade está nitidamente dividida em Apocalipse 14. De um lado, os 144.000 (a totalidade dos remidos) no Monte Sião com o Cordeiro — cantando um cântico novo, puros, sem mentira na boca, sem mácula. Do outro lado, os adoradores da besta — marcados, destinados ao cálice da ira de Deus sem mistura, ao tormento eterno. Não há terceira catégoria. A pergunta de Apocalipse não e se Satanás será vencido — e de qual lado cada pessoa estará quando o Cordeiro triunfar.</p>
+</div>
+<h3>O Evangelho Eterno — Ap 14:6-7</h3>
+<p>Antes de proclamar o juízo, Deus envia um anjo com o "evangelho eterno" para toda tribo, lingua, povo e nação — com o chámado ao arrependimento é a adoração. Hernandes Dias Lopes: "Antes do juízo, Deus alerta, avisa e conclama ao arrependimento. As trombetas do juízo sempre visaram levar o homem ao arrependimento." O "evangelho eterno" é a última misericórdia de Deus antes da consumação da ira. Deus nunca pune sem antes avisar.</p>
+<h3>A Bem-Aventuranca dos Mortos em Cristo — Ap 14:13</h3>
+<p>Em contraste com o tormento eterno dos adoradores da besta (14:11), os que morrem no Senhor são declarados bem-aventurados. Eles descansam. Suas obras os acompanhám. Não vagam, não vao para o purgatório — vao para a presença de Cristo. "Aqueles que morrem em Cristo não morrem, dormem." É melhor suportar perseguição pacientemente do que escapar agora e ser atormentado por toda a eternidade.</p>
+<div class="bconexao">
+<div class="bconexao-t">✦ Conexão Bíblica</div>
+<p>Compare Apocalipse 14:6-7 com Atos 17:30-31. Em ambos os textos, Deus cháma todos ao arrependimento porque fixou um dia de juízo. O evangelho eterno não elimina o juízo; elé anuncia a última misericórdia antes da prestação de contas. Como essa conexão corrigé uma evangelização que fala de graça sem falar dé arrependimento?</p>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 AS TAÇAS DA IRA -->
+<div class="lbl">Página 4 · As Taças da Ira — Ap 15-16</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. III</span><span class="pht">As Taças da Ira</span></div>
+<h2>As Sete Taças — A Ira Consumada</h2>
+<p>Antes das taças, Deus mostra a Igreja vitoriosa no céu cantando o cântico de Moisés é o cântico do Cordeiro (Ap 15:3-4). O novo Êxodo cósmico esta prestes a consumar-se. Os anjos saem do santuário cheio da fumaça da glória de Deus — inacessível até qué as taças sejam completadas.</p>
+<div class="bloco">
+<div class="bloco-t">Trombetas x Taças — A Diferença Crucial</div>
+<p>Hernandes Dias Lopes, seguindo William Hendriksen: <strong>Trombetas</strong> (Ap 8-11) — a ira de Deus misturada com misericórdia, afetando "um terço" da criação. São alertas progressivos com espaço para arrependimento. <strong>Taças</strong> (Ap 15-16) — a ira de Deus sem mistura, sem redução, sem interlúdio. A oportunidade dé arrependimento está esgotada. Quem se recusou a ser admoestado pelas trombetas será destruído pelas taças. "Deus sempré adverté antes de finalmente punir" — dilúvio, Sodoma, Egito, Jerusalém, juízo final.</p>
+</div>
+<h3>A Resposta dos Ímpios — Blasfêmia</h3>
+<p>Diante de cada taca, os ímpios respondem com blasfêmia — não com arrependimento. George Ladd: "A ira de Deus não é uma emoção humana; é a reação preestabelecida de Sua santidadé à pecaminosidade e rebeliao humanas." E uma ira santa, justa, consistente. Os ímpios "reconheceram tratar-se dé uma ação divina; mas seus corações são tão endurecidos que, ao invés de caírem de joelhos, blasfemam."</p>
+<p>Hernandes Dias Lopes: "Os homens não são santificados por meio do sofrimento; ao contrário, se fazem ainda mais iníquos. Existe somente um único caminho de volta para Deus: 'ninguém vem ao Pai senão por mim', disse Jesus. Quem não vem pela graça, não vem de modo algum."</p>
+<div class="bsabia">
+<div class="bsabia-t">✦ Sabia Que?</div>
+<p>As taças de Apocalipse 15–16 retomam a linguagem das pragas do Êxodo. Assim como o Egito foi julgado enquanto Deus libertava o seu povo, o Apocalipsé apresenta o juízo final como o novo Êxodo: Deus derrota os poderes opressores e conduz os seus remidos à vitória diante do Cordeiro.</p>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 MENSAGEM PARA HOJE -->
+<div class="lbl">Página 5 · Mensagem para Hoje</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. III</span><span class="pht">Mensagem para Hoje</span></div>
+<h2>Duas Questões Urgentes</h2>
+<div class="blteo">
+<div class="blteo-t">A Pergunta que não Pode Ser Evitada</div>
+<p>Hernandes Dias Lopes finaliza o capítulo sobre Apocalipse 11 com uma pergunta qué atravessa todo o livro: "Quem você é? Santuário de Deus ou átrio exterior? Testemunhá fiel ou amante do mundo? Onde você estará quando a sétima trombeta tocar? Você estará no santuário aberto de Deus ou atormentado pelos flagelos? O tempo da oportunidade é agora. Amanhã pode ser tarde demais."</p>
+</div>
+<h3>O Evangelho Eterno Ainda Está Sendo Pregado</h3>
+<p>O anjo de Apocalipse 14:6 voa "pelo meio do céu" proclamando o evangelho eterno — a convocação ao arrependimento antes do juízo. Isso ainda está acontecendo. A Igreja é o instrumento pelo qual Deus ancora esse convité a "toda tribo, lingua, povo e nação." O tempo entré o "evangelho eterno" é as "taças da ira" e exatamenté o tempo que vivemos — a era da Igreja, o tempo da graça.</p>
+<h3>A Ira de Deus e Boa Notícia</h3>
+<p>Isso parece um paradoxo, mas é bíblico: a ira de Deus é boa notícia para os que sofreram injustiça. Martyn Lloyd-Jones: "Quando o diabo não consegue desanimar o povo de Deus por meio de perseguição ativa, ele tem conseguido afastá-lo por meio das seduções do mundo." A certeza de que Deus é juiz e qué a ira atingirá os que perseguiram e mentiram é o que sustenta o crente sofredor — é o que liberta o perseguido da necessidade de se vingar.</p>
+<div class="bver">
+<div class="bver-ref">Apocalipse 14:12-13</div>
+<p>"Aqui está a paciência dos santos, os que guardam os mandamentos de Deus é a fé em Jesus. E ouvi uma voz do céu, dizendo: Escreve: Bem-aventurados os mortos que desdé agora morrem no Senhor."</p>
+<span class="ref-f">Apocalipse 14:12-13</span>
+</div>
+<div class="bpense">
+<div class="bpense-t">✦ Pense Nisso</div>
+<p>A ira de Deus não é descontrole emocional, mas a resposta santa de Deus ao mal. Um mundo em que Deus nunca julga seria um mundo em qué a injustiça vence para sempre. Como a certeza do juízo final pode produzir temor, consolo e responsabilidadé ao mesmo tempo?</p>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 APLICACÃO -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. III</span><span class="pht">Os Salvos é os Julgados</span></div>
+<h2>Aplicação Direta</h2>
+<p class="cap">Apocalipse 14 coloca dois grupos em contrasté absoluto: os que cantam com o Cordeiro no Monte Sião, é os que beberao o cálice da ira de Deus sem mistura. Não há neutralidade. O cântico dos remidos é aprendido por experiência — nâo por instrucão — porque é o cântico de quem foi redimido pelo sangue do Cordeiro. Só os remidos o conhecem. Você sabe esse cântico?</p>
+<div class="blapl">
+<div class="blapl-t">Para esta semana</div>
+<p>Primeiro: Deus envia o "evangelho eterno" antes de despejar as taças da ira — porque Ele quer que todos sé arrependam (2 Pe 3:9). Há alguém ao seu redor qué ainda não ouviu o evangelho claramente? A certeza do juízo vindouro deveria intensificar — não paralisar — seu testemunho. Segundo: "Bem-aventurados os mortos que desdé agora morrem no Senhor" — suas obras os acompanhám (14:13). O que você está fazendo agora que terá peso eterno? Qué obras de fidelidade, amor e testemunho serão suas "obras qué os acompanhám"? Terceiro: A diferença entre trombetas e taças é a diferença entré advertência e consumacão. Você está respondendo as "trombetas" de Deus na sua vida — as dificuldades que convocam ao arrependimento — ou as ignorando até que não hája mais espaco?</p>
+</div>
+<div class="mem">
+<div class="mem-t">◆ Versiculo para Memorizar</div>
+<p>"Bem-aventurados os mortos que desdé agora morrem no Senhor. Sim, diz o Espirito, descansarao dos seus trabalhos, porqué as suas obras os acompanhám."</p>
+<p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 14:13</p>
+</div>
+<div class="bleve">
+<div class="bleve-t">✦ Leve para a Vida</div>
+<p>Durante esta semana, avalie se sua visão de Deus inclui tanto a sua misericórdia quanto a sua santidade. Leia Apocalipse 14:6-7 antes dé orar por alguém distante da fé. Peça a Deus coragem para anunciar o evangelho eterno com amor, clareza e seriedade.</p>
+<div class="lr" style="margin-top:8px;"></div>
+<div class="lr"></div>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 QUESTOES -->
+<div class="lbl">Página 7 · Questões e Anotacões</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. III</span><span class="pht">Ap 14-16</span></div>
+<h2>Questões para Reflexao</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">Apocalipse 14 mostra dois grupos em contraste total: os 144.000 cantando com o Cordeiro, é os adoradores da besta destinados ao tormento eterno. Hernandes Dias Lopes diz que "não há terceira catégoria." Como essa visão bíblica da humanidade dividida em dois grupos — não em um espectro gradual — muda a urgência do testemunho cristão?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Deus envia o "evangelho eterno" imediatamenté antes de proclamar o juízo — porque "Deus sempré adverté antes de finalmente punir." Como esse padrão bíblico (dilúvio, Sodoma, Egito, Jerusalém, juízo final) revela o caráter de Deus? O que isso diz sobré a natureza da graça e da misericórdia divinas?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">A diferença entre trombetas (ira misturada com misericórdia) e taças (ira sem mistura) sugere que há um tempo para a conversão e um momento em que esse tempo se esgota. Como essa realidade deve moldar a postura do cristão diante das pessoas ao seu redor qué ainda não responderam ao evangelho?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">"Bem-aventurados os mortos que morrem no Senhor — suas obras os acompanhám" (14:13). Qué obras suas você gostaria qué o acompanhássem? Se voce morresse hoje, quais seriam as "obras qué acompanhám" — ações de fidelidade, amor e testemunho que definem sua vida cristã prática?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<h3 style="margin-top:12px;">Anotacoes</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Escháton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+</div>
+<script>
+function entrarLicao(){
+  const capa = document.getElementById('capaEntradaRevista');
+  if (capa) capa.classList.add('saindo');
+  setTimeout(() => document.body.classList.add('licao-iniciada'), 550);
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM','TD','TH'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul,table'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

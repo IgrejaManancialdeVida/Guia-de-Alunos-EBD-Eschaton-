@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton Vol. III · Lição 13 — Cidadãos da Nova Jerusalém</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --cor:        #304878;
+  --grad1:      #080c18;
+  --grad2:      #0e1428;
+  --ouro:       #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --vermelho:   #8b1a1a;
+  --ct:         #2a2a2a;
+  --branco:     #fdfbf7;
+  --perg:       #f0f2fa;
+  --creme:      #dce2f5;
+  --cc:         #b8c4e0;
+  --fonte-base: clamp(0.95rem, 2.2vw, 1.05rem);
+  --ouro-brilho: drop-shadow(0 0 4px rgba(201,168,76,.45));
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #05070f; font-family: 'EB Garamond', Georgia, serif; }
+img  { max-width: 100%; height: auto; display: block; }
+
+/* ── PAINEL ──────────────────────────────────────────── */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #040610, #080c18);
+  border-bottom: 1px solid rgba(48,72,120,.5);
+  padding: 0.625rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.marca { font-family: 'Cinzel', serif; font-size: clamp(0.7rem, 2vw, 0.875rem); color: var(--ouro); letter-spacing: 3px; margin-right: auto; }
+.marca span { font-family: 'Oswald', sans-serif; font-size: clamp(0.55rem, 1.5vw, 0.68rem); color: #666; letter-spacing: 1px; display: block; font-weight: 300; }
+.btn { font-family: 'Oswald', sans-serif; font-size: clamp(0.6rem, 1.8vw, 0.75rem); letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; padding: 0.44rem 1rem; border-radius: 2px; transition: all .2s; white-space: nowrap; }
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: clamp(0.55rem,1.5vw,0.7rem); }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* ── ÁREA ────────────────────────────────────────────── */
+.area { margin-top: 64px; padding: clamp(0.75rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem) 3.75rem; display: flex; flex-direction: column; align-items: center; gap: clamp(0.75rem, 2vw, 1rem); }
+
+/* ── PÁGINAS ─────────────────────────────────────────── */
+@page { size: A5 portrait; margin: 0; }
+.pag { width: min(148mm, 100%); min-height: 210mm; background: var(--perg); box-shadow: 0 6px 30px rgba(0,0,0,.6); position: relative; overflow: hidden; page-break-after: always; flex-shrink: 0; margin: 0 auto; }
+.lbl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: #555; letter-spacing: 2px; text-transform: uppercase; width: min(148mm, 100%); align-self: center; margin-left: 0; margin-right: 0; margin-bottom: -0.5rem; }
+
+/* ── CAPA ────────────────────────────────────────────── */
+.capa { background: linear-gradient(160deg, var(--grad1), var(--grad2)); display: flex; flex-direction: column; justify-content: flex-end; min-height: 210mm; padding: 0; }
+.catm { position: absolute; inset: 0; background: radial-gradient(ellipse at 22% 60%, rgba(48,72,120,.55) 0%, transparent 55%), radial-gradient(ellipse at 78% 20%, rgba(201,168,76,.18) 0%, transparent 45%); }
+.cgrd { position: absolute; inset: 0; opacity: .025; background-image: repeating-linear-gradient(45deg, rgba(201,168,76,.8) 0px, transparent 1px, transparent 28px, rgba(201,168,76,.8) 29px); }
+.cfx { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: linear-gradient(180deg, #0e1428, var(--cor), var(--ouro)); }
+.cnbg { position: absolute; bottom: -20px; right: -10px; font-family: 'Cinzel', serif; font-size: clamp(80pt, 22vw, 130pt); font-weight: 900; color: rgba(255,255,255,.03); line-height: 1; user-select: none; }
+.cimg { position: absolute; top: 0; left: 0; right: 0; height: 58%; background: linear-gradient(160deg, #050810, var(--cor) 50%, #80a0ff); opacity: .38; }
+.clh { position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px; background: linear-gradient(90deg, var(--cor), var(--ouro), transparent); opacity: .75; }
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num { font-family: 'Cinzel', serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--ouro); letter-spacing: 3px; opacity: .7; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,.4); margin: 4px 0 0 auto; }
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 4px; color: var(--ouro); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro); }
+.ctit { font-family: 'Cinzel', serif; font-size: clamp(12pt, 3.5vw, 17pt); font-weight: 700; color: #fff; line-height: 1.1; text-transform: uppercase; margin-bottom: 10px; }
+.cref { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; color: rgba(201,168,76,.6); text-transform: uppercase; margin-bottom: 10px; }
+.cver { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ouro-claro); line-height: 1.6; border-left: 2px solid var(--ouro); padding-left: 10px; opacity: .9; }
+
+/* ── INTERIOR ────────────────────────────────────────── */
+.int { padding: clamp(8mm, 5vw, 14mm) clamp(6mm, 4vw, 12mm) 18mm clamp(8mm, 4vw, 14mm); min-height: 210mm; position: relative; background: var(--perg); }
+.int::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent); }
+.int::after { content: ''; position: absolute; top: 6px; left: clamp(8mm, 4vw, 14mm); right: clamp(6mm, 4vw, 12mm); height: 1px; background: rgba(48,72,120,.15); }
+.int-linhas { position: absolute; inset: 0; top: 20mm; pointer-events: none; background-image: repeating-linear-gradient(transparent, transparent 23px, rgba(48,72,120,.045) 23px, rgba(48,72,120,.045) 24px); z-index: 0; }
+.wm { position: absolute; bottom: 14mm; right: 10mm; font-family: 'Cinzel', serif; font-size: clamp(2rem,8vw,3.25rem); font-weight: 900; color: rgba(0,0,0,.03); line-height: 1; user-select: none; pointer-events: none; }
+
+/* ── CABEÇALHOS ──────────────────────────────────────── */
+.ph { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--cc); display: flex; justify-content: space-between; align-items: baseline; position: relative; z-index: 1; }
+.phl { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(0.55rem, 1.5vw, 0.7rem); color: #aaa; }
+
+/* ── TIPOGRAFIA ──────────────────────────────────────── */
+h2 { font-family: 'Cinzel', serif; font-weight: 700; font-size: clamp(10pt, 3vw, 13pt); letter-spacing: 1px; text-transform: uppercase; color: var(--cor); border-bottom: 2px solid var(--cor); padding-bottom: 6px; margin-bottom: 12px; margin-top: 4px; line-height: 1.2; position: relative; z-index: 1; }
+h3 { font-family: 'Oswald', sans-serif; font-weight: 400; font-size: clamp(8pt, 2.5vw, 10pt); letter-spacing: 1.5px; color: #1a2c4a; text-transform: uppercase; margin-bottom: 6px; margin-top: 12px; position: relative; z-index: 1; }
+p { font-family: 'EB Garamond', serif; font-size: clamp(9.5pt, 2.5vw, 10.5pt); line-height: 1.65; color: var(--ct); text-align: justify; margin-bottom: 9px; hyphens: auto; position: relative; z-index: 1; }
+.cap::first-letter { font-family: 'Cinzel', serif; font-size: clamp(28pt, 8vw, 38pt); font-weight: 900; float: left; margin-right: 5px; color: var(--cor); line-height: .82; padding-top: 2px; }
+
+/* ── BLOCOS ──────────────────────────────────────────── */
+.bver { background: #fff; border: 1px solid rgba(48,72,120,.2); border-left: 4px solid var(--cor); padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bver-ref { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bver p { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(9.5pt, 2.5vw, 10.5pt); color: #0e1428; line-height: 1.7; margin: 0; }
+.bver .ref-f { font-size: clamp(8pt, 2vw, 9pt); font-style: normal; color: var(--ouro); font-family: 'Oswald', sans-serif; letter-spacing: 1px; display: block; text-align: right; margin-top: 4px; }
+.bloco { background: rgba(48,72,120,.05); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.bloco-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.blteo { background: rgba(201,168,76,.08); border-left: 3px solid var(--ouro); padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.blteo-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: #8a6a20; margin-bottom: 6px; }
+.blapl { background: linear-gradient(135deg, rgba(48,72,120,.05), rgba(201,168,76,.07)); border: 1px solid rgba(48,72,120,.2); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.blapl-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.mem { background: var(--creme); border: 1px solid rgba(201,168,76,.3); border-radius: 2px; padding: 10px 12px; margin: 10px 0; text-align: center; position: relative; z-index: 1; }
+.mem-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--ouro); margin-bottom: 6px; }
+.mem p { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(9pt, 2.5vw, 10pt); color: #0e1428; text-align: center; line-height: 1.6; }
+.obj { background: var(--creme); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.obj .ot { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.obj ul { list-style: none; padding: 0; }
+.obj ul li { font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ct); padding: 2px 0 2px 14px; position: relative; line-height: 1.4; }
+.obj ul li::before { content: '◆'; position: absolute; left: 0; color: var(--cor); font-size: clamp(6pt, 1.5vw, 8pt); top: 4px; }
+.brefletir { background: rgba(48,72,120,.06); border: 1px solid rgba(48,72,120,.2); border-top: 3px solid var(--cor); border-radius: 0 0 2px 2px; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.brefletir-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bconexao { background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.35); border-left: 4px solid var(--ouro); padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bconexao-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: #7a5c10; margin-bottom: 6px; }
+.bsabia { background: rgba(48,72,120,.07); border: 1px dashed rgba(48,72,120,.3); border-radius: 2px; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bsabia-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bpense { background: var(--creme); border-left: 4px solid var(--cor); border-radius: 0 2px 2px 0; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bpense-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.bleve { background: linear-gradient(135deg, rgba(48,72,120,.08), rgba(201,168,76,.1)); border: 1px solid rgba(48,72,120,.25); border-bottom: 3px solid var(--ouro); border-radius: 2px 2px 0 0; padding: 10px 12px; margin: 12px 0; position: relative; z-index: 1; }
+.bleve-t { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.sep { display: flex; align-items: center; gap: 10px; margin: 12px 0; opacity: .3; position: relative; z-index: 1; }
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: clamp(6pt, 1.5vw, 8pt); color: var(--ouro); }
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn { font-family: 'Oswald', sans-serif; font-size: clamp(0.5rem, 1.5vw, 0.625rem); color: var(--cor); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px; }
+.qt { font-family: 'EB Garamond', serif; font-size: clamp(9pt, 2.5vw, 10pt); color: var(--ct); line-height: 1.45; margin-bottom: 5px; }
+.lr { border-bottom: 1px solid rgba(48,72,120,.2); height: 20px; margin-top: 3px; }
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px; position: relative; z-index: 1; }
+.lin  { border-bottom: 1px solid rgba(48,72,120,.2); height: 22px; }
+
+/* ── RODAPÉ ──────────────────────────────────────────── */
+.rod { position: absolute; bottom: 0; left: 0; right: 0; padding: 6px clamp(6mm, 4vw, 12mm) 6mm clamp(8mm, 4vw, 14mm); display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+.rod::before { content: ''; position: absolute; top: 0; left: clamp(6mm, 4vw, 12mm); right: clamp(6mm, 4vw, 12mm); height: 1px; background: linear-gradient(90deg, var(--cor), var(--ouro), transparent); opacity: .3; }
+.rt { font-family: 'Oswald', sans-serif; font-size: clamp(6pt, 1.5vw, 7pt); color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: clamp(8pt, 2vw, 9pt); color: var(--ouro); }
+
+/* ── EDIÇÃO ──────────────────────────────────────────── */
+[contenteditable="true"] { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(48,72,120,.05); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(48,72,120,.08); border-radius: 2px; }
+
+/* ── CAPA DE ENTRADA ─────────────────────────────────── */
+#capaEntradaRevista { position: fixed; inset: 0; z-index: 10000; background: linear-gradient(160deg, #05070f 0%, #080c18 40%, #0e1428 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: opacity .6s ease; padding: 2rem; }
+#capaEntradaRevista.saindo { opacity: 0; pointer-events: none; }
+body.licao-iniciada #capaEntradaRevista { display: none; }
+.cv-atm { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 30% 70%, rgba(48,72,120,.45) 0%, transparent 50%), radial-gradient(ellipse at 75% 20%, rgba(201,168,76,.18) 0%, transparent 45%); }
+.cv-grd { position: absolute; inset: 0; pointer-events: none; opacity: .02; background-image: repeating-linear-gradient(45deg, rgba(201,168,76,.8) 0px, transparent 1px, transparent 28px, rgba(201,168,76,.8) 29px); }
+.cv-fx { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; pointer-events: none; background: linear-gradient(180deg, #0e1428, var(--cor), var(--ouro)); }
+.cv-corpo { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 480px; gap: 1.2rem; }
+.cv-serie { font-family: 'Oswald', sans-serif; font-size: clamp(.55rem,1.5vw,.6875rem); letter-spacing: 4px; color: var(--ouro); text-transform: uppercase; opacity: .75; }
+.cv-num { font-family: 'Cinzel', serif; font-size: clamp(.6rem,2vw,.75rem); color: rgba(201,168,76,.45); letter-spacing: 4px; text-transform: uppercase; }
+.cv-tema { font-family: 'Cinzel', serif; font-weight: 700; font-size: clamp(1.1rem,4vw,1.6rem); color: #fff; line-height: 1.2; text-transform: uppercase; letter-spacing: 1px; }
+.cv-tema-sub { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: clamp(.6rem,1.8vw,.75rem); color: rgba(201,168,76,.6); letter-spacing: 3px; text-transform: uppercase; }
+.cv-divisor { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--ouro), transparent); opacity: .5; }
+.cv-frase { font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(.85rem,2.2vw,1rem); color: var(--ouro-claro); line-height: 1.7; opacity: .9; border-left: 2px solid rgba(201,168,76,.4); padding-left: 1rem; text-align: left; max-width: 400px; }
+.cv-ref { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: clamp(.55rem,1.5vw,.65rem); color: rgba(201,168,76,.55); letter-spacing: 2px; text-transform: uppercase; text-align: right; width: 100%; max-width: 400px; }
+.cv-cta { font-family: 'Oswald', sans-serif; font-size: clamp(.6rem,1.8vw,.75rem); letter-spacing: 3px; text-transform: uppercase; color: #fff; background: var(--cor); border: none; padding: .6rem 1.8rem; cursor: pointer; border-radius: 2px; transition: all .2s; }
+.cv-cta:hover { background: var(--ouro); color: #111; }
+.cv-rodape { position: absolute; bottom: 1.5rem; left: 0; right: 0; text-align: center; pointer-events: none; }
+.cv-rodape-sub { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: clamp(.5rem,1.3vw,.6rem); color: rgba(255,255,255,.2); letter-spacing: 3px; text-transform: uppercase; }
+
+/* ── IMPRESSÃO ───────────────────────────────────────── */
+@media print {
+  body { background: none; }
+  #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+@media (max-width: 480px) { .cver { font-size: 9pt; } }
+</style>
+</head>
+<body>
+<div class="painel">
+  <div class="marca">ESCHATON VOL. III<span>Lição 13 · Cidadãos da Nova Jerusalém</span></div>
+  <button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+  <button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+  <a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+
+<!-- CAPA DE ENTRADA -->
+<div aria-label="Abrir lição 13" id="capaEntradaRevista" onclick="entrarLicao()" role="button" tabindex="0">
+  <div class="cv-atm"></div><div class="cv-grd"></div><div class="cv-fx"></div>
+  <div class="cv-corpo">
+    <div class="cv-serie">Eschaton · O Futuro Chegou</div>
+    <div class="cv-num">Vol. III · Lição 13</div>
+    <div class="cv-tema">Cidadãos da Nova Jerusalém</div>
+    <div class="cv-tema-sub">Desafios práticos para quem vive na esperança · Apocalipse 22:6-21</div>
+    <div class="cv-divisor"></div>
+    <div class="cv-frase">«Certamente venho sem demora. Amém! Vem, Senhor Jesus! A graça do Senhor Jesus seja com todos.»</div>
+    <div class="cv-ref">Apocalipse 22:20-21</div>
+    <button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+  </div>
+  <div class="cv-rodape"><div class="cv-rodape-sub">Jovens Adultos · Lição 13</div></div>
+</div>
+
+<div class="area">
+
+<!-- ══ PG 1 CAPA ══════════════════════════════════════ -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+  <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+  <div class="cimg"></div><div class="clh"></div>
+  <div class="cnbg">13</div>
+  <div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+  <div class="ccon">
+    <div class="cser">Eschaton · O Futuro Chegou</div>
+    <div class="cref">Apocalipse 22:6-21</div>
+    <div class="ctit">Cidadãos da Nova Jerusalém</div>
+    <div class="cver">
+      «Certamente venho sem demora. Amém! Vem, Senhor Jesus! A graça do Senhor Jesus seja com todos.»
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 22:20-21</span>
+    </div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- ══ PG 2 TEXTO BÍBLICO ════════════════════════════ -->
+<div class="lbl">Página 2 · Texto Bíblico</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">2</div>
+  <div class="ph"><span class="phl">Lição 13 · Vol. III</span><span class="pht">Ap 22:6-21</span></div>
+  <h2>O Texto</h2>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 22:6-7</div>
+    <p>«E disse-me: Estas palavras são fiéis e verdadeiras; e o Senhor Deus dos santos profetas enviou o seu anjo para mostrar aos seus servos as coisas que em breve devem acontecer. Eis que venho sem demora! Bem-aventurado aquele que guarda as palavras da profecia deste livro.»</p>
+    <span class="ref-f">Apocalipse 22:6-7</span>
+  </div>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 22:17, 20-21</div>
+    <p>«O Espírito e a noiva dizem: Vem! E aquele que ouve, diga: Vem! E aquele que tem sede, venha; e aquele que quiser, tome de graça da água da vida. [...] Aquele que dá testemunho destas coisas diz: Certamente venho sem demora! Amém! Vem, Senhor Jesus! A graça do Senhor Jesus seja com todos.»</p>
+    <span class="ref-f">Apocalipse 22:17, 20-21</span>
+  </div>
+  <div class="obj">
+    <div class="ot">Objetivos desta Lição</div>
+    <ul>
+      <li>Compreender os três desafios práticos dos cidadãos da Nova Jerusalém segundo Hernandes Dias Lopes: guardar a Palavra, estar preparados para o juízo e aguardar ansiosamente a vinda do Senhor;</li>
+      <li>Entender a confiabilidade e a integridade do Apocalipse como Palavra de Deus canônica e revelada;</li>
+      <li>Distinguir o critério da salvação (o sangue do Cordeiro) da base do julgamento (as obras);</li>
+      <li>Aplicar o clamor «Vem, Senhor Jesus!» como postura de vida missionária e de esperança ativa.</li>
+    </ul>
+  </div>
+  <div class="brefletir">
+    <div class="brefletir-t">✦ Para Você Refletir</div>
+    <p>Hernandes Dias Lopes pergunta: «Você é um cidadão da grande Babilônia, a cidade condenada, ou cidadão da Nova Jerusalém, cidadão do céu?» A cidadania celeste não é apenas uma crença — é uma postura diante da Palavra, do juízo e da vinda do Senhor. Como essa cidadania tem moldado concretamente a forma como você vive hoje?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- ══ PG 3 DESAFIO I — GUARDAR A PALAVRA ════════════ -->
+<div class="lbl">Página 3 · Desafio I — Guardar a Palavra</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">3</div>
+  <div class="ph"><span class="phl">Lição 13 · Vol. III</span><span class="pht">Ap 22:6-11, 18-19</span></div>
+  <h2>Desafio I — Guardar a Palavra do Senhor</h2>
+  <p class="cap">O Apocalipse não é um livro de curiosidades proféticas — é um livro que exige obediência. Hernandes Dias Lopes abre o último estudo com uma afirmação fundamental: o Apocalipse é absolutamente confiável, de origem divina, e deve ser guardado, não apenas lido.</p>
+
+  <div class="bloco">
+    <div class="bloco-t">A Revelação do Apocalipse é Absolutamente Confiável — v. 6</div>
+    <p>João trata da indisputável confiabilidade do Apocalipse. Este livro não é o Apocalipse de João, mas o Apocalipse de Jesus. É revelação a partir do céu. É Palavra de Deus, por isso absolutamente fiel e verdadeira. O mesmo Deus que revelou Sua Palavra aos profetas também revelou a mensagem do Apocalipse a João por meio de Seu anjo.</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">Guardar a Palavra Produz Bem-aventurança — v. 7b</div>
+    <p>«Guardar» a profecia do Apocalipse tem dois sentidos inseparáveis: <strong>primeiro</strong>, aceitar o conteúdo como legítimo — sem modificar, acrescentar nem subtrair nada (Dt 4:2; Pv 30:5-6). Isso é valorizar a integridade do texto. <strong>Segundo</strong>, obedecer, praticar, observar. Isso é valorizar a importância do texto. As profecias do Apocalipse não foram escritas para satisfazer a curiosidade intelectual quanto ao futuro, mas para que a Igreja seja capaz de viver dentro da vontade de Deus. A profecia não é apenas para informar sobre o fim — é para preparar um povo santo para o fim.</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">A Mensagem Vem de Deus, é Sobre Jesus e Destina-se à Igreja — v. 8-9</div>
+    <p>Quatro elos compõem a cadeia revelacional do Apocalipse: a) <strong>Deus</strong> é a fonte — Ele enviou Seu anjo para mostrar a João o que deve acontecer; b) <strong>Jesus</strong> é o conteúdo — o livro trata de Sua glória, Sua mensagem, Sua noiva e Sua vitória; c) <strong>o anjo</strong> é o instrumento, não a fonte; d) <strong>João</strong> é a testemunha ocular e o recipiente da revelação; e) <strong>a Igreja</strong> é a destinatária — a mensagem foi enviada às sete Igrejas da Ásia e, por extensão, a todas as Igrejas em todos os tempos.</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">A Mensagem Deve ser Proclamada, Não Selada — v. 10</div>
+    <p>Daniel foi ordenado a selar o livro até ao tempo do fim. João foi ordenado a <em>não</em> selar as palavras da profecia. O fim chegou em Cristo. Desde a primeira vinda de Cristo, o tempo do fim se iniciou. A mensagem da vitória de Cristo e de Sua Igreja precisa ser publicada, anunciada e pregada a todo o povo.</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">A Mensagem Deve ser Mantida Íntegra — v. 18-19</div>
+    <p>Dois perigos ameaçam a integridade da Palavra: a) <strong>o liberalismo</strong> tenta retirar algo das Escrituras — nega milagres, questiona a inspiração, classifica passagens como mito ou interpolação; b) <strong>o misticismo</strong> tenta acrescentar algo à revelação — novas profecias, revelações extrabíblicas, palavras que se colocam no mesmo nível das Escrituras. Nenhum dos dois tem autoridade para alterar o texto divinamente inspirado.</p>
+  </div>
+
+  <div class="bconexao">
+    <div class="bconexao-t">✦ Conexão Bíblica</div>
+    <p>Compare Apocalipse 22:18-19 com Deuteronômio 4:2 e Provérbios 30:5-6. O princípio da integridade das Escrituras atravessa toda a história da revelação bíblica. Como essa consistência confirma a unidade do cânon e a soberania de Deus sobre Sua própria Palavra?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- ══ PG 4 DESAFIO II — PREPARADOS PARA O JUÍZO ════ -->
+<div class="lbl">Página 4 · Desafio II — Preparados para o Juízo</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">4</div>
+  <div class="ph"><span class="phl">Lição 13 · Vol. III</span><span class="pht">Ap 22:12-15</span></div>
+  <h2>Desafio II — Estar Preparados para o Juízo do Senhor</h2>
+  <p>O cidadão da Nova Jerusalém não vive na indiferença diante do juízo vindouro. Ele o conhece, o leva a sério e, exatamente por isso, se ancora com segurança na única salvação possível: o sangue do Cordeiro.</p>
+
+  <div class="bloco">
+    <div class="bloco-t">Jesus Virá como Aquele que Julga Retamente — v. 12</div>
+    <p>Ele vem. Ele vem julgar. Ele tem o galardão. Ele retribuirá a cada um segundo as suas obras. Jesus é o juiz que se assentará no trono. O critério do galardão — ou do grau de condenação — são as obras (Mt 25:31-46). Ninguém poderá escapar, fugir ou subornar o Seu juízo. Os ímpios se desesperam (Ap 6:16-17).</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">Jesus tem Credencial Irrefutável para Julgar — v. 13</div>
+    <p>Ele é o princípio e o fim, o Alfa e o Ômega. Ele está no começo e no fim. Ele conhece tudo. Ele é o Pai da eternidade — a origem e a consumação de todas as coisas. Dele, por meio d'Ele e para Ele são todas as coisas. Nenhuma criatura tem qualificação para contestar o Seu julgamento.</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">O Critério da Salvação não são as Obras, mas a Obra Vicária de Cristo — v. 14</div>
+    <p>Os santos não são justos por causa de suas boas obras, mas por causa do sangue do Cordeiro (Ap 7:14). Os habitantes da Nova Jerusalém entrarão na cidade pelas portas não por causa de suas obras, mas por causa do sangue do Cordeiro (22:14). Não são as boas obras que nos levarão para o céu — somos nós que levaremos nossas obras para o céu (Ap 14:13). Os lavados no sangue do Cordeiro vencem o maligno (Ap 12:11), comem dos frutos da árvore da vida e entram na cidade pelas portas (22:14).</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">Os Não Lavados Ficarão Fora da Cidade — v. 15</div>
+    <p>Os remidos entram na cidade pelas portas. Os perversos são deixados fora. A cidade é onde está o trono de Deus; o Cordeiro é a sua lâmpada. Os que não foram lavados ficarão não apenas fora da cidade — serão lançados no lago de fogo (Ap 20:15). Os pecados mencionados incluem pecados de impiedade (feitiçaria e idolatria — relacionamento com Deus) e perversão (assassinato, impureza, mentira — relacionamento com os homens).</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">Depois do Juízo, é Impossível Mudar o Destino — v. 11</div>
+    <p>Em Gênesis 2:1-2, a obra da criação foi concluída. Em João 19:30, a obra da redenção foi consumada. Em Apocalipse 21:6, a consumação de todas as coisas é declarada. Agora, em Apocalipse 22:11, o destino final das pessoas é selado. Só há dois grupos na humanidade: os que fazem injustiça e são imundos, e os que praticam justiça e são santos. Não haverá mais arrependimento nem apostasia. Haverá uma hora em que será tarde demais.</p>
+  </div>
+
+  <div class="bpense">
+    <div class="bpense-t">✦ Pense Nisso</div>
+    <p>«Não são as nossas boas obras que nos levarão para o céu — somos nós que levaremos nossas obras para o céu» (Lopes). Essa distinção entre o fundamento da salvação (graça) e a evidência da salvação (obras) é central para uma vida cristã equilibrada. Como você tem vivido essa distinção na prática?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- ══ PG 5 DESAFIO III — AGUARDAR A VINDA ══════════ -->
+<div class="lbl">Página 5 · Desafio III — Aguardar a Vinda do Senhor</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">5</div>
+  <div class="ph"><span class="phl">Lição 13 · Vol. III</span><span class="pht">Ap 22:7, 12, 16-17, 20</span></div>
+  <h2>Desafio III — Aguardar Ansiosamente a Vinda do Senhor</h2>
+  <p class="cap">O livro mais escatológico da Bíblia termina não com uma descrição do fim, mas com um clamor de amor: «Vem, Senhor Jesus!» A escatologia bíblica não é um sistema de especulação — é uma postura do coração que anseia pelo Noivo.</p>
+
+  <div class="bloco">
+    <div class="bloco-t">O Senhor da Glória é Identificado com Precisão — v. 13, 16</div>
+    <p>Jesus se apresenta com três títulos que abarcam toda a extensão de Sua soberania: a) <strong>o princípio e o fim</strong> — Deus de eternidade a eternidade; tudo vem d'Ele e é para Ele; b) <strong>a raiz e a geração de Davi</strong> — Ele é ao mesmo tempo Filho e Senhor de Davi; abarca toda a história da redenção; c) <strong>a estrela da manhã</strong> — anuncia o alvorecer da eternidade, sinalizando que esta vida é apenas um prelúdio da vida real no mundo porvir.</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">O Noivo Promete Vir sem Demora — v. 7, 12, 20</div>
+    <p>Jesus, como Noivo da Igreja, já assumiu Seu compromisso de amor — pagou o dote na cruz. Agora, a noiva deve se preparar e se ataviar. Em breve Ele virá ao som de trombetas para buscar Sua noiva. Mas por que dois mil anos já se passaram e Ele não veio? Pedro responde: Deus deseja dar ao homem a oportunidade de se arrepender e ser salvo (2 Pe 3:9). O Apocalipse é o painel de Deus anunciando que Jesus voltará em breve. Cada geração deve estar desperta, como se a vinda do Senhor estivesse às portas (Mt 24:42-44).</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">A Noiva Clama Ansiosamente pela Vinda do Noivo — v. 17a</div>
+    <p>O grande anseio de uma noiva não é ter uma casa, mas um esposo. Seu coração não está em coisas, mas no seu Amado. Ela anseia não apenas pelo paraíso, mas pelo Amado da sua alma. O clamor da noiva é: «Vem!» Ela sempre ora: Maranata — Ora, vem, Senhor Jesus! (1 Co 16:22). A oração da Igreja é: «Senhor Jesus, leva a bom termo o Teu plano na história com vistas à Tua vinda.» O Espírito Santo inspira esse clamor. A última palavra da Igreja é: «Vem, Senhor Jesus!» (Ap 22:20).</p>
+  </div>
+
+  <div class="bloco">
+    <div class="bloco-t">A Noiva Chama os Sedentos para Conhecerem o Noivo — v. 17b</div>
+    <p>A Igreja não apenas aguarda o Noivo — ela chama os sedentos para conhecerem o seu Amado. A Igreja proclama que Jesus satisfaz; Ele tem a água da vida. O mundo não satisfaz; só Jesus pode saciar nossa sede. A Igreja proclama um evangelho de graça, não de obras ou méritos. Uma Igreja que anseia pela volta de Jesus é uma Igreja comprometida com o evangelismo.</p>
+  </div>
+
+  <div class="blteo">
+    <div class="blteo-t">A Última Promessa e a Última Oração das Escrituras</div>
+    <p>A última promessa das Escrituras é: «Certamente venho sem demora» (Ap 22:20a). A última oração das Escrituras é: «Amém! Vem, Senhor Jesus!» (Ap 22:20b). E a última bênção é: «A graça do Senhor Jesus seja com todos» (Ap 22:21). O livro mais assustador da Bíblia termina com graça — porque a história do mundo termina com a graça de Deus triunfando sobre tudo.</p>
+  </div>
+
+  <div class="bsabia">
+    <div class="bsabia-t">✦ Sabia Que?</div>
+    <p>«Maranata» é uma palavra aramaica preservada no grego do Novo Testamento (1 Co 16:22) que significa «Nosso Senhor, vem!» ou «O Senhor vem». Era a oração litúrgica da Igreja primitiva — o clamor coletivo da comunidade que aguardava o Noivo. Ao clamarem «Maranata», os primeiros cristãos não expressavam desespero, mas amor apaixonado pelo Senhor que prometeu voltar.</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- ══ PG 6 APLICAÇÃO ═════════════════════════════════ -->
+<div class="lbl">Página 6 · Aplicação</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">6</div>
+  <div class="ph"><span class="phl">Lição 13 · Vol. III</span><span class="pht">Desafios Práticos da Cidadania Celeste</span></div>
+  <h2>Aplicação Direta</h2>
+  <p class="cap">O Apocalipse não termina com o silêncio das estrelas — termina com uma conversa de amor entre o Noivo e a Noiva. A resposta ao juízo não é o desespero, mas o clamor: «Vem, Senhor Jesus!» A cidadania celeste não é passividade — é guardar, preparar-se e clamar.</p>
+
+  <div class="blteo">
+    <div class="blteo-t">Três Desafios, Uma Postura</div>
+    <p>Os três desafios desta lição são inseparáveis: guardar a Palavra produz integridade doutrinária; estar preparados para o juízo produz humildade e dependência do sangue do Cordeiro; aguardar a vinda do Senhor produz urgência missionária e esperança ativa. O cidadão da Nova Jerusalém que guarda esses três desafios vive de modo radicalmente diferente do cidadão da Babilônia — que rejeita a Palavra, confia nas próprias obras e não anseia pelo Senhor.</p>
+  </div>
+
+  <div class="blapl">
+    <div class="blapl-t">Para esta semana</div>
+    <p><strong>Primeiro — Guardar a Palavra:</strong> Lopes afirma que «guardar» o Apocalipse significa aceitar sua integridade e obedecer seu conteúdo. Que atitude concreta você tomará esta semana para tratar a Bíblia com mais reverência — não como manual de curiosidades proféticas, mas como Palavra que exige obediência e forma o caráter? <strong>Segundo — Preparados para o Juízo:</strong> «Não são as nossas boas obras que nos levarão para o céu — somos nós que levaremos nossas obras para o céu.» Você vive com a segurança do sangue do Cordeiro como único fundamento, ou ainda mistura mérito próprio com graça? O que precisa mudar nessa compreensão? <strong>Terceiro — Aguardar Ansiosamente:</strong> «Uma Igreja que anseia pela volta de Jesus é uma Igreja comprometida com o evangelismo.» Você ancora sua motivação missionária na vinda do Senhor? Com quem você compartilhará o evangelho esta semana, convidando os sedentos a vir a Cristo?</p>
+  </div>
+
+  <div class="mem">
+    <div class="mem-t">◆ Versículo para Memorizar</div>
+    <p>«O Espírito e a noiva dizem: Vem! E aquele que ouve, diga: Vem! E aquele que tem sede, venha; e aquele que quiser, tome de graça da água da vida.»</p>
+    <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 22:17</p>
+  </div>
+
+  <div class="bleve">
+    <div class="bleve-t">✦ Leve para a Vida</div>
+    <p>Esta semana, pratique a oração «Maranata — Vem, Senhor Jesus!» ao menos uma vez por dia. Deixe que essa oração reoriente suas prioridades, suas conversas e sua motivação para testemunhar. Anote abaixo uma palavra que descreva como a esperança da vinda de Cristo muda a sua semana agora.</p>
+    <div class="lr" style="margin-top:8px;"></div>
+    <div class="lr"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- ══ PG 7 QUESTÕES ══════════════════════════════════ -->
+<div class="lbl">Página 7 · Questões e Anotações</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">7</div>
+  <div class="ph"><span class="phl">Lição 13 · Vol. III</span><span class="pht">Cidadãos da Nova Jerusalém</span></div>
+  <h2>Questões para Reflexão</h2>
+  <div class="q">
+    <div class="qn">Questão 01</div>
+    <div class="qt">Lopes distingue dois modos de ameaçar a integridade da Palavra: o liberalismo (que subtrai) e o misticismo (que acrescenta). Como cada um desses erros se manifesta no contexto evangélico brasileiro contemporâneo? Qual é mais perigoso para a sua Igreja local — e por quê? O que «guardar a Palavra» exige concretamente diante desses dois perigos?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 02</div>
+    <div class="qt">O critério do julgamento são as obras, mas o critério da salvação é o sangue do Cordeiro. Como essas duas verdades coexistem sem se anular? O que significa «levar as obras para o céu» (Ap 14:13) em vez de «ser salvo pelas obras»? De que modo essa distinção liberta o crente da ansiedade de merecer e o motiva para a santidade genuína?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 03</div>
+    <div class="qt">Lopes afirma que «uma Igreja que anseia pela volta de Jesus é uma Igreja comprometida com o evangelismo». Por que a espera pela vinda do Senhor não produz passividade, mas urgência missionária? Como o clamor «Vem, Senhor Jesus!» e o convite «Quem tem sede, venha!» são a mesma postura expressa em dois direcionamentos — um para cima e outro para fora?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 04</div>
+    <div class="qt">O Apocalipse — o livro mais dramático da Bíblia — termina com graça: «A graça do Senhor Jesus seja com todos» (22:21). Como esse final ilumina o propósito de todo o livro? De que modo o conhecimento do juízo, da Babilônia e da besta leva o leitor não ao terror paralisante, mas ao recebimento apaixonado da graça e ao testemunho urgente dela?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <h3 style="margin-top:12px;">Anotações</h3>
+  <div class="lins">
+    <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+</div><!-- /area -->
+
+<script>
+function entrarLicao(){
+  const capa = document.getElementById('capaEntradaRevista');
+  if (capa) capa.classList.add('saindo');
+  setTimeout(() => document.body.classList.add('licao-iniciada'), 550);
+  window.scrollTo({top:0, behavior:'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM','TD','TH'];
+function toggleEdit(){
+  edit=!edit;
+  document.querySelectorAll('.pag *').forEach(el=>{
+    if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul,table'))
+      el.contentEditable=edit?'true':'false';
+  });
+  document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>
