@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton Vol. II · Lição 08 — A Queda da Babilônia</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--cor:#905020;--grad1:#181008;--grad2:#281808;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--pergaminho:#f8f2e8;--creme:#f0e8d8;--cc:#ddd8cc;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#100a04;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#080402,#100a04);border-bottom:1px solid rgba(144,80,32,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:11pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:7.5pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#555;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--pergaminho);box-shadow:0 6px 30px rgba(0,0,0,0.6);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 22% 60%,rgba(144,80,32,0.5) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(201,168,76,0.18) 0%,transparent 45%),radial-gradient(ellipse at 50% 85%,rgba(80,35,5,0.4) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(201,168,76,1) 24px,rgba(201,168,76,1) 25px);}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#281008,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#0d0602,var(--cor) 50%,#ffb060);opacity:0.4;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.75;}
+.cvol{position:absolute;top:14mm;right:12mm;z-index:4;text-align:right;}
+.cvol-num{font-family:'Cinzel',serif;font-size:8pt;color:var(--ouro);letter-spacing:3px;opacity:0.7;}
+.cvol-linha{width:40px;height:1px;background:rgba(201,168,76,0.4);margin:4px 0 0 auto;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.ctit{font-family:'Cinzel',serif;font-size:22pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:10px;}
+.cref{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:rgba(201,168,76,0.6);text-transform:uppercase;margin-bottom:10px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--pergaminho);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--cor),var(--ouro) 60%,transparent);}
+.int::after{content:'';position:absolute;top:6px;left:14mm;right:12mm;height:1px;background:rgba(144,80,32,0.15);}
+.int-linhas{position:absolute;inset:0;top:20mm;pointer-events:none;background-image:repeating-linear-gradient(transparent,transparent 23px,rgba(144,80,32,0.055) 23px,rgba(144,80,32,0.055) 24px);z-index:0;}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.03);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;position:relative;z-index:1;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Cinzel',serif;font-weight:700;font-size:13pt;letter-spacing:1px;text-transform:uppercase;color:var(--cor);border-bottom:2px solid var(--cor);padding-bottom:6px;margin-bottom:12px;margin-top:4px;line-height:1.2;position:relative;z-index:1;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1.5px;color:#4a2808;text-transform:uppercase;margin-bottom:6px;margin-top:12px;position:relative;z-index:1;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;position:relative;z-index:1;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.texto-biblico{background:#fff;border:1px solid rgba(144,80,32,0.2);border-left:4px solid var(--cor);padding:12px 14px;margin:12px 0;position:relative;z-index:1;}
+.texto-biblico-ref{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.texto-biblico-ref::after{content:'';flex:1;height:1px;background:rgba(144,80,32,0.2);}
+.texto-biblico p{font-family:'EB Garamond',serif;font-style:italic;font-size:10.5pt;color:#2a1505;line-height:1.7;margin-bottom:4px;text-align:left;}
+.texto-biblico .ref-final{font-size:9pt;font-style:normal;color:var(--ouro);font-family:'Oswald',sans-serif;letter-spacing:1px;display:block;text-align:right;margin-top:4px;}
+.bloco-ctx{background:rgba(144,80,32,0.05);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-ctx-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.bloco-teo{background:rgba(201,168,76,0.08);border-left:3px solid var(--ouro);padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-teo-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#8a6a20;margin-bottom:6px;}
+.bloco-apl{background:linear-gradient(135deg,rgba(144,80,32,0.06),rgba(201,168,76,0.06));border:1px solid rgba(144,80,32,0.2);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-apl-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.memorizar{background:var(--creme);border:1px solid rgba(201,168,76,0.3);border-radius:2px;padding:10px 12px;margin:10px 0;text-align:center;position:relative;z-index:1;}
+.memorizar-titulo{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:6px;}
+.memorizar p{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:#2a1505;text-align:center;line-height:1.6;}
+.obj{background:var(--creme);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+ul li::before { 
+    content: '\2192' !important; 
+    position: absolute; 
+    left: 0; 
+    color: var(--cor); 
+    font-size: 9pt; 
+}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.3;position:relative;z-index:1;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cor);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.q{margin-bottom:14px;position:relative;z-index:1;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid rgba(144,80,32,0.2);height:20px;margin-top:3px;}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;z-index:2;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#aaa;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;position:relative;z-index:1;}
+.lin{border-bottom:1px solid rgba(144,80,32,0.2);height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(144,80,32,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(144,80,32,0.08);border-radius:2px;}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+    .painel{padding:8px 12px;gap:8px;} .marca{font-size:9.5pt;} .marca span{font-size:7pt;}
+    .btn{padding:6px 10px;font-size:7.5pt;letter-spacing:1px;}
+    .area{margin-top:54px;padding:12px 8px 60px;gap:12px;}
+    .pag{width:100% !important;min-height:unset;box-shadow:0 4px 16px rgba(0,0,0,0.5);}
+    .lbl{margin-left:8px;}
+    .int{padding:6vw 5vw 10vw 5vw;min-height:unset;} .ccon{padding:0 5vw 8vw 5vw;}
+    .ctit{font-size:clamp(14pt,5.5vw,22pt);} .cver{font-size:9.5pt;}
+    h2{font-size:11pt;} h3{font-size:9.5pt;} p{font-size:9.5pt;line-height:1.6;}
+    .cap::first-letter{font-size:28pt;}
+    .texto-biblico{padding:10px 12px;}
+    .bloco-ctx,.bloco-teo,.bloco-apl,.memorizar,.obj{padding:8px 10px;}
+    .rod{padding:5px 5vw 5vw 5vw;position:relative;} .rod::before{left:5vw;right:5vw;}
+    .wm{display:none;} .int-linhas{display:none;}
+}
+@media screen and (max-width: 480px) {
+    .painel{flex-wrap:wrap;} .area{margin-top:96px;}
+    .int{padding:5vw 4vw 8vw 4vw;}
+    h2{font-size:10pt;} p{font-size:9pt;} .btn{padding:5px 8px;font-size:7pt;}
+}
+
+/* ===== CAPA ENTRADA VOL. II ===== */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;position:relative;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+.entrada-cta{position:absolute;bottom:32px;left:0;right:0;text-align:center;font-family:'Oswald',sans-serif;font-size:10pt;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.85);z-index:10;background:rgba(0,0,0,0.4);padding:10px;}
+.cv-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20mm 14mm 16mm;font-family:Georgia,'Times New Roman',serif;color:#f4ead6;background:radial-gradient(circle at 18% 14%,rgba(201,168,76,.16),transparent 22%),radial-gradient(circle at 82% 20%,rgba(192,57,43,.22),transparent 18%),radial-gradient(circle at 50% 75%,rgba(201,168,76,.08),transparent 26%),linear-gradient(180deg,#140b06 0%,#241409 34%,#2a1a0a 68%,#130b06 100%);}
+.cv-textura{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent 0 28px,rgba(201,168,76,.08) 28px 29px),repeating-linear-gradient(90deg,transparent 0 42px,rgba(201,168,76,.035) 42px 43px);mix-blend-mode:screen;}
+.cv-vinheta{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,transparent 42%,rgba(0,0,0,.45) 100%);}
+.cv-moldura{position:absolute;inset:0;pointer-events:none;}
+.cv-moldura::before{content:"";position:absolute;inset:14mm;border:1px solid rgba(201,168,76,.35);}
+.cv-moldura::after{content:"";position:absolute;inset:18mm;border:1px solid rgba(201,168,76,.14);}
+.cv-simbolo{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:170pt;font-weight:700;color:rgba(255,255,255,.035);letter-spacing:4px;transform:translateY(3mm);user-select:none;}
+.cv-inner{position:relative;z-index:2;width:100%;display:flex;flex-direction:column;align-items:center;flex:1;}
+.cv-badge{display:inline-flex;align-items:center;gap:3mm;padding:2.4mm 5mm;border:1px solid rgba(201,168,76,.36);color:#c9a84c;font-family:Arial,sans-serif;font-size:8.5pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-badge-sep{width:.3mm;height:4mm;background:rgba(201,168,76,.35);}
+.cv-titulo{margin-top:22mm;font-size:33pt;line-height:.95;letter-spacing:2.6pt;text-transform:uppercase;font-weight:700;}
+.cv-subtitulo{margin-top:4mm;color:#c0392b;font-family:Arial,sans-serif;font-size:10pt;letter-spacing:2.1pt;text-transform:uppercase;}
+.cv-divisor{margin-top:8mm;width:62mm;display:flex;align-items:center;gap:4mm;}
+.cv-divisor::before,.cv-divisor::after{content:"";flex:1;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.95),transparent);}
+.cv-divisor span{color:#c9a84c;font-size:13pt;}
+.cv-frase{margin-top:10mm;max-width:92mm;font-size:15.2pt;line-height:1.42;font-style:italic;color:rgba(232,213,160,.96);}
+.cv-ref{margin-top:4mm;color:#c9a84c;font-family:Arial,sans-serif;font-size:8.3pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-faixa{margin-top:auto;width:100%;padding:7mm 6mm;border-top:1px solid rgba(201,168,76,.20);border-bottom:1px solid rgba(201,168,76,.12);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));}
+.cv-tema{font-size:13pt;line-height:1.25;color:#f5ead8;font-weight:700;text-transform:uppercase;letter-spacing:.8pt;}
+.cv-tema-sub{margin-top:3.2mm;color:#b9aa90;font-size:10.4pt;line-height:1.45;font-style:italic;}
+.cv-rodape{margin-top:auto;width:100%;padding-top:8mm;}
+.cv-rodape-titulo{font-size:11pt;letter-spacing:1.6pt;text-transform:uppercase;color:#c9a84c;font-weight:700;}
+.cv-rodape-sub{margin-top:2.5mm;font-family:Arial,sans-serif;font-size:7.8pt;letter-spacing:1pt;text-transform:uppercase;color:#8a8a7a;}
+.cv-rodape-linha{margin:4mm auto 0;width:48mm;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.8),transparent);}
+@media screen and (max-width:768px){.capa-entrada{min-height:100svh;}.cv-titulo{font-size:clamp(22pt,8vw,33pt);}.cv-frase{font-size:clamp(11pt,4vw,15pt);max-width:100%;}}
+
+/* ===== BLOCOS DO ALUNO — VERSÃO 2 ===== */
+.bloco-aluno{position:relative;margin:12px 0;border-radius:3px;page-break-inside:avoid;z-index:1;}
+.bloco-aluno-header{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.bloco-aluno-icone{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11pt;flex-shrink:0;line-height:1;}
+.bloco-aluno-label{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+.bloco-aluno p{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.6;color:var(--ct);margin-bottom:5px;text-align:left;}
+
+/* Para Você Refletir — pg 2 */
+.bloco-refletir{background:rgba(144,80,32,0.06);border:1px solid rgba(144,80,32,0.22);border-left:4px solid var(--cor);padding:10px 12px;}
+.bloco-refletir .bloco-aluno-icone{background:var(--cor);color:#fff;}
+.bloco-refletir .bloco-aluno-label{color:var(--cor);}
+.bloco-refletir-linha{border-bottom:1px dashed rgba(144,80,32,0.25);height:22px;margin-top:4px;}
+
+/* Conexão Bíblica — pg 3 */
+.bloco-conexao{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.3);border-left:4px solid var(--ouro);padding:10px 12px;}
+.bloco-conexao .bloco-aluno-icone{background:var(--ouro);color:#2a1505;}
+.bloco-conexao .bloco-aluno-label{color:#7a5c10;}
+.bloco-conexao cite{font-family:'EB Garamond',serif;font-style:italic;font-size:9.5pt;color:#5a4010;display:block;margin-top:5px;padding-left:10px;border-left:2px solid rgba(201,168,76,0.5);line-height:1.55;}
+
+/* Sabia Que? — pg 4 */
+.bloco-sabia{background:rgba(139,26,26,0.05);border:1px solid rgba(139,26,26,0.2);border-left:4px solid var(--vermelho);padding:10px 12px;}
+.bloco-sabia .bloco-aluno-icone{background:var(--vermelho);color:#fff;}
+.bloco-sabia .bloco-aluno-label{color:var(--vermelho);}
+
+/* Pense Nisso — pg 5 */
+.bloco-pense{background:linear-gradient(135deg,rgba(144,80,32,0.05),rgba(201,168,76,0.05));border:1px solid rgba(144,80,32,0.18);border-top:3px solid var(--ouro);padding:10px 12px;}
+.bloco-pense .bloco-aluno-icone{background:linear-gradient(135deg,var(--cor),var(--ouro));color:#fff;}
+.bloco-pense .bloco-aluno-label{color:#7a5c10;}
+.bloco-pense-destaque{font-family:'Cinzel',serif;font-size:9.5pt;color:var(--cor);font-style:normal;font-weight:700;display:block;text-align:center;margin:6px 0 4px;line-height:1.4;}
+
+/* Leve para a Sua Vida — pg 6 */
+.bloco-leve{background:var(--creme);border:1px solid rgba(201,168,76,0.3);border-radius:3px;padding:10px 12px;}
+.bloco-leve .bloco-aluno-header{border-bottom:1px solid rgba(144,80,32,0.15);padding-bottom:6px;margin-bottom:8px;}
+.bloco-leve .bloco-aluno-icone{background:linear-gradient(135deg,var(--ouro),#e8a020);color:#fff;}
+.bloco-leve .bloco-aluno-label{color:var(--cor);}
+.bloco-leve-item{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start;}
+.bloco-leve-num{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);font-weight:700;flex-shrink:0;width:14px;line-height:1.5;}
+.bloco-leve-item p{margin-bottom:0;font-size:9.5pt;}
+
+/* ===== QR CODE BLOCO ===== */
+.bloco-qr{position:relative;z-index:1;margin:10px 0;display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(144,80,32,0.04),rgba(201,168,76,0.06));border:1px solid rgba(144,80,32,0.18);border-left:4px solid var(--ouro);border-radius:2px;padding:10px 12px;}
+.bloco-qr-canvas{flex-shrink:0;width:68px;height:68px;background:#fff;border:2px solid rgba(201,168,76,0.35);border-radius:2px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.bloco-qr-canvas canvas,.bloco-qr-canvas img{width:64px!important;height:64px!important;display:block;}
+.bloco-qr-info{flex:1;}
+.bloco-qr-label{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:3px;}
+.bloco-qr-titulo{font-family:'Cinzel',serif;font-size:9pt;font-weight:700;color:var(--cor);line-height:1.3;margin-bottom:3px;}
+.bloco-qr-desc{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#666;line-height:1.4;}
+.bloco-qr-url{font-family:'Oswald',sans-serif;font-size:6.5pt;color:#999;letter-spacing:0.5px;margin-top:4px;word-break:break-all;}
+
+@media print{
+    body{background:none;}
+    #capaEntradaRevista,.painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm,.int-linhas{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON VOL. II<span>Lição 08 · A Queda da Babilônia</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<div aria-label="Abrir lição 08" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<div class="cv-wrap">
+<div class="cv-textura"></div><div class="cv-vinheta"></div>
+<div class="cv-moldura"></div><div class="cv-simbolo">✦</div>
+<div class="cv-inner">
+<div class="cv-badge"><span>Vol. II</span><span class="cv-badge-sep"></span><span>Estudos Escatológicos</span></div>
+<div class="cv-titulo">ESCHATON</div>
+<div class="cv-subtitulo">A Palavra que Não Passará</div>
+<div class="cv-divisor"><span>✦</span></div>
+<div class="cv-frase">"O céu e a terra passarão, mas as minhas palavras não passarão."</div>
+<div class="cv-ref">Mateus 24:35</div>
+<div class="cv-faixa">
+<div class="cv-tema">Estudos Escatológicos Temáticos</div>
+<div class="cv-tema-sub">Temas do fim dos tempos apresentados a partir das passagens-chave das Escrituras.</div>
+</div>
+<div class="cv-rodape">
+<div class="cv-rodape-titulo">Escola Bíblica Dominical</div>
+<div class="cv-rodape-sub">Jovens Adultos · 13 lições</div>
+<div class="cv-rodape-linha"></div>
+</div>
+</div>
+</div>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<div id="conteudoLicao">
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">08</div>
+<div class="cvol"><div class="cvol-num">.</div><div class="cvol-linha"></div></div>
+<div class="ccon">
+<div class="cser">Eschaton · A Palavra que Não Passará</div>
+<div class="cref">Apocalipse 17:1 — 18:24</div>
+<div class="ctit">A Queda da Babilônia</div>
+<div class="cver">
+            "Caiu, caiu a grande Babilônia, e se tornou morada de demônios, e covil de todo espírito imundo... porque todas as nações beberam do vinho da ira da sua fornicação."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 18:2-3</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>Introdução</h2>
+<p class="cap">Há uma cidade que nunca existiu e, ao mesmo tempo, existe em cada século. Babilônia — o nome ecoa através da história bíblica como o símbolo supremo de tudo que se levanta contra Deus: o orgulho imperial, a sedução econômica, a idolatria travestida de prosperidade. No Apocalipse, João a desvela em toda a sua glória aparente — e em toda a sua podridão interior.</p>
+<p>Esta lição não é um exercício de arqueologia histórica. É um espelho. Babilônia não morreu com Roma — ela ressurge em cada sistema que promete vida plena fora de Deus, que escraviza os vulneráveis e que exige adoração. Reconhecê-la é o primeiro passo para obedecer ao chamado: "Saí dela, povo meu."</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Por que estudar a queda de Babilônia?</div>
+<p>Porque a Igreja precisa de clareza sobre onde está e a que serve. O cristão que não reconhece Babilônia é o cristão que já está dentro dela sem perceber. Estudar Apocalipse 17-18 é aprender a ver o mundo com os olhos de Deus — e a escolher lealdades com plena consciência das consequências.</p>
+</div>
+<h3>O Fio Condutor desta Lição</h3>
+<p>Examinaremos o contexto histórico e literário de Babilônia, a exegese das passagens centrais de Apocalipse 18, a teologia do julgamento de Deus sobre sistemas políticos e econômicos, e uma seção específica sobre a lamentação e o aleluia que respondem à queda.</p>
+<div class="bloco-aluno bloco-refletir">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">✎</div>
+<span class="bloco-aluno-label">Para Você Refletir</span>
+</div>
+<p>Antes de estudar, pare um momento: em que área da sua vida você percebe que Babilônia tem mais influência — seus hábitos de consumo, suas ambições profissionais, seus valores culturais? Anote livremente.</p>
+<div class="bloco-refletir-linha"></div>
+<div class="bloco-refletir-linha"></div>
+<div class="bloco-refletir-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 TEXTO BIBLICO -->
+<div class="lbl">Página 3 · Texto Bíblico</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>A Passagem-Base</h2>
+<div class="texto-biblico">
+<div class="texto-biblico-ref">Apocalipse 18:2-5</div>
+<p>"Caiu, caiu a grande Babilônia, e se tornou morada de demônios, e covil de todo espírito imundo, e covil de toda ave imunda e aborrecível. Porque todas as nações beberam do vinho da ira da sua fornicação, e os reis da terra se prostituíram com ela, e os mercadores da terra se enriqueceram com a abundância das suas delícias."</p>
+<p>"E ouvi outra voz do céu, que dizia: Saí dela, povo meu, para que não sejais participantes dos seus pecados, e para que não recebais das suas pragas. Porque os seus pecados amontoaram-se até ao céu, e Deus se lembrou das suas iniquidades."</p>
+<span class="ref-final">Apocalipse 18:2-5</span>
+</div>
+<div class="texto-biblico">
+<div class="texto-biblico-ref">Apocalipse 18:9-10</div>
+<p>"E os reis da terra, que com ela se prostituíram e viveram em delícias, chorarão e lamentarão sobre ela, quando virem a fumaça do seu incêndio. Estando de longe por causa do medo do seu tormento, dizendo: Ai! ai! a grande cidade de Babilônia, a forte cidade! Pois em uma hora veio o teu julgamento."</p>
+<span class="ref-final">Apocalipse 18:9-10</span>
+</div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Identificar Babilônia como símbolo do sistema mundial de corrupção e idolatria</li>
+<li>Examinar as três vozes de Apocalipse 18 — julgamento, saída e lamento</li>
+<li>Compreender o chamado "saí dela, povo meu" como separação cristã do mundo</li>
+<li>Aplicar a crítica profética ao consumismo, ao poder e à corrupção no presente</li>
+</ul>
+</div>
+<div class="bloco-aluno bloco-conexao">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">☍</div>
+<span class="bloco-aluno-label">Conexão Bíblica</span>
+</div>
+<p>O chamado "Saí dela" ecoa passagens do Antigo Testamento. Leia e relacione com o texto de hoje:</p>
+<cite>Isaías 48:20 — "Saí da Babilônia, fugi dos caldeus..."</cite>
+<cite>Jeremias 51:45 — "Saí do meio dela, povo meu, e salve cada um a sua vida..."</cite>
+<cite>2 Coríntios 6:17 — "...saí do meio deles, e apartai-vos, diz o Senhor..."</cite>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 CONTEXTO ORIGINAL -->
+<div class="lbl">Página 4 · I — Contexto Original</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>I — Contexto Original</h2>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Babilônia — Uma Cidade Real e um Símbolo</div>
+<p>Babilônia foi a maior potência do mundo antigo no século VI a.C. — destruiu Jerusalém, incendiou o Templo e levou Israel ao cativeiro. Para os judeus, o nome evocava opressão, idolatria e arrogância imperial. No Apocalipse, "Babilônia" é um codinome para Roma — a potência que dominava o mundo de João e perseguia os cristãos. Mas é também um símbolo atemporal de todo sistema humano que se ergue contra Deus, explora os fracos e seduz as nações com prosperidade falsa.</p>
+</div>
+<h3>Isaías 47 e Jeremias 50-51 — O Pano de Fundo</h3>
+<p>João constrói sua visão da queda de Babilônia a partir de dois grandes poemas proféticos: o lamento sobre a queda de Babilônia histórica em Isaías 47 e os oráculos de Jeremias 50-51. A linguagem é quase idêntica — o que confirma que João entende seu texto como o cumprimento escatológico dessas profecias veterotestamentárias. A "grande prostituta" de Apocalipse 17 ecoa o vocabulário de Jeremias sobre Babilônia como sedutora das nações.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Os Três Grupos de Lamentadores — Ap 18</div>
+<p>Quando Babilônia cai, três grupos lamentam sua queda "de longe" — por medo do tormento. Os <strong>reis da terra</strong> (Ap 18:9-10) que se prostituíram com ela; os <strong>mercadores</strong> (Ap 18:11-17) que enriqueceram com seu comércio; e os <strong>marinheiros</strong> (Ap 18:17-19) que lucraram com seu transporte. Cada grupo lamenta a perda do próprio lucro, não a morte de pessoas — a crítica econômica de João é demolidora.</p>
+</div>
+<h3>"Saí Dela, Povo Meu" — O Chamado do Êxodo</h3>
+<p>A voz de Ap 18:4 ecoa o chamado profético de Isaías 48:20 e Jeremias 51:45 para que Israel saísse da Babilônia histórica. Para a Igreja, o chamado não é geográfico — é uma separação de valores, lealdades e sistemas que competem com o senhorio de Cristo.</p>
+<div class="bloco-aluno bloco-sabia">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">ⓘ</div>
+<span class="bloco-aluno-label">Sabia Que?</span>
+</div>
+<p>A palavra "Babilônia" aparece 6 vezes no Novo Testamento — todas no livro do Apocalipse, exceto uma menção em 1 Pedro 5:13. Historiadores debatem se Pedro escrevia literalmente de Babilônia (Mesopotâmia) ou usando o codinome para Roma, assim como João. A maioria dos estudiosos entende que ambos os apóstolos usavam o nome como símbolo de resistência codificada sob perseguição imperial.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 EXEGESE -->
+<div class="lbl">Página 5 · II — Exegese Versículo a Versículo</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>II — Exegese da Passagem</h2>
+<h3>"A Grande Prostituta" — Ap 17:1</h3>
+<p>A imagem da prostituta — usada pelos profetas para descrever Israel infiel (Os 1-3; Ez 16; Jr 3) — é aqui aplicada ao sistema mundial que seduz as nações com promessas de prosperidade e prazer. A prostituta não é apenas um poder político — é um sistema de valores que faz as nações "beberem do vinho da ira da sua fornicação" (Ap 18:3). O vinho é sedutor; a ira é o que fica depois que a sedução passa.</p>
+<h3>"Caiu, caiu" — Ap 18:2</h3>
+<p>O duplo "caiu" ecoa Isaías 21:9 — o anúncio da queda da Babilônia histórica. No Apocalipse, a queda é anunciada no tempo passado antes de acontecer — a certeza profética é tão absoluta que o evento futuro pode ser descrito como já consumado. Deus já decretou a queda de todo sistema que se opõe a ele; a história apenas aguarda a execução do decreto.</p>
+<h3>"Em uma hora" — Ap 18:10, 17, 19</h3>
+<p>A expressão "em uma hora" aparece três vezes no lamento dos que perderam tudo com a queda de Babilônia. O que parecia eterno e sólido — o Império Romano, o sistema econômico global, a prosperidade das nações — desmorona em um instante. Isso é advertência: nada construído sobre a areia do sistema mundial é permanente.</p>
+<h3>A Lista de Mercadorias — Ap 18:12-13</h3>
+<p>A lista de mercadorias perdidas na queda de Babilônia é reveladora: ouro, prata, pedras preciosas, roupas finas, madeiras raras, marfim, bronze, ferro, mármore, especiarias, vinho, azeite, trigo, gado — e, por último, "corpos e almas de homens" (Ap 18:13). O sistema de Babilônia escraviza pessoas como mercadoria. A crítica de João ao comércio escravagista de Roma é explícita e demolidora.</p>
+<div class="bloco-aluno bloco-pense">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">⊙</div>
+<span class="bloco-aluno-label">Pense Nisso</span>
+</div>
+<span class="bloco-pense-destaque">"Corpos e almas de homens" — Ap 18:13</span>
+<p>A lista de mercadorias de Babilônia termina com pessoas. João coloca seres humanos na mesma categoria que ouro, marfim e especiarias. Quando um sistema econômico trata pessoas como recurso, insumo ou número — não como imagem de Deus — ele reproduz a lógica de Babilônia. Onde você vê isso hoje?</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 TEOLOGIA -->
+<div class="lbl">Página 6 · III — Teologia da Passagem</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>III-Teologia da Passagem</h2>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">O que essa passagem revela sobre Deus</div>
+<p>Deus é o Senhor da economia e da política — não apenas da religião. Sua crítica ao sistema de Babilônia é econômica, política e social: ela "enriqueceu os mercadores" (Ap 18:3), "escravizou corpos e almas" (Ap 18:13) e "embriagou as nações" (Ap 18:3). O Deus do Apocalipse não é um Deus privatizado que cuida apenas da "espiritualidade" — é o Senhor de toda a realidade que julga sistemas econômicos e políticos com a mesma seriedade com que julga pecados individuais.</p>
+</div>
+<h3>Duas Respostas Distintas — Ap 18 e 19</h3>
+<p>Diante da queda de Babilônia, dois grupos reagem de forma oposta. Os reis, mercadores e marinheiros choram e lamentam (Ap 18:9-19) — perderam seus lucros. O céu, os apóstolos e os profetas são convocados a regozijar-se (Ap 18:20) — a justiça foi feita. O mesmo evento é tragédia para os que investiram no sistema errado e aleluia para os que mantiveram sua lealdade ao Cordeiro.</p>
+<h3>Babilônia como Realidade Presente</h3>
+<p>Para os leitores de João, Babilônia era Roma — concreta, presente e opressiva. Para cada geração de cristãos, Babilônia assume a forma do sistema dominante que exige lealdade, seduz com prosperidade e persegue os fiéis. O critério para identificar Babilônia em cada época: qual sistema promete vida plena fora de Deus? Qual poder exige adoração? Qual economia escraviza os vulneráveis?</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">O Cântico do Aleluia — Ap 19:1-3</div>
+<p>Imediatamente após a queda de Babilônia, o céu ecoa com "Aleluia!" — a única vez que essa palavra aparece no NT. A adoração é a resposta adequada ao julgamento justo de Deus. Não é grito de vingança — é celebração da santidade de Deus e da libertação dos seus servos.</p>
+</div>
+<div class="bloco-aluno bloco-leve">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">➔</div>
+<span class="bloco-aluno-label">Leve para a Sua Vida</span>
+</div>
+<div class="bloco-leve-item">
+<span class="bloco-leve-num">1</span>
+<p><strong>Esta semana</strong>, identifique um "vinho de Babilônia" que tem exercido influência sobre você — uma promessa cultural, um hábito de consumo ou uma lealdade que compete com Cristo.</p>
+</div>
+<div class="bloco-leve-item">
+<span class="bloco-leve-num">2</span>
+<p><strong>Ore</strong> usando as palavras de Ap 18:4 como guia: peça ao Senhor clareza para reconhecer os valores do sistema que precisam ser abandonados.</p>
+</div>
+<div class="bloco-leve-item">
+<span class="bloco-leve-num">3</span>
+<p><strong>Compartilhe</strong> com um amigo ou familiar uma reflexão desta lição sobre como o julgamento de Deus sobre sistemas injustos traz esperança ao cristão.</p>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 SECAO IV -->
+<div class="lbl">Página 7 · IV — A Lamentação e o Aleluia</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>IV — A Lamentação e o Aleluia</h2>
+<h3>Os Três Grupos que Choram — Ap 18:9-19</h3>
+<p>Três grupos lamentam a queda de Babilônia — todos de longe, todos por medo, e nenhum por amor. Os <strong>reis</strong> lamentam o poder perdido (vv. 9-10); os <strong>mercadores</strong> lamentam os lucros perdidos (vv. 11-17a); os <strong>marinheiros</strong> lamentam os fretes perdidos (vv. 17b-19). Em cada lamento, a mesma frase: "em uma hora." O que levou séculos para construir desmorona instantaneamente. E ninguém chora pelas pessoas — todos choram pelas mercadorias.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">O Contraste Radical — Ap 18:20</div>
+<p>"Alegra-te sobre ela, ó céu, e vós, santos apóstolos e profetas; porque Deus julgou a vossa causa contra ela." Enquanto o mundo chora, o céu canta. O mesmo evento é tragédia para os que apostaram no sistema errado e libertação para os que mantiveram sua lealdade ao Cordeiro. A perspectiva determina tudo.</p>
+</div>
+<h3>O Cântico do Aleluia — Ap 19:1-4</h3>
+<p>"Aleluia!" — a única ocorrência desta palavra no Novo Testamento, repetida quatro vezes em Apocalipse 19:1-6. Não é um grito de vingança cruel — é a resposta santa de quem finalmente vê a justiça triunfar depois de séculos de opressão. O "Aleluia!" dos mártires e dos santos é a confirmação de que Deus ouviu o clamor dos que derramaram sangue sob o altar (Ap 6:9-10).</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">A Pedra no Mar — Ap 18:21</div>
+<p>Um anjo lança uma pedra como moinho no mar: "Com tal ímpeto será lançada a grande Babilônia, e nunca mais será achada." A imagem ecoa Jeremias 51:63-64, onde o profeta atirou ao Eufrates o rolo com as profecias contra Babilônia. A queda é total, irreversível e definitiva — não haverá recuperação, negociação ou apelação.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+<!-- PG 8 CONCLUSAO -->
+<div class="lbl">Página 8 · Conclusão</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">8</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>Conclusão</h2>
+<p class="cap">A queda de Babilônia não é uma notícia do futuro — é uma certeza do presente. Para quem lê o Apocalipse com fé, o decreto já foi assinado. A história ainda aguarda a execução, mas o resultado é tão certo que João pode descrevê-lo no passado: "Caiu, caiu." O cristão que sabe isso vive diferente: não investe no sistema errado, não chora quando o que sempre foi temporário finalmente acaba, e não se surpreende quando o que parecia eterno desmorona em uma hora.</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">O que esta lição nos ensinou</div>
+<p>Aprendemos que Babilônia é ao mesmo tempo uma realidade histórica — Roma no século I — e um símbolo atemporal de todo sistema que se opõe a Deus. Vimos que sua queda é anunciada com certeza profética absoluta, que os três grupos de lamentadores revelam a idolatria econômica do sistema, e que o chamado "Saí dela" é um chamado de separação de valores, não de fuga geográfica. E aprendemos que a resposta correta à queda de Babilônia é o "Aleluia!" — não a vingança, mas a adoração.</p>
+</div>
+<h3>A Pergunta que Permanece</h3>
+<p>Cada geração precisa responder: onde está minha Babilônia? Qual sistema exige minha lealdade, seduz com seus vinhos e escraviza quem eu deveria amar? O critério não muda: todo poder que promete vida plena fora de Deus, que acumula riqueza às custas dos vulneráveis e que persegue os fiéis — essa é Babilônia. E a ela, o povo de Deus recebe um só comando: "Saí."</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Ponte para as próximas lições</div>
+<p>A queda de Babilônia prepara o cenário para a ceia das bodas do Cordeiro (Ap 19:6-10) — tema da próxima lição. Enquanto Babilônia cai, a noiva do Cordeiro se prepara. São dois destinos opostos para dois tipos de pessoas: os que viveram para Babilônia e os que viveram para o Cordeiro.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">8</span></div>
+</div>
+<!-- PG 9 APLICACAO -->
+<div class="lbl">Página 9 · Aplicação Direta</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>Aplicação Direta</h2>
+<p class="cap">"Saí dela, povo meu" (Ap 18:4) — esse chamado não é monasticismo geográfico. O cristão não abandona o mundo; ele recusa a lógica do mundo. A diferença é entre habitação e participação: habitar o mundo é uma necessidade; participar de seus valores, lealdades e sistemas de idolatria é o que deve ser evitado. Essa distinção exige discernimento constante e coragem prática.</p>
+<div class="bloco-apl">
+<div class="bloco-apl-titulo">Para esta semana</div>
+<p>Primeiro: a lista de mercadorias de Ap 18:12-13 termina com "corpos e almas de homens" — o sistema de Babilônia escraviza pessoas. Examine sua própria participação em sistemas econômicos: sua forma de consumir, investir e trabalhar explora ou dignifica os vulneráveis? Segundo: os mercadores lamentam "em uma hora" — a rapidez da queda do que parecia eterno. Quais certezas materiais ou profissionais você está tratando como permanentes, quando são temporárias? Terceiro: o céu é convocado a regozijar-se com a queda de Babilônia — a justiça foi feita. Há injustiças em sua vida ou comunidade que você precisa confiar ao Senhor, em vez de tentar resolver pelos próprios meios?</p>
+</div>
+<div class="sep"><span>✦</span></div>
+<h3>Para Refletir</h3>
+<p>João descreve Babilônia como sedutora que faz as nações "beberem do vinho da sua fornicação" — o vinho é atraente; a ira é o que vem depois. Quais "vinhos" da cultura contemporânea são atrativos para você — formas de sucesso, prazer ou status que competem com o senhorio de Cristo — e que consequências esses vinhos carregam que raramente são mostradas?</p>
+<div class="memorizar">
+<div class="memorizar-titulo">✦ Versículo para Memorizar</div>
+<p>"Saí dela, povo meu, para que não sejais participantes dos seus pecados, e para que não recebais das suas pragas."</p>
+<p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 18:4</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">9</span></div>
+</div>
+<!-- PG 10 QUESTOES -->
+<div class="lbl">Página 10 · Questões e Anotações</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 08 · Vol. II</span><span class="pht">A Queda da Babilônia</span></div>
+<h2>Questões para Reflexão</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">Babilônia representa Roma para os leitores do século I, mas também todo sistema que se ergue contra Deus e escraviza os vulneráveis. Qual sistema contemporâneo — econômico, político ou cultural — você reconhece como manifestação do espírito de Babilônia? Quais são seus critérios de identificação?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Os mercadores lamentam a queda de Babilônia porque perderam seus lucros — eles não choram por pessoas, mas por mercadorias. A lista termina com "corpos e almas de homens." Como essa crítica econômica de João dialoga com as estruturas de exploração presentes no Brasil contemporâneo?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">"Saí dela, povo meu" é um chamado de separação de valores, não de isolamento geográfico. Como o cristão pratica essa separação enquanto permanece no mundo — em seus relacionamentos, no trabalho, nas redes sociais e no consumo?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">O céu é convocado a regozijar-se com a queda de Babilônia (Ap 18:20), e o resultado é o "Aleluia!" de Ap 19:1. Como a certeza do julgamento justo de Deus sobre todos os sistemas de injustiça pode sustentar a fé do cristão que vive em meio à corrupção e à impunidade hoje?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="bloco-qr">
+<div class="bloco-qr-canvas" id="qrcode-licao08"></div>
+<div class="bloco-qr-info">
+<div class="bloco-qr-label">▶ Vídeo Complementar</div>
+<div class="bloco-qr-titulo">Apocalipse 18 e 19 — Sete Cenas da Queda de Babilônia</div>
+<div class="bloco-qr-desc">Leandro Lima · Aponte a câmera do celular para assistir ao vídeo de aprofundamento desta lição.</div>
+<div class="bloco-qr-url">youtube.com/watch?v=KvAs9LT4bhk</div>
+</div>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">10</span></div>
+</div>
+</div><!-- /conteudoLicao -->
+<script>
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+// Gera o QR Code
+(function(){
+    var el = document.getElementById('qrcode-licao08');
+    if(el && typeof QRCode !== 'undefined'){
+        new QRCode(el, {
+            text: 'https://www.youtube.com/watch?v=KvAs9LT4bhk',
+            width: 64,
+            height: 64,
+            colorDark: '#181008',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    }
+})();
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</div></body>
+</html>

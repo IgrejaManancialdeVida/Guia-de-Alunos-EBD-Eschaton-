@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton Vol. II · Lição 03 — Os 144.000</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#208b20;--grad1:#0a1a0a;--grad2:#102810;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--pergaminho:#f8f2e8;--creme:#f0e8d8;--cc:#ddd8cc;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#081208;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#040804,#081208);border-bottom:1px solid rgba(32,139,32,0.4);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:11pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:7.5pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#555;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--pergaminho);box-shadow:0 6px 30px rgba(0,0,0,0.6);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 22% 60%,rgba(32,139,32,0.4) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(201,168,76,0.15) 0%,transparent 45%);}
+.cgrd{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(201,168,76,1) 24px,rgba(201,168,76,1) 25px);}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#082008,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#020802,var(--cor) 50%,#80ff80);opacity:0.32;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.7;}
+.cvol{position:absolute;top:14mm;right:12mm;z-index:4;text-align:right;}
+.cvol-num{font-family:'Cinzel',serif;font-size:8pt;color:var(--ouro);letter-spacing:3px;opacity:0.7;}
+.cvol-linha{width:40px;height:1px;background:rgba(201,168,76,0.4);margin:4px 0 0 auto;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.ctit{font-family:'Cinzel',serif;font-size:24pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:10px;}
+.cref{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:rgba(201,168,76,0.6);text-transform:uppercase;margin-bottom:10px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--pergaminho);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--cor),var(--ouro) 60%,transparent);}
+.int::after{content:'';position:absolute;top:6px;left:14mm;right:12mm;height:1px;background:rgba(32,139,32,0.15);}
+.int-linhas{position:absolute;inset:0;top:20mm;pointer-events:none;background-image:repeating-linear-gradient(transparent,transparent 23px,rgba(32,139,32,0.06) 23px,rgba(32,139,32,0.06) 24px);z-index:0;}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.03);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;position:relative;z-index:1;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Cinzel',serif;font-weight:700;font-size:13pt;letter-spacing:1px;text-transform:uppercase;color:var(--cor);border-bottom:2px solid var(--cor);padding-bottom:6px;margin-bottom:12px;margin-top:4px;line-height:1.2;position:relative;z-index:1;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1.5px;color:#1a5a1a;text-transform:uppercase;margin-bottom:6px;margin-top:12px;position:relative;z-index:1;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;position:relative;z-index:1;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.texto-biblico{background:#fff;border:1px solid rgba(32,139,32,0.2);border-left:4px solid var(--cor);padding:12px 14px;margin:12px 0;position:relative;z-index:1;}
+.texto-biblico-ref{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.texto-biblico-ref::after{content:'';flex:1;height:1px;background:rgba(32,139,32,0.2);}
+.texto-biblico p{font-family:'EB Garamond',serif;font-style:italic;font-size:10.5pt;color:#1a3a1a;line-height:1.7;margin-bottom:4px;text-align:left;}
+.texto-biblico .ref-final{font-size:9pt;font-style:normal;color:var(--ouro);font-family:'Oswald',sans-serif;letter-spacing:1px;display:block;text-align:right;margin-top:4px;}
+.bloco-ctx{background:rgba(32,139,32,0.05);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-ctx-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.bloco-teo{background:rgba(201,168,76,0.08);border-left:3px solid var(--ouro);padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-teo-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#8a6a20;margin-bottom:6px;}
+.bloco-apl{background:linear-gradient(135deg,rgba(32,139,32,0.05),rgba(201,168,76,0.06));border:1px solid rgba(32,139,32,0.2);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-apl-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.memorizar{background:var(--creme);border:1px solid rgba(201,168,76,0.3);border-radius:2px;padding:10px 12px;margin:10px 0;text-align:center;position:relative;z-index:1;}
+.memorizar-titulo{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:6px;}
+.memorizar p{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:#1a3a1a;text-align:center;line-height:1.6;}
+.obj{background:var(--creme);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.obj ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--cor); font-size: 9pt; }
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.3;position:relative;z-index:1;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cor);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.q{margin-bottom:14px;position:relative;z-index:1;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid rgba(32,139,32,0.2);height:20px;margin-top:3px;}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;z-index:2;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#aaa;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;position:relative;z-index:1;}
+.lin{border-bottom:1px solid rgba(32,139,32,0.2);height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(32,139,32,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(32,139,32,0.08);border-radius:2px;}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+    .painel{padding:8px 12px;gap:8px;} .marca{font-size:9.5pt;} .marca span{font-size:7pt;}
+    .btn{padding:6px 10px;font-size:7.5pt;letter-spacing:1px;}
+    .area{margin-top:54px;padding:12px 8px 60px;gap:12px;}
+    .pag{width:100% !important;min-height:unset;box-shadow:0 4px 16px rgba(0,0,0,0.5);}
+    .lbl{margin-left:8px;}
+    .int{padding:6vw 5vw 10vw 5vw;min-height:unset;} .ccon{padding:0 5vw 8vw 5vw;}
+    .ctit{font-size:clamp(14pt,5.5vw,24pt);} .cver{font-size:9.5pt;}
+    h2{font-size:11pt;} h3{font-size:9.5pt;} p{font-size:9.5pt;line-height:1.6;}
+    .cap::first-letter{font-size:28pt;}
+    .texto-biblico{padding:10px 12px;}
+    .bloco-ctx,.bloco-teo,.bloco-apl,.memorizar,.obj{padding:8px 10px;}
+    .rod{padding:5px 5vw 5vw 5vw;position:relative;} .rod::before{left:5vw;right:5vw;}
+    .wm{display:none;} .int-linhas{display:none;}
+}
+@media screen and (max-width: 480px) {
+    .painel{flex-wrap:wrap;} .area{margin-top:96px;}
+    .int{padding:5vw 4vw 8vw 4vw;}
+    h2{font-size:10pt;} p{font-size:9pt;} .btn{padding:5px 8px;font-size:7pt;}
+}
+
+/* ===== CAPA ENTRADA VOL. II ===== */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;position:relative;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+.entrada-cta{position:absolute;bottom:32px;left:0;right:0;text-align:center;font-family:'Oswald',sans-serif;font-size:10pt;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.85);z-index:10;background:rgba(0,0,0,0.4);padding:10px;}
+.cv-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20mm 14mm 16mm;font-family:Georgia,'Times New Roman',serif;color:#f4ead6;background:radial-gradient(circle at 18% 14%,rgba(201,168,76,.16),transparent 22%),radial-gradient(circle at 82% 20%,rgba(192,57,43,.22),transparent 18%),radial-gradient(circle at 50% 75%,rgba(201,168,76,.08),transparent 26%),linear-gradient(180deg,#140b06 0%,#241409 34%,#2a1a0a 68%,#130b06 100%);}
+.cv-textura{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent 0 28px,rgba(201,168,76,.08) 28px 29px),repeating-linear-gradient(90deg,transparent 0 42px,rgba(201,168,76,.035) 42px 43px);mix-blend-mode:screen;}
+.cv-vinheta{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,transparent 42%,rgba(0,0,0,.45) 100%);}
+.cv-moldura{position:absolute;inset:0;pointer-events:none;}
+.cv-moldura::before{content:"";position:absolute;inset:14mm;border:1px solid rgba(201,168,76,.35);}
+.cv-moldura::after{content:"";position:absolute;inset:18mm;border:1px solid rgba(201,168,76,.14);}
+.cv-simbolo{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:170pt;font-weight:700;color:rgba(255,255,255,.035);letter-spacing:4px;transform:translateY(3mm);user-select:none;}
+.cv-inner{position:relative;z-index:2;width:100%;display:flex;flex-direction:column;align-items:center;flex:1;}
+.cv-badge{display:inline-flex;align-items:center;gap:3mm;padding:2.4mm 5mm;border:1px solid rgba(201,168,76,.36);color:#c9a84c;font-family:Arial,sans-serif;font-size:8.5pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-badge-sep{width:.3mm;height:4mm;background:rgba(201,168,76,.35);}
+.cv-titulo{margin-top:22mm;font-size:33pt;line-height:.95;letter-spacing:2.6pt;text-transform:uppercase;font-weight:700;}
+.cv-subtitulo{margin-top:4mm;color:#c0392b;font-family:Arial,sans-serif;font-size:10pt;letter-spacing:2.1pt;text-transform:uppercase;}
+.cv-divisor{margin-top:8mm;width:62mm;display:flex;align-items:center;gap:4mm;}
+.cv-divisor::before,.cv-divisor::after{content:"";flex:1;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.95),transparent);}
+.cv-divisor span{color:#c9a84c;font-size:13pt;}
+.cv-frase{margin-top:10mm;max-width:92mm;font-size:15.2pt;line-height:1.42;font-style:italic;color:rgba(232,213,160,.96);}
+.cv-ref{margin-top:4mm;color:#c9a84c;font-family:Arial,sans-serif;font-size:8.3pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-faixa{margin-top:auto;width:100%;padding:7mm 6mm;border-top:1px solid rgba(201,168,76,.20);border-bottom:1px solid rgba(201,168,76,.12);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));}
+.cv-tema{font-size:13pt;line-height:1.25;color:#f5ead8;font-weight:700;text-transform:uppercase;letter-spacing:.8pt;}
+.cv-tema-sub{margin-top:3.2mm;color:#b9aa90;font-size:10.4pt;line-height:1.45;font-style:italic;}
+.cv-rodape{margin-top:auto;width:100%;padding-top:8mm;}
+.cv-rodape-titulo{font-size:11pt;letter-spacing:1.6pt;text-transform:uppercase;color:#c9a84c;font-weight:700;}
+.cv-rodape-sub{margin-top:2.5mm;font-family:Arial,sans-serif;font-size:7.8pt;letter-spacing:1pt;text-transform:uppercase;color:#8a8a7a;}
+.cv-rodape-linha{margin:4mm auto 0;width:48mm;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.8),transparent);}
+@media screen and (max-width:768px){.capa-entrada{min-height:100svh;}.cv-titulo{font-size:clamp(22pt,8vw,33pt);}.cv-frase{font-size:clamp(11pt,4vw,15pt);max-width:100%;}}
+
+@media print{
+    body{background:none;}
+    #capaEntradaRevista,.painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm,.int-linhas{display:none;}
+}
+
+/* ===== BLOCOS DO ALUNO (versão 2) ===== */
+/* --- Para você refletir (pg 2) --- */
+.bloco-aluno-refletir{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.35);border-top:3px solid var(--ouro);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-refletir-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-refletir-titulo::before{content:'✦';font-size:7pt;}
+.bloco-aluno-refletir p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);font-style:italic;line-height:1.6;margin-bottom:6px;}
+.bloco-aluno-refletir .lra{border-bottom:1px solid rgba(201,168,76,0.3);height:22px;margin-top:4px;}
+
+/* --- Conexão bíblica (pg 3) --- */
+.bloco-aluno-conexao{background:rgba(32,139,32,0.05);border:1px solid rgba(32,139,32,0.25);border-left:4px solid var(--cor);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-conexao-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-conexao-titulo::before{content:'✦';font-size:7pt;}
+.bloco-aluno-conexao p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.6;margin-bottom:6px;}
+.bloco-aluno-conexao .ref-bib{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:1.5px;color:var(--cor);text-transform:uppercase;margin-top:4px;}
+.bloco-aluno-conexao .lra{border-bottom:1px solid rgba(32,139,32,0.2);height:22px;margin-top:4px;}
+
+/* --- Sabia que? (pg 4) --- */
+.bloco-aluno-sabia{background:linear-gradient(135deg,rgba(10,26,10,0.04),rgba(201,168,76,0.07));border:1px solid rgba(201,168,76,0.3);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-sabia-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#8a6a20;margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-sabia-titulo::before{content:'?';font-family:'Cinzel',serif;font-size:10pt;font-weight:700;color:var(--ouro);line-height:1;}
+.bloco-aluno-sabia p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.6;margin-bottom:0;}
+
+/* --- Pense nisso (pg 5) --- */
+.bloco-aluno-pense{background:#fff;border:1px solid rgba(32,139,32,0.18);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;text-align:center;}
+.bloco-aluno-pense-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;}
+.bloco-aluno-pense-icone{font-size:16pt;color:var(--ouro);margin-bottom:4px;display:block;}
+.bloco-aluno-pense p{font-family:'EB Garamond',serif;font-size:10.5pt;font-style:italic;color:#1a3a1a;line-height:1.65;text-align:center;margin-bottom:0;}
+.bloco-aluno-pense .lra{border-bottom:1px solid rgba(32,139,32,0.2);height:22px;margin-top:6px;text-align:left;}
+
+/* --- Leve para a sua vida (pg 6) --- */
+.bloco-aluno-leve{background:linear-gradient(135deg,rgba(32,139,32,0.06),rgba(201,168,76,0.07));border:1px solid rgba(32,139,32,0.22);border-radius:2px;padding:12px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-leve-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-leve-titulo::before{content:'→';font-size:10pt;color:var(--ouro);}
+.bloco-aluno-leve p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.6;margin-bottom:6px;}
+.bloco-aluno-leve .lra{border-bottom:1px solid rgba(32,139,32,0.2);height:22px;margin-top:4px;}
+
+@media screen and (max-width:768px){
+    .bloco-aluno-refletir,.bloco-aluno-conexao,.bloco-aluno-sabia,.bloco-aluno-pense,.bloco-aluno-leve{padding:8px 10px;}
+}
+</style>
+</head>
+<body>
+
+<div class="painel">
+    <div class="marca">ESCHATON VOL. II<span>Lição 03 · Os 144.000</span></div>
+    <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+    <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+<div class="area">
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 03">
+    <div class="cv-wrap">
+        <div class="cv-textura"></div><div class="cv-vinheta"></div>
+        <div class="cv-moldura"></div><div class="cv-simbolo">✦</div>
+        <div class="cv-inner">
+            <div class="cv-badge"><span>Vol. II</span><span class="cv-badge-sep"></span><span>Estudos Escatológicos</span></div>
+            <div class="cv-titulo">ESCHATON</div>
+            <div class="cv-subtitulo">A Palavra que Não Passará</div>
+            <div class="cv-divisor"><span>✦</span></div>
+            <div class="cv-frase">"O céu e a terra passarão, mas as minhas palavras não passarão."</div>
+            <div class="cv-ref">Mateus 24:35</div>
+            <div class="cv-faixa">
+                <div class="cv-tema">Estudos Escatológicos Temáticos</div>
+                <div class="cv-tema-sub">Temas do fim dos tempos apresentados a partir das passagens-chave das Escrituras.</div>
+            </div>
+            <div class="cv-rodape">
+                <div class="cv-rodape-titulo">Escola Bíblica Dominical</div>
+                <div class="cv-rodape-sub">Jovens Adultos · 13 lições</div>
+                <div class="cv-rodape-linha"></div>
+            </div>
+        </div>
+    </div>
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<div id="conteudoLicao">
+
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">03</div>
+    <div class="cvol"><div class="cvol-num">.</div><div class="cvol-linha"></div></div>
+    <div class="ccon">
+        <div class="cser">Eschaton · A Palavra que Não Passará</div>
+        <div class="cref">Apocalipse 7:1-8 &middot; Apocalipse 14:1-5</div>
+        <div class="ctit">Os 144.000</div>
+        <div class="cver">
+            "E vi, e eis que o Cordeiro estava em pé sobre o monte Sião, e com ele cento e quarenta e quatro mil, que tinham o nome dele e o nome de seu Pai escrito nas suas frontes."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 14:1</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II &middot; EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Poucas imagens do Apocalipse geram tanta especulação quanto os 144.000. Grupos religiosos os reivindicam como sua elite espiritual. Pregadores sensacionalistas os identificam com judeus étnicos de uma era futura. Mas o que João realmente quer dizer com esse número? E por que essa resposta importa para o cristão hoje?</p>
+    <p>Esta lição convida ao que toda boa exegese exige: ler o Apocalipse com os olhos do século I, usando as ferramentas que o próprio livro oferece — a numerologia simbólica, o vocabulário do Antigo Testamento e a lógica interna da narrativa joanina.</p>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">Uma imagem, duas cenas</div>
+        <p>Os 144.000 aparecem em dois momentos distintos do Apocalipse: primeiro sendo selados para proteção (cap. 7), depois de pé vitoriosos com o Cordeiro no monte Sião (cap. 14). A mesma multidão, no início e no fim da jornada. Entender essas duas cenas em conjunto é a chave para interpretar corretamente quem eles são.</p>
+    </div>
+    <h3>O fio condutor desta lição</h3>
+    <p>Examinaremos o gênero literário do Apocalipse, a lógica numerológica do livro, e as duas passagens centrais — Apocalipse 7 e 14 — para discernir o que João comunica sobre o povo de Deus selado, protegido e vitorioso.</p>
+    <div class="bloco-aluno-refletir">
+        <div class="bloco-aluno-refletir-titulo">Para você refletir</div>
+        <p>Você já leu o Apocalipse esperando encontrar datas e previsões literais, ou como uma carta de encorajamento ao povo de Deus? Como essa perspectiva muda a forma de ler o livro?</p>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 TEXTO BIBLICO -->
+<div class="lbl">Página 3 · Texto bíblico</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>A passagem-base</h2>
+    <div class="texto-biblico">
+        <div class="texto-biblico-ref">Apocalipse 7:2-4</div>
+        <p>"E vi outro anjo subir do nascente do sol, tendo o selo do Deus vivo; e clamou em grande voz aos quatro anjos, aos quais fora dado prejudicar a terra e o mar, dizendo: Não prejudiqueis a terra, nem o mar, nem as árvores, até que selemos os servos do nosso Deus nas suas frontes."</p>
+        <p>"E ouvi o número dos selados: cento e quarenta e quatro mil selados de todas as tribos dos filhos de Israel."</p>
+        <span class="ref-final">Apocalipse 7:2-4</span>
+    </div>
+    <div class="texto-biblico">
+        <div class="texto-biblico-ref">Apocalipse 14:1-5</div>
+        <p>"E vi, e eis que o Cordeiro estava em pé sobre o monte Sião, e com ele cento e quarenta e quatro mil, que tinham o nome dele e o nome de seu Pai escrito nas suas frontes."</p>
+        <p>"Estes são os que não se contaminaram com mulheres, porque são virgens. São os que seguem o Cordeiro por onde quer que vá. Estes foram redimidos dentre os homens, como primícias para Deus e para o Cordeiro. E em sua boca não foi achada mentira, porque são sem mácula diante do trono de Deus."</p>
+        <span class="ref-final">Apocalipse 14:1, 4-5</span>
+    </div>
+    <div class="obj">
+        <div class="ot">Objetivos desta lição</div>
+        <ul>
+            <li>Examinar as duas aparições dos 144.000 em Apocalipse 7 e 14</li>
+            <li>Avaliar as interpretações literal (judeus étnicos) e simbólica (povo de Deus)</li>
+            <li>Compreender o "selo de Deus" como marca de proteção e pertencimento</li>
+            <li>Aplicar o chamado à pureza, fidelidade e testemunho ao cristão hoje</li>
+        </ul>
+    </div>
+    <div class="bloco-aluno-conexao">
+        <div class="bloco-aluno-conexao-titulo">Conexão bíblica</div>
+        <p>Compare a cena do selo em Apocalipse 7:2-4 com Ezequiel 9:4-6 e Êxodo 8:22-23. O que o padrão bíblico de proteção antes do julgamento revela sobre o caráter de Deus? O que esses três textos têm em comum?</p>
+        <div class="ref-bib">Ez 9:4-6 · Êx 8:22-23 · Ap 7:2-4</div>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 CONTEXTO ORIGINAL -->
+<div class="lbl">Página 4 · Contexto original</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>I - Contexto original</h2>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">O Gênero Literário do Apocalipse</div>
+        <p>Antes de interpretar qualquer passagem do Apocalipse, é essencial reconhecer seu gênero literário: <em>apocalipse</em> — literatura profética altamente simbólica, com raízes no AT (Daniel, Ezequiel, Zacarias). João escreve usando um vocabulário visual e numerológico que seus leitores do século I reconheciam como linguagem simbólica, não fotografia do futuro. Isso não significa que o texto não fale de realidades — significa que a realidade é comunicada através de símbolos, não de relatórios jornalísticos.</p>
+    </div>
+    <h3>Os números no Apocalipse</h3>
+    <p>No Apocalipse, números têm significado teológico sistemático. O 7 representa perfeição/plenitude (sete igrejas, sete selos, sete trombetas, sete taças). O 12 representa o povo de Deus (12 tribos de Israel, 12 apóstolos). O 1000 representa multidão imensa ou completude. Portanto, 144.000 = 12 x 12 x 1000 — a plenitude completa do povo de Deus, sem nenhum faltando.</p>
+    <h3>Onde os 144.000 aparecem</h3>
+    <p>Os 144.000 aparecem em duas cenas distintas no Apocalipse. Em Apocalipse 7:1-8, estão sendo "selados" antes dos julgamentos — protegidos para suportar as tribulações vindouras. Em Apocalipse 14:1-5, estão de pé com o Cordeiro no monte Sião, vitoriosos — cantando um cântico novo que só eles podem aprender. A narrativa vai do início ao fim: selados para a missão, vitoriosos na consumação.</p>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">O Paralelo com Ezequiel 9</div>
+        <p>A cena do selo em Apocalipse 7 ecoa Ezequiel 9:4-6, onde Deus ordena que um anjo marque a fronte dos que gemem pelas abominações de Jerusalém — os fiéis são marcados antes do julgamento sobre os infiéis. O princípio é o mesmo: o povo de Deus é protegido e identificado antes do julgamento cair.</p>
+    </div>
+    <div class="bloco-aluno-sabia">
+        <div class="bloco-aluno-sabia-titulo">Sabia que?</div>
+        <p>A tribo de Dã foi omitida da lista dos 144.000 em Apocalipse 7, e teólogos debatem o motivo desde o século II. Ireneu de Lião (c. 180 d.C.) especulou que o anticristo sairia da tribo de Dã, baseando-se em Jeremias 8:16. A omissão pode também refletir a associação histórica de Dã com a idolatria em Israel (Jz 18; 1 Rs 12:28-29) — reforçando o caráter simbólico, e não étnico, da lista.</p>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 EXEGESE -->
+<div class="lbl">Página 5 · Exegese versículo a versículo</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>II - Exegese da Passagem</h2>
+    <h3>"Das tribos dos filhos de Israel" — Ap 7:4</h3>
+    <p>A lista das doze tribos em Apocalipse 7:5-8 é incomum: inclui a tribo de Manassés (filho de José) mas omite a tribo de Dã — uma substituição sem precedente no AT. Isso é um sinal de que João não está listando o Israel étnico histórico de forma convencional. Ele está usando a estrutura das doze tribos como símbolo do povo de Deus completo e redimido — a nova Israel constituída em Cristo.</p>
+    <h3>"Que não se contaminaram com mulheres" — Ap 14:4</h3>
+    <p>Interpretar essa frase literalmente levaria à conclusão de que os 144.000 são homens celibatários — o que conflita com todo o ensinamento paulino sobre o casamento como bom e honroso (Hb 13:4; 1 Co 7). A linguagem é simbólica: no AT, a idolatria é sistematicamente descrita como "prostituição" espiritual (Os 1-3; Jr 3). "Não se contaminar com mulheres" significa não ter se comprometido com a idolatria e os sistemas do mundo — fidelidade espiritual total ao Cordeiro.</p>
+    <h3>"Primícias para Deus e para o Cordeiro" — Ap 14:4</h3>
+    <p>A palavra "primícias" (<em>aparchê</em>) remete ao primeiro fruto da colheita oferecido a Deus como penhor do restante. Os 144.000 como "primícias" sugere que representam o início de uma colheita maior — não um grupo exclusivo e fechado, mas os primeiros de uma multidão incontável (cf. Ap 7:9 — a grande multidão que nenhum homem pode numerar).</p>
+    <h3>"Sem mácula diante do trono" — Ap 14:5</h3>
+    <p>A ausência de mentira e mácula não descreve perfeição moral conquistada, mas santidade imputada pelo sangue do Cordeiro. O mesmo vocabulário é usado em Efésios 5:27 para a Igreja que Cristo apresentará "sem mácula nem ruga" — toda a Igreja, não uma elite.</p>
+    <div class="bloco-aluno-pense">
+        <span class="bloco-aluno-pense-icone">✦</span>
+        <div class="bloco-aluno-pense-titulo">Pense nisso</div>
+        <p>Se "não se contaminar com mulheres" é uma metáfora de fidelidade espiritual, e não celibato literal — quais são as "idolatrias" concretas que disputam sua lealdade ao Cordeiro hoje? Quais lealdades concorrentes você carrega sem perceber?</p>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 TEOLOGIA -->
+<div class="lbl">Página 6 · Teologia da passagem</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>III - Teologia da passagem</h2>
+    <div class="bloco-teo">
+        <div class="bloco-teo-titulo">O que essa passagem revela sobre Deus</div>
+        <p>Deus protege os seus antes de agir em julgamento — o selo precede as tribulações. Isso é consistente com todo o padrão bíblico: Noé foi preservado antes do dilúvio; Ló foi retirado antes de Sodoma ser destruída; Israel foi selada antes das pragas do Egito (Ex 8:22-23). O Deus dos 144.000 é aquele que conhece os seus pelo nome e os preserva através do julgamento, não necessariamente deles.</p>
+    </div>
+    <h3>As duas interpretações principais</h3>
+    <p>A interpretação <strong>literal</strong> — adotada pelo dispensacionalismo — vê os 144.000 como judeus étnicos convertidos durante a Grande Tribulação após o arrebatamento da Igreja, que evangelizarão o mundo nesse período. A interpretação <strong>simbólica</strong> — adotada pelo amilenismo reformado — vê os 144.000 como a totalidade do povo de Deus de todas as eras, simbolizada pelo número perfeito 12 x 12 x 1000, identificada como Israel porque a Igreja é o verdadeiro Israel (Gl 6:16; Rm 9:6).</p>
+    <h3>A grande multidão de Apocalipse 7:9</h3>
+    <p>Imediatamente após os 144.000 selados (Ap 7:1-8), João vê "uma grande multidão que ninguém podia numerar, de todas as nações, tribos, povos e línguas" (Ap 7:9). A transição é significativa: o número limitado e preciso (144.000) contrasta com a multidão inumerável — sugerindo que os 144.000 são a representação simbólica daquela multidão, não um grupo separado e menor.</p>
+    <div class="bloco-teo">
+        <div class="bloco-teo-titulo">O Cântico que Só Eles Podem Aprender</div>
+        <p>"E ninguém podia aprender aquele cântico, senão os cento e quarenta e quatro mil" (Ap 14:3). O cântico da redenção só pode ser cantado por quem foi redimido — a experiência pessoal da graça é incompreensível para quem não a viveu. Isso não é exclusivismo arrogante — é a realidade da fé que transforma.</p>
+    </div>
+    <div class="bloco-aluno-leve">
+        <div class="bloco-aluno-leve-titulo">Leve para a sua vida</div>
+        <p>O "cântico novo" que só os redimidos podem cantar é a história única da sua salvação. Esta semana, compartilhe com alguém — de forma simples e pessoal — o que a graça de Deus fez em você. Não há argumento mais poderoso do que um testemunho vivido.</p>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 CONCLUSAO -->
+<div class="lbl">Página 7 · Conclusão</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>Conclusão</h2>
+    <p class="cap">Os 144.000 não são uma elite mística reservada a um grupo especial no futuro — são o retrato do povo de Deus completo: selado, protegido, fiel e vitorioso. João usa a linguagem simbólica que seus leitores do século I compreendiam perfeitamente para comunicar uma verdade consoladora: nenhum dos que pertencem ao Cordeiro ficará de fora.</p>
+    <div class="bloco-teo">
+        <div class="bloco-teo-titulo">O que esta lição nos ensinou</div>
+        <p>Aprendemos que o Apocalipse é literatura simbólica profética, e que seus números carregam significado teológico — não informação numérica literal. Vimos que 144.000 = 12 × 12 × 1000, a plenitude do povo de Deus. Examinamos as duas cenas — o selo e a vitória — como o início e o fim da jornada do mesmo povo. E descobrimos que as qualidades dos 144.000 são o perfil do discípulo fiel, não de uma elite inacessível.</p>
+    </div>
+    <h3>A certeza que permanece</h3>
+    <p>O selo de Deus precede o julgamento — sempre. Como Noé, como Ló, como Israel no Egito, o povo de Deus é marcado antes de a ira cair. Para o cristão, esse selo já foi dado: "o Espírito Santo da promessa, o qual é o penhor da nossa herança" (Ef 1:13-14). A questão não é se você está entre os 144.000 — é se o nome do Cordeiro está escrito em sua fronte.</p>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">Ponte para as próximas lições</div>
+        <p>As lições seguintes continuarão desdobrando os julgamentos do Apocalipse — as sete trombetas e as sete taças. O selo estudado hoje é a garantia de proteção do povo de Deus durante esses julgamentos. Conhecer os 144.000 é conhecer a segurança daqueles que pertencem ao Cordeiro.</p>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+<!-- PG 8 APLICACAO -->
+<div class="lbl">Página 8 · Aplicação direta</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>Aplicação direta</h2>
+    <p class="cap">Os 144.000 são descritos com quatro qualidades: não se contaminaram com a idolatria do mundo, seguem o Cordeiro aonde quer que vá, foram redimidos como primícias, e em sua boca não há mentira. Essas não são qualidades de uma elite — são o perfil do discípulo fiel. João está descrevendo o que o seguimento de Cristo parece em um mundo hostil.</p>
+    <div class="bloco-apl">
+        <div class="bloco-apl-titulo">Para esta semana</div>
+        <p>Primeiro: "não se contaminaram" com a idolatria do mundo. Quais sistemas, valores ou lealdades concorrentes com Cristo você carrega sem perceber — o sucesso profissional, a aprovação das pessoas, o conforto material? Onde sua fidelidade ao Cordeiro tem sido comprometida? Segundo: "seguem o Cordeiro aonde quer que vá" — não apenas quando é conveniente. Há algum chamado de Cristo em sua vida que você tem postergado por medo ou custo? Terceiro: "em sua boca não foi achada mentira." Examine sua comunicação — no trabalho, nas redes sociais, nos relacionamentos. Onde a verdade tem sido distorcida ou omitida por conveniência?</p>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>Para Refletir</h3>
+    <p>O "cântico novo" que só os redimidos podem cantar (Ap 14:3) sugere que há dimensões da graça de Deus que só podem ser conhecidas por experiência — não por argumentação. Como a história pessoal da sua redenção — o cântico que só você pode cantar — pode ser um instrumento único de testemunho para as pessoas ao seu redor?</p>
+    <div class="memorizar">
+        <div class="memorizar-titulo">&#10022; Versículo para Memorizar</div>
+        <p>"Estes são os que seguem o Cordeiro por onde quer que vá. Estes foram redimidos dentre os homens, como primícias para Deus e para o Cordeiro."</p>
+        <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 14:4</p>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II &middot; EBD Jovens Adultos</span><span class="rn">8</span></div>
+</div>
+
+<!-- PG 9 QUESTOES -->
+<div class="lbl">Página 9 · Questões e Anotações</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">9</div>
+    <div class="ph"><span class="phl">Lição 03 · Vol. II</span><span class="pht">Os 144.000</span></div>
+    <h2>Questões para reflexão</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">A lista das doze tribos em Apocalipse 7:5-8 omite Dã e inclui Manassés — uma substituição sem precedente no AT. O que isso indica sobre a natureza da lista? Como esse detalhe influencia a interpretação literal vs. simbólica dos 144.000?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">O número 144.000 é formado por 12 x 12 x 1000. Como o uso sistemático de números simbólicos no Apocalipse (7, 12, 1000) apoia ou desafia a interpretação literal desse número específico?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">"Não se contaminaram com mulheres" é uma expressão claramente simbólica para fidelidade espiritual — o mesmo vocabulário do AT para idolatria como "prostituição". Como esse princípio hermenêutico — entender linguagem simbólica do AT usada no Apocalipse — deve guiar a leitura de outras passagens do livro?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">Os 144.000 "seguem o Cordeiro aonde quer que vá." Em que áreas da sua vida você segue Cristo apenas até onde é conveniente — e para onde exatamente ele está chamando você a ir além da zona de conforto?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="bloco-qr" style="margin:14px 0 10px;display:flex;align-items:center;gap:14px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.3);border-left:3px solid var(--ouro);padding:10px 12px;position:relative;z-index:1;">
+        <div id="qrDiv" style="width:72px;height:72px;flex-shrink:0;border:1px solid rgba(201,168,76,0.2);background:#fff;display:flex;align-items:center;justify-content:center;"></div>
+        <div>
+            <div style="font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:4px;">▶ Assista</div>
+            <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:9.5pt;color:var(--ct);line-height:1.4;">Quem São os Cento e Quarenta e Quatro Mil?</div>
+            <div style="font-family:'Oswald',sans-serif;font-size:8pt;color:#888;letter-spacing:1px;margin-top:2px;">Paulo Junior · Série Apocalipse · YouTube</div>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var url="https://www.youtube.com/watch?v=GVDvB8yT8XY";
+        var script=document.createElement('script');
+        script.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+        script.onload=function(){
+            new QRCode(document.getElementById('qrDiv'),{
+                text:url,width:70,height:70,
+                colorDark:'#1a0808',colorLight:'#ffffff',
+                correctLevel:QRCode.CorrectLevel.M
+            });
+        };
+        document.head.appendChild(script);
+    })();
+    </script>
+    <h3 style="margin-top:12px;">Anotações</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II &middot; EBD Jovens Adultos</span><span class="rn">9</span></div>
+</div>
+
+</div><!-- /conteudoLicao -->
+</div><!-- /area -->
+<script>
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

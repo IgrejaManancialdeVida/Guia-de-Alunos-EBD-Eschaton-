@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eschaton Vol. II · Lição 02 — A Apostasia dos Últimos Tempos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cor:#8b5020;--grad1:#1a1008;--grad2:#2a1808;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--pergaminho:#f8f2e8;--creme:#f0e8d8;--cc:#ddd8cc;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#1a1005;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#0d0800,#1a1005);border-bottom:1px solid rgba(139,80,32,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:11pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:7.5pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#555;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--pergaminho);box-shadow:0 6px 30px rgba(0,0,0,0.6);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 22% 60%,rgba(139,80,32,0.5) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(201,168,76,0.15) 0%,transparent 45%);}
+.cgrd{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(201,168,76,1) 24px,rgba(201,168,76,1) 25px);}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#3a2008,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:58%;background:linear-gradient(160deg,#0d0800,var(--cor) 50%,#ffa040);opacity:0.35;}
+.clh{position:absolute;top:55%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.7;}
+.cvol{position:absolute;top:14mm;right:12mm;z-index:4;text-align:right;}
+.cvol-num{font-family:'Cinzel',serif;font-size:8pt;color:var(--ouro);letter-spacing:3px;opacity:0.7;}
+.cvol-linha{width:40px;height:1px;background:rgba(201,168,76,0.4);margin:4px 0 0 auto;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.ctit{font-family:'Cinzel',serif;font-size:20pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:10px;}
+.cref{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:rgba(201,168,76,0.6);text-transform:uppercase;margin-bottom:10px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--pergaminho);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--cor),var(--ouro) 60%,transparent);}
+.int::after{content:'';position:absolute;top:6px;left:14mm;right:12mm;height:1px;background:rgba(139,80,32,0.15);}
+.int-linhas{position:absolute;inset:0;top:20mm;pointer-events:none;background-image:repeating-linear-gradient(transparent,transparent 23px,rgba(139,80,32,0.06) 23px,rgba(139,80,32,0.06) 24px);z-index:0;}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.03);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;position:relative;z-index:1;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Cinzel',serif;font-weight:700;font-size:13pt;letter-spacing:1px;text-transform:uppercase;color:var(--cor);border-bottom:2px solid var(--cor);padding-bottom:6px;margin-bottom:12px;margin-top:4px;line-height:1.2;position:relative;z-index:1;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1.5px;color:#5a3a1a;text-transform:uppercase;margin-bottom:6px;margin-top:12px;position:relative;z-index:1;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;position:relative;z-index:1;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.texto-biblico{background:#fff;border:1px solid rgba(139,80,32,0.2);border-left:4px solid var(--cor);padding:12px 14px;margin:12px 0;position:relative;z-index:1;}
+.texto-biblico-ref{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.texto-biblico-ref::after{content:'';flex:1;height:1px;background:rgba(139,80,32,0.2);}
+.texto-biblico p{font-family:'EB Garamond',serif;font-style:italic;font-size:10.5pt;color:#3a2010;line-height:1.7;margin-bottom:4px;text-align:left;}
+.texto-biblico .ref-final{font-size:9pt;font-style:normal;color:var(--ouro);font-family:'Oswald',sans-serif;letter-spacing:1px;display:block;text-align:right;margin-top:4px;}
+.bloco-ctx{background:rgba(139,80,32,0.06);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-ctx-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.bloco-teo{background:rgba(201,168,76,0.08);border-left:3px solid var(--ouro);padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-teo-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#8a6a20;margin-bottom:6px;}
+.bloco-apl{background:linear-gradient(135deg,rgba(139,80,32,0.06),rgba(201,168,76,0.06));border:1px solid rgba(139,80,32,0.2);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-apl-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.memorizar{background:var(--creme);border:1px solid rgba(201,168,76,0.3);border-radius:2px;padding:10px 12px;margin:10px 0;text-align:center;position:relative;z-index:1;}
+.memorizar-titulo{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:6px;}
+.memorizar p{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:#3a2010;text-align:center;line-height:1.6;}
+.obj{background:var(--creme);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.obj ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--cor); font-size: 9pt; }
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.3;position:relative;z-index:1;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cor);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.q{margin-bottom:14px;position:relative;z-index:1;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid rgba(139,80,32,0.2);height:20px;margin-top:3px;}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;z-index:2;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#aaa;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;position:relative;z-index:1;}
+.lin{border-bottom:1px solid rgba(139,80,32,0.2);height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(139,80,32,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(139,80,32,0.08);border-radius:2px;}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+    .painel { padding: 8px 12px; gap: 8px; }
+    .marca { font-size: 9.5pt; }
+    .marca span { font-size: 7pt; }
+    .btn { padding: 6px 10px; font-size: 7.5pt; letter-spacing: 1px; }
+    .area { margin-top: 54px; padding: 12px 8px 60px; gap: 12px; }
+    .pag { width: min(100%, 148mm) !important; max-width: 148mm; min-height: unset; box-shadow: 0 4px 16px rgba(0,0,0,0.5); }
+    .lbl { margin-left: 8px; }
+    .int { padding: 6vw 5vw 10vw 5vw; min-height: unset; }
+    .ccon { padding: 0 5vw 8vw 5vw; }
+    .ctit { font-size: clamp(14pt, 5.5vw, 20pt); }
+    .cver { font-size: 9.5pt; }
+    h2 { font-size: 11pt; } h3 { font-size: 9.5pt; }
+    p { font-size: 9.5pt; line-height: 1.6; }
+    .cap::first-letter { font-size: 28pt; }
+    .texto-biblico { padding: 10px 12px; }
+    .bloco-ctx, .bloco-teo, .bloco-apl, .memorizar, .obj { padding: 8px 10px; }
+    .rod { padding: 5px 5vw 5vw 5vw; position: relative; }
+    .rod::before { left: 5vw; right: 5vw; }
+    .wm { display: none; } .int-linhas { display: none; }
+}
+@media screen and (max-width: 480px) {
+    .painel { flex-wrap: wrap; }
+    .area { margin-top: 96px; }
+    .int { padding: 5vw 4vw 8vw 4vw; }
+    h2 { font-size: 10pt; } p { font-size: 9pt; }
+    .btn { padding: 5px 8px; font-size: 7pt; }
+}
+
+
+/* ===== CAPA ENTRADA VOL. II ===== */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;position:relative;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+.entrada-cta{position:absolute;bottom:32px;left:0;right:0;text-align:center;font-family:'Oswald',sans-serif;font-size:10pt;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.85);z-index:10;background:rgba(0,0,0,0.4);padding:10px;}
+.cv-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20mm 14mm 16mm;font-family:Georgia,'Times New Roman',serif;color:#f4ead6;background:radial-gradient(circle at 18% 14%,rgba(201,168,76,.16),transparent 22%),radial-gradient(circle at 82% 20%,rgba(192,57,43,.22),transparent 18%),radial-gradient(circle at 50% 75%,rgba(201,168,76,.08),transparent 26%),linear-gradient(180deg,#140b06 0%,#241409 34%,#2a1a0a 68%,#130b06 100%);}
+.cv-textura{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent 0 28px,rgba(201,168,76,.08) 28px 29px),repeating-linear-gradient(90deg,transparent 0 42px,rgba(201,168,76,.035) 42px 43px);mix-blend-mode:screen;}
+.cv-vinheta{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,transparent 42%,rgba(0,0,0,.45) 100%);}
+.cv-moldura{position:absolute;inset:0;pointer-events:none;}
+.cv-moldura::before{content:"";position:absolute;inset:14mm;border:1px solid rgba(201,168,76,.35);}
+.cv-moldura::after{content:"";position:absolute;inset:18mm;border:1px solid rgba(201,168,76,.14);}
+.cv-simbolo{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:170pt;font-weight:700;color:rgba(255,255,255,.035);letter-spacing:4px;transform:translateY(3mm);user-select:none;}
+.cv-inner{position:relative;z-index:2;width:100%;display:flex;flex-direction:column;align-items:center;flex:1;}
+.cv-badge{display:inline-flex;align-items:center;gap:3mm;padding:2.4mm 5mm;border:1px solid rgba(201,168,76,.36);color:#c9a84c;font-family:Arial,sans-serif;font-size:8.5pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-badge-sep{width:.3mm;height:4mm;background:rgba(201,168,76,.35);}
+.cv-titulo{margin-top:22mm;font-size:33pt;line-height:.95;letter-spacing:2.6pt;text-transform:uppercase;font-weight:700;}
+.cv-subtitulo{margin-top:4mm;color:#c0392b;font-family:Arial,sans-serif;font-size:10pt;letter-spacing:2.1pt;text-transform:uppercase;}
+.cv-divisor{margin-top:8mm;width:62mm;display:flex;align-items:center;gap:4mm;}
+.cv-divisor::before,.cv-divisor::after{content:"";flex:1;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.95),transparent);}
+.cv-divisor span{color:#c9a84c;font-size:13pt;}
+.cv-frase{margin-top:10mm;max-width:92mm;font-size:15.2pt;line-height:1.42;font-style:italic;color:rgba(232,213,160,.96);}
+.cv-ref{margin-top:4mm;color:#c9a84c;font-family:Arial,sans-serif;font-size:8.3pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-faixa{margin-top:auto;width:100%;padding:7mm 6mm;border-top:1px solid rgba(201,168,76,.20);border-bottom:1px solid rgba(201,168,76,.12);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));}
+.cv-tema{font-size:13pt;line-height:1.25;color:#f5ead8;font-weight:700;text-transform:uppercase;letter-spacing:.8pt;}
+.cv-tema-sub{margin-top:3.2mm;color:#b9aa90;font-size:10.4pt;line-height:1.45;font-style:italic;}
+.cv-rodape{margin-top:auto;width:100%;padding-top:8mm;}
+.cv-rodape-titulo{font-size:11pt;letter-spacing:1.6pt;text-transform:uppercase;color:#c9a84c;font-weight:700;}
+.cv-rodape-sub{margin-top:2.5mm;font-family:Arial,sans-serif;font-size:7.8pt;letter-spacing:1pt;text-transform:uppercase;color:#8a8a7a;}
+.cv-rodape-linha{margin:4mm auto 0;width:48mm;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.8),transparent);}
+@media screen and (max-width:768px){
+    .capa-entrada{min-height:100svh;}
+    .cv-titulo{font-size:clamp(22pt,8vw,33pt);}
+    .cv-frase{font-size:clamp(11pt,4vw,15pt);max-width:100%;}
+}
+
+@media print{
+    body{background:none;}
+    #capaEntradaRevista,.painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm,.int-linhas{display:none;}
+}
+
+/* ===== BLOCOS DO ALUNO (versão 2) ===== */
+/* --- Para Você Refletir (pg 2) --- */
+.bloco-aluno-refletir{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.35);border-top:3px solid var(--ouro);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-refletir-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-refletir-titulo::before{content:'✦';font-size:7pt;}
+.bloco-aluno-refletir p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);font-style:italic;line-height:1.6;margin-bottom:6px;}
+.bloco-aluno-refletir .lra{border-bottom:1px solid rgba(201,168,76,0.3);height:22px;margin-top:4px;}
+
+/* --- Conexão Bíblica (pg 3) --- */
+.bloco-aluno-conexao{background:rgba(139,80,32,0.05);border:1px solid rgba(139,80,32,0.25);border-left:4px solid var(--cor);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-conexao-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-conexao-titulo::before{content:'✦';font-size:7pt;}
+.bloco-aluno-conexao p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.6;margin-bottom:6px;}
+.bloco-aluno-conexao .ref-bib{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:1.5px;color:var(--cor);text-transform:uppercase;margin-top:4px;}
+.bloco-aluno-conexao .lra{border-bottom:1px solid rgba(139,80,32,0.2);height:22px;margin-top:4px;}
+
+/* --- Sabia Que? (pg 4) --- */
+.bloco-aluno-sabia{background:linear-gradient(135deg,rgba(26,16,8,0.04),rgba(201,168,76,0.07));border:1px solid rgba(201,168,76,0.3);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-sabia-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#8a6a20;margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-sabia-titulo::before{content:'?';font-family:'Cinzel',serif;font-size:10pt;font-weight:700;color:var(--ouro);line-height:1;}
+.bloco-aluno-sabia p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.6;margin-bottom:0;}
+
+/* --- Pense Nisso (pg 5) --- */
+.bloco-aluno-pense{background:#fff;border:1px solid rgba(139,80,32,0.18);border-radius:2px;padding:11px 13px;margin:12px 0;position:relative;z-index:1;text-align:center;}
+.bloco-aluno-pense-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;}
+.bloco-aluno-pense-icone{font-size:16pt;color:var(--ouro);margin-bottom:4px;display:block;}
+.bloco-aluno-pense p{font-family:'EB Garamond',serif;font-size:10.5pt;font-style:italic;color:#3a2010;line-height:1.65;text-align:center;margin-bottom:0;}
+.bloco-aluno-pense .lra{border-bottom:1px solid rgba(139,80,32,0.2);height:22px;margin-top:6px;text-align:left;}
+
+/* --- Leve para a Sua Vida (pg 6) --- */
+.bloco-aluno-leve{background:linear-gradient(135deg,rgba(139,80,32,0.07),rgba(201,168,76,0.08));border:1px solid rgba(139,80,32,0.22);border-radius:2px;padding:12px 13px;margin:12px 0;position:relative;z-index:1;}
+.bloco-aluno-leve-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.bloco-aluno-leve-titulo::before{content:'→';font-size:10pt;color:var(--ouro);}
+.bloco-aluno-leve p{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.6;margin-bottom:6px;}
+.bloco-aluno-leve .lra{border-bottom:1px solid rgba(139,80,32,0.2);height:22px;margin-top:4px;}
+
+@media screen and (max-width:768px){
+    .bloco-aluno-refletir,.bloco-aluno-conexao,.bloco-aluno-sabia,.bloco-aluno-pense,.bloco-aluno-leve{padding:8px 10px;}
+}
+</style>
+</head>
+<body>
+
+<div class="painel">
+    <div class="marca">ESCHATON VOL. II<span>Lição 02 · A Apostasia dos Últimos Tempos</span></div>
+    <button class="btn be" onclick="toggleEdit()">&#9998; <span id="etxt">Editar</span></button>
+    <button class="btn bi" onclick="window.print()">&#128438; Imprimir</button>
+    <a href="index.html"><button class="btn bv">&#8592; Hub</button></a>
+</div>
+
+<div class="area">
+<div class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()" aria-label="Abrir lição 02">
+    <div class="cv-wrap">
+        <div class="cv-textura"></div>
+        <div class="cv-vinheta"></div>
+        <div class="cv-moldura"></div>
+        <div class="cv-simbolo">✦</div>
+        <div class="cv-inner">
+            <div class="cv-badge">
+                <span>Vol. II</span>
+                <span class="cv-badge-sep"></span>
+                <span>Estudos Escatológicos</span>
+            </div>
+            <div class="cv-titulo">ESCHATON</div>
+            <div class="cv-subtitulo">A Palavra que Não Passará</div>
+            <div class="cv-divisor"><span>✦</span></div>
+            <div class="cv-frase">"O céu e a terra passarão, mas as minhas palavras não passarão."</div>
+            <div class="cv-ref">Mateus 24:35</div>
+            <div class="cv-faixa">
+                <div class="cv-tema">Estudos Escatológicos Temáticos</div>
+                <div class="cv-tema-sub">Temas do fim dos tempos apresentados a partir das passagens-chave das Escrituras.</div>
+            </div>
+            <div class="cv-rodape">
+                <div class="cv-rodape-titulo">Escola Bíblica Dominical</div>
+                <div class="cv-rodape-sub">Jovens Adultos · 13 lições</div>
+                <div class="cv-rodape-linha"></div>
+            </div>
+        </div>
+    </div>
+    <div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<div id="conteudoLicao">
+
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+    <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+    <div class="cimg"></div><div class="clh"></div>
+    <div class="cnbg">02</div>
+    <div class="cvol"><div class="cvol-num">.</div><div class="cvol-linha"></div></div>
+    <div class="ccon">
+        <div class="cser">Eschaton · A Palavra que Não Passará</div>
+        <div class="cref">2 Tessalonicenses 2:1-12 &middot; 1 Timóteo 4:1-3</div>
+        <div class="ctit">A Apostasia dos Últimos Tempos</div>
+        <div class="cver">
+            "Não vos enganeis de maneira alguma; porque isso não acontecerá sem que antes venha a apostasia, e se manifeste o homem do pecado, o filho da perdição."
+            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">2 Tessalonicenses 2:3</span>
+        </div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II &middot; EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+
+<!-- PG 2 INTRODUCAO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 02 · Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>Introdução</h2>
+    <p class="cap">Em toda geração, a Igreja enfrenta vozes que desviam da fé. Mas a Bíblia não apenas registra essa realidade — ela a anuncia como sinal profético dos últimos tempos. Antes da volta de Cristo, o apóstolo Paulo afirma que uma grande apostasia marcará o cenário escatológico: um abandono massivo e deliberado da verdade do evangelho.</p>
+    <p>Esta lição não é um exercício de pessimismo — é um ato de vigilância. Conhecer os padrões do engano é a melhor proteção contra ele. Paulo não alertou os tessalonicenses para paralisá-los com medo, mas para firmá-los na verdade. O mesmo objetivo guia este estudo.</p>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">Por que estudar a apostasia?</div>
+        <p>Porque ela já está operando. Paulo afirma que "o mistério da iniquidade já está em ação" (2 Ts 2:7). Não se trata de um evento puramente futuro — é um processo presente que culminará num evento escatológico final. Identificar seus padrões é missão urgente para a Igreja contemporânea.</p>
+    </div>
+    <h3>O Fio Condutor desta Lição</h3>
+    <p>Examinaremos dois textos paulinos complementares: 2 Tessalonicenses 2, que trata da apostasia em escala cósmica e histórica; e 1 Timóteo 4, que a descreve em escala individual e eclesial. Juntos, eles formam um diagnóstico preciso do desvio doutrinário — e uma vacina contra ele.</p>
+    <div class="bloco-aluno-refletir">
+        <div class="bloco-aluno-refletir-titulo">Para Você Refletir</div>
+        <p>Você já percebeu vozes ao seu redor que desviam sutilmente da fé? Como você distingue entre um erro honesto e uma apostasia deliberada?</p>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+
+<!-- PG 3 TEXTO BIBLICO -->
+<div class="lbl">Página 3 · Texto Bíblico</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">2</div>
+    <div class="ph"><span class="phl">Lição 02 &middot; Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>A Passagem-Base</h2>
+    <div class="texto-biblico">
+        <div class="texto-biblico-ref">2 Tessalonicenses 2:1-4, 9-10</div>
+        <p>"Ora, irmãos, com respeito à vinda de nosso Senhor Jesus Cristo e à nossa reunião com ele, rogamos-vos que não vos movais facilmente do vosso propósito..."</p>
+        <p>"Não vos enganeis de maneira alguma; porque isso não acontecerá sem que antes venha a apostasia, e se manifeste o homem do pecado, o filho da perdição, o qual se opõe e se levanta contra tudo o que se chama Deus ou se adora; de sorte que ele se assenta no templo de Deus, ostentando-se como se fosse Deus."</p>
+        <p>"Aquele cuja vinda é segundo a eficácia de Satanás, com todo o poder, e sinais, e prodígios de mentira, e com todo o engano de injustiça para os que se perdem; porque não receberam o amor da verdade para serem salvos."</p>
+        <span class="ref-final">2 Tessalonicenses 2:1-4, 9-10</span>
+    </div>
+    <div class="texto-biblico">
+        <div class="texto-biblico-ref">1 Timóteo 4:1-2</div>
+        <p>"Mas o Espírito expressamente diz que nos últimos tempos alguns apostatarão da fé, dando ouvidos a espíritos enganadores e a doutrinas de demônios; pela hipocrisia de homens que falam mentiras e têm a sua própria consciência cauterizada."</p>
+        <span class="ref-final">1 Timóteo 4:1-2</span>
+    </div>
+    <div class="obj">
+        <div class="ot">Objetivos desta lição</div>
+        <ul>
+            <li>Compreender o significado bíblico de "apostasia" — abandono deliberado da fé</li>
+            <li>Examinar 2 Tessalonicenses 2 como texto central sobre o "homem do pecado"</li>
+            <li>Identificar os sinais da apostasia dos últimos tempos segundo Paulo e as cartas</li>
+            <li>Aplicar o discernimento bíblico diante do desvio doutrinário contemporâneo</li>
+        </ul>
+    </div>
+    <div class="bloco-aluno-conexao">
+        <div class="bloco-aluno-conexao-titulo">Conexão Bíblica</div>
+        <p>Compare 2 Tessalonicenses 2:3 com Hebreus 6:4-6 e 2 Pedro 2:20-22. O que esses textos revelam sobre a gravidade do abandono deliberado da fé? Que elemento comum você identifica neles?</p>
+        <div class="ref-bib">Hb 6:4-6 · 2 Pe 2:20-22 · 2 Ts 2:3</div>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+
+<!-- PG 4 CONTEXTO ORIGINAL -->
+<div class="lbl">Página 4 · Contexto Original</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">3</div>
+    <div class="ph"><span class="phl">Lição 02 &middot; Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>I — Contexto Original</h2>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">A Crise em Tessalônica</div>
+        <p>Paulo escreveu 2 Tessalonicenses por volta de 51-52 d.C., poucos meses após a primeira carta. A Igreja em Tessalônica estava em confusão — alguém havia espalhado a ideia de que "o dia do Senhor já chegou" (2 Ts 2:2). Alguns membros haviam parado de trabalhar, esperando o fim iminente. Paulo responde com urgência: não, o Dia ainda não chegou — pois dois eventos precederão: a apostasia e a manifestação do homem do pecado.</p>
+    </div>
+    <h3>O Que é Apostasia?</h3>
+    <p>A palavra grega <em>apostasia</em> — da qual vem o termo português — significa "afastamento", "abandono deliberado de uma posição anteriormente mantida". No contexto bíblico, é o abandono deliberado da fé cristã por parte de quem a professava. Não é incredulidade de quem nunca creu — é traição de quem conheceu a verdade e a rejeitou conscientemente (cf. Hb 6:4-6; 2 Pe 2:20-22).</p>
+    <h3>Paulo e Timóteo — Dois Ângulos</h3>
+    <p>Em 2 Tessalonicenses 2, Paulo trata da apostasia em escala cósmica — ligada ao surgimento do "homem do pecado" no palco da história. Em 1 Timóteo 4:1-3, o mesmo Paulo descreve a apostasia em escala eclesiástica e individual: pessoas que abandonam a fé "dando ouvidos a espíritos enganadores" e a "doutrinas de demônios". Os dois ângulos são complementares — a grande apostasia começa em corações individuais e se expande até o colapso institucional da fé.</p>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">O "Obstaculizador" — o Katechon</div>
+        <p>Paulo menciona em 2 Ts 2:6-7 uma força que "retém" a manifestação do homem do pecado. Em grego, <em>katechon</em> — "o que retém". A identidade desse obstaculizador é um dos maiores enigmas da teologia bíblica. Propostas históricas incluem: o Império Romano, a pregação do evangelho, o Espírito Santo, a Igreja ou o exercício legítimo da autoridade civil. O texto não permite identificação definitiva — apenas a certeza de que a apostasia final está sendo retida por algo que Deus controla.</p>
+    </div>
+    <div class="bloco-aluno-sabia">
+        <div class="bloco-aluno-sabia-titulo">Sabia Que?</div>
+        <p>A palavra grega <em>katechon</em> aparece apenas duas vezes no Novo Testamento — ambas em 2 Tessalonicenses 2:6-7 — e é um dos termos mais debatidos de toda a teologia bíblica. Ao longo dos séculos, teólogos como Tertuliano, João Crisóstomo, Agostinho e Karl Barth propuseram interpretações distintas, sem que o consenso tenha sido alcançado até hoje.</p>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+
+<!-- PG 5 EXEGESE -->
+<div class="lbl">Página 5 · Exegese Versículo a Versículo</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">4</div>
+    <div class="ph"><span class="phl">Lição 02 &middot; Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>II — Exegese da Passagem</h2>
+    <h3>"Não vos movais facilmente do vosso propósito" — 2:2</h3>
+    <p>O verbo grego <em>saleuo</em> — "ser abalado", "sacudido" — é usado para a ação do vento sobre um mastro de navio. Paulo adverte contra a instabilidade doutrinária causada por fontes não verificadas: "por espírito, por palavra ou por carta como se fosse nossa" (2 Ts 2:2). Três canais de desinformação — revelação espiritualista, pregação oral e documentos escritos. A lista é atualíssima no contexto das redes sociais e do sensacionalismo profético.</p>
+    <h3>"A apostasia" — 2:3</h3>
+    <p>O artigo definido grego — <em>he apostasia</em> — indica que Paulo se refere a uma apostasia específica, conhecida pelos tessalonicenses. Não é qualquer desvio, mas o grande abandono escatológico da fé — o colapso massivo da profissão cristã antes da manifestação do homem do pecado. A questão é: isso é um evento futuro ainda por cumprir-se, ou descreve um processo já em andamento desde o século I?</p>
+    <h3>"O homem do pecado... se assenta no templo de Deus" — 2:4</h3>
+    <p>A expressão "templo de Deus" é central e controvertida. Para o dispensacionalismo, é um Templo físico reconstruído em Jerusalém. Para a hermenêutica reformada, "templo de Deus" no NT sempre se refere à Igreja (1 Co 3:16; 2 Co 6:16; Ef 2:21) — o homem do pecado invadiria a própria comunidade cristã, não um edifício em Jerusalém.</p>
+    <h3>"Doutrinas de demônios" — 1 Tm 4:1</h3>
+    <p>Paulo especifica em 1 Timóteo 4:3 dois exemplos concretos dessas doutrinas: proibir o casamento e ordenar abstinência de alimentos. O princípio é amplo: qualquer ensinamento que adiciona condições humanas à graça de Deus ou distorce a criação boa de Deus é potencialmente "doutrina de demônio" — independentemente de quão espiritual soe.</p>
+    <div class="bloco-aluno-pense">
+        <span class="bloco-aluno-pense-icone">✦</span>
+        <div class="bloco-aluno-pense-titulo">Pense Nisso</div>
+        <p>Se Paulo já identificava "três canais de desinformação" no século I — revelação espiritualista, pregação oral e documentos escritos —, quantos canais existem hoje? Como o cristão pode desenvolver discernimento sem cair no cinismo ou no isolamento?</p>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+
+<!-- PG 6 TEOLOGIA -->
+<div class="lbl">Página 6 · Teologia da Passagem</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">5</div>
+    <div class="ph"><span class="phl">Lição 02 &middot; Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>III — Teologia da Passagem</h2>
+    <div class="bloco-teo">
+        <div class="bloco-teo-titulo">O que essa passagem revela sobre Deus</div>
+        <p>A soberania de Deus sobre a apostasia é absoluta: o homem do pecado só se manifesta quando Deus remove o obstaculizador (2 Ts 2:7-8). Nenhum desvio ocorre fora do controle divino. Mais profundamente: a apostasia é permitida como julgamento sobre aqueles que "não receberam o amor da verdade" (2 Ts 2:10) — Deus honra a rejeição humana da verdade enviando "operação de erro" (2 Ts 2:11). Deus não é cruel: ele confirma a escolha que as pessoas já fizeram livremente.</p>
+    </div>
+    <h3>A Apostasia como Processo e como Evento</h3>
+    <p>A Bíblia apresenta a apostasia em dois níveis: como <em>processo contínuo</em> — "já está operando o mistério da iniquidade" (2 Ts 2:7) — e como <em>evento escatológico final</em> — "a apostasia" que precede a manifestação do homem do pecado. A Igreja de todos os séculos enfrenta o processo; o evento final aguarda o momento determinado por Deus.</p>
+    <h3>A Cauterização da Consciência</h3>
+    <p>A imagem de 1 Timóteo 4:2 é médica e assustadora: "consciência cauterizada" — como tecido queimado que perde sensibilidade. O processo da apostasia não é repentino: é uma série de comprometimentos graduais com a mentira que progressivamente anestesia a capacidade de distinguir o verdadeiro do falso. Isso explica por que apóstatas frequentemente não percebem que apostataram — a consciência já não funciona como alerta.</p>
+    <div class="bloco-teo">
+        <div class="bloco-teo-titulo">A Resposta de Deus à Apostasia</div>
+        <p>O Senhor destruirá o homem do pecado "pelo sopro de sua boca" (2 Ts 2:8) — a mesma Palavra que criou o cosmos bastará para destruir a obra máxima do pecado. A apostasia não é a última palavra — a Parusia é.</p>
+    </div>
+    <div class="bloco-aluno-leve">
+        <div class="bloco-aluno-leve-titulo">Leve para a Sua Vida</div>
+        <p>A cauterização da consciência começa com pequenas concessões. Esta semana, identifique uma área em que você tem "negociado" com a verdade — algo que antes incomodava e agora já não incomoda tanto. O que você fará a respeito?</p>
+        <div class="lra"></div>
+        <div class="lra"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+
+<!-- PG 7 CONCLUSAO -->
+<div class="lbl">Página 7 · Conclusão</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 02 · Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>Conclusão</h2>
+    <p class="cap">A apostasia não é uma surpresa para Deus — é um evento anunciado, controlado e limitado por ele. Paulo não escreve para semear terror, mas para produzir firmeza. O cristão que compreende o território do engano está muito melhor posicionado para não ser enganado e para ajudar outros a permanecerem na fé.</p>
+    <div class="bloco-teo">
+        <div class="bloco-teo-titulo">O que esta lição nos ensinou</div>
+        <p>Vimos que a apostasia é ao mesmo tempo um processo já em curso — "o mistério da iniquidade já está em ação" — e um evento escatológico futuro. Analisamos o "katechon" como a força retentora que Deus usa para controlar o ritmo da história. E aprendemos que a cauterização da consciência é o mecanismo interno da apostasia — gradual, silenciosa e, por isso, especialmente perigosa.</p>
+    </div>
+    <h3>A Garantia que Permanece</h3>
+    <p>Diante de todo o cenário da apostasia, Paulo não termina em desespero — termina em doxologia: "Deus vos escolheu desde o princípio para a salvação" (2 Ts 2:13). A eleição divina é o fundamento inabalável sobre o qual a Igreja permanece de pé enquanto o mundo ao redor oscila.</p>
+    <div class="bloco-ctx">
+        <div class="bloco-ctx-titulo">Ponte para as próximas lições</div>
+        <p>Nas lições seguintes, continuaremos examinando os sinais dos últimos tempos — os 144.000, as trombetas, as duas testemunhas. A apostasia estudada hoje é o pano de fundo sobre o qual todos esses eventos se desenvolvem. Conhecê-la é condição para interpretar o restante com sabedoria.</p>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+
+<!-- PG 8 APLICACAO -->
+<div class="lbl">Página 8 · Aplicação Direta</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">6</div>
+    <div class="ph"><span class="phl">Lição 02 &middot; Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>Aplicação Direta</h2>
+    <p class="cap">Paulo não escreve sobre a apostasia para assustar — escreve para vacinar. O cristão que conhece o território do engano está melhor equipado para não ser enganado. A advertência apostólica não é para alimentar paranoia, mas para cultivar discernimento — a capacidade de distinguir o espírito da verdade do espírito do erro (1 Jo 4:6).</p>
+    <div class="bloco-apl">
+        <div class="bloco-apl-titulo">Para esta semana</div>
+        <p>Primeiro: Paulo diz que a apostasia começa em quem "não recebeu o amor da verdade" (2 Ts 2:10). Examine sua própria relação com a Palavra de Deus — você a ama, ou apenas a usa quando é conveniente? O amor pela verdade é o maior antídoto contra o engano. Segundo: identifique uma "doutrina de demônio" que circula no evangelicalismo brasileiro hoje — algum ensinamento que distorce a graça ou acrescenta condições humanas à salvação. Como você responderia a ela com base no texto? Terceiro: a consciência "cauterizada" perde a sensibilidade gradualmente. Há alguma área em sua vida onde você percebe que sua sensibilidade espiritual diminuiu nos últimos meses?</p>
+    </div>
+    <div class="sep"><span>&#10022;</span></div>
+    <h3>Para Refletir</h3>
+    <p>Paulo diz que o Senhor destruirá o homem do pecado "pelo sopro de sua boca e pelo esplendor da sua vinda" (2 Ts 2:8). A Palavra de Deus é suficiente para destruir qualquer sistema de engano — não importa quão sofisticado. Como isso deve moldar sua confiança na proclamação simples e fiel do evangelho em uma era de sofisticação ideológica e relativismo religioso?</p>
+    <div class="memorizar">
+        <div class="memorizar-titulo">&#10022; Versículo para Memorizar</div>
+        <p>"Mas nós devemos dar graças a Deus sempre por vós, irmãos amados do Senhor, porque Deus vos escolheu desde o princípio para a salvação, em santificação do Espírito e fé da verdade."</p>
+        <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">2 Tessalonicenses 2:13</p>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II &middot; EBD Jovens Adultos</span><span class="rn">8</span></div>
+</div>
+
+<!-- PG 9 QUESTOES -->
+<div class="lbl">Página 9 · Questões e Anotações</div>
+<div class="pag int">
+    <div class="int-linhas"></div>
+    <div class="wm">7</div>
+    <div class="ph"><span class="phl">Lição 02 &middot; Vol. II</span><span class="pht">A Apostasia dos Últimos Tempos</span></div>
+    <h2>Questões para Reflexão</h2>
+    <div class="q">
+        <div class="qn">Questão 01</div>
+        <div class="qt">Qual é a diferença entre incredulidade — nunca ter crido — e apostasia — ter crido e abandonado deliberadamente? Por que essa distinção importa teologicamente e pastoralmente?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 02</div>
+        <div class="qt">Paulo menciona o "katechon" — o obstaculizador que retém a manifestação do homem do pecado (2 Ts 2:6-7). Quais são as principais interpretações da identidade desse obstaculizador? Qual você considera mais plausível biblicamente?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 03</div>
+        <div class="qt">A expressão "templo de Deus" em 2 Ts 2:4 é interpretada como o Templo físico de Jerusalém (dispensacionalismo) ou como a Igreja (amilenismo). Quais textos do NT sustentam cada interpretação? Qual parece mais coerente com o uso paulino do termo?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="q">
+        <div class="qn">Questão 04</div>
+        <div class="qt">Paulo diz que os que se perdem "não receberam o amor da verdade" (2 Ts 2:10). Como o amor — e não apenas o conhecimento — pela verdade bíblica protege o cristão da apostasia? Qual é a diferença prática entre essas duas posturas?</div>
+        <div class="lr"></div><div class="lr"></div>
+    </div>
+    <div class="bloco-qr" style="margin:14px 0 10px;display:flex;align-items:center;gap:14px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.3);border-left:3px solid var(--ouro);padding:10px 12px;position:relative;z-index:1;">
+        <div id="qrDiv" style="width:72px;height:72px;flex-shrink:0;border:1px solid rgba(201,168,76,0.2);background:#fff;display:flex;align-items:center;justify-content:center;"></div>
+        <div>
+            <div style="font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:4px;">▶ Assista</div>
+            <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:9.5pt;color:var(--ct);line-height:1.4;">1 Timóteo 4.1–5 · A Apostasia nos Últimos Tempos</div>
+            <div style="font-family:'Oswald',sans-serif;font-size:8pt;color:#888;letter-spacing:1px;margin-top:2px;">Rev. Augustus Nicodemus · YouTube</div>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var url="https://www.youtube.com/watch?v=zgNhrh_00w8";
+        var script=document.createElement('script');
+        script.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+        script.onload=function(){
+            new QRCode(document.getElementById('qrDiv'),{
+                text:url,width:70,height:70,
+                colorDark:'#1a0808',colorLight:'#ffffff',
+                correctLevel:QRCode.CorrectLevel.M
+            });
+        };
+        document.head.appendChild(script);
+    })();
+    </script>
+    <h3 style="margin-top:12px;">Anotações</h3>
+    <div class="lins">
+        <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+    </div>
+    <div class="rod"><span class="rt">Eschaton Vol. II &middot; EBD Jovens Adultos</span><span class="rn">9</span></div>
+</div>
+
+</div><!-- /conteudoLicao -->
+</div><!-- /area -->
+<script>
+
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</body>
+</html>

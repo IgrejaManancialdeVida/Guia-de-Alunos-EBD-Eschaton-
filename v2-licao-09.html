@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton Vol. II · Lição 09 — A Ceia das Bodas do Cordeiro</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--cor:#7a5010;--grad1:#1a1204;--grad2:#261a04;--ouro:#c9a84c;--ouro-claro:#e8d5a0;--vermelho:#8b1a1a;--ct:#2a2a2a;--branco:#fdfbf7;--pergaminho:#f8f2e8;--creme:#f5edd8;--cc:#ddd8cc;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#100e04;font-family:'EB Garamond',Georgia,serif;}
+.painel{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#080600,#100e04);border-bottom:1px solid rgba(201,168,76,0.5);padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.marca{font-family:'Cinzel',serif;font-size:11pt;color:var(--ouro);letter-spacing:3px;margin-right:auto;}
+.marca span{font-family:'Oswald',sans-serif;font-size:7.5pt;color:#666;letter-spacing:1px;display:block;font-weight:300;}
+.btn{font-family:'Oswald',sans-serif;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;padding:7px 16px;border-radius:2px;transition:all 0.2s;white-space:nowrap;}
+.be{background:transparent;color:var(--ouro);border:1px solid rgba(201,168,76,0.4);}.be:hover{background:var(--ouro);color:#111;}
+.bi{background:var(--vermelho);color:#fff;}.bi:hover{filter:brightness(1.2);}
+.bv{background:transparent;color:#666;border:1px solid #333;font-size:8pt;}.bv:hover{color:#fff;border-color:#555;}
+.area{margin-top:60px;padding:24px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+@page{size:A5 portrait;margin:0;}
+.pag{width:148mm;min-height:210mm;background:var(--pergaminho);box-shadow:0 6px 30px rgba(0,0,0,0.6);position:relative;overflow:hidden;page-break-after:always;flex-shrink:0;}
+.lbl{font-family:'Oswald',sans-serif;font-size:8pt;color:#555;letter-spacing:2px;text-transform:uppercase;align-self:flex-start;margin-left:calc(50% - 74mm);margin-bottom:-8px;}
+.capa{background:linear-gradient(160deg,var(--grad1),var(--grad2));display:flex;flex-direction:column;justify-content:flex-end;min-height:210mm;padding:0;}
+.catm{position:absolute;inset:0;background:radial-gradient(ellipse at 22% 60%,rgba(201,168,76,0.4) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(255,220,100,0.18) 0%,transparent 45%),radial-gradient(ellipse at 55% 85%,rgba(100,70,10,0.45) 0%,transparent 50%);}
+.cgrd{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(201,168,76,1) 24px,rgba(201,168,76,1) 25px);}
+.cfx{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#261804,var(--cor),var(--ouro));}
+.cnbg{position:absolute;bottom:-20px;right:-10px;font-family:'Cinzel',serif;font-size:130pt;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;user-select:none;}
+.cimg{position:absolute;top:0;left:0;right:0;height:60%;background:linear-gradient(160deg,#0d0a02,var(--cor) 50%,#ffd060);opacity:0.42;}
+.clh{position:absolute;top:57%;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.75;}
+.cvol{position:absolute;top:14mm;right:12mm;z-index:4;text-align:right;}
+.cvol-num{font-family:'Cinzel',serif;font-size:8pt;color:var(--ouro);letter-spacing:3px;opacity:0.7;}
+.cvol-linha{width:40px;height:1px;background:rgba(201,168,76,0.4);margin:4px 0 0 auto;}
+.ccon{position:relative;z-index:3;padding:0 12mm 14mm 18mm;}
+.cser{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.cser::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);}
+.ctit{font-family:'Cinzel',serif;font-size:17pt;font-weight:700;color:#fff;line-height:1.1;text-transform:uppercase;margin-bottom:10px;}
+.cref{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;color:rgba(201,168,76,0.6);text-transform:uppercase;margin-bottom:10px;}
+.cver{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:var(--ouro-claro);line-height:1.6;border-left:2px solid var(--ouro);padding-left:10px;opacity:0.9;}
+.int{padding:14mm 12mm 18mm 14mm;min-height:210mm;position:relative;background:var(--pergaminho);}
+.int::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--cor),var(--ouro) 60%,transparent);}
+.int::after{content:'';position:absolute;top:6px;left:14mm;right:12mm;height:1px;background:rgba(122,80,16,0.15);}
+.int-linhas{position:absolute;inset:0;top:20mm;pointer-events:none;background-image:repeating-linear-gradient(transparent,transparent 23px,rgba(122,80,16,0.05) 23px,rgba(122,80,16,0.05) 24px);z-index:0;}
+.wm{position:absolute;bottom:14mm;right:10mm;font-family:'Cinzel',serif;font-size:52pt;font-weight:900;color:rgba(0,0,0,0.03);line-height:1;user-select:none;pointer-events:none;}
+.ph{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--cc);display:flex;justify-content:space-between;align-items:baseline;position:relative;z-index:1;}
+.phl{font-family:'Oswald',sans-serif;font-size:7.5pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;}
+.pht{font-family:'EB Garamond',serif;font-style:italic;font-size:8.5pt;color:#aaa;}
+h2{font-family:'Cinzel',serif;font-weight:700;font-size:13pt;letter-spacing:1px;text-transform:uppercase;color:var(--cor);border-bottom:2px solid var(--cor);padding-bottom:6px;margin-bottom:12px;margin-top:4px;line-height:1.2;position:relative;z-index:1;}
+h3{font-family:'Oswald',sans-serif;font-weight:400;font-size:10pt;letter-spacing:1.5px;color:#5a3a08;text-transform:uppercase;margin-bottom:6px;margin-top:12px;position:relative;z-index:1;}
+p{font-family:'EB Garamond',serif;font-size:10.5pt;line-height:1.65;color:var(--ct);text-align:justify;margin-bottom:9px;hyphens:auto;position:relative;z-index:1;}
+.cap::first-letter{font-family:'Cinzel',serif;font-size:38pt;font-weight:900;float:left;margin-right:5px;color:var(--cor);line-height:0.82;padding-top:2px;}
+.texto-biblico{background:#fff;border:1px solid rgba(122,80,16,0.2);border-left:4px solid var(--cor);padding:12px 14px;margin:12px 0;position:relative;z-index:1;}
+.texto-biblico-ref{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.texto-biblico-ref::after{content:'';flex:1;height:1px;background:rgba(122,80,16,0.2);}
+.texto-biblico p{font-family:'EB Garamond',serif;font-style:italic;font-size:10.5pt;color:#2a1800;line-height:1.7;margin-bottom:4px;text-align:left;}
+.texto-biblico .ref-final{font-size:9pt;font-style:normal;color:var(--ouro);font-family:'Oswald',sans-serif;letter-spacing:1px;display:block;text-align:right;margin-top:4px;}
+.bloco-ctx{background:rgba(122,80,16,0.05);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-ctx-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.bloco-teo{background:rgba(201,168,76,0.10);border-left:3px solid var(--ouro);padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-teo-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#8a6a20;margin-bottom:6px;}
+.bloco-apl{background:linear-gradient(135deg,rgba(122,80,16,0.05),rgba(201,168,76,0.08));border:1px solid rgba(122,80,16,0.2);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.bloco-apl-titulo{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.memorizar{background:var(--creme);border:1px solid rgba(201,168,76,0.4);border-radius:2px;padding:10px 12px;margin:10px 0;text-align:center;position:relative;z-index:1;}
+.memorizar-titulo{font-family:'Oswald',sans-serif;font-size:7.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);margin-bottom:6px;}
+.memorizar p{font-family:'EB Garamond',serif;font-style:italic;font-size:10pt;color:#2a1800;text-align:center;line-height:1.6;}
+.obj{background:var(--creme);border-radius:2px;padding:10px 12px;margin:10px 0;position:relative;z-index:1;}
+.obj .ot{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--cor);margin-bottom:6px;}
+.obj ul{list-style:none;padding:0;}
+.obj ul li{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);padding:2px 0 2px 14px;position:relative;line-height:1.4;}
+.obj ul li::before{content:'\2192';position:absolute;left:0;color:var(--cor);font-size:9pt;}
+.sep{display:flex;align-items:center;gap:10px;margin:12px 0;opacity:0.3;position:relative;z-index:1;}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--cor);}
+.sep span{font-size:8pt;color:var(--ouro);}
+.q{margin-bottom:14px;position:relative;z-index:1;}
+.qn{font-family:'Oswald',sans-serif;font-size:8pt;color:var(--cor);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.qt{font-family:'EB Garamond',serif;font-size:10pt;color:var(--ct);line-height:1.45;margin-bottom:5px;}
+.lr{border-bottom:1px solid rgba(122,80,16,0.2);height:20px;margin-top:3px;}
+.rod{position:absolute;bottom:0;left:0;right:0;padding:6px 12mm 6mm 14mm;display:flex;justify-content:space-between;align-items:center;z-index:2;}
+.rod::before{content:'';position:absolute;top:0;left:12mm;right:12mm;height:1px;background:linear-gradient(90deg,var(--cor),var(--ouro),transparent);opacity:0.3;}
+.rt{font-family:'Oswald',sans-serif;font-size:7pt;color:#aaa;letter-spacing:1px;text-transform:uppercase;}
+.rn{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);}
+.lins{display:flex;flex-direction:column;gap:18px;margin-top:10px;position:relative;z-index:1;}
+.lin{border-bottom:1px solid rgba(122,80,16,0.2);height:22px;}
+[contenteditable="true"]{outline:none;cursor:text;}
+[contenteditable="true"]:hover{background:rgba(122,80,16,0.05);border-radius:2px;}
+[contenteditable="true"]:focus{background:rgba(122,80,16,0.08);border-radius:2px;}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+    .painel{padding:8px 12px;gap:8px;} .marca{font-size:9.5pt;} .marca span{font-size:7pt;}
+    .btn{padding:6px 10px;font-size:7.5pt;letter-spacing:1px;}
+    .area{margin-top:54px;padding:12px 8px 60px;gap:12px;}
+    .pag{width:100% !important;min-height:unset;box-shadow:0 4px 16px rgba(0,0,0,0.5);}
+    .lbl{margin-left:8px;}
+    .int{padding:6vw 5vw 10vw 5vw;min-height:unset;} .ccon{padding:0 5vw 8vw 5vw;}
+    .ctit{font-size:clamp(13pt,5vw,17pt);} .cver{font-size:9.5pt;}
+    h2{font-size:11pt;} h3{font-size:9.5pt;} p{font-size:9.5pt;line-height:1.6;}
+    .cap::first-letter{font-size:28pt;}
+    .texto-biblico{padding:10px 12px;}
+    .bloco-ctx,.bloco-teo,.bloco-apl,.memorizar,.obj{padding:8px 10px;}
+    .rod{padding:5px 5vw 5vw 5vw;position:relative;} .rod::before{left:5vw;right:5vw;}
+    .wm{display:none;} .int-linhas{display:none;}
+}
+@media screen and (max-width: 480px) {
+    .painel{flex-wrap:wrap;} .area{margin-top:96px;}
+    .int{padding:5vw 4vw 8vw 4vw;}
+    h2{font-size:10pt;} p{font-size:9pt;} .btn{padding:5px 8px;font-size:7pt;}
+}
+
+/* ===== CAPA ENTRADA VOL. II ===== */
+.capa-entrada{background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;min-height:210mm;position:relative;}
+.capa-entrada::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.0) 40%,rgba(0,0,0,0.3) 100%);pointer-events:none;}
+body.licao-iniciada #capaEntradaRevista{display:none;}
+.entrada-cta{position:absolute;bottom:32px;left:0;right:0;text-align:center;font-family:'Oswald',sans-serif;font-size:10pt;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.85);z-index:10;background:rgba(0,0,0,0.4);padding:10px;}
+.cv-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20mm 14mm 16mm;font-family:Georgia,'Times New Roman',serif;color:#f4ead6;background:radial-gradient(circle at 18% 14%,rgba(201,168,76,.22),transparent 22%),radial-gradient(circle at 82% 20%,rgba(180,130,30,.25),transparent 18%),radial-gradient(circle at 50% 75%,rgba(201,168,76,.10),transparent 26%),linear-gradient(180deg,#130f03 0%,#201606 34%,#261c06 68%,#130f03 100%);}
+.cv-textura{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent 0 28px,rgba(201,168,76,.08) 28px 29px),repeating-linear-gradient(90deg,transparent 0 42px,rgba(201,168,76,.035) 42px 43px);mix-blend-mode:screen;}
+.cv-vinheta{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,transparent 42%,rgba(0,0,0,.45) 100%);}
+.cv-moldura{position:absolute;inset:0;pointer-events:none;}
+.cv-moldura::before{content:"";position:absolute;inset:14mm;border:1px solid rgba(201,168,76,.45);}
+.cv-moldura::after{content:"";position:absolute;inset:18mm;border:1px solid rgba(201,168,76,.18);}
+.cv-simbolo{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:170pt;font-weight:700;color:rgba(255,255,255,.035);letter-spacing:4px;transform:translateY(3mm);user-select:none;}
+.cv-inner{position:relative;z-index:2;width:100%;display:flex;flex-direction:column;align-items:center;flex:1;}
+.cv-badge{display:inline-flex;align-items:center;gap:3mm;padding:2.4mm 5mm;border:1px solid rgba(201,168,76,.45);color:#c9a84c;font-family:Arial,sans-serif;font-size:8.5pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-badge-sep{width:.3mm;height:4mm;background:rgba(201,168,76,.40);}
+.cv-titulo{margin-top:22mm;font-size:33pt;line-height:.95;letter-spacing:2.6pt;text-transform:uppercase;font-weight:700;}
+.cv-subtitulo{margin-top:4mm;color:#d4a830;font-family:Arial,sans-serif;font-size:10pt;letter-spacing:2.1pt;text-transform:uppercase;}
+.cv-divisor{margin-top:8mm;width:62mm;display:flex;align-items:center;gap:4mm;}
+.cv-divisor::before,.cv-divisor::after{content:"";flex:1;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.95),transparent);}
+.cv-divisor span{color:#c9a84c;font-size:13pt;}
+.cv-frase{margin-top:10mm;max-width:92mm;font-size:15.2pt;line-height:1.42;font-style:italic;color:rgba(232,213,160,.96);}
+.cv-ref{margin-top:4mm;color:#c9a84c;font-family:Arial,sans-serif;font-size:8.3pt;letter-spacing:1.2pt;text-transform:uppercase;}
+.cv-faixa{margin-top:auto;width:100%;padding:7mm 6mm;border-top:1px solid rgba(201,168,76,.25);border-bottom:1px solid rgba(201,168,76,.14);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));}
+.cv-tema{font-size:13pt;line-height:1.25;color:#f5ead8;font-weight:700;text-transform:uppercase;letter-spacing:.8pt;}
+.cv-tema-sub{margin-top:3.2mm;color:#b9aa90;font-size:10.4pt;line-height:1.45;font-style:italic;}
+.cv-rodape{margin-top:auto;width:100%;padding-top:8mm;}
+.cv-rodape-titulo{font-size:11pt;letter-spacing:1.6pt;text-transform:uppercase;color:#c9a84c;font-weight:700;}
+.cv-rodape-sub{margin-top:2.5mm;font-family:Arial,sans-serif;font-size:7.8pt;letter-spacing:1pt;text-transform:uppercase;color:#8a8a7a;}
+.cv-rodape-linha{margin:4mm auto 0;width:48mm;height:.35mm;background:linear-gradient(90deg,transparent,rgba(201,168,76,.8),transparent);}
+@media screen and (max-width:768px){.capa-entrada{min-height:100svh;}.cv-titulo{font-size:clamp(22pt,8vw,33pt);}.cv-frase{font-size:clamp(11pt,4vw,15pt);max-width:100%;}}
+
+/* ===== BLOCOS DO ALUNO — VERSÃO 2 ===== */
+.bloco-aluno{position:relative;margin:12px 0;border-radius:3px;page-break-inside:avoid;z-index:1;}
+.bloco-aluno-header{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.bloco-aluno-icone{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11pt;flex-shrink:0;line-height:1;}
+.bloco-aluno-label{font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+.bloco-aluno p{font-family:'EB Garamond',serif;font-size:10pt;line-height:1.6;color:var(--ct);margin-bottom:5px;text-align:left;}
+
+/* Para Você Refletir — pg 2 */
+.bloco-refletir{background:rgba(122,80,16,0.06);border:1px solid rgba(122,80,16,0.22);border-left:4px solid var(--cor);padding:10px 12px;}
+.bloco-refletir .bloco-aluno-icone{background:var(--cor);color:#fff;}
+.bloco-refletir .bloco-aluno-label{color:var(--cor);}
+.bloco-refletir-linha{border-bottom:1px dashed rgba(122,80,16,0.25);height:22px;margin-top:4px;}
+
+/* Conexão Bíblica — pg 3 */
+.bloco-conexao{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.32);border-left:4px solid var(--ouro);padding:10px 12px;}
+.bloco-conexao .bloco-aluno-icone{background:var(--ouro);color:#2a1800;}
+.bloco-conexao .bloco-aluno-label{color:#7a5c10;}
+.bloco-conexao cite{font-family:'EB Garamond',serif;font-style:italic;font-size:9.5pt;color:#5a3a08;display:block;margin-top:5px;padding-left:10px;border-left:2px solid rgba(201,168,76,0.5);line-height:1.55;}
+
+/* Sabia Que? — pg 4 */
+.bloco-sabia{background:rgba(100,70,10,0.05);border:1px solid rgba(122,80,16,0.22);border-left:4px solid var(--vermelho);padding:10px 12px;}
+.bloco-sabia .bloco-aluno-icone{background:var(--vermelho);color:#fff;}
+.bloco-sabia .bloco-aluno-label{color:var(--vermelho);}
+
+/* Pense Nisso — pg 5 */
+.bloco-pense{background:linear-gradient(135deg,rgba(122,80,16,0.05),rgba(201,168,76,0.07));border:1px solid rgba(122,80,16,0.18);border-top:3px solid var(--ouro);padding:10px 12px;}
+.bloco-pense .bloco-aluno-icone{background:linear-gradient(135deg,var(--cor),var(--ouro));color:#fff;}
+.bloco-pense .bloco-aluno-label{color:#7a5c10;}
+.bloco-pense-destaque{font-family:'Cinzel',serif;font-size:9.5pt;color:var(--cor);font-style:normal;font-weight:700;display:block;text-align:center;margin:6px 0 4px;line-height:1.4;}
+
+/* Leve para a Sua Vida — pg 6 */
+.bloco-leve{background:var(--creme);border:1px solid rgba(201,168,76,0.35);border-radius:3px;padding:10px 12px;}
+.bloco-leve .bloco-aluno-header{border-bottom:1px solid rgba(122,80,16,0.15);padding-bottom:6px;margin-bottom:8px;}
+.bloco-leve .bloco-aluno-icone{background:linear-gradient(135deg,var(--ouro),#d4940a);color:#fff;}
+.bloco-leve .bloco-aluno-label{color:var(--cor);}
+.bloco-leve-item{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start;}
+.bloco-leve-num{font-family:'Cinzel',serif;font-size:9pt;color:var(--ouro);font-weight:700;flex-shrink:0;width:14px;line-height:1.5;}
+.bloco-leve-item p{margin-bottom:0;font-size:9.5pt;}
+
+/* ===== QR CODE BLOCO — AJUSTADO PARA TELEMÓVEL ===== */
+.bloco-qr {
+    position: relative;
+    z-index: 10;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(122, 80, 16, 0.05), rgba(201, 168, 76, 0.08));
+    border: 1px solid rgba(122, 80, 16, 0.2);
+    border-left: 4px solid var(--ouro);
+    border-radius: 2px;
+    padding: 12px;
+}
+
+.bloco-qr-canvas {
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    background: #fff;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco-qr-canvas img {
+    width: 60px !important; /* Ligeiramente menor para dar margem */
+    height: 60px !important;
+    display: block !important;
+    object-fit: contain;
+}
+
+.bloco-qr-info { flex: 1; min-width: 0; }
+.bloco-qr-label { font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: 2px; text-transform: uppercase; color: #7a5010; margin-bottom: 4px; }
+.bloco-qr-titulo { font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; color: var(--ct); line-height: 1.3; margin-bottom: 3px; }
+.bloco-qr-desc { font-family: 'EB Garamond', serif; font-size: 9pt; color: #666; line-height: 1.4; }
+.bloco-qr-url { font-family: 'Oswald', sans-serif; font-size: 7pt; letter-spacing: 0.5px; color: var(--cor); opacity: 0.7; margin-top: 3px; }
+@media print{
+    body{background:none;}
+    #capaEntradaRevista,.painel,.lbl{display:none!important;}
+    .area{margin-top:0;padding:0;gap:0;}
+    .pag{box-shadow:none;page-break-after:always;page-break-inside:avoid;}
+    .wm,.int-linhas{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="painel">
+<div class="marca">ESCHATON VOL. II<span>Lição 09 · A Ceia das Bodas do Cordeiro</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<!-- CAPA ENTRADA -->
+<div aria-label="Abrir lição 09" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<div class="cv-wrap">
+<div class="cv-textura"></div><div class="cv-vinheta"></div>
+<div class="cv-moldura"></div><div class="cv-simbolo">✦</div>
+<div class="cv-inner">
+<div class="cv-badge"><span>Vol. II</span><span class="cv-badge-sep"></span><span>Estudos Escatológicos</span></div>
+<div class="cv-titulo">ESCHATON</div>
+<div class="cv-subtitulo">A Palavra que Não Passará</div>
+<div class="cv-divisor"><span>✦</span></div>
+<div class="cv-frase">"O céu e a terra passarão, mas as minhas palavras não passarão."</div>
+<div class="cv-ref">Mateus 24:35</div>
+<div class="cv-faixa">
+<div class="cv-tema">Estudos Escatológicos Temáticos</div>
+<div class="cv-tema-sub">Temas do fim dos tempos apresentados a partir das passagens-chave das Escrituras.</div>
+</div>
+<div class="cv-rodape">
+<div class="cv-rodape-titulo">Escola Bíblica Dominical</div>
+<div class="cv-rodape-sub">Jovens Adultos · 13 lições</div>
+<div class="cv-rodape-linha"></div>
+</div>
+</div>
+</div>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<div id="conteudoLicao">
+<!-- PG 1 CAPA -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">09</div>
+<div class="cvol"><div class="cvol-num">.</div><div class="cvol-linha"></div></div>
+<div class="ccon">
+<div class="cser">Eschaton · A Palavra que Não Passará</div>
+<div class="cref">Apocalipse 19:6-9 · João 3:29 · Efésios 5:25-27</div>
+<div class="ctit">A Ceia das Bodas do Cordeiro</div>
+<div class="cver">
+ "Alegremo-nos e regozijemo-nos, e demos glória a ele; porque são chegadas as bodas do Cordeiro, e a sua esposa já se aprontou. E foi-lhe dado que se vestisse de linho fino, puro e resplandecente; porque o linho fino são as justiças dos santos."
+ <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Apocalipse 19:7-8</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- PG 2 INTRODUÇÃO -->
+<div class="lbl">Página 2 · Introdução</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">2</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>Introdução</h2>
+<p class="cap">Depois dos julgamentos, depois das trombetas, depois da queda da Babilônia e do rugido do Aleluia celestial, o Apocalipse apresenta a mais bela das imagens escatológicas: um banquete. Não qualquer banquete — a Ceia das Bodas do Cordeiro, a celebração definitiva da união entre Cristo e a sua Igreja, o evento para o qual toda a história foi preparação e expectativa.</p>
+<p>Esta lição convida ao que toda boa exegese exige: ler Apocalipse 19:6-9 à luz de toda a tradição bíblica do casamento como metáfora da aliança entre Deus e o seu povo — do Éden ao Sinai, dos profetas a Paulo, culminando na visão final de João. A Ceia das Bodas não é apenas o encerramento do Apocalipse; é a resposta de Deus à pergunta mais profunda do coração humano: seremos amados para sempre?</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Uma metáfora que percorre toda a Bíblia</div>
+<p>O casamento como imagem da relação entre Deus e o seu povo não começa no Apocalipse. Já em Oseias 2:19-20, Deus prometeu desposar Israel para sempre. Em Efésios 5:25-32, Paulo revela que o casamento humano foi sempre uma parábola do relacionamento entre Cristo e a Igreja. O Apocalipse não inventa a metáfora — ele a consuma.</p>
+</div>
+<h3>O Fio Condutor desta Lição</h3>
+<p>Examinaremos o contexto da cena em Apocalipse 19, os paralelos veterotestamentários que constroem a imagem das bodas, a exegese dos versículos centrais, as duas principais leituras interpretativas, e a teologia que emerge dessa passagem — culminando na sua aplicação prática para o discípulo que vive como noiva à espera do noivo.</p>
+<div class="bloco-aluno bloco-refletir">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">✎</div>
+<span class="bloco-aluno-label">Para Você Refletir</span>
+</div>
+<p>A história termina com um banquete de bodas. Como essa imagem — comunhão íntima, celebração, amor eterno — muda a forma como você enxerga o seu destino final como cristão? O que você sente ao pensar que Deus deseja não apenas servos, mas uma noiva amada?</p>
+<div class="bloco-refletir-linha"></div>
+<div class="bloco-refletir-linha"></div>
+<div class="bloco-refletir-linha"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">2</span></div>
+</div>
+<!-- PG 3 TEXTO BÍBLICO -->
+<div class="lbl">Página 3 · Texto Bíblico</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">3</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>A Passagem-Base</h2>
+<div class="texto-biblico">
+<div class="texto-biblico-ref">Apocalipse 19:6-9</div>
+<p>"E ouvi como que a voz de uma grande multidão, e como que a voz de muitas águas, e como que a voz de grandes trovões, dizendo: Aleluia! porque já o Senhor nosso Deus Todo-Poderoso reina."</p>
+<p>"Alegremo-nos e regozijemo-nos, e demos glória a ele; porque são chegadas as bodas do Cordeiro, e a sua esposa já se aprontou. E foi-lhe dado que se vestisse de linho fino, puro e resplandecente; porque o linho fino são as justiças dos santos."</p>
+<p>"E disse-me ele: Escreve: Bem-aventurados os que são chamados à ceia das bodas do Cordeiro. E disse-me: Estas são as verdadeiras palavras de Deus."</p>
+<span class="ref-final">Apocalipse 19:6-9</span>
+</div>
+<div class="texto-biblico">
+<div class="texto-biblico-ref">Efésios 5:25-27</div>
+<p>"Maridos, amai vossas mulheres, como também Cristo amou a Igreja, e a si mesmo se entregou por ela; para a santificar, purificando-a com a lavagem da água pela palavra; para a apresentar a si mesmo Igreja gloriosa, sem mácula, nem ruga, nem coisa semelhante, mas santa e irrepreensível."</p>
+<span class="ref-final">Efésios 5:25-27</span>
+</div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Compreender a metáfora das bodas como fio condutor da aliança bíblica entre Deus e o seu povo</li>
+<li>Examinar o contexto de Apocalipse 19 e o significado da Ceia das Bodas do Cordeiro</li>
+<li>Identificar quem é a noiva, o que é o linho fino e o que significa estar "aprontada"</li>
+<li>Aplicar a postura de espera vigilante e fiel ao discipulado cristão no presente</li>
+</ul>
+</div>
+<div class="bloco-aluno bloco-conexao">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">☍</div>
+<span class="bloco-aluno-label">Conexão Bíblica</span>
+</div>
+<p>A metáfora nupcial percorre toda a Escritura. Leia e relacione com Apocalipse 19:7-9:</p>
+<cite>Oseias 2:19 — "E desposar-te-ei comigo para sempre..."</cite>
+<cite>Isaías 62:5 — "...como o noivo se alegra com a noiva, assim o teu Deus se alegrará contigo."</cite>
+<cite>João 3:29 — "O amigo do noivo, que está em pé e o ouve, alegra-se muito com a voz do noivo."</cite>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">3</span></div>
+</div>
+<!-- PG 4 I — CONTEXTO ORIGINAL -->
+<div class="lbl">Página 4 · I — Contexto Original</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>I — O Contexto das Bodas</h2>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Apocalipse 19 no Contexto do Livro</div>
+<p>Apocalipse 19 abre com o cântico do Aleluia mais exuberante de todo o livro — a resposta do céu à queda da grande Babilônia (Ap 18). Após o lamento do mundo diante da destruição do sistema que o seduzia, o céu explode em adoração: "Aleluia! porque já o Senhor nosso Deus Todo-Poderoso reina" (v.6). É nesse clima de vitória consumada que a cena das Bodas é revelada — não como sequência futura, mas como realidade já proclamada: "são chegadas as bodas do Cordeiro."</p>
+</div>
+<h3>O Casamento no Mundo Antigo e no Antigo Testamento</h3>
+<p>No mundo judaico do século I, o casamento se dava em três etapas: o noivado (contrato formal e juridicamente vinculante), a procissão do noivo até a casa da noiva e, finalmente, a festa de bodas — celebração que podia durar uma semana inteira. João usa essa estrutura para revelar o drama da redenção: o noivado foi o pacto eterno; a procissão é a encarnação e a segunda vinda; a festa é a eternidade.</p>
+<h3>A Tradição Profética do Casamento Divino</h3>
+<p>Os profetas usaram sistematicamente a metáfora nupcial para descrever a aliança entre Deus e Israel. Oseias casou-se com Gômer como sinal do amor de Deus por Israel infiel (Os 1–3). Isaías proclamou: "como o noivo se alegra com a noiva, assim o teu Deus se alegrará contigo" (Is 62:5). Jeremias descreveu a apostasia de Israel como adultério (Jr 3:1-8). João 3:29 apresenta João Batista como o "amigo do noivo" — e o noivo é Cristo. O Apocalipse é o capítulo final desse longo romance redentor.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">O Contexto Imediato: Após a Queda da Babilônia</div>
+<p>A Ceia das Bodas é anunciada imediatamente após a destruição da grande prostituta (Ap 17–18) — a figura que representa o sistema mundano de sedução e idolatria. O contraste é deliberado: de um lado, a meretriz que seduzia as nações com seu vinho; do outro, a noiva pura vestida de linho fino. O mundo oferece sedução. Cristo oferece aliança. O Apocalipse convida o leitor a escolher com quem quer se sentar à mesa.</p>
+</div>
+<div class="bloco-aluno bloco-sabia">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">ⓘ</div>
+<span class="bloco-aluno-label">Sabia Que?</span>
+</div>
+<p>No judaísmo do século I, o noivo percorria à noite o caminho até a casa da noiva em procissão com tochas acesas — exatamente a cena retratada na parábola das dez virgens (Mt 25:1-13). Os convidados que aguardavam precisavam ter azeite suficiente para manter suas lâmpadas acesas durante toda a espera. A imagem de vigilância e preparo era imediatamente compreendida pelos primeiros leitores de João.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">4</span></div>
+</div>
+<!-- PG 5 II-EXEGESE DA PASSAGEM -->
+<div class="lbl">Página 5 · II — Exegese da Passagem</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>II — Exegese da Passagem</h2>
+<h3>"São chegadas as bodas do Cordeiro" — v.7</h3>
+<p>O verbo grego está no aoristo — tempo que indica uma ação completada. João não diz "estão chegando" — diz "chegaram." A consumação já foi decretada nos conselhos eternos de Deus; o que resta é a sua manifestação na história. Para o cristão que vive entre os dois advimentos, isso significa que a festa já tem data marcada — e ele é convidado, não espectador.</p>
+<h3>"A sua esposa já se aprontou" — v.7</h3>
+<p>Quem é a esposa? O próprio livro responde: em Apocalipse 21:9-10, um dos mesmos anjos que apresentou as Bodas mostra a João a "noiva, esposa do Cordeiro" — e o que ele vê é a Nova Jerusalém descendo do céu. A noiva é a cidade; a cidade é o povo. A esposa do Cordeiro é a Igreja redimida em sua totalidade — não apenas os crentes individuais, mas a comunidade de todos os que foram comprados pelo seu sangue ao longo da história.</p>
+<h3>"Linho fino são as justiças dos santos" — v.8</h3>
+<p>O linho fino branco (<em>byssinos</em>) contrasta diretamente com a púrpura e a escarlata da prostituta Babilônia (Ap 17:4; 18:16). A vestimenta da noiva não é adquirida — "foi-lhe <em>dado</em>" (passivo divino): é dom de Deus. E o linho representa as "justiças dos santos" — no plural grego <em>dikaiōmata</em>, ações justas, frutos da fé. A roupa da noiva é, ao mesmo tempo, graça imputada e caráter transformado. Ela não se veste de seus próprios méritos — veste-se da justiça de Cristo que se torna vida santa.</p>
+<h3>"Bem-aventurados os que são chamados" — v.9</h3>
+<p>Esta é a quarta das sete bem-aventuranças do Apocalipse — e é a única que descreve um banquete. O chamado (<em>keklēmenoi</em>) é o convite eficaz da graça soberana: não são bem-aventurados os que se convidaram, mas os que foram chamados. A bem-aventurança não é para os que merecem a festa — é para os que responderam ao convite do noivo.</p>
+<div class="bloco-aluno bloco-pense">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">⊙</div>
+<span class="bloco-aluno-label">Pense Nisso</span>
+</div>
+<span class="bloco-pense-destaque">"Foi-lhe dado que se vestisse" — Ap 19:8</span>
+<p>O verbo está no passivo — a vestimenta da noiva é dom de Deus, não conquista própria. Ao mesmo tempo, ela "se aprontou" — voz média grega, ação reflexiva. A santificação é simultaneamente recebida e vivida. Como você tem correspondido à graça que Deus lhe deu para preparar sua "veste"?</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">5</span></div>
+</div>
+<!-- PG 6 III — TEOLOGIA DA PASSAGEM -->
+<div class="lbl">Página 6 · III — Teologia da Passagem</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>III — Teologia da Passagem</h2>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">O que essa passagem revela sobre Deus</div>
+<p>Deus não redime a humanidade por obrigação — redime por amor de aliança. A escolha da metáfora nupcial para descrever o destino final da história não é acidental: é a revelação mais íntima do coração de Deus. Ele não quer apenas servos obedientes — quer uma esposa amada. A escatologia cristã não termina com a execução de um contrato jurídico; termina com um banquete de bodas. O Deus do Apocalipse é o Noivo que preparou a festa, pagou o preço do resgate e vai buscar a sua noiva.</p>
+</div>
+<h3>A Ceia das Bodas e a Santa Ceia</h3>
+<p>Jesus institui a Ceia do Senhor com uma perspectiva escatológica explícita: "não beberei mais deste fruto da videira até aquele dia em que o beba novo convosco no reino de meu Pai" (Mt 26:29). A Santa Ceia não é apenas memorial — é antecipação. Cada vez que a Igreja parte o pão e bebe o cálice, ela proclama a morte do Senhor "até que ele venha" (1 Co 11:26). A mesa da comunhão presente aponta para a Ceia das Bodas futura. Celebrar a eucaristia é ensaiar o banquete eterno.</p>
+<h3>A Noiva que se Aprontou — Santidade como Preparação</h3>
+<p>Efésios 5:25-27 revela o processo pelo qual a noiva se aprontou: Cristo "a si mesmo se entregou por ela para a santificar, purificando-a com a lavagem da água pela palavra." A santificação da Igreja é obra de Cristo — mas ela não é passiva. A noiva coopera com a graça: ela "se aprontou" (Ap 19:7, voz média grega — ação reflexiva). O linho fino das justiças dos santos é fruto da vida transformada pela graça. Santidade não é condição para o amor de Deus — é resposta ao amor de Deus.</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">A Bênção dos Chamados</div>
+<p>A bem-aventurança de Apocalipse 19:9 é declarada por um anjo e confirmada com solenidade: "estas são as verdadeiras palavras de Deus." A festa não é hipotética — é certa. Os chamados são bem-aventurados não pelo que fazem, mas pelo Noivo que os amou e os chamou. A certeza da festa fundamenta a perseverança no caminho.</p>
+</div>
+<div class="bloco-aluno bloco-leve">
+<div class="bloco-aluno-header">
+<div class="bloco-aluno-icone">➔</div>
+<span class="bloco-aluno-label">Leve para a Sua Vida</span>
+</div>
+<div class="bloco-leve-item">
+<span class="bloco-leve-num">1</span>
+<p><strong>Na próxima Santa Ceia</strong> celebrada em sua igreja, participe com consciência escatológica: você está ensaiando a Ceia das Bodas. Lembre que cada pão partido é um "até que ele venha" (1 Co 11:26).</p>
+</div>
+<div class="bloco-leve-item">
+<span class="bloco-leve-num">2</span>
+<p><strong>Examine sua veste</strong> — quais ações desta semana refletem as "justiças dos santos"? Onde o linho está manchado e precisa da lavagem da Palavra (Ef 5:26)?</p>
+</div>
+<div class="bloco-leve-item">
+<span class="bloco-leve-num">3</span>
+<p><strong>Ore a partir de Ap 19:7</strong>, pedindo ao Senhor que o prepare como noiva fiel: "Senhor, que eu me apronte — em caráter, em fé e em santidade — para o encontro com o Noivo."</p>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">6</span></div>
+</div>
+<!-- PG 7 IV — AS INTERPRETAÇÕES PRINCIPAIS -->
+<div class="lbl">Página 7 · IV — As Interpretações Principais</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">7</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>IV — As Interpretações Principais</h2>
+<h3>A Interpretação Dispensacionalista</h3>
+<p>O dispensacionalismo distingue a noiva (a Igreja da era atual, arrebatada antes da Tribulação) dos "chamados à ceia" (santos do AT e da Tribulação, convidados como hóspedes). Nessa leitura, a Ceia das Bodas ocorre no céu durante os sete anos da Grande Tribulação terrestre, antes do retorno de Cristo para o milênio. A distinção entre "esposa" e "convidados" (v.9) seria literal e significaria dois grupos distintos de salvos com destinos e posições diferentes no reino.</p>
+<h3>A Interpretação Reformada Amilenista</h3>
+<p>O amilenarismo reformado vê a noiva como a totalidade do povo de Deus de todas as eras — Israel e Igreja, Antigo e Novo Testamento — reunidos em Cristo. "Esposa" e "chamados à ceia" não são dois grupos distintos, mas a mesma realidade descrita de ângulos diferentes: a noiva é a Igreja vista em sua identidade; os chamados são a Igreja vista em sua convocação. A Ceia das Bodas ocorre na consumação final — após o julgamento, na eternidade da nova criação. Não há intervalo milenário entre o convite e a festa.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">O Que as Interpretações Têm em Comum</div>
+<p>Independentemente da escola interpretativa, todas concordam nos pontos essenciais: a Ceia das Bodas é real e futura; a noiva é o povo de Deus redimido pelo sangue do Cordeiro; a vestimenta é dom da graça e fruto da vida santa; e a bem-aventurança pertence aos que responderam ao chamado. A divergência está no tempo e na composição — não na substância da esperança.</p>
+</div>
+<h3>A Parábola dos Dez Talentos e a Porta Fechada</h3>
+<p>Jesus narrou a parábola das dez virgens (Mt 25:1-13) como advertência à Igreja que aguarda o noivo: cinco eram prudentes e tinham azeite; cinco eram néscias e não tinham. Quando o noivo chegou tarde da noite, as néscias foram buscar azeite — e a porta foi fechada. "Não vos conheço", disse o noivo. A Ceia das Bodas tem uma porta. E a porta se fecha. A escatologia das Bodas não é apenas esperança — é urgência.</p>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">7</span></div>
+</div>
+<!-- PG 8 CONCLUSÃO -->
+<div class="lbl">Página 8 · Conclusão</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">8</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>Conclusão</h2>
+<p class="cap">A Ceia das Bodas do Cordeiro é a imagem mais terna e mais gloriosa do destino da Igreja. Não um tribunal frio — um banquete. Não uma sentença — uma celebração. Não solidão — comunhão perfeita com o Noivo que atravessou a morte para buscar a sua noiva. Toda a história — com suas guerras, seus julgamentos, suas testemunhas fiéis e suas Babilônias caídas — foi o longo noivado. A festa ainda está por vir.</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">O que esta lição nos ensinou</div>
+<p>Aprendemos que a metáfora nupcial percorre toda a Bíblia como fio condutor da aliança entre Deus e o seu povo — de Oseias a Paulo, de João Batista ao Apocalipse. Vimos que a noiva é a Igreja redimida em sua totalidade, vestida com o linho fino das justiças dos santos — graça imputada tornada vida transformada. Examinamos que a Santa Ceia é antecipação da Ceia das Bodas, e que santidade é a preparação da noiva para o encontro definitivo com o Noivo.</p>
+</div>
+<h3>A Certeza que Permanece</h3>
+<p>O anjo declara com solenidade: "estas são as verdadeiras palavras de Deus" (v.9). A festa não é promessa condicional — é decreto eterno do Deus que não mente. Para o cristão que vive entre o noivado e o casamento, entre a cruz e a consumação, essa certeza é o fundamento da alegria, da pureza e da perseverança. A noiva que sabe que o noivo vem cuida da sua veste. A Igreja que crê nas Bodas vive de maneira diferente.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">Ponte para as próximas lições</div>
+<p>As lições finais desta série apresentarão a Nova Criação e o estado eterno — a vida que começa após a Ceia das Bodas. O que estudamos hoje sobre a identidade da noiva e a certeza do banquete será o fundamento para compreender a promessa da Nova Jerusalém: Deus habitará com os homens, e eles serão o seu povo (Ap 21:3).</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">8</span></div>
+</div>
+<!-- PG 9 APLICAÇÃO DIRETA -->
+<div class="lbl">Página 9 · Aplicação Direta</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">9</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>Aplicação Direta</h2>
+<p class="cap">A esposa "já se aprontou" — mas a preparação é processo, não evento instantâneo. Efésios 5:26-27 descreve Cristo purificando a Igreja "com a lavagem da água pela palavra" para apresentá-la "sem mácula, nem ruga." A noiva não chega pronta ao altar — ela é preparada ao longo de toda a vida pela Palavra, pela comunhão, pelo sofrimento santificador e pela perseverança na fé. A pergunta que esta lição deixa é concreta: como está a sua veste?</p>
+<div class="bloco-apl">
+<div class="bloco-apl-titulo">Para esta semana</div>
+<p>Primeiro: a Santa Ceia é antecipação da Ceia das Bodas. Na próxima vez que sua igreja celebrar a eucaristia, participe com consciência escatológica — você está ensaiando o banquete eterno. O que muda quando a Ceia deixa de ser ritual e passa a ser promessa? Segundo: o linho fino são as "justiças dos santos" — ações justas, frutos concretos da fé. Examine sua semana: quais ações refletem que você está se preparando como noiva fiel? Onde a veste está manchada e precisa da lavagem da Palavra? Terceiro: as virgens néscias da parábola não eram inimigas do noivo — eram descuidadas. O descuido espiritual é tão perigoso quanto a rebelião aberta. Em que área da sua vida espiritual você tem sido negligente?</p>
+</div>
+<div class="sep"><span>✦</span></div>
+<h3>Para Refletir</h3>
+<p>João Batista disse de si mesmo: "o amigo do noivo, que está em pé e o ouve, alegra-se muito com a voz do noivo" (Jo 3:29). A alegria de João era derivada — vinha do noivo, não de si mesmo. Como essa postura de "amigo do noivo" — que serve à celebração de outro, não à sua própria — desafia sua maneira de servir na Igreja e de viver o ministério?</p>
+<div class="memorizar">
+<div class="memorizar-titulo">✦ Versículo para Memorizar</div>
+<p>"Bem-aventurados os que são chamados à ceia das bodas do Cordeiro. E disse-me: Estas são as verdadeiras palavras de Deus."</p>
+<p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 19:9</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">9</span></div>
+</div>
+<!-- PG 10 QUESTÕES -->
+<div class="lbl">Página 10 · Questões e Anotações</div>
+<div class="pag int">
+<div class="int-linhas"></div>
+<div class="wm">10</div>
+<div class="ph"><span class="phl">Lição 09 · Vol. II</span><span class="pht">A Ceia das Bodas do Cordeiro</span></div>
+<h2>Questões para Reflexão</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">A metáfora nupcial percorre toda a Bíblia — de Oseias a Efésios, do Cântico dos Cânticos ao Apocalipse. O que a escolha dessa imagem para descrever o destino final da história revela sobre a natureza do relacionamento que Deus deseja ter com o seu povo? Por que um banquete e não um tribunal?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">O linho fino da noiva representa as "justiças dos santos" — e ao mesmo tempo "foi-lhe dado" (passivo divino). Como essa tensão entre graça imputada e fruto vivido descreve a santificação? A vestimenta da noiva é mérito ou dom — ou ambos? Como isso se relaciona com Filipenses 2:12-13?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">Jesus disse que não beberia mais do fruto da videira até bebê-lo "novo" no reino de seu Pai (Mt 26:29). Como essa declaração transforma o significado da Santa Ceia de memorial para antecipação escatológica? O que muda na forma como sua comunidade celebra a eucaristia à luz das Bodas do Cordeiro?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">A parábola das dez virgens (Mt 25:1-13) termina com a porta fechada e o noivo dizendo "não vos conheço." Que advertência essa parábola dirige especificamente à Igreja que se considera convidada às Bodas? O que distingue a virgem prudente da néscia — e como essa distinção se aplica concretamente à sua vida espiritual hoje?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="bloco-qr">
+<div class="bloco-qr-canvas">
+<img alt="QR Code Lição 09" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https://www.youtube.com/watch?v=l9KNIt8n070"/>
+</div>
+<div class="bloco-qr-info">
+<div class="bloco-qr-label">▶ Vídeo Aula</div>
+<div class="bloco-qr-titulo">As Bodas do Cordeiro (Apocalipse 19)</div>
+<div class="bloco-qr-desc">Aprofunde seus estudos com a exposição bíblica do Rev. Hernandes Dias Lopes.</div>
+<div class="bloco-qr-url">youtube.com/watch?v=l9KNIt8n070</div>
+</div>
+</div>
+<h3 style="margin-top:12px;">Anotações</h3>
+<div class="lins">
+<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">10</span></div>
+</div>
+</div><!-- /conteudoLicao -->
+<script>
+function entrarLicao(){
+    document.body.classList.add('licao-iniciada');
+    window.scrollTo({top: 0, behavior: 'instant'});
+}
+let edit=false;
+const TAGS=['P','H2','H3','DIV','LI','CITE','SPAN','STRONG','EM'];
+function toggleEdit(){
+    edit=!edit;
+    document.querySelectorAll('.pag *').forEach(el=>{
+        if(TAGS.includes(el.tagName)&&!el.querySelector('div,p,h2,h3,ul'))
+            el.contentEditable=edit?'true':'false';
+    });
+    document.getElementById('etxt').textContent=edit?'Concluir':'Editar';
+}
+</script>
+</div></body>
+</html>

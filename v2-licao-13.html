@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eschaton Vol.2 · Lição 13 — Maranata: A Igreja que Espera</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+/* ===== VARIÁVEIS E RESET ===== */
+:root {
+  --cor: #907020;
+  --grad1: #201808;
+  --grad2: #281e08;
+  --ouro: #c9a84c;
+  --ouro-claro: #e8d5a0;
+  --ouro-brilho: #f0d060;
+  --vermelho: #8b1a1a;
+  --ct: #2a2a2a;
+  --branco: #fdfbf7;
+  --pergaminho: #f8f2e8;
+  --creme: #f0e8d8;
+  --cc: #ddd8cc;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #100e04; font-family: 'EB Garamond', Georgia, serif; }
+
+/* ===== PAINEL DE CONTROLE ===== */
+.painel {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(90deg, #080602, #100e04);
+  border-bottom: 1px solid rgba(201,168,76,0.5);
+  padding: 10px 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.marca { font-family: 'Cinzel', serif; font-size: 11pt; color: var(--ouro); letter-spacing: 3px; margin-right: auto; }
+.marca span { font-family: 'Oswald', sans-serif; font-size: 7.5pt; color: #666; letter-spacing: 1px; display: block; font-weight: 300; }
+.btn {
+  font-family: 'Oswald', sans-serif; font-size: 9pt; letter-spacing: 1.5px;
+  text-transform: uppercase; border: none; cursor: pointer; padding: 7px 16px;
+  border-radius: 2px; transition: all 0.2s; white-space: nowrap;
+}
+.be { background: transparent; color: var(--ouro); border: 1px solid rgba(201,168,76,0.4); }
+.be:hover { background: var(--ouro); color: #111; }
+.bi { background: var(--vermelho); color: #fff; }
+.bi:hover { filter: brightness(1.2); }
+.bv { background: transparent; color: #666; border: 1px solid #333; font-size: 8pt; }
+.bv:hover { color: #fff; border-color: #555; }
+
+/* Badge de versão professor */
+.badge-prof {
+  background: linear-gradient(90deg, rgba(201,168,76,0.2), rgba(201,168,76,0.1));
+  border: 1px solid rgba(201,168,76,0.4);
+  color: var(--ouro-brilho);
+  font-family: 'Oswald', sans-serif;
+  font-size: 7.5pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* ===== ÁREA DE CONTEÚDO ===== */
+.area { margin-top: 60px; padding: 24px 16px 60px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+
+/* ===== CONFIGURAÇÃO DE IMPRESSÃO ===== */
+@page { size: A5 portrait; margin: 0; }
+
+/* ===== PÁGINA BASE ===== */
+.pag {
+  width: 148mm; min-height: 210mm; background: var(--pergaminho);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+  position: relative; overflow: hidden; page-break-after: always; flex-shrink: 0;
+}
+.lbl {
+  font-family: 'Oswald', sans-serif; font-size: 8pt; color: #555;
+  letter-spacing: 2px; text-transform: uppercase;
+  align-self: flex-start; margin-left: calc(50% - 74mm); margin-bottom: -8px;
+}
+
+/* ===== CAPA ESPECIAL ===== */
+.capa {
+  background: linear-gradient(160deg, var(--grad1), var(--grad2));
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 210mm; padding: 0;
+  border: 1.5px solid rgba(201,168,76,0.35);
+}
+.catm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 55%, rgba(201,168,76,0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.3) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 88%, rgba(80,60,0,0.4) 0%, transparent 50%);
+}
+.cgrd {
+  position: absolute; inset: 0; opacity: 0.03;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(201,168,76,1) 24px, rgba(201,168,76,1) 25px);
+}
+.cfx {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+  background: linear-gradient(180deg, #201808, var(--cor), var(--ouro-brilho));
+}
+.cnbg {
+  position: absolute; bottom: -20px; right: -10px;
+  font-family: 'Cinzel', serif; font-size: 130pt; font-weight: 900;
+  color: rgba(255,255,255,0.04); line-height: 1; user-select: none;
+}
+.cimg {
+  position: absolute; top: 0; left: 0; right: 0; height: 58%;
+  background: linear-gradient(160deg, #100c00, var(--cor) 50%, #ffe090); opacity: 0.45;
+}
+.clh {
+  position: absolute; top: 55%; left: 12mm; right: 12mm; height: 1px;
+  background: linear-gradient(90deg, var(--ouro-brilho), var(--ouro), transparent); opacity: 0.9;
+}
+
+/* Borda dourada interna da capa */
+.capa-borda {
+  position: absolute; inset: 5mm; border: 1px solid rgba(201,168,76,0.25);
+  pointer-events: none; z-index: 2;
+}
+.capa-borda::before {
+  content: ''; position: absolute; inset: 3mm;
+  border: 1px solid rgba(201,168,76,0.12);
+}
+
+/* Badge encerramento */
+.capa-fim { position: absolute; top: 0; left: 0; right: 0; padding: 8mm 14mm 6mm 18mm; z-index: 4; }
+.capa-fim-txt { font-family: 'Oswald', sans-serif; font-size: 7pt; letter-spacing: 3px; color: rgba(201,168,76,0.8); text-transform: uppercase; }
+.capa-fim-linha { width: 100%; height: 1px; background: linear-gradient(90deg, rgba(201,168,76,0.6), transparent); margin-top: 4px; }
+
+.cvol { position: absolute; top: 14mm; right: 12mm; z-index: 4; text-align: right; }
+.cvol-num { font-family: 'Cinzel', serif; font-size: 8pt; color: var(--ouro-brilho); letter-spacing: 3px; opacity: 0.85; }
+.cvol-linha { width: 40px; height: 1px; background: rgba(201,168,76,0.5); margin: 4px 0 0 auto; }
+
+.ccon { position: relative; z-index: 3; padding: 0 12mm 14mm 18mm; }
+.cser {
+  font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: 4px;
+  color: var(--ouro-brilho); text-transform: uppercase; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cser::before { content: ''; display: block; width: 20px; height: 1px; background: var(--ouro-brilho); }
+
+/* TÍTULO DA CAPA — fonte reduzida, sem justificação, alinhamento à esquerda */
+.ctit {
+  font-family: 'Cinzel', serif; font-size: 14pt; font-weight: 700;
+  color: var(--ouro-brilho);
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: left;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(201,168,76,0.4), 0 2px 8px rgba(0,0,0,0.8);
+  word-spacing: 4px;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.cref {
+  font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px;
+  color: rgba(201,168,76,0.7); text-transform: uppercase; margin-bottom: 10px;
+}
+.cver {
+  font-family: 'EB Garamond', serif; font-style: italic; font-size: 10pt;
+  color: var(--ouro-claro); line-height: 1.6;
+  border-left: 2px solid var(--ouro-brilho); padding-left: 10px; opacity: 0.95;
+}
+
+/* ===== PÁGINAS INTERNAS ===== */
+.int { padding: 14mm 12mm 18mm 14mm; min-height: 210mm; position: relative; background: var(--pergaminho); }
+.int::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--cor), var(--ouro) 60%, transparent);
+}
+.int::after {
+  content: ''; position: absolute; top: 6px; left: 14mm; right: 12mm;
+  height: 1px; background: rgba(144,112,32,0.15);
+}
+.int-linhas {
+  position: absolute; inset: 0; top: 20mm; pointer-events: none;
+  background-image: repeating-linear-gradient(transparent, transparent 23px, rgba(144,112,32,0.055) 23px, rgba(144,112,32,0.055) 24px);
+  z-index: 0;
+}
+.wm {
+  position: absolute; bottom: 14mm; right: 10mm;
+  font-family: 'Cinzel', serif; font-size: 52pt; font-weight: 900;
+  color: rgba(0,0,0,0.03); line-height: 1; user-select: none; pointer-events: none;
+}
+
+/* Cabeçalho interno */
+.ph {
+  margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--cc);
+  display: flex; justify-content: space-between; align-items: baseline; position: relative; z-index: 1;
+}
+.phl { font-family: 'Oswald', sans-serif; font-size: 7.5pt; color: var(--cor); letter-spacing: 2px; text-transform: uppercase; }
+.pht { font-family: 'EB Garamond', serif; font-style: italic; font-size: 8.5pt; color: #aaa; }
+
+/* Rodapé */
+.rod {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 6px 12mm 6mm 14mm;
+  display: flex; justify-content: space-between; align-items: center; z-index: 2;
+}
+.rod::before {
+  content: ''; position: absolute; top: 0; left: 12mm; right: 12mm;
+  height: 1px; background: linear-gradient(90deg, var(--cor), var(--ouro), transparent); opacity: 0.3;
+}
+.rt { font-family: 'Oswald', sans-serif; font-size: 7pt; color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+.rn { font-family: 'Cinzel', serif; font-size: 9pt; color: var(--ouro); }
+
+/* Marca da edição do aluno no rodapé */
+.rod-aluno {
+  font-family: 'Oswald', sans-serif; font-size: 6.5pt;
+  color: rgba(144,112,32,0.5); letter-spacing: 2px; text-transform: uppercase;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 700; font-size: 13pt; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--cor);
+  border-bottom: 2px solid var(--cor); padding-bottom: 6px;
+  margin-bottom: 12px; margin-top: 4px; line-height: 1.2; position: relative; z-index: 1;
+}
+h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 400; font-size: 10pt;
+  letter-spacing: 1.5px; color: #503010; text-transform: uppercase;
+  margin-bottom: 6px; margin-top: 12px; position: relative; z-index: 1;
+}
+p {
+  font-family: 'EB Garamond', serif; font-size: 10.5pt; line-height: 1.65;
+  color: var(--ct); text-align: justify; margin-bottom: 9px;
+  hyphens: auto; position: relative; z-index: 1;
+}
+.cap::first-letter {
+  font-family: 'Cinzel', serif; font-size: 38pt; font-weight: 900;
+  float: left; margin-right: 5px; color: var(--cor);
+  line-height: 0.82; padding-top: 2px;
+}
+
+/* ===== COMPONENTES ===== */
+.texto-biblico {
+  background: #fff; border: 1px solid rgba(144,112,32,0.2);
+  border-left: 4px solid var(--cor); padding: 12px 14px; margin: 12px 0;
+  position: relative; z-index: 1;
+}
+.texto-biblico-ref {
+  font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--cor); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.texto-biblico-ref::after { content: ''; flex: 1; height: 1px; background: rgba(144,112,32,0.2); }
+.texto-biblico p { font-family: 'EB Garamond', serif; font-style: italic; font-size: 10.5pt; color: #281a00; line-height: 1.7; margin-bottom: 4px; text-align: left; }
+.texto-biblico .ref-final { font-size: 9pt; font-style: normal; color: var(--ouro); font-family: 'Oswald', sans-serif; letter-spacing: 1px; display: block; text-align: right; margin-top: 4px; }
+
+/* Blocos contextuais */
+.bloco-ctx { background: rgba(144,112,32,0.05); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.bloco-ctx-titulo { font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+.bloco-teo { background: rgba(201,168,76,0.09); border-left: 3px solid var(--ouro); padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.bloco-teo-titulo { font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: #8a6a20; margin-bottom: 6px; }
+
+.bloco-apl {
+  background: linear-gradient(135deg, rgba(144,112,32,0.07), rgba(201,168,76,0.08));
+  border: 1px solid rgba(144,112,32,0.25); border-radius: 2px;
+  padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1;
+}
+.bloco-apl-titulo { font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+/* Bloco de orientação ao aluno */
+.bloco-aluno {
+  background: linear-gradient(135deg, rgba(144,112,32,0.08), rgba(201,168,76,0.05));
+  border: 1px solid rgba(144,112,32,0.3);
+  border-left: 4px solid var(--cor);
+  border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1;
+}
+.bloco-aluno-titulo {
+  font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--cor); margin-bottom: 6px;
+  display: flex; align-items: center; gap: 6px;
+}
+.bloco-aluno-titulo::before { content: '✦'; font-size: 7pt; color: var(--ouro); }
+
+/* Objetivos */
+.obj { background: var(--creme); border-radius: 2px; padding: 10px 12px; margin: 10px 0; position: relative; z-index: 1; }
+.obj .ot { font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+.obj ul { list-style: none; padding: 0; }
+.obj ul li { font-family: 'EB Garamond', serif; font-size: 10pt; color: var(--ct); padding: 2px 0 2px 20px; position: relative; line-height: 1.4; }
+.obj ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--cor); font-size: 10pt; font-weight: bold; }
+
+/* Memorizar */
+.memorizar { background: var(--creme); border: 1px solid rgba(201,168,76,0.3); border-radius: 2px; padding: 10px 12px; margin: 10px 0; text-align: center; position: relative; z-index: 1; }
+.memorizar-titulo { font-family: 'Oswald', sans-serif; font-size: 7.5pt; letter-spacing: 2px; text-transform: uppercase; color: var(--ouro); margin-bottom: 6px; }
+.memorizar p { font-family: 'EB Garamond', serif; font-style: italic; font-size: 10pt; color: #281a00; text-align: center; line-height: 1.6; }
+
+/* Separador */
+.sep { display: flex; align-items: center; gap: 10px; margin: 12px 0; opacity: 0.3; position: relative; z-index: 1; }
+.sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--cor); }
+.sep span { font-size: 8pt; color: var(--ouro); }
+
+/* Perguntas */
+.q { margin-bottom: 14px; position: relative; z-index: 1; }
+.qn { font-family: 'Oswald', sans-serif; font-size: 8pt; color: var(--cor); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px; }
+.qt { font-family: 'EB Garamond', serif; font-size: 10pt; color: var(--ct); line-height: 1.45; margin-bottom: 5px; }
+.lr { border-bottom: 1px solid rgba(144,112,32,0.2); height: 20px; margin-top: 3px; }
+
+/* Linhas de anotação */
+.lins { display: flex; flex-direction: column; gap: 18px; margin-top: 10px; position: relative; z-index: 1; }
+.lin { border-bottom: 1px solid rgba(144,112,32,0.2); height: 22px; }
+
+/* Box */
+.box { background: rgba(144,112,32,0.06); border: 1px solid rgba(144,112,32,0.2); border-radius: 2px; padding: 10px 12px; margin: 10px 0; }
+.box-t { font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 6px; }
+
+/* Síntese */
+.sintese {
+  background: linear-gradient(135deg, #fdfbf0, #f5f0e0);
+  border: 1px solid rgba(144,112,32,0.3); border-radius: 3px;
+  padding: 12px 14px; margin: 12px 0; position: relative; z-index: 1;
+}
+.sintese-titulo { font-family: 'Oswald', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: var(--cor); margin-bottom: 8px; }
+.sintese-item {
+  font-family: 'EB Garamond', serif; font-size: 9.5pt; color: var(--ct);
+  padding: 3px 0 3px 14px; position: relative; line-height: 1.4;
+  border-bottom: 1px solid rgba(144,112,32,0.12);
+}
+.sintese-item:last-child { border-bottom: none; }
+.sintese-item::before {
+  content: '\2726'; position: absolute; left: 0; color: var(--ouro);
+  font-size: 10pt; top: 2px;
+}
+
+/* Encerramento */
+.encerramento {
+  background: linear-gradient(135deg, #201808, #281e08);
+  border-radius: 3px; padding: 14px; margin: 12px 0;
+  text-align: center; position: relative; z-index: 1;
+}
+.enc-titulo { font-family: 'Cinzel', serif; font-size: 11pt; color: var(--ouro); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+.enc-texto { font-family: 'EB Garamond', serif; font-style: italic; font-size: 10pt; color: var(--ouro-claro); line-height: 1.6; }
+
+/* Intro */
+.intro { position: relative; z-index: 1; margin-bottom: 10px; }
+
+/* ===== CAPA DE ENTRADA DO VOLUME ===== */
+.capa-entrada {
+  background: #050505; display: flex; align-items: center;
+  justify-content: center; cursor: pointer; padding: 0;
+  min-height: 210mm; position: relative;
+}
+.capa-entrada::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
+}
+body.licao-iniciada #capaEntradaRevista { display: none; }
+.entrada-cta {
+  position: absolute; bottom: 32px; left: 0; right: 0; text-align: center;
+  font-family: 'Oswald', sans-serif; font-size: 10pt; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.85); z-index: 10;
+  background: rgba(0,0,0,0.4); padding: 10px;
+}
+.cv-wrap {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; text-align: center; padding: 20mm 14mm 16mm;
+  font-family: Georgia, 'Times New Roman', serif; color: #f4ead6;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(201,168,76,.16), transparent 22%),
+    radial-gradient(circle at 82% 20%, rgba(48,80,128,.32), transparent 18%),
+    radial-gradient(circle at 50% 75%, rgba(201,168,76,.08), transparent 26%),
+    linear-gradient(180deg, #080c14 0%, #0e1622 34%, #101828 68%, #080c14 100%);
+}
+.cv-textura {
+  position: absolute; inset: 0; pointer-events: none; opacity: .12;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 28px, rgba(201,168,76,.08) 28px 29px),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(201,168,76,.035) 42px 43px);
+  mix-blend-mode: screen;
+}
+.cv-vinheta { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle, transparent 42%, rgba(0,0,0,.45) 100%); }
+.cv-moldura { position: absolute; inset: 0; pointer-events: none; }
+.cv-moldura::before { content: ""; position: absolute; inset: 14mm; border: 1px solid rgba(201,168,76,.35); }
+.cv-moldura::after { content: ""; position: absolute; inset: 18mm; border: 1px solid rgba(201,168,76,.14); }
+.cv-simbolo { position: absolute; inset: 0; pointer-events: none; display: flex; align-items: center; justify-content: center; font-size: 170pt; font-weight: 700; color: rgba(255,255,255,.035); letter-spacing: 4px; transform: translateY(3mm); user-select: none; }
+.cv-inner { position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; align-items: center; flex: 1; }
+.cv-badge { display: inline-flex; align-items: center; gap: 3mm; padding: 2.4mm 5mm; border: 1px solid rgba(201,168,76,.36); color: #c9a84c; font-family: Arial, sans-serif; font-size: 8.5pt; letter-spacing: 1.2pt; text-transform: uppercase; }
+.cv-badge-sep { width: .3mm; height: 4mm; background: rgba(201,168,76,.35); }
+.cv-titulo { margin-top: 22mm; font-size: 33pt; line-height: .95; letter-spacing: 2.6pt; text-transform: uppercase; font-weight: 700; }
+.cv-subtitulo { margin-top: 4mm; color: #4a70a8; font-family: Arial, sans-serif; font-size: 10pt; letter-spacing: 2.1pt; text-transform: uppercase; }
+.cv-divisor { margin-top: 8mm; width: 62mm; display: flex; align-items: center; gap: 4mm; }
+.cv-divisor::before, .cv-divisor::after { content: ""; flex: 1; height: .35mm; background: linear-gradient(90deg, transparent, rgba(201,168,76,.95), transparent); }
+.cv-divisor span { color: #c9a84c; font-size: 13pt; }
+.cv-frase { margin-top: 10mm; max-width: 92mm; font-size: 15.2pt; line-height: 1.42; font-style: italic; color: rgba(232,213,160,.96); }
+.cv-ref { margin-top: 4mm; color: #c9a84c; font-family: Arial, sans-serif; font-size: 8.3pt; letter-spacing: 1.2pt; text-transform: uppercase; }
+.cv-faixa { margin-top: auto; width: 100%; padding: 7mm 6mm; border-top: 1px solid rgba(201,168,76,.20); border-bottom: 1px solid rgba(201,168,76,.12); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); }
+.cv-tema { font-size: 13pt; line-height: 1.25; color: #f5ead8; font-weight: 700; text-transform: uppercase; letter-spacing: .8pt; }
+.cv-tema-sub { margin-top: 3.2mm; color: #b9aa90; font-size: 10.4pt; line-height: 1.45; font-style: italic; }
+.cv-rodape { margin-top: auto; width: 100%; padding-top: 8mm; }
+.cv-rodape-titulo { font-size: 11pt; letter-spacing: 1.6pt; text-transform: uppercase; color: #c9a84c; font-weight: 700; }
+.cv-rodape-sub { margin-top: 2.5mm; font-family: Arial, sans-serif; font-size: 7.8pt; letter-spacing: 1pt; text-transform: uppercase; color: #8a8a7a; }
+.cv-rodape-linha { margin: 4mm auto 0; width: 48mm; height: .35mm; background: linear-gradient(90deg, transparent, rgba(201,168,76,.8), transparent); }
+
+/* ===== EDITÁVEL ===== */
+[contenteditable="true"] { outline: none; cursor: text; }
+[contenteditable="true"]:hover { background: rgba(144,112,32,0.06); border-radius: 2px; }
+[contenteditable="true"]:focus { background: rgba(144,112,32,0.09); border-radius: 2px; }
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+  .painel { padding: 8px 12px; gap: 8px; }
+  .marca { font-size: clamp(8pt, 2.5vw, 11pt); }
+  .marca span { font-size: clamp(6pt, 1.8vw, 7.5pt); }
+  .btn { padding: 6px 10px; font-size: clamp(6.5pt, 1.9vw, 9pt); letter-spacing: 1px; }
+  .area { margin-top: 54px; padding: 12px 8px 60px; gap: 12px; }
+  .pag { width: 100% !important; min-height: unset; box-shadow: 0 4px 16px rgba(0,0,0,0.5); }
+  .lbl { margin-left: 8px; }
+  .int { padding: 6vw 5vw 10vw 5vw; min-height: unset; }
+  .ccon { padding: 0 5vw 8vw 5vw; }
+  .ctit { font-size: clamp(10pt, 3.8vw, 14pt); letter-spacing: 1.5px; }
+  .cver { font-size: clamp(8.5pt, 2.5vw, 10pt); }
+  h2 { font-size: clamp(10pt, 3.2vw, 13pt); }
+  h3 { font-size: clamp(8.5pt, 2.8vw, 10pt); }
+  p { font-size: clamp(9pt, 2.6vw, 10.5pt); line-height: 1.6; }
+  .cap::first-letter { font-size: clamp(24pt, 7vw, 38pt); }
+  .texto-biblico { padding: 10px 12px; }
+  .texto-biblico p { font-size: clamp(9pt, 2.5vw, 10.5pt); }
+  .bloco-ctx, .bloco-teo, .bloco-apl, .bloco-aluno, .memorizar, .obj { padding: 8px 10px; }
+  .rod { padding: 5px 5vw 5vw 5vw; position: relative; }
+  .rod::before { left: 5vw; right: 5vw; }
+  .wm, .int-linhas { display: none; }
+  .capa-entrada { min-height: 100svh; }
+  .cv-titulo { font-size: clamp(22pt, 8vw, 33pt); }
+  .cv-frase { font-size: clamp(11pt, 4vw, 15pt); max-width: 100%; }
+  .entrada-cta { font-size: clamp(8pt, 2.5vw, 10pt); }
+  .badge-prof { display: none; }
+  /* Corrige sobreposição de elementos na capa mobile */
+  .capa { flex-direction: column; justify-content: flex-start; overflow: visible; }
+  .cimg { height: 35%; }
+  .clh { top: 36%; }
+  .cvol { position: static; text-align: left; margin-bottom: 6px; }
+  .cvol-num { font-size: 7pt; opacity: 0.7; }
+  .cvol-linha { display: none; }
+  .cref { font-size: 7pt; letter-spacing: 1px; }
+  .capa-fim { position: static; padding: 4px 5vw 0 5vw; }
+  .capa-fim-txt { font-size: 6.5pt; letter-spacing: 2px; }
+  .capa-fim-linha { display: none; }
+  .cser { font-size: 6.5pt; letter-spacing: 2px; margin-bottom: 8px; }
+  .ctit { font-size: clamp(13pt, 5vw, 17pt) !important; letter-spacing: 1px !important; word-spacing: 2px; line-height: 1.15; }
+  .ccon { padding: 6vw 5vw 8vw 5vw; margin-top: auto; }
+}
+@media screen and (max-width: 480px) {
+  .painel { flex-wrap: wrap; }
+  .area { margin-top: 96px; }
+  .int { padding: 5vw 4vw 8vw 4vw; }
+  h2 { font-size: clamp(9.5pt, 3vw, 11pt); }
+  p { font-size: clamp(8.5pt, 2.4vw, 9.5pt); }
+  .btn { padding: 5px 8px; font-size: clamp(6pt, 1.7vw, 7pt); }
+}
+
+/* ===== IMPRESSÃO ===== */
+@media print {
+  body { background: none; }
+  #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  .area { margin-top: 0; padding: 0; gap: 0; }
+  .pag { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+  .wm, .int-linhas { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- ===== PAINEL DE CONTROLE ===== -->
+<div class="painel">
+<div class="marca">ESCHATON VOL. II<span>Lição 13 · Final · Maranata — A Igreja que Espera</span></div>
+<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+<a href="index.html"><button class="btn bv">← Hub</button></a>
+</div>
+<div class="area">
+<!-- ===== CAPA DE ENTRADA DO VOLUME ===== -->
+<div aria-label="Abrir lição 13" class="pag capa-entrada" id="capaEntradaRevista" onclick="entrarLicao()">
+<div class="cv-wrap">
+<div class="cv-textura"></div><div class="cv-vinheta"></div>
+<div class="cv-moldura"></div><div class="cv-simbolo">✦</div>
+<div class="cv-inner">
+<div class="cv-badge"><span>Vol. II</span><span class="cv-badge-sep"></span><span>Estudos Escatológicos</span></div>
+<div class="cv-titulo">ESCHATON</div>
+<div class="cv-subtitulo">A Palavra que Não Passará</div>
+<div class="cv-divisor"><span>✦</span></div>
+<div class="cv-frase">"O céu e a terra passarão, mas as minhas palavras não passarão."</div>
+<div class="cv-ref">Mateus 24:35</div>
+<div class="cv-faixa">
+<div class="cv-tema">Estudos Escatológicos Temáticos</div>
+<div class="cv-tema-sub">Temas do fim dos tempos apresentados a partir das passagens-chave das Escrituras.</div>
+</div>
+<div class="cv-rodape">
+<div class="cv-rodape-titulo">Escola Bíblica Dominical</div>
+<div class="cv-rodape-sub">Jovens Adultos · 13 Lições</div>
+<div class="cv-rodape-linha"></div>
+</div>
+</div>
+</div>
+<div class="entrada-cta">Toque para entrar na lição</div>
+</div>
+<div id="conteudoLicao">
+<!-- ===== PÁGINA 1 — CAPA DA LIÇÃO ===== -->
+<div class="lbl">Página 1 · Capa</div>
+<div class="pag capa">
+<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+<div class="capa-borda"></div>
+<div class="cimg"></div><div class="clh"></div>
+<div class="cnbg">13</div>
+<div class="capa-fim">
+<div class="capa-fim-txt">Lição Final do Volume II</div>
+<div class="capa-fim-linha"></div>
+</div>
+<div class="cvol"><div class="cvol-num">.</div><div class="cvol-linha"></div></div>
+<div class="ccon">
+<div class="cser">Eschaton · A Palavra que Não Passará</div>
+<div class="cref">1 Coríntios 16:22 · Apocalipse 22:17–21</div>
+<div class="ctit">Maranata —<br/>A Igreja que Espera</div>
+<div class="cver">
+      "O Espírito e a esposa dizem: Vem. E aquele que ouve diga: Vem... Aquele que testifica estas coisas diz: Certamente venho sem demora. Amém! Vem, Senhor Jesus."
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro-brilho);">Apocalipse 22:17,20</span>
+</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rn">1</span></div>
+</div>
+<!-- ===== PÁGINA 2 — INTRODUÇÃO E TEXTO BÍBLICO ===== -->
+<div class="lbl">Página 2 · Texto Bíblico e Introdução</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">2</div>
+<div class="ph">
+<span class="phl">Lição 13 · Final</span>
+<span class="pht">Maranata — A Igreja que Espera</span>
+</div>
+<div class="intro">
+<p class="cap">Chegamos ao ápice da nossa jornada pelo Volume II da série <em>Eschaton</em>. Após percorrermos as visões apocalípticas de João e as promessas proféticas de Daniel, esta lição final nos conduz ao coração da liturgia da Igreja Primitiva: o clamor <em>Maranata</em>. Essa não é apenas uma palavra de esperança passiva — é a identidade de um povo que vive sob a tensão teológica entre o "já" e o "ainda não".</p>
+<p>O objetivo central desta lição é mostrar que a esperança cristã não se fundamenta em cálculos cronológicos nem em especulações proféticas, mas na fidelidade <em>d'Aquele</em> que prometeu. A Igreja não espera por um evento, mas por uma <em>Pessoa</em>. O "Maranata" é, ao mesmo tempo, confissão de fé, oração e postura de vida.</p>
+<p>Enquanto o mundo se orienta pelo desespero ou pela distração, a Igreja que espera o retorno de Cristo vive de maneira distinta: trabalha com diligência no presente, ama o próximo com urgência e mantém os olhos fixos no horizonte da eternidade. Que esta última lição não apenas informe a mente, mas transforme a maneira como vivemos cada dia.</p>
+</div>
+<div class="bloco-aluno">
+<div class="bloco-aluno-titulo">Para Você Refletir — O que é Escatologia?</div>
+<p>A palavra <em>escatologia</em> vem do grego <em>eschaton</em> — "as últimas coisas". Ela não é um tema secundário da fé: ocupa os últimos capítulos da Bíblia e permeia toda a teologia cristã. Estudar escatologia não é especular sobre datas — é aprender a viver hoje à luz do que Deus prometeu para o amanhã.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">2</span></div>
+</div>
+<!-- ===== PÁGINA 3 — TEXTO BÍBLICO E OBJETIVOS ===== -->
+<div class="lbl">Página 3 · Passagem-Base e Objetivos</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">3</div>
+<div class="ph">
+<span class="phl">Lição 13 · Final</span>
+<span class="pht">Maranata — A Igreja que Espera</span>
+</div>
+<h2>A Passagem-Base</h2>
+<div class="texto-biblico">
+<div class="texto-biblico-ref">1 Coríntios 16:22</div>
+<p>"Se alguém não ama o Senhor Jesus Cristo, seja anátema. Maranata."</p>
+<span class="ref-final">1 Coríntios 16:22</span>
+</div>
+<div class="texto-biblico">
+<div class="texto-biblico-ref">Apocalipse 22:17–21</div>
+<p>"E o Espírito e a esposa dizem: Vem. E aquele que ouve diga: Vem. E aquele que tem sede venha; e aquele que quiser receba de graça a água da vida."</p>
+<p>"Eu testifico a todo aquele que ouve as palavras da profecia deste livro: Se alguém lhes acrescentar alguma coisa, Deus lançará sobre ele as pragas que estão escritas neste livro..."</p>
+<p>"Aquele que testifica estas coisas diz: Certamente venho sem demora. Amém! Vem, Senhor Jesus. A graça do Senhor Jesus Cristo seja com todos. Amém."</p>
+<span class="ref-final">Apocalipse 22:17–21</span>
+</div>
+<div class="obj">
+<div class="ot">Objetivos desta lição</div>
+<ul>
+<li>Compreender o significado da palavra aramaica "Maranata" e seu peso litúrgico</li>
+<li>Examinar Apocalipse 22:17–21 como o encerramento de toda a Bíblia</li>
+<li>Identificar as quatro vozes que clamam "Vem" no final do Apocalipse</li>
+<li>Aplicar a oração "Vem, Senhor Jesus" como postura fundamental da vida cristã</li>
+</ul>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">3</span></div>
+</div>
+<!-- ===== PÁGINA 4 — TÓPICO I: CONTEXTO ORIGINAL ===== -->
+<div class="lbl">Página 4 · Tópico I — Contexto Original</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">4</div>
+<div class="ph"><span class="phl">Lição 13 · Tópico I</span><span class="pht">Maranata — A Igreja que Espera</span></div>
+<h2>I. Contexto Original — A Oração Mais Antiga da Igreja</h2>
+<p>Antes de qualquer credo, antes das grandes confissões conciliares, antes dos tratados teológicos, a Igreja tinha uma oração: <em>Maranata</em>. Essa palavra aramaica, preservada como relíquia linguística no Novo Testamento grego, revela que a fé cristã nasceu voltada para o futuro.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">A Dupla Leitura do "Maranata"</div>
+<p><em>Maranata</em> pode ser lida como <em>Maran atha</em> — "Nosso Senhor vem", uma declaração de fé no retorno iminente de Cristo; ou como <em>Marana tha</em> — "Nosso Senhor, vem!", uma oração ardente pelo retorno do Rei. Ambas as leituras são teologicamente ricas: uma afirma a certeza da promessa; a outra expressa o anseio do coração.</p>
+</div>
+<h3>Apocalipse 22 — O Fim de Todo o Cânon</h3>
+<p>Apocalipse 22:17–21 é o último texto de toda a Bíblia — a última cena, a última fala, a última bênção. João encerra a revelação exatamente da mesma forma como a Igreja Primitiva encerrava cada culto dominical: com o clamor pelo retorno de Cristo. A Bíblia não termina com um regulamento nem com uma doutrina, mas com uma oração e uma promessa.</p>
+<div class="bloco-ctx">
+<div class="bloco-ctx-titulo">A Didaqué e o Uso Litúrgico</div>
+<p>A <em>Didaqué</em> (século I–II d.C.) instrui que, ao final da Ceia do Senhor, a congregação deve clamar: <em>"Maran atha!"</em> Isso significa que cada celebração eucarística era, na Igreja Primitiva, uma antecipação e um ensaio da vinda do Noivo. O domingo se tornava um ato de esperança encenada.</p>
+</div>
+<div class="bloco-aluno">
+<div class="bloco-aluno-titulo">Sabia Que? — Escatologia e Vida Diária</div>
+<p>Muitos cristãos pensam que escatologia é assunto de especialistas. Mas a Igreja Primitiva vivia e orava escatologicamente todos os dias. O "Maranata" não era reservado para seminários — era cantado nas casas, murmurado nas perseguições e celebrado na Ceia. A esperança no retorno de Cristo era o combustível da fé cotidiana.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">4</span></div>
+</div>
+<!-- ===== PÁGINA 5 — TÓPICO II: AS QUATRO VOZES ===== -->
+<div class="lbl">Página 5 · Tópico II — As Quatro Vozes</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">5</div>
+<div class="ph"><span class="phl">Lição 13 · Tópico II</span><span class="pht">Maranata — A Igreja que Espera</span></div>
+<h2>II. As Quatro Vozes de Apocalipse 22</h2>
+<p>A cena final do Apocalipse é surpreendentemente coral. João não registra uma única voz, mas uma convergência de clamores vindos de distintas esferas — divina, eclesiástica e humana — todos apontando para a mesma direção: a vinda do Senhor.</p>
+<h3>1. O Espírito diz: "Vem"</h3>
+<p>O próprio Espírito Santo clama pelo retorno de Cristo. Isso nos revela uma verdade profunda: quando oramos "Vem, Senhor Jesus", não estamos apenas expressando um desejo pessoal — é o Espírito que intercede em nós e por nós com gemidos que excedem as palavras (Rm 8:26). A oração escatológica é, antes de tudo, oração trinit ária.</p>
+<h3>2. A Esposa diz: "Vem"</h3>
+<p>A Igreja — apresentada como noiva — anseia pelo seu Noivo. O amor genuíno sempre quer a presença do amado. A intensidade do clamor da Igreja pelo retorno de Cristo é, portanto, um termômetro de saúde espiritual: quanto mais a congregação ama a Cristo, mais ela o deseja. A frieza escatológica revela distância relacional.</p>
+<h3>3. O que ouve diz: "Vem"</h3>
+<p>A oração escatológica não é monopólio dos teólogos. Todo aquele que ouve a Palavra e a recebe com fé é convidado a participar do clamor. Isso transforma a esperança em movimento missionário: o cristão que espera Cristo convida outros a partilhar essa mesma espera.</p>
+<h3>4. O que tem sede: "Venha"</h3>
+<p>O convite se abre para além da comunidade crente. A água da vida é oferecida de graça a todo aquele que tem sede — um eco direto de Isaías 55:1. O clamor escatológico e o convite evangelístico se fundem: esperar o Rei é convidar outros para o seu banquete.</p>
+<div class="bloco-aluno">
+<div class="bloco-aluno-titulo">Conexão Escatológica — Você É Uma das Vozes</div>
+<p>A escatologia bíblica não é uma doutrina para observadores passivos. Você, ao ouvir e crer na Palavra, torna-se uma das vozes do clamor final. Cada vez que você ora "Vem, Senhor Jesus" e convida alguém a conhecer a Cristo, está participando do coral que encerra a história — exatamente como João descreve em Apocalipse 22.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">5</span></div>
+</div>
+<!-- ===== PÁGINA 6 — TÓPICO III: O QUE A PALAVRA NOS ENSINOU ===== -->
+<div class="lbl">Página 6 · Tópico III — Síntese do Volume II</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">6</div>
+<div class="ph"><span class="phl">Lição 13 · Tópico III</span><span class="pht">Maranata — A Igreja que Espera</span></div>
+<h2>III. O Que a Palavra Nos Ensinou</h2>
+<p>Treze lições. Treze janelas abertas para a eternidade. Cada passagem estudada ao longo deste volume foi, em última análise, um convite a viver de maneira diferente — não como quem ignora o futuro, mas como quem o conhece e deixa que ele transforme o presente.</p>
+<div class="sintese">
+<div class="sintese-titulo">Síntese das 13 Lições — Volume II</div>
+<div class="sintese-item">O Dia do Senhor é real, justo e misericordioso · clama por arrependimento (L1)</div>
+<div class="sintese-item">A apostasia começa em corações que não amam a verdade · vacine-se com a Palavra (L2)</div>
+<div class="sintese-item">Os 144.000 são o povo completo de Deus · chamados a seguir o Cordeiro (L3)</div>
+<div class="sintese-item">As trombetas são advertências progressivas · Deus age antes de consumar (L4)</div>
+<div class="sintese-item">As Duas Testemunhas profetizam, morrem e ressuscitam · o padrão do testemunho (L5)</div>
+<div class="sintese-item">A guerra cósmica já foi decidida na cruz · vencemos pelo sangue do Cordeiro (L6)</div>
+<div class="sintese-item">As taças são a ira consumada · "Está feito!" ecoa o Calvário (L7)</div>
+<div class="sintese-item">Babilônia cai "em uma hora" · nada construído sobre o mundo é permanente (L8)</div>
+<div class="sintese-item">A Ceia das Bodas é o destino eterno · o Noivo já prepara o lugar (L9)</div>
+<div class="sintese-item">O Cavaleiro vence pela Palavra · "Rei dos Reis e Senhor dos Senhores" (L10)</div>
+<div class="sintese-item">Daniel viu os reinos passarem e o de Deus permanecer · fidelidade no exílio (L11)</div>
+<div class="sintese-item">A Nova Aliança é inquebrantável · "dos seus pecados não me lembrarei mais" (L12)</div>
+</div>
+<div class="bloco-aluno">
+<div class="bloco-aluno-titulo">Lembre-se — O Estudo das Últimas Coisas Transforma o Hoje</div>
+<p>Cada lição deste volume revelou uma faceta do plano soberano de Deus sobre a história. A escatologia não nos afasta da realidade — ela nos ancora nela com mais firmeza. Quem sabe como a história termina vive com mais coragem, mais amor e mais propósito no presente. Guarde estas verdades: elas serão seu fundamento nos dias difíceis.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">6</span></div>
+</div>
+<!-- ===== PÁGINA 7 — TÓPICO IV: O ESPÍRITO E A ESPOSA ===== -->
+<div class="lbl">Página 7 · Tópico IV — O Espírito e a Esposa</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">7</div>
+<div class="ph">
+<span class="phl">Lição 13 · Tópico IV</span>
+<span class="pht">O Espírito e a Esposa</span>
+</div>
+<h2>IV. O Espírito e a Esposa Dizem: Vem</h2>
+<p>O encerramento do cânon bíblico ocorre com um convite apaixonado. Em Apocalipse 22:17, testemunhamos uma harmonia perfeita e sem precedentes: o Espírito Santo e a Igreja clamam juntos pelo retorno do Rei. Esse clamor uníssono revela que a esperança cristã não é um sentimento individual, mas uma convicção comunitária sustentada pelo próprio Deus.</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">A Tensão Teológica da Esperança</div>
+<p>A Igreja vive entre dois momentos: a primeira vinda de Cristo — que inaugurou o Reino — e a segunda vinda — que o consumará. Essa tensão entre o "já" e o "ainda não" não é angústia, mas vitalidade. É a mesma tensão que move um noivo que já escolheu a noiva e aguarda o dia do casamento: certeza e antecipação coexistem.</p>
+</div>
+<div class="box">
+<div class="box-t">A Missão da Esperança</div>
+<p>A espera da Igreja não é ociosa nem passiva. A esperança genuína é contagiosa e transformadora. Enquanto o mundo se desespera diante da incerteza, a Igreja proclama com serenidade e convicção que o Rei está voltando — e isso muda tudo: muda a forma como amamos, servimos, sofremos e morremos.</p>
+</div>
+<div class="bloco-aluno">
+<div class="bloco-aluno-titulo">Pense Nisso — O "Já" e o "Ainda Não"</div>
+<p>Uma das chaves da escatologia cristã é entender que vivemos entre dois momentos decisivos: a primeira vinda de Cristo, que trouxe salvação e inaugurou o Reino, e a segunda vinda, que consumará tudo. Você já foi salvo — esse é o "já". A glorificação plena ainda virá — esse é o "ainda não". Essa tensão não é fraqueza da fé; é o ritmo normal da vida cristã fiel.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">7</span></div>
+</div>
+<!-- ===== PÁGINA 8 — CONCLUSÃO ===== -->
+<div class="lbl">Página 8 · Conclusão</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">8</div>
+<div class="ph"><span class="phl">Lição 13 · Conclusão</span><span class="pht">O Amém da História</span></div>
+<h2>Conclusão: O Amém da História</h2>
+<p class="cap">Ao encerrarmos este volume, a mensagem central que ecoa é esta: a Palavra de Deus não passará. Empérios passam. Sistemas filosóficos se esgotam. Civilizações se erguem e ruem. Mas aquele que disse "Certamente venho sem demora" nunca falhou em nenhuma de suas promessas — e não começará agora.</p>
+<p>O fim da Bíblia não é um ponto final, mas uma porta aberta. O último "Amém" do Apocalipse não é um encerramento resignado, mas um grito de antecipação: o melhor ainda está por vir. A Nova Jerusalém não é um consolação teológica — é a realidade mais concreta e mais permanente que existe.</p>
+<div class="bloco-teo">
+<div class="bloco-teo-titulo">A Conexão entre Fé e Esperança</div>
+<p>A fé olha para trás — para a cruz, a ressurreição, as promessas cumpridas — e encontra fundamento. A esperança olha para frente — para o retorno de Cristo, a ressurreição dos mortos, a renovação de todas as coisas — e encontra motivação. Uma fé sem esperança se torna nostalgia. Uma esperança sem fé se torna fantasia. Juntas, elas formam a vida cristã autêntica.</p>
+</div>
+<p>Que a nossa resposta diária, em cada manhã que amanhecer e em cada desafio que enfrentarmos, seja a mesma da Igreja Primitiva: <strong>Amém! Vem, Senhor Jesus!</strong></p>
+<div class="bloco-aluno">
+<div class="bloco-aluno-titulo">Leve Para a Vida — A Esperança que Transforma</div>
+<p>A escatologia cristã não é pessimismo disfaçado de espiritualidade. É a convicção de que a história tem um Senhor, que esse Senhor venceu a morte e que ele voltará para fazer novas todas as coisas. Essa esperança não paralisa — liberta. Liberta do medo do futuro, da escravidão do presente e do peso do passado. Saia desta lição com mais esperança do que entrou.</p>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">8</span></div>
+</div>
+<!-- ===== PÁGINA 9 — APLICAÇÃO FINAL ===== -->
+<div class="lbl">Página 9 · Aplicação Final</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">9</div>
+<div class="ph"><span class="phl">Lição 13 · Aplicação</span><span class="pht">Maranata — A Igreja que Espera</span></div>
+<h2>Aplicação Final</h2>
+<p class="cap">A última palavra da Bíblia é uma oração: "Vem, Senhor Jesus." A teologia que não desemboca em oração e em ação ficou apenas no intelecto. O conhecimento do fim dos tempos deve produzir, antes de tudo, santidade no presente — não curiosidade especulativa sobre o futuro.</p>
+<div class="bloco-apl">
+<div class="bloco-apl-titulo">Três Compromisos Finais</div>
+<p><strong>1. Ore "Maranata" diariamente.</strong> Comece ou encerre cada dia com essa oração. Ela reorienta o coração, lembrando quem é o verdadeiro Senhor do tempo e da história.</p>
+<p><strong>2. Viva como quem espera.</strong> A esperança do retorno de Cristo deve produzir urgência no amor, na santidade e no serviço. Não vivemos como se tivéssemos todo o tempo do mundo — vivemos como quem sabe que o tempo é precioso.</p>
+<p><strong>3. Convide outros para a esperança.</strong> O clamor "Vem" é também um convite. Cada cristão que espera é um embaixador da esperança — alguém que, com sua vida e suas palavras, diz ao mundo: "Há um lugar reservado para você na Mesa do Rei."</p>
+</div>
+<h3>Perguntas para Reflexão Pessoal</h3>
+<div class="q">
+<div class="qn">Reflexão 01</div>
+<div class="qt">Como a convicção do retorno de Cristo muda a forma como você prioriza seu tempo e seus relacionamentos?</div>
+</div>
+<div class="q">
+<div class="qn">Reflexão 02</div>
+<div class="qt">Há alguém em sua vida para quem você deveria ser "a voz que convida"? O que tem impedido esse convite?</div>
+</div>
+<div class="q">
+<div class="qn">Reflexão 03</div>
+<div class="qt">Qual foi a lição ou o conceito deste volume que mais impactou sua compreensão da fé? Como você pode aplicá-lo esta semana?</div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · EBD Jovens Adultos</span><span class="rod-aluno"></span><span class="rn">9</span></div>
+</div>
+<!-- ===== PÁGINA 10 — ENCERRAMENTO E PERGUNTAS FINAIS ===== -->
+<div class="lbl">Página 10 · Questões Finais e Encerramento</div>
+<div class="pag int">
+<div class="int-linhas"></div><div class="wm">10</div>
+<div class="ph"><span class="phl">Lição 13 · Final</span><span class="pht">Maranata — A Igreja que Espera</span></div>
+<h2>Questões Finais do Volume II</h2>
+<div class="q">
+<div class="qn">Questão 01</div>
+<div class="qt">O que o clamor <em>Maranata</em> revela sobre o anseio relacional da Igreja por Cristo? Por que isso é mais do que um desejo apocalíptico?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 02</div>
+<div class="qt">Como as quatro vozes de Apocalipse 22 descrevem a lógica integral da missão cristã — da espiritualidade individual ao convite evangelístico?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 03</div>
+<div class="qt">Como o equilíbrio entre esperar e convidar — passividade e ação — deve moldar a vida prática da Igreja e a sua vida pessoal?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="q">
+<div class="qn">Questão 04</div>
+<div class="qt">O que mudou na sua compreensão da fé após estas 13 lições do Volume II? Que verdade permanecerá com você daqui para frente?</div>
+<div class="lr"></div><div class="lr"></div>
+</div>
+<div class="sep"><span>✶</span></div>
+<div class="encerramento">
+<div class="enc-titulo">Eschaton · Vol. II · Encerramento</div>
+<div class="enc-texto">
+      "Certamente venho sem demora.<br/>
+      Amém! Vem, Senhor Jesus.<br/>
+      A graça do Senhor Jesus Cristo seja com todos. Amém."<br/><br/>
+      Apocalipse 22:20–21
+    </div>
+</div>
+<div class="rod"><span class="rt">Eschaton Vol. II · Fim do Volume II</span><span class="rod-aluno"></span><span class="rn">10</span></div>
+</div>
+</div><!-- fim #conteudoLicao -->
+</div> fim.area 
+<script>
+function entrarLicao() {
+  document.body.classList.add('licao-iniciada');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+let edit = false;
+const TAGS = ['P', 'H2', 'H3', 'DIV', 'LI', 'CITE', 'SPAN', 'STRONG', 'EM'];
+
+function toggleEdit() {
+  edit = !edit;
+  document.querySelectorAll('.pag *').forEach(el => {
+    if (TAGS.includes(el.tagName) && !el.querySelector('div,p,h2,h3,ul'))
+      el.contentEditable = edit ? 'true' : 'false';
+  });
+  document.getElementById('etxt').textContent = edit ? 'Concluir' : 'Editar';
+}
+</script>
+</body>
+</html>
