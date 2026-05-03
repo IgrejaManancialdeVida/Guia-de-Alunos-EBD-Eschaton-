@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
+<meta charset="UTF-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Eschaton Vol. III · Lição 07 — O Dragão Ataca a Igrejá</title>
+<title>Eschaton Vol. III · Lição 07 — O Dragão Ataca a Igreja</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Oswald:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet"/>
 <style>
 
 /* ── TOKENS ─────────────────────────────────────────── */
@@ -454,7 +453,6 @@ p {
 [contenteditable="true"]:hover { background: rgba(48,96,32,.05); border-radius: 2px; }
 [contenteditable="true"]:focus { background: rgba(48,96,32,.08); border-radius: 2px; }
 
-
 /* ── CAPA DE ENTRADA ─────────────────────────────────── */
 #capaEntradaRevista {
   position: fixed; inset: 0; z-index: 10000;
@@ -465,7 +463,7 @@ p {
   padding: 2rem;
 }
 #capaEntradaRevista.saindo { opacity: 0; pointer-events: none; }
-body.Lição-iniciada #capaEntradaRevista { display: none; }
+body.licao-iniciada #capaEntradaRevista { display: none; }
 .cv-atm {
   position: absolute; inset: 0; pointer-events: none;
   background:
@@ -553,7 +551,7 @@ body.Lição-iniciada #capaEntradaRevista { display: none; }
 /* ── IMPRESSÃO ───────────────────────────────────────── */
 @media print {
   body { background: none; }
-  #capaEntradaRevista, #capaEntradaRevista, .painel, .lbl { display: none !important; }
+  #capaEntradaRevista, .painel, .lbl { display: none !important; }
   .area { margin-top: 0; padding: 0; gap: 0; }
   .pag  { box-shadow: none; page-break-after: always; page-break-inside: avoid; }
   .wm, .int-linhas { display: none; }
@@ -572,201 +570,259 @@ body.Lição-iniciada #capaEntradaRevista { display: none; }
 </head>
 <body>
 <div class="painel">
-<div class="marca">ESCHATON VOL. III<span>Lição 07 · O Dragão Ataca a Igrejá</span></div>
-<button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
-<button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
-<a href="index.html"><button class="btn bv">← Hub</button></a>
+  <div class="marca">ESCHATON VOL. III<span>Lição 07 · O Dragão Ataca a Igreja</span></div>
+  <button class="btn be" onclick="toggleEdit()">✎ <span id="etxt">Editar</span></button>
+  <button class="btn bi" onclick="window.print()">🖶 Imprimir</button>
+  <a href="index.html"><button class="btn bv">← Hub</button></a>
 </div>
+
 <!-- CAPA DE ENTRADA -->
-<div aria-label="Abrir Lição 07" id="capaEntradaRevista" onclick="entrarLição()" role="button" tabindex="0">
-<div class="cv-atm"></div>
-<div class="cv-grd"></div>
-<div class="cv-fx"></div>
-<div class="cv-corpo">
-<div class="cv-serie">Eschaton · O Futuro Chegou</div>
-<div class="cv-num">Vol. III · Lição 07</div>
-<div class="cv-tema">O Dragão Ataca a Igrejá</div>
-<div class="cv-tema-sub">Apocalipsé 12:1-18 · 13:1-18</div>
-<div class="cv-divisor"></div>
-<div class="cv-frase">"Quando a Igrejá sofré aflições, jámais é a Igrejá em si qué está em jogo. O dragão sempré visa atingir o Cristo na Igrejá."</div>
-<div class="cv-ref">Adolf Pohl — citado por H. D. Lopés</div>
-<button class="cv-cta" onclick="entrarLição()">Abrir Lição</button>
+<div aria-label="Abrir Lição 07" id="capaEntradaRevista" onclick="entrarLicao()" role="button" tabindex="0">
+  <div class="cv-atm"></div>
+  <div class="cv-grd"></div>
+  <div class="cv-fx"></div>
+  <div class="cv-corpo">
+    <div class="cv-serie">Eschaton · O Futuro Chegou</div>
+    <div class="cv-num">Vol. III · Lição 07</div>
+    <div class="cv-tema">O Dragão Ataca a Igreja</div>
+    <div class="cv-tema-sub">Apocalipse 12:1-18 · 13:1-18</div>
+    <div class="cv-divisor"></div>
+    <div class="cv-frase">"Quando a Igreja sofre aflições, jamais é a Igreja em si que está em jogo. O dragão sempre visa atingir o Cristo na Igreja."</div>
+    <div class="cv-ref">Adolf Pohl — citado por H. D. Lopes</div>
+    <button class="cv-cta" onclick="entrarLicao()">Abrir Lição</button>
+  </div>
+  <div class="cv-rodape">
+    <div class="cv-rodape-sub">Jovens Adultos · Lição 07</div>
+  </div>
 </div>
-<div class="cv-rodape">
-<div class="cv-rodape-sub">Jovens Adultos · Lição 07</div>
-</div>
-</div>
+
 <div class="area">
+
 <!-- PG 1 CAPA -->
 <div class="lbl">Página 1 · Capa</div>
 <div class="pag capa">
-<div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
-<div class="cimg"></div><div class="clh"></div>
-<div class="cnbg">07</div>
-<div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
-<div class="ccon">
-<div class="cser">Eschaton · O Futuro Chegou</div>
-<div class="cref">Apocalipsé 12:1-18 · 13:1-18</div>
-<div class="ctit">O Dragão Ataca a Igrejá</div>
-<div class="cver">
-            "Quando a Igrejá sofré aflições, jámais é a Igrejá em si qué está em jogo. O dragão sempré visa atingir o Cristo na Igrejá. A luta é pelo Cristo na Igrejá e, em decorrência, pelo testemunho dessé Cristo."
-            <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Adolf Pohl — citado por H. D. Lopés</span>
+  <div class="catm"></div><div class="cgrd"></div><div class="cfx"></div>
+  <div class="cimg"></div><div class="clh"></div>
+  <div class="cnbg">07</div>
+  <div class="cvol"><div class="cvol-num">VOL. III</div><div class="cvol-linha"></div></div>
+  <div class="ccon">
+    <div class="cser">Eschaton · O Futuro Chegou</div>
+    <div class="cref">Apocalipse 12:1-18 · 13:1-18</div>
+    <div class="ctit">O Dragão Ataca a Igreja</div>
+    <div class="cver">
+      "Quando a Igreja sofre aflições, jamais é a Igreja em si que está em jogo. O dragão sempre visa atingir o Cristo na Igreja. A luta é pelo Cristo na Igreja e, em decorrência, pelo testemunho desse Cristo."
+      <span style="display:block;margin-top:4px;font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);">Adolf Pohl — citado por H. D. Lopes</span>
+    </div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
 </div>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">1</span></div>
-</div>
-<!-- PG 2 TEXTO BÍBLICO -->
-<div class="lbl">Página 2 · Texto Bíblico</div>
+
+<!-- PG 2 INTRODUÇÃO -->
+<div class="lbl">Página 2 · Introdução</div>
 <div class="pag int">
-<div class="int-linhas"></div><div class="wm">2</div>
-<div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão é a Igrejá</span></div>
-<h2>O Texto</h2>
-<div class="bver">
-<div class="bver-ref">Apocalipsé 12:7-9, 11</div>
-<p>"E houvé pelejá no céu: Miguel e os seus anjos pelejávam contra o dragão; é o dragão pelejáva, e os seus anjos, e não prevaleceram, e o seu lugar não foi mais achado no céu. É foi lançado fora o grandé dragão, a antiga serpente, chamada o Diabo é Satanás, o sedutor dé todo o mundo... É eles o venceram pelo sangué do Cordeiro é pela palavra do seu testemunho; e não amaram as suas vidas até a morte."</p>
-<span class="ref-f">Apocalipsé 12:7-9, 11</span>
+  <div class="int-linhas"></div><div class="wm">2</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão e a Igreja</span></div>
+  <h2>Introdução</h2>
+  <p class="cap">Apocalipse 12–13 não é uma pausa dramática no meio do livro — é o coração teológico do Apocalipse. Antes de revelar os julgamentos finais e a vitória definitiva do Cordeiro, Deus descerra o véu sobre a guerra cósmica que está por trás de toda a perseguição à Igreja. A ordem é deliberada: é preciso ver o inimigo tal como ele é — e como ele já foi derrotado — antes de entender por que o povo de Deus sofre e de onde vem a sua vitória.</p>
+  <p>O Apocalipse foi escrito para uma Igreja sob perseguição — crentes que viam o Império Romano esmagar os santos, que assistiam ao martírio de líderes, que viviam sob a ameaça constante de serem eliminados. Para essa Igreja, Deus não envia primeiro uma explicação filosófica do sofrimento. Envia uma revelação: por trás de cada perseguidor humano, há um dragão vermelho que já foi expulso do céu e que age com fúria porque sabe que o seu tempo é curto.</p>
+  <div class="blteo">
+    <div class="blteo-t">O Contexto de Apocalipse 12–13</div>
+    <p>Após a visão do trono (Ap 4–5), dos selos, das trombetas e dos dois testemunhos (Ap 6–11), João é transportado para o centro do conflito: uma mulher que dá à luz, um dragão que a persegue, uma guerra no céu e duas bestas que surgem para atacar a Igreja. Hernandes Dias Lopes escreve que esses capítulos revelam a dimensão espiritual e cósmica do conflito em que a Igreja sempre esteve envolvida. Antes de ver as armas da vitória, João — e o leitor — precisa ver a natureza e os limites do inimigo.</p>
+  </div>
+  <h3>Por que Apocalipse 12–13 Muda Tudo</h3>
+  <p>A maioria das pessoas que sofre perseguição ou pressão social por causa da fé tende a interpretar esse sofrimento como um conflito meramente humano — político, cultural ou social. Mas Apocalipse 12 revela que há uma dimensão mais profunda: o dragão ataca a Igreja porque odeia Cristo, e o povo de Deus é o campo de batalha, não o alvo final. Quem compreende isso não responde à perseguição com medo, mas com testemunho.</p>
+  <p>É nessa visão — o dragão derrotado que age com fúria, a Igreja protegida e vitoriosa em Cristo — que repousa toda a coragem cristã diante da história. Esta lição convida você a ver, com os olhos de João, a guerra que já foi vencida e as armas que Deus colocou nas mãos de sua Igreja.</p>
+  <div class="bloco">
+    <div class="bloco-t">O que estudaremos nesta lição</div>
+    <p>Examinaremos o conflito cósmico revelado em Apocalipse 12 — a mulher, o dragão e o Filho Varão —, as oito características do inimigo descritas por Hernandes Dias Lopes, as duas bestas de Apocalipse 13 e as três armas da vitória da Igreja registradas em Apocalipse 12:11.</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
 </div>
-<div class="bver">
-<div class="bver-ref">Apocalipsé 13:7-8</div>
-<p>"E foi-lhé permitido fazer guerra contra os santos é vencê-los; é foi-lhé dado pôder sobré toda tribo, língua e nação. É adoraram-no todos os qué habitam na terra, cujos nomes não estão escritos no livro da vida do Cordeiro."</p>
-<span class="ref-f">Apocalipsé 13:7-8</span>
-</div>
-<div class="obj">
-<div class="ot">Objetivos destá Lição</div>
-<ul class="obj-lista">
-<li>Compreender a estrutura dé Apocalipsé 12 — as três lutas do dragão é suas três derrotas;</li>
-<li>Identificar as oito características do dragão descritas por Hernandes Dias Lopés;</li>
-<li>Examinar as duas bestás dé Apocalipsé 13 — o pôder político é o religioso a serviço do mal;</li>
-<li>Aplicar as três armas da vitória da Igrejá sobré o dragão.</li>
-</ul>
-</div>
-<div class="brefletir">
-<div class="brefletir-t">✦ Para Você Refletir</div>
-<p>Apocalipsé 12 mostra qué a perseguição contra a Igrejá tem uma dimensão mais profunda do qué conflitos humanos. O dragão ataca a Igrejá porqué odeia Cristo e o testemunho dé Cristo nela. Quando você enfrenta opôsição por causa da fé, consegué discernir essa dimensão espiritual sem perder a sobriedade?</p>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">2</span></div>
-</div>
- PG 3 A MULHER É O DRAGAO 
-<div class="lbl">Página 3 · A Mulher e o Dragão Vermelho</div>
+
+<!-- PG 3 TEXTO BÍBLICO -->
+<div class="lbl">Página 3 · Texto Bíblico</div>
 <div class="pag int">
-<div class="int-linhas"></div><div class="wm">3</div>
-<div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">A Mulher é o Dragão</span></div>
-<h2>A Mulher, o Dragão é o Filho Varao</h2>
-<p class="cap">Apocalipsé 12 revela o conflito cósmico por tras dé toda a história da Igrejá. O dragão realiza três lutas — contra Deus e Seu Messias (v.1-6), contra Miguel (v.7-12), é contra a mulher (v.13-18) — e sai derrotado nas três. A Igrejá qué sofré precisa ver essé quadro completo para entender qué seu sofrimento não é abandono; é a fúria dé um inimigo já derrotado.</p>
-<div class="bloco">
-<div class="bloco-t">A Mulher — Símbolo da Igrejá</div>
-<p>A mulher vestida do sol, com a lua debaixo dos pés é uma coroa dé dozé estrelas, representa a Igrejá — o povo dé Deus em ambas as dispensações. Hernandes Dias Lopés destáca seis aspectos: ela é <strong>gloriosa</strong> (vestida do sol — refleté a beleza dé Cristo); exercé <strong>domínio</strong> (lua debaixo dos pés — autoridadé espiritual em Cristo); é <strong>vitoriosa</strong> (coroa dé dozé estrelas); sua missão é <strong>dar à luz o Messias</strong>; é protegida por Deus <strong>no deserto</strong>; é <strong>sustentada</strong> no periodo dé tribulação (1.260 dias).</p>
+  <div class="int-linhas"></div><div class="wm">3</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão e a Igreja</span></div>
+  <h2>O Texto</h2>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 12:7-9, 11</div>
+    <p>"E houve peleja no céu: Miguel e os seus anjos pelejavam contra o dragão; e o dragão pelejava, e os seus anjos, e não prevaleceram, e o seu lugar não foi mais achado no céu. E foi lançado fora o grande dragão, a antiga serpente, chamada o Diabo e Satanás, o sedutor de todo o mundo... E eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho; e não amaram as suas vidas até a morte."</p>
+    <span class="ref-f">Apocalipse 12:7-9, 11</span>
+  </div>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 13:7-8</div>
+    <p>"E foi-lhe permitido fazer guerra contra os santos e vencê-los; e foi-lhe dado poder sobre toda tribo, língua e nação. E adoraram-no todos os que habitam na terra, cujos nomes não estão escritos no livro da vida do Cordeiro."</p>
+    <span class="ref-f">Apocalipse 13:7-8</span>
+  </div>
+  <div class="obj">
+    <div class="ot">Objetivos desta Lição</div>
+    <ul class="obj-lista">
+      <li>Compreender a estrutura de Apocalipse 12 — as três lutas do dragão e suas três derrotas;</li>
+      <li>Identificar as oito características do dragão descritas por Hernandes Dias Lopes;</li>
+      <li>Examinar as duas bestas de Apocalipse 13 — o poder político e o religioso a serviço do mal;</li>
+      <li>Aplicar as três armas da vitória da Igreja sobre o dragão.</li>
+    </ul>
+  </div>
+  <div class="brefletir">
+    <div class="brefletir-t">✦ Para Você Refletir</div>
+    <p>Apocalipse 12 mostra que a perseguição contra a Igreja tem uma dimensão mais profunda do que conflitos humanos. O dragão ataca a Igreja porque odeia Cristo e o testemunho de Cristo nela. Quando você enfrenta oposição por causa da fé, consegue discernir essa dimensão espiritual sem perder a sobriedade?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
 </div>
-<h3>O Verdadeiro Alvo do Dragão</h3>
-<p>Adolf Pohl, citado por Lopés, faz uma observação decisiva: "Quando a Igrejá sofré aflições, jámais é a Igrejá em si qué está em jogo. O dragão sempré visa atingir o Cristo na Igrejá. A luta é pelo Cristo na Igrejá e, em decorrência, pelo testemunho dessé Cristo." É por isso qué Cristo perguntou a Saulo: "Por qué mé persegues?" — não "por qué persegues a minha Igrejá?" A luta é contra Cristo; a Igrejá é o campo dé batalha, não o alvo final.</p>
-<div class="bconexao">
-<div class="bconexao-t">✦ Conexão Bíblica</div>
-<p>Comparé Apocalipsé 12:11 com Romanos 8:33-34. O acusador acusa os irmãos, mas Cristo morreu, ressuscitou é intercedé por eles. A vitória da Igrejá não nascé da força moral dos santos, mas da obra objetiva do Cordeiro. Como essa conexão muda a forma dé lidar com culpa, acusação é intimidação espiritual?</p>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">3</span></div>
-</div>
-<!-- PG 4 AS 8 CARACTERISTICAS DO DRAGAO -->
-<div class="lbl">Página 4 · As As Oito Características do Dragão</div>
+
+<!-- PG 4 A MULHER E O DRAGÃO -->
+<div class="lbl">Página 4 · A Mulher e o Dragão Vermelho</div>
 <div class="pag int">
-<div class="int-linhas"></div><div class="wm">4</div>
-<div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão Descrito</span></div>
-<h2>O Retrato do Inimigo</h2>
-<p>Hernandes Dias Lopés descrevé o dragão em oito características — não para inflar seu pôder, mas para qué a Igrejá o conheça e não sejá surpreendida por suas táticas.</p>
-<div class="bloco">
-<div class="bloco-t">As As Oito Características do Dragão</div>
-<p><strong>1. Pessoal</strong> — não é energia negativa nem mito; é um anjo caído, com vontade, planos e sentimentos. <strong>2. Influencia universal</strong> — seté cabeças (pôder universal), dez chifres (capacidadé destruidora), seté diademas (governo universal). <strong>3. Destruidor</strong> — vermelho: assassino, sanguinário. <strong>4. Sedutor</strong> — disfarce, dúvida, inversão da Palavra dé Deus; "a serpenté dé Gênesis 3 é o dragão dé Apocalipsé 12." <strong>5. Acusador incessante</strong> — acusa os irmãos dia é noité sem descansar, sem tirar férias. <strong>6. Opositor</strong> — Satanás significa "adversário"; sé opôs a Moisés, a Josué, a Paulo. <strong>7. Cheio dé cólera</strong> — irado porqué foi expulso do céu, porque não pôdé destruir o Filho, porqué a Igrejá é protegida. <strong>8. LIMITADO</strong> — limitado em espaco (expulso do céu), em tempo (pouco lhé restá), em pôder (é vencido por Cristo, pelos anjos é pela Igrejá).</p>
+  <div class="int-linhas"></div><div class="wm">4</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">A Mulher e o Dragão</span></div>
+  <h2>A Mulher, o Dragão e o Filho Varão</h2>
+  <p class="cap">Apocalipse 12 revela o conflito cósmico por trás de toda a história da Igreja. O dragão realiza três lutas — contra Deus e Seu Messias (v.1-6), contra Miguel (v.7-12), e contra a mulher (v.13-18) — e sai derrotado nas três. A Igreja que sofre precisa ver esse quadro completo para entender que seu sofrimento não é abandono; é a fúria de um inimigo já derrotado.</p>
+  <div class="bloco">
+    <div class="bloco-t">A Mulher — Símbolo da Igreja</div>
+    <p>A mulher vestida do sol, com a lua debaixo dos pés e uma coroa de doze estrelas, representa a Igreja — o povo de Deus em ambas as dispensações. Hernandes Dias Lopes destaca seis aspectos: ela é <strong>gloriosa</strong> (vestida do sol — reflete a beleza de Cristo); exerce <strong>domínio</strong> (lua debaixo dos pés — autoridade espiritual em Cristo); é <strong>vitoriosa</strong> (coroa de doze estrelas); sua missão é <strong>dar à luz o Messias</strong>; é protegida por Deus <strong>no deserto</strong>; e <strong>sustentada</strong> no período de tribulação (1.260 dias).</p>
+  </div>
+  <h3>O Verdadeiro Alvo do Dragão</h3>
+  <p>Adolf Pohl, citado por Lopes, faz uma observação decisiva: "Quando a Igreja sofre aflições, jamais é a Igreja em si que está em jogo. O dragão sempre visa atingir o Cristo na Igreja. A luta é pelo Cristo na Igreja e, em decorrência, pelo testemunho desse Cristo." É por isso que Cristo perguntou a Saulo: "Por que me persegues?" — não "por que persegues a minha Igreja?" A luta é contra Cristo; a Igreja é o campo de batalha, não o alvo final.</p>
+  <div class="bconexao">
+    <div class="bconexao-t">✦ Conexão Bíblica</div>
+    <p>Compare Apocalipse 12:11 com Romanos 8:33-34. O acusador acusa os irmãos, mas Cristo morreu, ressuscitou e intercede por eles. A vitória da Igreja não nasce da força moral dos santos, mas da obra objetiva do Cordeiro. Como essa conexão muda a forma de lidar com culpa, acusação e intimidação espiritual?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
 </div>
-<div class="blteo">
-<div class="blteo-t">A Advertencia dé Hernandes Dias Lopés</div>
-<p>"Hojé muitos superenfatizam o pôder do diabo. A demonologia está em alta. Mas o diabo foi vencido por Jesus (12:5), é vencido pelos anjos (12:7-8) é pela Igrejá (12:11). Elé é uma serpenté golpeada na cabeça qué está no estertor da morté — furiosa, mas já condenada."</p>
-</div>
-<div class="bsabia">
-<div class="bsabia-t">✦ Sabia Que?</div>
-<p>O nomé Satanás significa adversário, é diabo significa acusador. Apocalipsé 12 reúné as duas ações: elé sé opõé ao povo dé Deus é o acusa dianté dé Deus. A cena mostra qué a acusação não é neutra; ela é uma arma espiritual. Por isso, a resposta bíblica não é autodefesa, mas o sangué do Cordeiro é o testemunho fiel.</p>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">4</span></div>
-</div>
- PG 5 AS DUAS BESTAS É AS TRES ARMAS 
-<div class="lbl">Página 5 · As Duas Bestás é as Três Armas da Vitória</div>
+
+<!-- PG 5 O RETRATO DO INIMIGO -->
+<div class="lbl">Página 5 · As Oito Características do Dragão</div>
 <div class="pag int">
-<div class="int-linhas"></div><div class="wm">5</div>
-<div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">As Bestás é a Vitória</span></div>
-<h2>As Duas Bestás — Ap 13</h2>
-<p>Derrotado em suas confrontações diretas, o dragão levanta dois agentes para atacar a Igrejá. A <strong>primeira bestá</strong> (do mar) — horrivel, dé seté cabeças — representa o pôder político perseguidor: Roma no século I, é todo sistema dé governo qué exigé lealdadé absoluta é persegué os cristãos. É a "mão dé Satanás." A <strong>segunda bestá</strong> (da terra), disfarçada como cordeiro, falando como dragão — representa as religiões é filosofias falsas qué seduzem: é a "menté do diabo." Ela faz a humanidadé adorar a primeira bestá.</p>
-<div class="bloco">
-<div class="bloco-t">A Marca da Bestá — 666</div>
-<p>O número 666 é o número do homem — aquelé qué está sempré aquém da perfeição dé Deus (simbolizada pelo 7). Hernandes Dias Lopés rejeita interpretações literalistas dé microchips e sistemas digitais: a marca da bestá é a lealdadé a qualquer sistema qué exigé adoração é competé com Cristo pelo senhorio. A questão sempré foi é sempré será: quem é o Senhor?</p>
+  <div class="int-linhas"></div><div class="wm">5</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão Descrito</span></div>
+  <h2>O Retrato do Inimigo</h2>
+  <p>Hernandes Dias Lopes descreve o dragão em oito características — não para inflar seu poder, mas para que a Igreja o conheça e não seja surpreendida por suas táticas.</p>
+  <div class="bloco">
+    <div class="bloco-t">As Oito Características do Dragão</div>
+    <p><strong>1. Pessoal</strong> — não é energia negativa nem mito; é um anjo caído, com vontade, planos e sentimentos. <strong>2. Influência universal</strong> — sete cabeças (poder universal), dez chifres (capacidade destruidora), sete diademas (governo universal). <strong>3. Destruidor</strong> — vermelho: assassino, sanguinário. <strong>4. Sedutor</strong> — disfarce, dúvida, inversão da Palavra de Deus; "a serpente de Gênesis 3 é o dragão de Apocalipse 12." <strong>5. Acusador incessante</strong> — acusa os irmãos dia e noite sem descansar, sem tirar férias. <strong>6. Opositor</strong> — Satanás significa "adversário"; se opôs a Moisés, a Josué, a Paulo. <strong>7. Cheio de cólera</strong> — irado porque foi expulso do céu, porque não pôde destruir o Filho, porque a Igreja é protegida. <strong>8. LIMITADO</strong> — limitado em espaço (expulso do céu), em tempo (pouco lhe resta), em poder (é vencido por Cristo, pelos anjos e pela Igreja).</p>
+  </div>
+  <div class="blteo">
+    <div class="blteo-t">A Advertência de Hernandes Dias Lopes</div>
+    <p>"Hoje muitos superenfatizam o poder do diabo. A demonologia está em alta. Mas o diabo foi vencido por Jesus (12:5), é vencido pelos anjos (12:7-8) e pela Igreja (12:11). Ele é uma serpente golpeada na cabeça que está no estertor da morte — furiosa, mas já condenada."</p>
+  </div>
+  <div class="bsabia">
+    <div class="bsabia-t">✦ Sabia Que?</div>
+    <p>O nome Satanás significa adversário, e diabo significa acusador. Apocalipse 12 reúne as duas ações: ele se opõe ao povo de Deus e o acusa diante de Deus. A cena mostra que a acusação não é neutra; ela é uma arma espiritual. Por isso, a resposta bíblica não é a autodefesa, mas o sangue do Cordeiro e o testemunho fiel.</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
 </div>
-<h2 style="margin-top:14px;">As Três Armas da Vitória — Ap 12:11</h2>
-<p><strong>1. O sangué do Cordeiro</strong> — não é o conhecimento do Cordeiro nem a crença intelectual, mas o sangue. O sacrifício dé Cristo na cruz desfez toda a possibilidadé dé Satanás triunfar. As acusações do dragão não têm nenhuma basé legal dianté da obra do Calvário. <strong>2. A palavra do testemunho</strong> — a Igrejá vencé quando testemunha dé Cristo mesmo sob perseguição. Lopés é severo: "Não é a Igrejá qué hiberna qué será vencedora." A Igrejá vitoriosa é a qué testemunha. <strong>3. Não amar a vida até a morte</strong> — a disposição ao martírio. Somenté o sangué do Cordeiro derrota o dragão — o sangué dos mártires não. Mas a disposição dé morrer pelo Cordeiro é a evidencia dé qué o Cordeiro é amado acima da própria vida.</p>
-<div class="bpense">
-<div class="bpense-t">✦ Pensé Nisso</div>
-<p>As três armas dé Apocalipsé 12:11 não são técnicas dé domínio espiritual; são marcas dé fidelidadé cristã. O sangué do Cordeiro aponta para a cruz, a palavra do testemunho aponta para a confissão pública dé Cristo, e não amar a vida até a morté aponta para uma lealdadé que não negocia o senhorio dé Jesus. Qual dessas três áreas mais confronta sua vida hoje?</p>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">5</span></div>
-</div>
-<!-- PG 6 APLICACAO -->
-<div class="lbl">Página 6 · Aplicação</div>
+
+<!-- PG 6 AS DUAS BESTAS -->
+<div class="lbl">Página 6 · As Duas Bestas e as Três Armas da Vitória</div>
 <div class="pag int">
-<div class="int-linhas"></div><div class="wm">6</div>
-<div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão Ataca a Igrejá</span></div>
-<h2>Aplicação Direta</h2>
-<p class="cap">Hernandes Dias Lopés termina o capitulo com uma declaracao qué é o nucleo da esperanca crista: "Embora o dragão sejá grande, vermelho, sedutor, temido, elé está derrotado. A vitória está assegurada. Caminhamos não para um final tragico ou incerto. Caminhamos para a consumacao gloriosa dé Cristo e dé Sua noiva."</p>
-<div class="blapl">
-<div class="blapl-t">Para besta semana</div>
-<p>Primeiro: Adolf Pohl diz qué o dragão "sempré visa atingir o Cristo na Igrejá." Quando vocé é perseguido, difamado ou marginalizado por causa da fe, a batalha não é contra vocé — é contra o Cristo em voce. Como essa perspectiva muda sua coragem é sua resposta a perseguição ou pressão social? Segundo: O dragão acusa "os irmãos dia é noité sem cessar" (Ap 12:10). Ha acusações qué vocé carrega sobré si mesmo — dé que não é bom o suficiente, qué Deus não podé té usar, qué seu passado té desqualifica? Apocalipsé 12:10-11 diz qué essé escritorio dé acusação foi fechado pelo sangué do Cordeiro. Terceiro: Lopés diz qué "não é a Igrejá qué hiberna qué será vencedora." Ha alguma forma dé testemunho qué vocé tem evitado por medo? O qué seria dar a "palavra do seu testemunho" besta semana?</p>
+  <div class="int-linhas"></div><div class="wm">6</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">As Bestas e a Vitória</span></div>
+  <h2>As Duas Bestas — Ap 13</h2>
+  <p>Derrotado em suas confrontações diretas, o dragão levanta dois agentes para atacar a Igreja. A <strong>primeira besta</strong> (do mar) — horrível, de sete cabeças — representa o poder político perseguidor: Roma no século I, e todo sistema de governo que exige lealdade absoluta e persegue os cristãos. É a "mão de Satanás." A <strong>segunda besta</strong> (da terra), disfarçada como cordeiro, falando como dragão — representa as religiões e filosofias falsas que seduzem: é a "mente do diabo." Ela faz a humanidade adorar a primeira besta.</p>
+  <div class="bloco">
+    <div class="bloco-t">A Marca da Besta — 666</div>
+    <p>O número 666 é o número do homem — aquele que está sempre aquém da perfeição de Deus (simbolizada pelo 7). Hernandes Dias Lopes rejeita interpretações literalistas de microchips e sistemas digitais: a marca da besta é a lealdade a qualquer sistema que exige adoração e compete com Cristo pelo senhorio. A questão sempre foi e sempre será: quem é o Senhor?</p>
+  </div>
+  <h2 style="margin-top:14px;">As Três Armas da Vitória — Ap 12:11</h2>
+  <p><strong>1. O sangue do Cordeiro</strong> — não é o conhecimento do Cordeiro nem a crença intelectual, mas o sangue. O sacrifício de Cristo na cruz desfez toda a possibilidade de Satanás triunfar. As acusações do dragão não têm nenhuma base legal diante da obra do Calvário. <strong>2. A palavra do testemunho</strong> — a Igreja vence quando testemunha de Cristo mesmo sob perseguição. Lopes é severo: "Não é a Igreja que hiberna que será vencedora." A Igreja vitoriosa é a que testemunha. <strong>3. Não amar a vida até a morte</strong> — a disposição ao martírio. Somente o sangue do Cordeiro derrota o dragão — o sangue dos mártires não. Mas a disposição de morrer pelo Cordeiro é a evidência de que o Cordeiro é amado acima da própria vida.</p>
+  <div class="bpense">
+    <div class="bpense-t">✦ Pense Nisso</div>
+    <p>As três armas de Apocalipse 12:11 não são técnicas de domínio espiritual; são marcas de fidelidade cristã. O sangue do Cordeiro aponta para a cruz, a palavra do testemunho aponta para a confissão pública de Cristo, e não amar a vida até a morte aponta para uma lealdade que não negocia o senhorio de Jesus. Qual dessas três áreas mais confronta sua vida hoje?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
 </div>
-<div class="mem">
-<div class="mem-t">◆ Versiculo para Memorizar</div>
-<p>"E eles o venceram pelo sangué do Cordeiro é pela palavra do seu testemunho; e não amaram as suas vidas até a morte."</p>
-<p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipsé 12:11</p>
-</div>
-<div class="bleve">
-<div class="bleve-t">✦ Levé para a Vida</div>
-<p>Duranté besta semana, observé ondé sua fidelidadé a Cristo sofré pressão: medo dé testemunhar, desejo dé aprovação, culpa paralisanté ou acomodação ao sistema ao redor. Escreva uma resposta simples a partir dé Apocalipsé 12:11: o qué o sangué do Cordeiro garante, qué testemunho você precisa sustentar é qué apego precisa perder força dianté dé Cristo?</p>
-<div class="lr" style="margin-top:8px;"></div>
-<div class="lr"></div>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">6</span></div>
-</div>
-<!-- PG 7 QUESTOES -->
-<div class="lbl">Página 7 · Questoes é Anotacoes</div>
+
+<!-- PG 7 CONCLUSÃO -->
+<div class="lbl">Página 7 · Conclusão</div>
 <div class="pag int">
-<div class="int-linhas"></div><div class="wm">7</div>
-<div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão é a Igrejá</span></div>
-<h2>Questoes para Reflexao</h2>
-<div class="q">
-<div class="qn">Questão 01</div>
-<div class="qt">Adolf Pohl diz qué o dragão "sempré visa atingir o Cristo na Igrejá" — não a Igrejá em si. O sofrimento é a perseguição da Igrejá são, no fundo, uma luta contra Cristo. Como essé entendimento muda a forma como a Igrejá (é vocé individualmente) devé responder a perseguição — com medo ou com testemunho?</div>
-<div class="lr"></div><div class="lr"></div>
+  <div class="int-linhas"></div><div class="wm">7</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão Ataca a Igreja</span></div>
+  <h2>Conclusão</h2>
+  <p class="cap">Hernandes Dias Lopes termina o capítulo com uma declaração que é o núcleo da esperança cristã: "Embora o dragão seja grande, vermelho, sedutor, temido, ele está derrotado. A vitória está assegurada. Caminhamos não para um final trágico ou incerto. Caminhamos para a consumação gloriosa de Cristo e de Sua noiva."</p>
+  <p>Apocalipse 12–13 não foi escrito para gerar terror diante do inimigo — foi escrito para libertar a Igreja do terror que o inimigo tenta produzir. O dragão é real, poderoso e furioso. Mas é um inimigo expulso do céu, com o tempo contado, que já encontrou sua derrota definitiva na cruz e na ressurreição do Cordeiro. A Igreja que enfrenta perseguição, acusação ou pressão cultural não está à mercê de um poder soberano — está sob a proteção do único que é soberano.</p>
+  <div class="blteo">
+    <div class="blteo-t">A Certeza que Sustenta a Igreja</div>
+    <p>As três armas de Apocalipse 12:11 não são recursos para crises excepcionais — são a identidade permanente da Igreja fiel: uma comunidade que vive pela obra do Cordeiro, testemunha publicamente de Cristo e não negocia o senhorio de Jesus em troca de segurança ou aprovação. Essa Igreja não hiberna. Ela avança — não pela força própria, mas pela certeza de que o Cordeiro já venceu e o dragão já foi lançado fora.</p>
+  </div>
+  <p>A pergunta que esta lição deixa para cada um de nós não é "o dragão é poderoso?" — a resposta é sim. A pergunta é: você está lutando com as armas certas? O sangue do Cordeiro cobre sua culpa e invalida cada acusação. A palavra do seu testemunho é a arma mais temida pelo inimigo. E a disposição de não amar sua vida mais do que a Cristo é o sinal mais claro de que o dragão já perdeu sua presa.</p>
+  <div class="bver">
+    <div class="bver-ref">Apocalipse 12:11</div>
+    <p>"E eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho; e não amaram as suas vidas até a morte."</p>
+    <span class="ref-f">Apocalipse 12:11</span>
+  </div>
+  <div class="bpense">
+    <div class="bpense-t">✦ Pense Nisso</div>
+    <p>A vitória descrita em Apocalipse 12:11 não pertence a heróis extraordinários — pertence a crentes comuns que confiam na obra extraordinária do Cordeiro. A sua voz de testemunho faz parte dessa vitória. Ela está sendo sustentada?</p>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
 </div>
-<div class="q">
-<div class="qn">Questão 02</div>
-<div class="qt">Hernandes Dias Lopés adverté contra a "superenfasé no pôder do diabo" — demonologia em alta. Como vocé equilibra o reconhecimento serio da realidadé espiritual do inimigo com a certeza dé qué elé já foi vencido é está "no estertor da morte"? Qual dos dois extremos (ignorar o diabo ou superenfatiza-lo) é mais perigoso para a vida crista pratica?</div>
-<div class="lr"></div><div class="lr"></div>
+
+<!-- PG 8 APLICAÇÃO -->
+<div class="lbl">Página 8 · Aplicação</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">8</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão Ataca a Igreja</span></div>
+  <h2>Aplicação Direta</h2>
+  <p class="cap">Hernandes Dias Lopes termina o capítulo com uma declaração que é o núcleo da esperança cristã: "Embora o dragão seja grande, vermelho, sedutor, temido, ele está derrotado. A vitória está assegurada. Caminhamos não para um final trágico ou incerto. Caminhamos para a consumação gloriosa de Cristo e de Sua noiva."</p>
+  <div class="blapl">
+    <div class="blapl-t">Para esta semana</div>
+    <p>Primeiro: Adolf Pohl diz que o dragão "sempre visa atingir o Cristo na Igreja." Quando você é perseguido, difamado ou marginalizado por causa da fé, a batalha não é contra você — é contra o Cristo em você. Como essa perspectiva muda sua coragem e sua resposta à perseguição ou pressão social? Segundo: O dragão acusa "os irmãos dia e noite sem cessar" (Ap 12:10). Há acusações que você carrega sobre si mesmo — de que não é bom o suficiente, que Deus não pode te usar, que seu passado te desqualifica? Apocalipse 12:10-11 diz que esse escritório de acusação foi fechado pelo sangue do Cordeiro. Terceiro: Lopes diz que "não é a Igreja que hiberna que será vencedora." Há alguma forma de testemunho que você tem evitado por medo? O que seria dar a "palavra do seu testemunho" esta semana?</p>
+  </div>
+  <div class="mem">
+    <div class="mem-t">◆ Versículo para Memorizar</div>
+    <p>"E eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho; e não amaram as suas vidas até a morte."</p>
+    <p style="font-style:normal;font-family:'Oswald',sans-serif;font-size:8pt;letter-spacing:1px;color:var(--ouro);margin-top:6px;">Apocalipse 12:11</p>
+  </div>
+  <div class="bleve">
+    <div class="bleve-t">✦ Leve para a Vida</div>
+    <p>Durante esta semana, observe onde sua fidelidade a Cristo sofre pressão: medo de testemunhar, desejo de aprovação, culpa paralisante ou acomodação ao sistema ao redor. Escreva uma resposta simples a partir de Apocalipse 12:11: o que o sangue do Cordeiro garante, que testemunho você precisa sustentar e que apego precisa perder força diante de Cristo?</p>
+    <div class="lr" style="margin-top:8px;"></div>
+    <div class="lr"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">8</span></div>
 </div>
-<div class="q">
-<div class="qn">Questão 03</div>
-<div class="qt">A segunda bestá (falso profeta) representa as religiões é filosofias falsas qué fazem a humanidadé adorar o pôder político. Como vocé identifica essa dinamica — religiao a servico do pôder — na Igrejá é na sociedadé brasileira hoje? Quais são os sinais dé qué uma Igrejá sé tornou "falso profeta" dé um sistema político ou cultural?</div>
-<div class="lr"></div><div class="lr"></div>
+
+<!-- PG 9 QUESTÕES -->
+<div class="lbl">Página 9 · Questões e Anotações</div>
+<div class="pag int">
+  <div class="int-linhas"></div><div class="wm">9</div>
+  <div class="ph"><span class="phl">Lição 07 · Vol. III</span><span class="pht">O Dragão e a Igreja</span></div>
+  <h2>Questões para Reflexão</h2>
+  <div class="q">
+    <div class="qn">Questão 01</div>
+    <div class="qt">Adolf Pohl diz que o dragão "sempre visa atingir o Cristo na Igreja" — não a Igreja em si. O sofrimento e a perseguição da Igreja são, no fundo, uma luta contra Cristo. Como esse entendimento muda a forma como a Igreja (e você individualmente) deve responder à perseguição — com medo ou com testemunho?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 02</div>
+    <div class="qt">Hernandes Dias Lopes adverte contra a "superênfase no poder do diabo" — demonologia em alta. Como você equilibra o reconhecimento sério da realidade espiritual do inimigo com a certeza de que ele já foi vencido e está "no estertor da morte"? Qual dos dois extremos (ignorar o diabo ou superenfatizá-lo) é mais perigoso para a vida cristã prática?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 03</div>
+    <div class="qt">A segunda besta (falso profeta) representa as religiões e filosofias falsas que fazem a humanidade adorar o poder político. Como você identifica essa dinâmica — religião a serviço do poder — na Igreja e na sociedade brasileira hoje? Quais são os sinais de que uma Igreja se tornou "falso profeta" de um sistema político ou cultural?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <div class="q">
+    <div class="qn">Questão 04</div>
+    <div class="qt">As três armas de Apocalipse 12:11 são: sangue do Cordeiro, palavra do testemunho e não amar a vida até a morte. Lopes diz que "não é a Igreja que hiberna que será vencedora." Em que situações sua Igreja ou você pessoalmente tem "hibernado" — suspendido o testemunho por medo das consequências?</div>
+    <div class="lr"></div><div class="lr"></div>
+  </div>
+  <h3 style="margin-top:12px;">Anotações</h3>
+  <div class="lins">
+    <div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
+  </div>
+  <div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">9</span></div>
 </div>
-<div class="q">
-<div class="qn">Questão 04</div>
-<div class="qt">As três armas dé Apocalipsé 12:11 são: sangué do Cordeiro, palavra do testemunho e não amar a vida até a morte. Lopés diz qué "não é a Igrejá qué hiberna qué será vencedora." Em qué situacoes sua Igrejá ou vocé péssoalmenté tem "hibernado" — suspendido o testemunho por medo das consequências?</div>
-<div class="lr"></div><div class="lr"></div>
-</div>
-<h3 style="margin-top:12px;">Anotacoes</h3>
-<div class="lins">
-<div class="lin"></div><div class="lin"></div><div class="lin"></div><div class="lin"></div>
-</div>
-<div class="rod"><span class="rt">Eschaton Vol. III · EBD Jovens Adultos</span><span class="rn">7</span></div>
-</div>
-</div>
+
+</div><!-- /area -->
+
 <script>
-function entrarLição(){
+function entrarLicao(){
   const capa = document.getElementById('capaEntradaRevista');
   if (capa) capa.classList.add('saindo');
-  setTimeout(() => document.body.classList.add('Lição-iniciada'), 550);
+  setTimeout(() => document.body.classList.add('licao-iniciada'), 550);
   window.scrollTo({top:0, behavior:'instant'});
 }
 
